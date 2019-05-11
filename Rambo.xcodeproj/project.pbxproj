@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F0228675B300F91C4F /* AppDelegate.swift */; };
+		208C22F3228675B300F91C4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F2228675B300F91C4F /* ViewController.swift */; };
+		208C22F6228675B300F91C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208C22F4228675B300F91C4F /* Main.storyboard */; };
+		208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */; };
+		208C22FB228675B400F91C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208C22FA228675B400F91C4F /* Assets.xcassets */; };
+		208C22FE228675B400F91C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208C22FC228675B400F91C4F /* LaunchScreen.storyboard */; };
+		208C2309228675B400F91C4F /* RamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2308228675B400F91C4F /* RamboTests.swift */; };
+		208C2314228675B400F91C4F /* RamboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2313228675B400F91C4F /* RamboUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		208C2305228675B400F91C4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 208C22E5228675B300F91C4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 208C22EC228675B300F91C4F;
+			remoteInfo = Rambo;
+		};
+		208C2310228675B400F91C4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 208C22E5228675B300F91C4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 208C22EC228675B300F91C4F;
+			remoteInfo = Rambo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		208C22ED228675B300F91C4F /* Rambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		208C22F0228675B300F91C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		208C22F2228675B300F91C4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		208C22F5228675B300F91C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		208C22F8228675B300F91C4F /* Rambo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rambo.xcdatamodel; sourceTree = "<group>"; };
+		208C22FA228675B400F91C4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		208C22FD228675B400F91C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		208C22FF228675B400F91C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		208C2304228675B400F91C4F /* RamboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		208C2308228675B400F91C4F /* RamboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamboTests.swift; sourceTree = "<group>"; };
+		208C230A228675B400F91C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		208C230F228675B400F91C4F /* RamboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		208C2313228675B400F91C4F /* RamboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamboUITests.swift; sourceTree = "<group>"; };
+		208C2315228675B400F91C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		208C22EA228675B300F91C4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		208C2301228675B400F91C4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		208C230C228675B400F91C4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		208C22E4228675B300F91C4F = {
+			isa = PBXGroup;
+			children = (
+				208C22EF228675B300F91C4F /* Rambo */,
+				208C2307228675B400F91C4F /* RamboTests */,
+				208C2312228675B400F91C4F /* RamboUITests */,
+				208C22EE228675B300F91C4F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		208C22EE228675B300F91C4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				208C22ED228675B300F91C4F /* Rambo.app */,
+				208C2304228675B400F91C4F /* RamboTests.xctest */,
+				208C230F228675B400F91C4F /* RamboUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		208C22EF228675B300F91C4F /* Rambo */ = {
+			isa = PBXGroup;
+			children = (
+				208C22F0228675B300F91C4F /* AppDelegate.swift */,
+				208C22F2228675B300F91C4F /* ViewController.swift */,
+				208C22F4228675B300F91C4F /* Main.storyboard */,
+				208C22FA228675B400F91C4F /* Assets.xcassets */,
+				208C22FC228675B400F91C4F /* LaunchScreen.storyboard */,
+				208C22FF228675B400F91C4F /* Info.plist */,
+				208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */,
+			);
+			path = Rambo;
+			sourceTree = "<group>";
+		};
+		208C2307228675B400F91C4F /* RamboTests */ = {
+			isa = PBXGroup;
+			children = (
+				208C2308228675B400F91C4F /* RamboTests.swift */,
+				208C230A228675B400F91C4F /* Info.plist */,
+			);
+			path = RamboTests;
+			sourceTree = "<group>";
+		};
+		208C2312228675B400F91C4F /* RamboUITests */ = {
+			isa = PBXGroup;
+			children = (
+				208C2313228675B400F91C4F /* RamboUITests.swift */,
+				208C2315228675B400F91C4F /* Info.plist */,
+			);
+			path = RamboUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		208C22EC228675B300F91C4F /* Rambo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 208C2318228675B400F91C4F /* Build configuration list for PBXNativeTarget "Rambo" */;
+			buildPhases = (
+				208C22E9228675B300F91C4F /* Sources */,
+				208C22EA228675B300F91C4F /* Frameworks */,
+				208C22EB228675B300F91C4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rambo;
+			productName = Rambo;
+			productReference = 208C22ED228675B300F91C4F /* Rambo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		208C2303228675B400F91C4F /* RamboTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 208C231B228675B400F91C4F /* Build configuration list for PBXNativeTarget "RamboTests" */;
+			buildPhases = (
+				208C2300228675B400F91C4F /* Sources */,
+				208C2301228675B400F91C4F /* Frameworks */,
+				208C2302228675B400F91C4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				208C2306228675B400F91C4F /* PBXTargetDependency */,
+			);
+			name = RamboTests;
+			productName = RamboTests;
+			productReference = 208C2304228675B400F91C4F /* RamboTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		208C230E228675B400F91C4F /* RamboUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 208C231E228675B400F91C4F /* Build configuration list for PBXNativeTarget "RamboUITests" */;
+			buildPhases = (
+				208C230B228675B400F91C4F /* Sources */,
+				208C230C228675B400F91C4F /* Frameworks */,
+				208C230D228675B400F91C4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				208C2311228675B400F91C4F /* PBXTargetDependency */,
+			);
+			name = RamboUITests;
+			productName = RamboUITests;
+			productReference = 208C230F228675B400F91C4F /* RamboUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		208C22E5228675B300F91C4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Jeffery Pereira";
+				TargetAttributes = {
+					208C22EC228675B300F91C4F = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					208C2303228675B400F91C4F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 208C22EC228675B300F91C4F;
+					};
+					208C230E228675B400F91C4F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 208C22EC228675B300F91C4F;
+					};
+				};
+			};
+			buildConfigurationList = 208C22E8228675B300F91C4F /* Build configuration list for PBXProject "Rambo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 208C22E4228675B300F91C4F;
+			productRefGroup = 208C22EE228675B300F91C4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				208C22EC228675B300F91C4F /* Rambo */,
+				208C2303228675B400F91C4F /* RamboTests */,
+				208C230E228675B400F91C4F /* RamboUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		208C22EB228675B300F91C4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208C22FE228675B400F91C4F /* LaunchScreen.storyboard in Resources */,
+				208C22FB228675B400F91C4F /* Assets.xcassets in Resources */,
+				208C22F6228675B300F91C4F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		208C2302228675B400F91C4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		208C230D228675B400F91C4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		208C22E9228675B300F91C4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */,
+				208C22F3228675B300F91C4F /* ViewController.swift in Sources */,
+				208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		208C2300228675B400F91C4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208C2309228675B400F91C4F /* RamboTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		208C230B228675B400F91C4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208C2314228675B400F91C4F /* RamboUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		208C2306228675B400F91C4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 208C22EC228675B300F91C4F /* Rambo */;
+			targetProxy = 208C2305228675B400F91C4F /* PBXContainerItemProxy */;
+		};
+		208C2311228675B400F91C4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 208C22EC228675B300F91C4F /* Rambo */;
+			targetProxy = 208C2310228675B400F91C4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		208C22F4228675B300F91C4F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208C22F5228675B300F91C4F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		208C22FC228675B400F91C4F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				208C22FD228675B400F91C4F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		208C2316228675B400F91C4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		208C2317228675B400F91C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		208C2319228675B400F91C4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BEPL73VPNG;
+				INFOPLIST_FILE = Rambo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jeff.GOODLIFE.Rambo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		208C231A228675B400F91C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BEPL73VPNG;
+				INFOPLIST_FILE = Rambo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jeff.GOODLIFE.Rambo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		208C231C228675B400F91C4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BEPL73VPNG;
+				INFOPLIST_FILE = RamboTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jeff.GOODLIFE.RamboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rambo.app/Rambo";
+			};
+			name = Debug;
+		};
+		208C231D228675B400F91C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BEPL73VPNG;
+				INFOPLIST_FILE = RamboTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jeff.GOODLIFE.RamboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rambo.app/Rambo";
+			};
+			name = Release;
+		};
+		208C231F228675B400F91C4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BEPL73VPNG;
+				INFOPLIST_FILE = RamboUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jeff.GOODLIFE.RamboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Rambo;
+			};
+			name = Debug;
+		};
+		208C2320228675B400F91C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BEPL73VPNG;
+				INFOPLIST_FILE = RamboUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jeff.GOODLIFE.RamboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Rambo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		208C22E8228675B300F91C4F /* Build configuration list for PBXProject "Rambo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				208C2316228675B400F91C4F /* Debug */,
+				208C2317228675B400F91C4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		208C2318228675B400F91C4F /* Build configuration list for PBXNativeTarget "Rambo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				208C2319228675B400F91C4F /* Debug */,
+				208C231A228675B400F91C4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		208C231B228675B400F91C4F /* Build configuration list for PBXNativeTarget "RamboTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				208C231C228675B400F91C4F /* Debug */,
+				208C231D228675B400F91C4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		208C231E228675B400F91C4F /* Build configuration list for PBXNativeTarget "RamboUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				208C231F228675B400F91C4F /* Debug */,
+				208C2320228675B400F91C4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				208C22F8228675B300F91C4F /* Rambo.xcdatamodel */,
+			);
+			currentVersion = 208C22F8228675B300F91C4F /* Rambo.xcdatamodel */;
+			path = Rambo.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 208C22E5228675B300F91C4F /* Project object */;
+}
