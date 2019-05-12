@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207062FF2288A27100ADE876 /* SplashScreenViewController.swift */; };
+		207063022288A28500ADE876 /* Layout Helper in Resources */ = {isa = PBXBuildFile; fileRef = 207063012288A28500ADE876 /* Layout Helper */; };
+		207063042288A28E00ADE876 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 207063032288A28E00ADE876 /* Fonts */; };
 		208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F0228675B300F91C4F /* AppDelegate.swift */; };
 		208C22F3228675B300F91C4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F2228675B300F91C4F /* ViewController.swift */; };
 		208C22F6228675B300F91C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208C22F4228675B300F91C4F /* Main.storyboard */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		207062FF2288A27100ADE876 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		207063012288A28500ADE876 /* Layout Helper */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Layout Helper"; sourceTree = SOURCE_ROOT; };
+		207063032288A28E00ADE876 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = SOURCE_ROOT; };
 		208C22ED228675B300F91C4F /* Rambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C22F0228675B300F91C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		208C22F2228675B300F91C4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,10 +105,13 @@
 		208C22EF228675B300F91C4F /* Rambo */ = {
 			isa = PBXGroup;
 			children = (
+				207063032288A28E00ADE876 /* Fonts */,
+				207063012288A28500ADE876 /* Layout Helper */,
 				208C22F0228675B300F91C4F /* AppDelegate.swift */,
 				208C22F2228675B300F91C4F /* ViewController.swift */,
 				208C22F4228675B300F91C4F /* Main.storyboard */,
 				208C22FA228675B400F91C4F /* Assets.xcassets */,
+				207062FF2288A27100ADE876 /* SplashScreenViewController.swift */,
 				208C22FC228675B400F91C4F /* LaunchScreen.storyboard */,
 				208C22FF228675B400F91C4F /* Info.plist */,
 				208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */,
@@ -232,9 +241,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				207063042288A28E00ADE876 /* Fonts in Resources */,
 				208C22FE228675B400F91C4F /* LaunchScreen.storyboard in Resources */,
 				208C22FB228675B400F91C4F /* Assets.xcassets in Resources */,
 				208C22F6228675B300F91C4F /* Main.storyboard in Resources */,
+				207063022288A28500ADE876 /* Layout Helper in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +272,7 @@
 			files = (
 				208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */,
 				208C22F3228675B300F91C4F /* ViewController.swift in Sources */,
+				207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */,
 				208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
