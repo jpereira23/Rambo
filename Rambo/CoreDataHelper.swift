@@ -9,12 +9,20 @@
 import UIKit
 import CoreData
 
+/**
+ *  CoreDataHelper, this class at the moment is helping with pulling the logged in
+ *  user from the iPhone
+ */
 class CoreDataHelper{
     private var managedObjects = [NSManagedObject]()
     private var appDelegate = UIApplication.shared.delegate as! AppDelegate
     private var managedContext: NSManagedObjectContext!
     private var userEntity: NSEntityDescription!
     
+    /**
+     *  Initializing entity User
+     *
+     */
     init(){
         self.managedContext = self.appDelegate.persistentContainer.viewContext
         self.userEntity = NSEntityDescription.entity(forEntityName: "User", in: self.managedContext)

@@ -16,7 +16,10 @@ class SelectATemplateViewController: UIViewController {
         if coreDataHelper.loadUser() != nil{
             
         } else {
-            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "onBoarding")
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.window?.rootViewController = vc
+            //self.present(vc!, animated: true, completion: nil)
         }
         // Do any additional setup after loading the view.
     }
