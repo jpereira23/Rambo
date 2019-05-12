@@ -8,10 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class SelectATemplateViewController: UIViewController {
+    let coreDataHelper: CoreDataHelper = CoreDataHelper()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if coreDataHelper.loadUser() != nil{
+            
+        } else {
+            
+        }
         // Do any additional setup after loading the view.
     }
 

@@ -11,13 +11,15 @@
 		207063022288A28500ADE876 /* Layout Helper in Resources */ = {isa = PBXBuildFile; fileRef = 207063012288A28500ADE876 /* Layout Helper */; };
 		207063042288A28E00ADE876 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 207063032288A28E00ADE876 /* Fonts */; };
 		208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F0228675B300F91C4F /* AppDelegate.swift */; };
-		208C22F3228675B300F91C4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F2228675B300F91C4F /* ViewController.swift */; };
+		208C22F3228675B300F91C4F /* SelectATemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F2228675B300F91C4F /* SelectATemplateViewController.swift */; };
 		208C22F6228675B300F91C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208C22F4228675B300F91C4F /* Main.storyboard */; };
 		208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */; };
 		208C22FB228675B400F91C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208C22FA228675B400F91C4F /* Assets.xcassets */; };
 		208C22FE228675B400F91C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208C22FC228675B400F91C4F /* LaunchScreen.storyboard */; };
 		208C2309228675B400F91C4F /* RamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2308228675B400F91C4F /* RamboTests.swift */; };
 		208C2314228675B400F91C4F /* RamboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2313228675B400F91C4F /* RamboUITests.swift */; };
+		20E177E02288A7ED00E89E42 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E177DF2288A7ED00E89E42 /* CoreDataHelper.swift */; };
+		20E177E22288A8C100E89E42 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E177E12288A8C100E89E42 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,7 @@
 		207063032288A28E00ADE876 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = SOURCE_ROOT; };
 		208C22ED228675B300F91C4F /* Rambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C22F0228675B300F91C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		208C22F2228675B300F91C4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		208C22F2228675B300F91C4F /* SelectATemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectATemplateViewController.swift; sourceTree = "<group>"; };
 		208C22F5228675B300F91C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		208C22F8228675B300F91C4F /* Rambo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rambo.xcdatamodel; sourceTree = "<group>"; };
 		208C22FA228675B400F91C4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +57,8 @@
 		208C230F228675B400F91C4F /* RamboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C2313228675B400F91C4F /* RamboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamboUITests.swift; sourceTree = "<group>"; };
 		208C2315228675B400F91C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20E177DF2288A7ED00E89E42 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		20E177E12288A8C100E89E42 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +112,9 @@
 				207063032288A28E00ADE876 /* Fonts */,
 				207063012288A28500ADE876 /* Layout Helper */,
 				208C22F0228675B300F91C4F /* AppDelegate.swift */,
-				208C22F2228675B300F91C4F /* ViewController.swift */,
+				208C22F2228675B300F91C4F /* SelectATemplateViewController.swift */,
+				20E177DF2288A7ED00E89E42 /* CoreDataHelper.swift */,
+				20E177E12288A8C100E89E42 /* Profile.swift */,
 				208C22F4228675B300F91C4F /* Main.storyboard */,
 				208C22FA228675B400F91C4F /* Assets.xcassets */,
 				207062FF2288A27100ADE876 /* SplashScreenViewController.swift */,
@@ -270,8 +276,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20E177E02288A7ED00E89E42 /* CoreDataHelper.swift in Sources */,
+				20E177E22288A8C100E89E42 /* Profile.swift in Sources */,
 				208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */,
-				208C22F3228675B300F91C4F /* ViewController.swift in Sources */,
+				208C22F3228675B300F91C4F /* SelectATemplateViewController.swift in Sources */,
 				207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */,
 				208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */,
 			);
