@@ -34,14 +34,25 @@ class OnBoardingViewController: UIViewController {
     }
     
     @IBAction func nextButton(_ sender: Any) {
-        buttonView.next()
         constant += 1
-        headerLabel.text = arrayOfHeaders[constant]
-        subHeaderLabel.text = arrayOfSubHeaders[constant]
-        if(constant == 3)
-        {
-            ContinueButton.setTitle("Build My Resume", for: .normal)
+        if(constant == 4){
+            NSLog("constant == 4")
+            
+                let vc = storyboard?.instantiateViewController(withIdentifier: "templateView")
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = vc
+ 
+            
+        } else {
+            buttonView.next()
+            headerLabel.text = arrayOfHeaders[constant]
+            subHeaderLabel.text = arrayOfSubHeaders[constant]
+            if(constant == 3)
+            {
+                ContinueButton.setTitle("Build My Resume", for: .normal)
+            }
         }
+        
     }
     
     
