@@ -46,7 +46,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eeN-qP-WIa" firstAttribute="top" secondItem="Eh6-8t-rbg" secondAttribute="top" constant="394" id="G7P-xi-nMD"/>
+                            <constraint firstItem="Eh6-8t-rbg" firstAttribute="bottom" secondItem="eeN-qP-WIa" secondAttribute="bottom" constant="403" id="G8o-QS-OIq"/>
                             <constraint firstItem="eeN-qP-WIa" firstAttribute="leading" secondItem="Eh6-8t-rbg" secondAttribute="leading" constant="186" id="GUP-Q8-3g5"/>
+                            <constraint firstItem="eeN-qP-WIa" firstAttribute="leading" secondItem="Eh6-8t-rbg" secondAttribute="leading" constant="186" id="Qte-Vg-Aw0"/>
+                            <constraint firstItem="eeN-qP-WIa" firstAttribute="top" secondItem="Eh6-8t-rbg" secondAttribute="top" constant="394" id="Zd6-5H-P6F"/>
+                            <constraint firstItem="Eh6-8t-rbg" firstAttribute="trailing" secondItem="eeN-qP-WIa" secondAttribute="trailing" constant="186" id="gkG-FL-YUE"/>
                             <constraint firstItem="Eh6-8t-rbg" firstAttribute="bottom" secondItem="eeN-qP-WIa" secondAttribute="bottom" constant="403" id="h5K-uD-GR5"/>
                             <constraint firstItem="Eh6-8t-rbg" firstAttribute="trailing" secondItem="eeN-qP-WIa" secondAttribute="trailing" constant="186" id="x2n-h9-aDU"/>
                         </constraints>

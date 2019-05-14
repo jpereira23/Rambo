@@ -17,6 +17,8 @@
 		208C2309228675B400F91C4F /* RamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2308228675B400F91C4F /* RamboTests.swift */; };
 		208C2314228675B400F91C4F /* RamboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2313228675B400F91C4F /* RamboUITests.swift */; };
 		E54A8DA4228A494D0030FB2F /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = E54A8DA1228A494C0030FB2F /* Icons */; };
+		E5BBC24A228A60C100D778C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */; };
+		E5BBC24D228A61DE00D778C6 /* worthy-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BBC24C228A61DE00D778C6 /* worthy-logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		E54A8DAA228A49770030FB2F /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
 		E54A8DAB228A49770030FB2F /* UIButtonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonHelper.swift; sourceTree = "<group>"; };
 		E54A8DAC228A49770030FB2F /* UILabelHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelHelper.swift; sourceTree = "<group>"; };
+		E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E5BBC24C228A61DE00D778C6 /* worthy-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "worthy-logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +114,11 @@
 			isa = PBXGroup;
 			children = (
 				208C22F0228675B300F91C4F /* AppDelegate.swift */,
+				E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */,
 				208C22F2228675B300F91C4F /* ViewController.swift */,
 				208C22F4228675B300F91C4F /* Main.storyboard */,
 				207062FF2288A27100ADE876 /* SplashScreenViewController.swift */,
+				E5BBC24C228A61DE00D778C6 /* worthy-logo.png */,
 				208C22FA228675B400F91C4F /* Assets.xcassets */,
 				208C22FF228675B400F91C4F /* Info.plist */,
 				208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */,
@@ -261,6 +267,8 @@
 				207063042288A28E00ADE876 /* Fonts in Resources */,
 				208C22FB228675B400F91C4F /* Assets.xcassets in Resources */,
 				208C22F6228675B300F91C4F /* Main.storyboard in Resources */,
+				E5BBC24D228A61DE00D778C6 /* worthy-logo.png in Resources */,
+				E5BBC24A228A60C100D778C6 /* LaunchScreen.storyboard in Resources */,
 				E54A8DA4228A494D0030FB2F /* Icons in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
