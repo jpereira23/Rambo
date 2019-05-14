@@ -12,6 +12,7 @@
 		2011B86F228B67C600067C1C /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B86E228B67C600067C1C /* OnBoardingViewController.swift */; };
 		2011B872228B68B100067C1C /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B871228B68B100067C1C /* OnBoardingView.swift */; };
 		2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2011B873228B68BE00067C1C /* OnBoardingView.xib */; };
+		2011B876228B8D2E00067C1C /* dream-job.png in Resources */ = {isa = PBXBuildFile; fileRef = 2011B875228B8D2D00067C1C /* dream-job.png */; };
 		207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207062FF2288A27100ADE876 /* SplashScreenViewController.swift */; };
 		207063042288A28E00ADE876 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 207063032288A28E00ADE876 /* Fonts */; };
 		208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F0228675B300F91C4F /* AppDelegate.swift */; };
@@ -49,6 +50,7 @@
 		2011B86E228B67C600067C1C /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		2011B871228B68B100067C1C /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		2011B873228B68BE00067C1C /* OnBoardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
+		2011B875228B8D2D00067C1C /* dream-job.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dream-job.png"; sourceTree = "<group>"; };
 		207062FF2288A27100ADE876 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		207063032288A28E00ADE876 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = SOURCE_ROOT; };
 		208C22ED228675B300F91C4F /* Rambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 				208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */,
 				E5BBC24C228A61DE00D778C6 /* worthy-logo.png */,
 				208C22FA228675B400F91C4F /* Assets.xcassets */,
+				2011B875228B8D2D00067C1C /* dream-job.png */,
 				E54A8DA6228A49770030FB2F /* Layout Helper */,
 				207063032288A28E00ADE876 /* Fonts */,
 				E54A8DA1228A494C0030FB2F /* Icons */,
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */,
+				2011B876228B8D2E00067C1C /* dream-job.png in Resources */,
 				207063042288A28E00ADE876 /* Fonts in Resources */,
 				208C22FB228675B400F91C4F /* Assets.xcassets in Resources */,
 				208C22F6228675B300F91C4F /* Main.storyboard in Resources */,

@@ -11,6 +11,7 @@ import UIKit
 class OnBoardingViewController: UIViewController {
     var headers: [String] = ["Welcome to Worthy", "Select a Template", "Add your Details", "Export and Apply to Jobs"]
     var subHeaders: [String] = ["Your convenient resume builder.", "Get started by choosing one of our job-worthy resume templates.", "Enter your unique qualifications through our simple prompts.", "Export your resume and kick start your job hunt more ready than before."]
+    var imageNames: [String] = ["welcome.png", "select-template.png", "add-details.png", "export.png"]
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -41,6 +42,7 @@ class OnBoardingViewController: UIViewController {
             let slide1: OnBoardingView = Bundle.main.loadNibNamed("OnBoardingView", owner: self, options: nil)?.first as! OnBoardingView
             slide1.title.text = headers[count]
             slide1.subHeader.text = subHeaders[count]
+            slide1.imageView.image = UIImage(named: imageNames[count])
             slides.append(slide1)
         }
         

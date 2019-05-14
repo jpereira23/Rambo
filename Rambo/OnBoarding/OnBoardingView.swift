@@ -12,6 +12,7 @@ class OnBoardingView: UIView {
     @IBOutlet weak var title: UITextView!
     @IBOutlet weak var subHeader: UITextView!
     
+    @IBOutlet weak var imageView: UIImageView!
     
     /*
     // Only override draw() if you perform custom drawing.
