@@ -21,7 +21,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="LQ2-H1-qA9" kind="presentation" id="RqT-mO-aWL"/>
+                        <segue destination="LQ2-H1-qA9" kind="presentation" identifier="goToLogin" id="RqT-mO-aWL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -36,15 +36,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeN-qP-WIa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeN-qP-WIa">
                                 <rect key="frame" x="186" y="438" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eeN-qP-WIa" firstAttribute="top" secondItem="Eh6-8t-rbg" secondAttribute="top" constant="394" id="G7P-xi-nMD"/>
+                            <constraint firstItem="eeN-qP-WIa" firstAttribute="leading" secondItem="Eh6-8t-rbg" secondAttribute="leading" constant="186" id="GUP-Q8-3g5"/>
+                            <constraint firstItem="Eh6-8t-rbg" firstAttribute="bottom" secondItem="eeN-qP-WIa" secondAttribute="bottom" constant="403" id="h5K-uD-GR5"/>
+                            <constraint firstItem="Eh6-8t-rbg" firstAttribute="trailing" secondItem="eeN-qP-WIa" secondAttribute="trailing" constant="186" id="x2n-h9-aDU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Eh6-8t-rbg"/>
                     </view>
                 </viewController>

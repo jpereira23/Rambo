@@ -8,16 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207062FF2288A27100ADE876 /* SplashScreenViewController.swift */; };
-		207063022288A28500ADE876 /* Layout Helper in Resources */ = {isa = PBXBuildFile; fileRef = 207063012288A28500ADE876 /* Layout Helper */; };
 		207063042288A28E00ADE876 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 207063032288A28E00ADE876 /* Fonts */; };
 		208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F0228675B300F91C4F /* AppDelegate.swift */; };
 		208C22F3228675B300F91C4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F2228675B300F91C4F /* ViewController.swift */; };
 		208C22F6228675B300F91C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208C22F4228675B300F91C4F /* Main.storyboard */; };
 		208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */; };
 		208C22FB228675B400F91C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208C22FA228675B400F91C4F /* Assets.xcassets */; };
-		208C22FE228675B400F91C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208C22FC228675B400F91C4F /* LaunchScreen.storyboard */; };
 		208C2309228675B400F91C4F /* RamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2308228675B400F91C4F /* RamboTests.swift */; };
 		208C2314228675B400F91C4F /* RamboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2313228675B400F91C4F /* RamboUITests.swift */; };
+		E54A8DA4228A494D0030FB2F /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = E54A8DA1228A494C0030FB2F /* Icons */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		207062FF2288A27100ADE876 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
-		207063012288A28500ADE876 /* Layout Helper */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Layout Helper"; sourceTree = SOURCE_ROOT; };
 		207063032288A28E00ADE876 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = SOURCE_ROOT; };
 		208C22ED228675B300F91C4F /* Rambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C22F0228675B300F91C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +45,6 @@
 		208C22F5228675B300F91C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		208C22F8228675B300F91C4F /* Rambo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rambo.xcdatamodel; sourceTree = "<group>"; };
 		208C22FA228675B400F91C4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		208C22FD228675B400F91C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		208C22FF228675B400F91C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		208C2304228675B400F91C4F /* RamboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C2308228675B400F91C4F /* RamboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamboTests.swift; sourceTree = "<group>"; };
@@ -55,6 +52,13 @@
 		208C230F228675B400F91C4F /* RamboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C2313228675B400F91C4F /* RamboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamboUITests.swift; sourceTree = "<group>"; };
 		208C2315228675B400F91C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E54A8DA1228A494C0030FB2F /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
+		E54A8DA7228A49770030FB2F /* UITextFieldHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldHelper.swift; sourceTree = "<group>"; };
+		E54A8DA8228A49770030FB2F /* UITextViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewHelper.swift; sourceTree = "<group>"; };
+		E54A8DA9228A49770030FB2F /* NSLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutHelper.swift; sourceTree = "<group>"; };
+		E54A8DAA228A49770030FB2F /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
+		E54A8DAB228A49770030FB2F /* UIButtonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonHelper.swift; sourceTree = "<group>"; };
+		E54A8DAC228A49770030FB2F /* UILabelHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,16 +109,16 @@
 		208C22EF228675B300F91C4F /* Rambo */ = {
 			isa = PBXGroup;
 			children = (
-				207063032288A28E00ADE876 /* Fonts */,
-				207063012288A28500ADE876 /* Layout Helper */,
 				208C22F0228675B300F91C4F /* AppDelegate.swift */,
 				208C22F2228675B300F91C4F /* ViewController.swift */,
 				208C22F4228675B300F91C4F /* Main.storyboard */,
-				208C22FA228675B400F91C4F /* Assets.xcassets */,
 				207062FF2288A27100ADE876 /* SplashScreenViewController.swift */,
-				208C22FC228675B400F91C4F /* LaunchScreen.storyboard */,
+				208C22FA228675B400F91C4F /* Assets.xcassets */,
 				208C22FF228675B400F91C4F /* Info.plist */,
 				208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */,
+				E54A8DA6228A49770030FB2F /* Layout Helper */,
+				207063032288A28E00ADE876 /* Fonts */,
+				E54A8DA1228A494C0030FB2F /* Icons */,
 			);
 			path = Rambo;
 			sourceTree = "<group>";
@@ -135,6 +139,19 @@
 				208C2315228675B400F91C4F /* Info.plist */,
 			);
 			path = RamboUITests;
+			sourceTree = "<group>";
+		};
+		E54A8DA6228A49770030FB2F /* Layout Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E54A8DA7228A49770030FB2F /* UITextFieldHelper.swift */,
+				E54A8DA8228A49770030FB2F /* UITextViewHelper.swift */,
+				E54A8DA9228A49770030FB2F /* NSLayoutHelper.swift */,
+				E54A8DAA228A49770030FB2F /* DeviceHelper.swift */,
+				E54A8DAB228A49770030FB2F /* UIButtonHelper.swift */,
+				E54A8DAC228A49770030FB2F /* UILabelHelper.swift */,
+			);
+			path = "Layout Helper";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,10 +259,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				207063042288A28E00ADE876 /* Fonts in Resources */,
-				208C22FE228675B400F91C4F /* LaunchScreen.storyboard in Resources */,
 				208C22FB228675B400F91C4F /* Assets.xcassets in Resources */,
 				208C22F6228675B300F91C4F /* Main.storyboard in Resources */,
-				207063022288A28500ADE876 /* Layout Helper in Resources */,
+				E54A8DA4228A494D0030FB2F /* Icons in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,14 +331,6 @@
 				208C22F5228675B300F91C4F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		208C22FC228675B400F91C4F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				208C22FD228675B400F91C4F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
