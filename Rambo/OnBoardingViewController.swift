@@ -9,11 +9,54 @@
 import UIKit
 
 class OnBoardingViewController: UIViewController {
-
+    var headers: [String] = ["Welcome to Worthy", "Select a Template", "Add your Details", "Export and Apply to Jobs"]
+    var subHeaders: [String] = ["Your convenient resume builder.", "Get started by choosing one of our job-worthy resume templates.", "Enter your unique qualifications through our simple prompts.", "Export your resume and kick start your job hunt more ready than before."]
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    
+    var aSlides: [OnBoardingView] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        aSlides = createSlides()
+        
+        setUpScrollView(slides: aSlides)
+        pageControl.numberOfPages = aSlides.count
+        pageControl.currentPage = 0
+        pageControl.pageIndicatorTintColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
+        pageControl.currentPageIndicatorTintColor = UIColor(red: 12.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
 
+    
+        
+        
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func createSlides() -> [OnBoardingView]{
+        var slides: [OnBoardingView] = []
+        
+        for count in 0...3{
+            let slide1: OnBoardingView = Bundle.main.loadNibNamed("OnBoardingView", owner: self, options: nil)?.first as! OnBoardingView
+            slide1.title.text = headers[count]
+            slide1.subHeader.text = subHeaders[count]
+            slides.append(slide1)
+        }
+        
+        return slides
+    }
+    
+    func setUpScrollView(slides: [OnBoardingView]){
+        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
+        scrollView.isPagingEnabled = true
+        
+        
+        for i in 0..<slides.count{
+            slides[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
+            scrollView.addSubview(slides[i])
+        }
     }
     
 

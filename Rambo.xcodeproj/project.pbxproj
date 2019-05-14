@@ -10,6 +10,8 @@
 		2011B86B228B642300067C1C /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B86A228B642300067C1C /* CoreDataHelper.swift */; };
 		2011B86D228B64FF00067C1C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B86C228B64FF00067C1C /* User.swift */; };
 		2011B86F228B67C600067C1C /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B86E228B67C600067C1C /* OnBoardingViewController.swift */; };
+		2011B872228B68B100067C1C /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B871228B68B100067C1C /* OnBoardingView.swift */; };
+		2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2011B873228B68BE00067C1C /* OnBoardingView.xib */; };
 		207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207062FF2288A27100ADE876 /* SplashScreenViewController.swift */; };
 		207063042288A28E00ADE876 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 207063032288A28E00ADE876 /* Fonts */; };
 		208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F0228675B300F91C4F /* AppDelegate.swift */; };
@@ -45,6 +47,8 @@
 		2011B86A228B642300067C1C /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		2011B86C228B64FF00067C1C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2011B86E228B67C600067C1C /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		2011B871228B68B100067C1C /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		2011B873228B68BE00067C1C /* OnBoardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
 		207062FF2288A27100ADE876 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		207063032288A28E00ADE876 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = SOURCE_ROOT; };
 		208C22ED228675B300F91C4F /* Rambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +109,15 @@
 			path = "Account Stuff";
 			sourceTree = "<group>";
 		};
+		2011B870228B688C00067C1C /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				2011B871228B68B100067C1C /* OnBoardingView.swift */,
+				2011B873228B68BE00067C1C /* OnBoardingView.xib */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
 		208C22E4228675B300F91C4F = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +141,7 @@
 		208C22EF228675B300F91C4F /* Rambo */ = {
 			isa = PBXGroup;
 			children = (
+				2011B870228B688C00067C1C /* OnBoarding */,
 				2011B869228B640900067C1C /* Account Stuff */,
 				208C22F4228675B300F91C4F /* Main.storyboard */,
 				E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */,
@@ -281,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */,
 				207063042288A28E00ADE876 /* Fonts in Resources */,
 				208C22FB228675B400F91C4F /* Assets.xcassets in Resources */,
 				208C22F6228675B300F91C4F /* Main.storyboard in Resources */,
@@ -316,6 +331,7 @@
 				2011B86F228B67C600067C1C /* OnBoardingViewController.swift in Sources */,
 				2011B86D228B64FF00067C1C /* User.swift in Sources */,
 				208C22F3228675B300F91C4F /* SelectATemplateViewController.swift in Sources */,
+				2011B872228B68B100067C1C /* OnBoardingView.swift in Sources */,
 				207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */,
 				208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */,
 			);
