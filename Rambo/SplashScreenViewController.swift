@@ -52,7 +52,7 @@ class SplashScreenViewController: UIViewController {
             })
             
             //4th
-            UIView.addKeyframe(withRelativeStartTime: 0.8, relativeDuration: 0.33, animations: {
+            UIView.addKeyframe(withRelativeStartTime: 0.7, relativeDuration: 0.33, animations: {
                 self.worthyLogoImgView!.bounds = CGRect(x: self.view.frame.size.width / 2, y: self.view.frame.height / 2, width: 4000, height: 4000)
                 
             })
