@@ -11,7 +11,6 @@ import UIKit
 class OnBoardingView: UIView {
     @IBOutlet weak var title: UITextView!
     @IBOutlet weak var subHeader: UITextView!
-    
     @IBOutlet weak var imageView: UIImageView!
     
     /*

@@ -10,10 +10,11 @@ import UIKit
 
 class OnBoardingViewController: UIViewController {
     var headers: [String] = ["Welcome to Worthy", "Select a Template", "Add your Details", "Export and Apply to Jobs"]
-    var subHeaders: [String] = ["Your convenient resume builder.", "Get started by choosing one of our job-worthy resume templates.", "Enter your unique qualifications through our simple prompts.", "Export your resume and kick start your job hunt more ready than before."]
+    var subHeaders: [String] = ["Your convenient resume builder.", "Get started by choosing one of our \n job-worthy resume templates.", "Enter your unique qualifications through \nour simple prompts.", "Export your resume and kick start your job \nhunt more ready than before."]
     var imageNames: [String] = ["welcome.png", "select-template.png", "add-details.png", "export.png"]
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet var buildResume: UIButton!
     
     
     var aSlides: [OnBoardingView] = []
@@ -27,9 +28,8 @@ class OnBoardingViewController: UIViewController {
         pageControl.currentPage = 0
         pageControl.pageIndicatorTintColor = UIColor(red: 0.0/255.0, green: 0.0/255.0, blue: 0.0/255.0, alpha: 1.0)
         pageControl.currentPageIndicatorTintColor = UIColor(red: 12.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
-
-    
         
+        buildResume.layer.cornerRadius = 5
         
         
         // Do any additional setup after loading the view.
