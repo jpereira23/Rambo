@@ -12,6 +12,9 @@
 		2011B86F228B67C600067C1C /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B86E228B67C600067C1C /* OnBoardingViewController.swift */; };
 		2011B872228B68B100067C1C /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B871228B68B100067C1C /* OnBoardingView.swift */; };
 		2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2011B873228B68BE00067C1C /* OnBoardingView.xib */; };
+		202606B9228DD59F0017BDCD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202606B8228DD59F0017BDCD /* SignUpViewController.swift */; };
+		202606BD228DDF370017BDCD /* AccountKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202606BC228DDF370017BDCD /* AccountKit.swift */; };
+		202606C1228DE0950017BDCD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202606C0228DE0950017BDCD /* CloudKit.framework */; };
 		207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207062FF2288A27100ADE876 /* SplashScreenViewController.swift */; };
 		208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F0228675B300F91C4F /* AppDelegate.swift */; };
 		208C22F3228675B300F91C4F /* SelectATemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F2228675B300F91C4F /* SelectATemplateViewController.swift */; };
@@ -57,6 +60,10 @@
 		2011B86E228B67C600067C1C /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		2011B871228B68B100067C1C /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		2011B873228B68BE00067C1C /* OnBoardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
+		202606B8228DD59F0017BDCD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		202606BC228DDF370017BDCD /* AccountKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountKit.swift; sourceTree = "<group>"; };
+		202606BE228DE08C0017BDCD /* Rambo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rambo.entitlements; sourceTree = "<group>"; };
+		202606C0228DE0950017BDCD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		207062FF2288A27100ADE876 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		208C22ED228675B300F91C4F /* Rambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C22F0228675B300F91C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202606C1228DE0950017BDCD /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +123,7 @@
 			children = (
 				2011B86A228B642300067C1C /* CoreDataHelper.swift */,
 				2011B86C228B64FF00067C1C /* User.swift */,
+				202606BC228DDF370017BDCD /* AccountKit.swift */,
 			);
 			path = "Account Stuff";
 			sourceTree = "<group>";
@@ -128,6 +137,14 @@
 			path = OnBoarding;
 			sourceTree = "<group>";
 		};
+		202606BF228DE0950017BDCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				202606C0228DE0950017BDCD /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		208C22E4228675B300F91C4F = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +152,7 @@
 				208C2307228675B400F91C4F /* RamboTests */,
 				208C2312228675B400F91C4F /* RamboUITests */,
 				208C22EE228675B300F91C4F /* Products */,
+				202606BF228DE0950017BDCD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +169,7 @@
 		208C22EF228675B300F91C4F /* Rambo */ = {
 			isa = PBXGroup;
 			children = (
+				202606BE228DE08C0017BDCD /* Rambo.entitlements */,
 				2011B870228B688C00067C1C /* OnBoarding */,
 				2011B869228B640900067C1C /* Account Stuff */,
 				208C22F4228675B300F91C4F /* Main.storyboard */,
@@ -168,6 +187,7 @@
 				E5B78522228BA9CE0089BC59 /* NotoSansJP-Medium.otf */,
 				E54A8DA6228A49770030FB2F /* Layout Helper */,
 				E54A8DA1228A494C0030FB2F /* Icons */,
+				202606B8228DD59F0017BDCD /* SignUpViewController.swift */,
 			);
 			path = Rambo;
 			sourceTree = "<group>";
@@ -271,6 +291,14 @@
 				TargetAttributes = {
 					208C22EC228675B300F91C4F = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					208C2303228675B400F91C4F = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -340,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				202606BD228DDF370017BDCD /* AccountKit.swift in Sources */,
 				E5B7852A228BB5690089BC59 /* UIButtonHelper.swift in Sources */,
 				2011B86B228B642300067C1C /* CoreDataHelper.swift in Sources */,
 				E5B78529228BB5690089BC59 /* DeviceHelper.swift in Sources */,
@@ -349,6 +378,7 @@
 				2011B86F228B67C600067C1C /* OnBoardingViewController.swift in Sources */,
 				2011B86D228B64FF00067C1C /* User.swift in Sources */,
 				E5B78526228BB5690089BC59 /* UITextFieldHelper.swift in Sources */,
+				202606B9228DD59F0017BDCD /* SignUpViewController.swift in Sources */,
 				208C22F3228675B300F91C4F /* SelectATemplateViewController.swift in Sources */,
 				2011B872228B68B100067C1C /* OnBoardingView.swift in Sources */,
 				207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */,
@@ -520,6 +550,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Rambo/Rambo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BEPL73VPNG;
 				INFOPLIST_FILE = Rambo/Info.plist;
@@ -527,7 +558,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jeff.GOODLIFE.Rambo;
+				PRODUCT_BUNDLE_IDENTIFIER = Jeff.GOODLIFE.Worthy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -538,6 +569,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Rambo/Rambo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BEPL73VPNG;
 				INFOPLIST_FILE = Rambo/Info.plist;
@@ -545,7 +577,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = jeff.GOODLIFE.Rambo;
+				PRODUCT_BUNDLE_IDENTIFIER = Jeff.GOODLIFE.Worthy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
