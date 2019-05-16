@@ -14,27 +14,22 @@ class SelectATemplateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
+        coreDataHelper.resetCoreData()
+        NSLog("No Polka")
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore  {
             print("Not first launch.")
         } else {
-        */
+ 
             let vc = storyboard?.instantiateViewController(withIdentifier: "onBoarding")
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             appDelegate.window?.rootViewController = vc
             print("First launch, setting UserDefault.")
-            //UserDefaults.standard.set(true, forKey: "launchedBefore")
-        //}
-        /*
-        if aChange == false || coreDataHelper.loadProfile() != nil {
-            
-        } else {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "onBoarding")
-            let appDelegate = UIApplication.shared.delegate as! AppDelegate
-            appDelegate.window?.rootViewController = vc
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
         }
-         */
+ 
+        
+        
         // Do any additional setup after loading the view.
     }
 
