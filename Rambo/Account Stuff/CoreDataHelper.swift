@@ -25,9 +25,8 @@ class CoreDataHelper{
     public func saveProfile(user: User){
         let theProfile = NSManagedObject(entity: self.profileEntity!, insertInto: self.managedContext)
         
-        theProfile.setValue(user.username, forKeyPath: "username")
-        theProfile.setValue(user.password, forKeyPath: "password")
         theProfile.setValue(user.email, forKeyPath: "email")
+        theProfile.setValue(user.password, forKeyPath: "password")
         
         do{
             try self.managedContext.save()
@@ -51,15 +50,26 @@ class CoreDataHelper{
         }
         
         if(managedObjects.count > 0){
-            let theUsername = (managedObjects[0].value(forKeyPath: "username") as! String)
             let theEmail = (managedObjects[0].value(forKeyPath: "email") as! String)
             let thePassword = (managedObjects[0].value(forKeyPath: "password") as! String)
             
-            tempUser = User(aUsername: theUsername, aPassword: thePassword, aEmail: theEmail)
+            tempUser = User(aPassword: thePassword, aEmail: theEmail)
             
             return tempUser
         }
         
         return nil
+    }
+    
+    public func resetCoreData()
+    {
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Profile")
+        let request = NSBatchDeleteRequest(fetchRequest: fetch)
+        
+        do {
+            _ = try self.managedContext.execute(request)
+        } catch let error as NSError {
+            print("Could not save. \(error). \(error.userInfo)")
+        }
     }
 }

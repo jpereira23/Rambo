@@ -9,7 +9,6 @@
 import UIKit
 
 class User: NSObject{
-    var username: String = ""
     var email: String = ""
     var password: String = ""
     
@@ -17,8 +16,7 @@ class User: NSObject{
         super.init()
     }
     
-    init(aUsername: String, aPassword: String, aEmail: String){
-        username = aUsername
+    init(aPassword: String, aEmail: String){
         password = aPassword
         email = aEmail
     }

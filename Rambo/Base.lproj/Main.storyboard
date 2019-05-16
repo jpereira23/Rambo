@@ -123,7 +123,7 @@
         <!--Sign Up View Controller-->
         <scene sceneID="mu3-c0-9e5">
             <objects>
-                <viewController id="ggu-qb-d6m" customClass="SignUpViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ggu-qb-d6m" customClass="SignUpViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qO3-M8-WA1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -230,7 +230,6 @@
                                 <state key="normal" title="Submit Resume"/>
                                 <connections>
                                     <action selector="submitResume:" destination="LQ2-H1-qA9" eventType="touchUpInside" id="uyY-6H-euC"/>
-                                    <segue destination="ggu-qb-d6m" kind="presentation" id="tF1-o9-gx3"/>
                                 </connections>
                             </button>
                         </subviews>

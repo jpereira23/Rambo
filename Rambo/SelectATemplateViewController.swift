@@ -38,7 +38,10 @@ class SelectATemplateViewController: UIViewController {
     }
 
     @IBAction func submitResume(_ sender: Any) {
-        
+        if coreDataHelper.loadProfile() == nil{
+            let vc = storyboard?.instantiateViewController(withIdentifier: "SignUp")
+            self.present(vc!, animated: false, completion:   nil)
+        }
     }
     
 }
