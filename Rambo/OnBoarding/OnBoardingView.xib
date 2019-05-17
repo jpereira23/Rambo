@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OnBoardingView" customModule="Rambo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="459" height="580"/>
+            <rect key="frame" x="0.0" y="0.0" width="354" height="429"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Mb-pl-TFv">
@@ -34,7 +34,7 @@
                                         <fragment content="Some Sub Header">
                                             <attributes>
                                                 <color key="NSColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="18" name="NotoSansJP-Bold"/>
+                                                <font key="NSFont" metaFont="system" size="18"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -52,7 +52,7 @@
                                         <fragment content="Some Sub Header">
                                             <attributes>
                                                 <color key="NSColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="0.5" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="16" name="NotoSansJP-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="16"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
