@@ -91,6 +91,9 @@
                                     <constraint firstAttribute="width" constant="354" id="0cE-19-da5"/>
                                     <constraint firstAttribute="height" constant="429" id="DuE-no-1nA"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="uto-zT-MCG" id="Wua-u9-ZGf"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
