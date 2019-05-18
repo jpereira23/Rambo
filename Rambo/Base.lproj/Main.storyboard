@@ -251,10 +251,24 @@
                                     <action selector="submitResume:" destination="LQ2-H1-qA9" eventType="touchUpInside" id="uyY-6H-euC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQb-G6-Atb">
+                                <rect key="frame" x="0.0" y="252" width="414" height="429"/>
+                                <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Onboarding">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uto-zT-MCG" kind="show" id="xCB-W8-XLr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FCm-tr-Myh" firstAttribute="top" secondItem="Eh6-8t-rbg" secondAttribute="top" constant="709" id="Ewe-9c-JXc"/>
+                            <constraint firstItem="uQb-G6-Atb" firstAttribute="leading" secondItem="t9Z-Nl-vQQ" secondAttribute="leading" id="JkU-mK-bWS"/>
+                            <constraint firstItem="uQb-G6-Atb" firstAttribute="centerX" secondItem="FCm-tr-Myh" secondAttribute="centerX" id="Ly1-cm-lZz"/>
+                            <constraint firstItem="uQb-G6-Atb" firstAttribute="top" secondItem="Eh6-8t-rbg" secondAttribute="top" constant="208" id="XdM-qi-8zF"/>
+                            <constraint firstItem="FCm-tr-Myh" firstAttribute="top" secondItem="uQb-G6-Atb" secondAttribute="bottom" constant="72" id="ckP-XK-f2F"/>
                             <constraint firstItem="FCm-tr-Myh" firstAttribute="centerX" secondItem="t9Z-Nl-vQQ" secondAttribute="centerX" id="zPH-fc-rm0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Eh6-8t-rbg"/>
