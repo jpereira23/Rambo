@@ -15,6 +15,7 @@
 		202606B9228DD59F0017BDCD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202606B8228DD59F0017BDCD /* SignUpViewController.swift */; };
 		202606BD228DDF370017BDCD /* AccountKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202606BC228DDF370017BDCD /* AccountKit.swift */; };
 		202606C1228DE0950017BDCD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202606C0228DE0950017BDCD /* CloudKit.framework */; };
+		2042B174229070E500DEAD80 /* sample_two.html in Resources */ = {isa = PBXBuildFile; fileRef = 2042B173229070E500DEAD80 /* sample_two.html */; };
 		207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207062FF2288A27100ADE876 /* SplashScreenViewController.swift */; };
 		208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F0228675B300F91C4F /* AppDelegate.swift */; };
 		208C22F3228675B300F91C4F /* SelectATemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F2228675B300F91C4F /* SelectATemplateViewController.swift */; };
@@ -29,7 +30,6 @@
 		20B63A5C2290647900EA1814 /* TemplateWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63A5B2290647900EA1814 /* TemplateWeb.swift */; };
 		20B63A5E2290652200EA1814 /* sample_one.html in Resources */ = {isa = PBXBuildFile; fileRef = 20B63A5D2290652200EA1814 /* sample_one.html */; };
 		20B63A60229066E700EA1814 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B63A5F229066E700EA1814 /* WebKit.framework */; };
-		20B63A62229069DB00EA1814 /* sample_two.html in Resources */ = {isa = PBXBuildFile; fileRef = 20B63A61229069DB00EA1814 /* sample_two.html */; };
 		20C2C1FB228E5E1000E3B0D7 /* SelectTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C2C1FA228E5E1000E3B0D7 /* SelectTemplate.xib */; };
 		20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C1FC228E5E6000E3B0D7 /* SelectTemplate.swift */; };
 		E54A8DA4228A494D0030FB2F /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = E54A8DA1228A494C0030FB2F /* Icons */; };
@@ -73,6 +73,7 @@
 		202606BC228DDF370017BDCD /* AccountKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountKit.swift; sourceTree = "<group>"; };
 		202606BE228DE08C0017BDCD /* Rambo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rambo.entitlements; sourceTree = "<group>"; };
 		202606C0228DE0950017BDCD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		2042B173229070E500DEAD80 /* sample_two.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample_two.html; sourceTree = "<group>"; };
 		207062FF2288A27100ADE876 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		208C22ED228675B300F91C4F /* Rambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C22F0228675B300F91C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,7 +94,6 @@
 		20B63A5B2290647900EA1814 /* TemplateWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateWeb.swift; sourceTree = "<group>"; };
 		20B63A5D2290652200EA1814 /* sample_one.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample_one.html; sourceTree = "<group>"; };
 		20B63A5F229066E700EA1814 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		20B63A61229069DB00EA1814 /* sample_two.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = sample_two.html; path = ../../templates/sample_two.html; sourceTree = "<group>"; };
 		20C2C1FA228E5E1000E3B0D7 /* SelectTemplate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectTemplate.xib; sourceTree = "<group>"; };
 		20C2C1FC228E5E6000E3B0D7 /* SelectTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTemplate.swift; sourceTree = "<group>"; };
 		E54A8DA1228A494C0030FB2F /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		208C22EF228675B300F91C4F /* Rambo */ = {
 			isa = PBXGroup;
 			children = (
-				20B63A61229069DB00EA1814 /* sample_two.html */,
+				2042B173229070E500DEAD80 /* sample_two.html */,
 				20B63A5D2290652200EA1814 /* sample_one.html */,
 				20C2C1F9228E5DB000E3B0D7 /* Resume Flow */,
 				202606BE228DE08C0017BDCD /* Rambo.entitlements */,
@@ -376,7 +376,7 @@
 				208C22FB228675B400F91C4F /* Assets.xcassets in Resources */,
 				208C22F6228675B300F91C4F /* Main.storyboard in Resources */,
 				E5BBC24D228A61DE00D778C6 /* worthy-logo.png in Resources */,
-				20B63A62229069DB00EA1814 /* sample_two.html in Resources */,
+				2042B174229070E500DEAD80 /* sample_two.html in Resources */,
 				E5B78521228BA9720089BC59 /* NotoSansJP-Regular.otf in Resources */,
 				20B63A56229062AC00EA1814 /* TemplateScroll.xib in Resources */,
 				20B63A5E2290652200EA1814 /* sample_one.html in Resources */,
