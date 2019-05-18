@@ -74,6 +74,7 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage = Int(pageIndex)
         
         /*
+         Hi Jeff
         
         let maximumHorizontalOffset: CGFloat = scrollView.contentSize.width - scrollView.frame.width
         let currentHorizontalOffset: CGFloat = scrollView.contentOffset.x
