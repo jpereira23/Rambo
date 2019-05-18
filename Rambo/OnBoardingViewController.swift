@@ -32,6 +32,7 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPageIndicatorTintColor = UIColor(red: 12.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
         
         buildResume.layer.cornerRadius = 5
+        //need to check if the line aove actually works.
         
         
         // Do any additional setup after loading the view.
