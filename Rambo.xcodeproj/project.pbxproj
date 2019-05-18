@@ -23,6 +23,15 @@
 		208C22FB228675B400F91C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208C22FA228675B400F91C4F /* Assets.xcassets */; };
 		208C2309228675B400F91C4F /* RamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2308228675B400F91C4F /* RamboTests.swift */; };
 		208C2314228675B400F91C4F /* RamboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2313228675B400F91C4F /* RamboUITests.swift */; };
+		20B63A56229062AC00EA1814 /* TemplateScroll.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B63A55229062AC00EA1814 /* TemplateScroll.xib */; };
+		20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63A57229062B800EA1814 /* TemplateScroll.swift */; };
+		20B63A5A2290646B00EA1814 /* TemplateWeb.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B63A592290646B00EA1814 /* TemplateWeb.xib */; };
+		20B63A5C2290647900EA1814 /* TemplateWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63A5B2290647900EA1814 /* TemplateWeb.swift */; };
+		20B63A5E2290652200EA1814 /* sample_one.html in Resources */ = {isa = PBXBuildFile; fileRef = 20B63A5D2290652200EA1814 /* sample_one.html */; };
+		20B63A60229066E700EA1814 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B63A5F229066E700EA1814 /* WebKit.framework */; };
+		20B63A62229069DB00EA1814 /* sample_two.html in Resources */ = {isa = PBXBuildFile; fileRef = 20B63A61229069DB00EA1814 /* sample_two.html */; };
+		20C2C1FB228E5E1000E3B0D7 /* SelectTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C2C1FA228E5E1000E3B0D7 /* SelectTemplate.xib */; };
+		20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C1FC228E5E6000E3B0D7 /* SelectTemplate.swift */; };
 		E54A8DA4228A494D0030FB2F /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = E54A8DA1228A494C0030FB2F /* Icons */; };
 		E5B78520228BA96E0089BC59 /* NotoSansJP-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B7851E228BA9560089BC59 /* NotoSansJP-Bold.otf */; };
 		E5B78521228BA9720089BC59 /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B7851F228BA9560089BC59 /* NotoSansJP-Regular.otf */; };
@@ -78,6 +87,15 @@
 		208C230F228675B400F91C4F /* RamboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C2313228675B400F91C4F /* RamboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamboUITests.swift; sourceTree = "<group>"; };
 		208C2315228675B400F91C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20B63A55229062AC00EA1814 /* TemplateScroll.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateScroll.xib; sourceTree = "<group>"; };
+		20B63A57229062B800EA1814 /* TemplateScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateScroll.swift; sourceTree = "<group>"; };
+		20B63A592290646B00EA1814 /* TemplateWeb.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateWeb.xib; sourceTree = "<group>"; };
+		20B63A5B2290647900EA1814 /* TemplateWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateWeb.swift; sourceTree = "<group>"; };
+		20B63A5D2290652200EA1814 /* sample_one.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample_one.html; sourceTree = "<group>"; };
+		20B63A5F229066E700EA1814 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		20B63A61229069DB00EA1814 /* sample_two.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = sample_two.html; path = ../../templates/sample_two.html; sourceTree = "<group>"; };
+		20C2C1FA228E5E1000E3B0D7 /* SelectTemplate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectTemplate.xib; sourceTree = "<group>"; };
+		20C2C1FC228E5E6000E3B0D7 /* SelectTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTemplate.swift; sourceTree = "<group>"; };
 		E54A8DA1228A494C0030FB2F /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
 		E54A8DA7228A49770030FB2F /* UITextFieldHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldHelper.swift; sourceTree = "<group>"; };
 		E54A8DA8228A49770030FB2F /* UITextViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewHelper.swift; sourceTree = "<group>"; };
@@ -97,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20B63A60229066E700EA1814 /* WebKit.framework in Frameworks */,
 				202606C1228DE0950017BDCD /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +159,7 @@
 		202606BF228DE0950017BDCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				20B63A5F229066E700EA1814 /* WebKit.framework */,
 				202606C0228DE0950017BDCD /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -169,6 +189,9 @@
 		208C22EF228675B300F91C4F /* Rambo */ = {
 			isa = PBXGroup;
 			children = (
+				20B63A61229069DB00EA1814 /* sample_two.html */,
+				20B63A5D2290652200EA1814 /* sample_one.html */,
+				20C2C1F9228E5DB000E3B0D7 /* Resume Flow */,
 				202606BE228DE08C0017BDCD /* Rambo.entitlements */,
 				2011B870228B688C00067C1C /* OnBoarding */,
 				2011B869228B640900067C1C /* Account Stuff */,
@@ -208,6 +231,19 @@
 				208C2315228675B400F91C4F /* Info.plist */,
 			);
 			path = RamboUITests;
+			sourceTree = "<group>";
+		};
+		20C2C1F9228E5DB000E3B0D7 /* Resume Flow */ = {
+			isa = PBXGroup;
+			children = (
+				20C2C1FA228E5E1000E3B0D7 /* SelectTemplate.xib */,
+				20C2C1FC228E5E6000E3B0D7 /* SelectTemplate.swift */,
+				20B63A55229062AC00EA1814 /* TemplateScroll.xib */,
+				20B63A57229062B800EA1814 /* TemplateScroll.swift */,
+				20B63A592290646B00EA1814 /* TemplateWeb.xib */,
+				20B63A5B2290647900EA1814 /* TemplateWeb.swift */,
+			);
+			path = "Resume Flow";
 			sourceTree = "<group>";
 		};
 		E54A8DA6228A49770030FB2F /* Layout Helper */ = {
@@ -336,13 +372,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */,
+				20C2C1FB228E5E1000E3B0D7 /* SelectTemplate.xib in Resources */,
 				208C22FB228675B400F91C4F /* Assets.xcassets in Resources */,
 				208C22F6228675B300F91C4F /* Main.storyboard in Resources */,
 				E5BBC24D228A61DE00D778C6 /* worthy-logo.png in Resources */,
+				20B63A62229069DB00EA1814 /* sample_two.html in Resources */,
 				E5B78521228BA9720089BC59 /* NotoSansJP-Regular.otf in Resources */,
+				20B63A56229062AC00EA1814 /* TemplateScroll.xib in Resources */,
+				20B63A5E2290652200EA1814 /* sample_one.html in Resources */,
 				E5BBC24A228A60C100D778C6 /* LaunchScreen.storyboard in Resources */,
 				E5B78523228BA9CE0089BC59 /* NotoSansJP-Medium.otf in Resources */,
 				E54A8DA4228A494D0030FB2F /* Icons in Resources */,
+				20B63A5A2290646B00EA1814 /* TemplateWeb.xib in Resources */,
 				E5B78520228BA96E0089BC59 /* NotoSansJP-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,8 +413,11 @@
 				E5B7852A228BB5690089BC59 /* UIButtonHelper.swift in Sources */,
 				2011B86B228B642300067C1C /* CoreDataHelper.swift in Sources */,
 				E5B78529228BB5690089BC59 /* DeviceHelper.swift in Sources */,
+				20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */,
 				E5B78527228BB5690089BC59 /* UITextViewHelper.swift in Sources */,
 				208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */,
+				20B63A5C2290647900EA1814 /* TemplateWeb.swift in Sources */,
+				20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */,
 				E5B78528228BB5690089BC59 /* NSLayoutHelper.swift in Sources */,
 				2011B86F228B67C600067C1C /* OnBoardingViewController.swift in Sources */,
 				2011B86D228B64FF00067C1C /* User.swift in Sources */,
