@@ -18,7 +18,7 @@ class TemplateScroll: UIView {
         templateScrollView.contentSize = CGSize(width: 414 * CGFloat(templates.count), height: 446)
         
         for i in 0..<templates.count{
-            templates[i].frame = CGRect(x: 0, y: 0, width: 414 * CGFloat(i), height: 446)
+            templates[i].frame = CGRect(x: 414 * CGFloat(i), y: 0, width: 414 * CGFloat(i), height: 446)
             templateScrollView.addSubview(templates[i])
         }
     }
