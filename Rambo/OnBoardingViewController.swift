@@ -10,7 +10,7 @@ import UIKit
 
 class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
     var headers: [String] = ["Welcome to Worthy", "Select a Template", "Add your Details", "Export and Apply to Jobs"]
-    var subHeaders: [String] = ["Your convenient resume builder.", "Get started by choosing one of our \n job-worthy resume templates.", "Enter your unique qualifications through \nour simple prompts.", "Export your resume and kick start your job \nhunt more ready than before."]
+    var subHeaders: [String] = ["Your convenient resume builder.", "Get started by choosing one of our job-worthy resume templates.", "Enter your unique qualifications through our simple prompts.", "Export your resume and kick start your job hunt more ready than before."]
     var imageNames: [String] = ["welcome.png", "select-template.png", "add-details.png", "export.png"]
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
