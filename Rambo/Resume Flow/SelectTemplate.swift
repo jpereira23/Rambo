@@ -12,6 +12,7 @@ class SelectTemplate: UIView {
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var headerField: UILabel!
     @IBOutlet weak var subHeaderField: UILabel!
+    @IBOutlet weak var navView: NavFlow!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

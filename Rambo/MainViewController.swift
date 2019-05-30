@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //coreDataHelper.resetCoreData()
         tableView.reloadData()
         if let aProfile: User = coreDataHelper.loadProfile(){
             accountButton.setTitle("Sign Out", for: .normal)
@@ -33,9 +34,10 @@ class MainViewController: UIViewController {
     
     @IBAction func accountAction(_ sender: Any) {
         if isSignedIn{
-            
+            coreDataHelper.resetCoreData()
         } else {
-            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "signInView") as! SignInViewController
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
