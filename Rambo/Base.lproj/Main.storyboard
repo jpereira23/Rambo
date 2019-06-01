@@ -314,6 +314,14 @@
                                     <outlet property="delegate" destination="LQ2-H1-qA9" id="xYs-hK-5RG"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CI8-2L-MRh">
+                                <rect key="frame" x="137" y="95" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="fuck jeffffffff"/>
+                                <connections>
+                                    <segue destination="uto-zT-MCG" kind="show" id="rNi-Rn-Ril"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Eh6-8t-rbg"/>
