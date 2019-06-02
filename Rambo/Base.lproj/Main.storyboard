@@ -85,12 +85,8 @@
                                     <action selector="backToMain:" destination="uto-zT-MCG" eventType="touchUpInside" id="Hfw-Xy-HMH"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pT-BN-5MS">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pT-BN-5MS">
                                 <rect key="frame" x="30" y="145" width="354" height="429"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="354" id="0cE-19-da5"/>
-                                    <constraint firstAttribute="height" constant="429" id="DuE-no-1nA"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="uto-zT-MCG" id="Wua-u9-ZGf"/>
                                 </connections>
@@ -98,18 +94,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="9pT-BN-5MS" firstAttribute="top" secondItem="fuV-yJ-CN1" secondAttribute="top" priority="250" constant="101" id="7cY-A3-Yby"/>
                             <constraint firstItem="pnU-2Q-2ET" firstAttribute="leading" secondItem="fuV-yJ-CN1" secondAttribute="leading" constant="31" id="9bX-JD-bke"/>
-                            <constraint firstItem="5Zd-GR-9Ns" firstAttribute="top" secondItem="9pT-BN-5MS" secondAttribute="bottom" constant="60" id="P7z-sF-5JN"/>
+                            <constraint firstItem="fuV-yJ-CN1" firstAttribute="trailing" secondItem="9pT-BN-5MS" secondAttribute="trailing" constant="30" id="Kyk-ez-F2P"/>
                             <constraint firstItem="5Zd-GR-9Ns" firstAttribute="centerX" secondItem="p3l-tv-N0n" secondAttribute="centerX" id="Z0z-HB-xzP"/>
                             <constraint firstItem="fuV-yJ-CN1" firstAttribute="trailing" secondItem="p3l-tv-N0n" secondAttribute="trailing" constant="29" id="adA-0b-QIj" customClass="NSLayoutHelper" customModule="Rambo" customModuleProvider="target"/>
                             <constraint firstItem="p3l-tv-N0n" firstAttribute="leading" secondItem="fuV-yJ-CN1" secondAttribute="leading" constant="30" id="bDR-Bm-kti"/>
-                            <constraint firstItem="fuV-yJ-CN1" firstAttribute="trailing" secondItem="9pT-BN-5MS" secondAttribute="trailing" constant="30" id="c7J-bQ-Aec"/>
                             <constraint firstItem="p3l-tv-N0n" firstAttribute="top" secondItem="5Zd-GR-9Ns" secondAttribute="bottom" constant="48" id="gFH-AI-DYf"/>
-                            <constraint firstItem="9pT-BN-5MS" firstAttribute="leading" secondItem="fuV-yJ-CN1" secondAttribute="leading" constant="30" id="hYS-7K-WZ4"/>
+                            <constraint firstItem="5Zd-GR-9Ns" firstAttribute="top" secondItem="9pT-BN-5MS" secondAttribute="bottom" constant="60" id="lWl-3l-rdS"/>
                             <constraint firstItem="pnU-2Q-2ET" firstAttribute="top" secondItem="p3l-tv-N0n" secondAttribute="bottom" constant="15" id="lpg-rd-csr"/>
                             <constraint firstItem="fuV-yJ-CN1" firstAttribute="bottom" secondItem="pnU-2Q-2ET" secondAttribute="bottom" constant="48" id="oEx-vi-AV8"/>
-                            <constraint firstItem="5Zd-GR-9Ns" firstAttribute="leading" secondItem="fuV-yJ-CN1" secondAttribute="leading" constant="188" id="rsq-f5-evn"/>
                             <constraint firstItem="fuV-yJ-CN1" firstAttribute="trailing" secondItem="pnU-2Q-2ET" secondAttribute="trailing" constant="29" id="ud0-KP-sbe"/>
+                            <constraint firstItem="9pT-BN-5MS" firstAttribute="leading" secondItem="fuV-yJ-CN1" secondAttribute="leading" constant="30" id="xdH-WD-hYz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fuV-yJ-CN1"/>
                     </view>
