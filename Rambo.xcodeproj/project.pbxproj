@@ -34,6 +34,13 @@
 		20B63A60229066E700EA1814 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B63A5F229066E700EA1814 /* WebKit.framework */; };
 		20C2C1FB228E5E1000E3B0D7 /* SelectTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C2C1FA228E5E1000E3B0D7 /* SelectTemplate.xib */; };
 		20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C1FC228E5E6000E3B0D7 /* SelectTemplate.swift */; };
+		20D360A122A449EE00CBF8DE /* ResumePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D360A022A449EE00CBF8DE /* ResumePreviewViewController.swift */; };
+		20D360A722A46B3D00CBF8DE /* traditional.css in Resources */ = {isa = PBXBuildFile; fileRef = 20D360A222A46B3D00CBF8DE /* traditional.css */; };
+		20D360A822A46B3D00CBF8DE /* red.css in Resources */ = {isa = PBXBuildFile; fileRef = 20D360A322A46B3D00CBF8DE /* red.css */; };
+		20D360A922A46B3D00CBF8DE /* column.css in Resources */ = {isa = PBXBuildFile; fileRef = 20D360A422A46B3D00CBF8DE /* column.css */; };
+		20D360AA22A46B3D00CBF8DE /* resume.html in Resources */ = {isa = PBXBuildFile; fileRef = 20D360A522A46B3D00CBF8DE /* resume.html */; };
+		20D360AB22A46B3D00CBF8DE /* roboto.css in Resources */ = {isa = PBXBuildFile; fileRef = 20D360A622A46B3D00CBF8DE /* roboto.css */; };
+		20D360AE22A46CA500CBF8DE /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D360AD22A46CA500CBF8DE /* Node.swift */; };
 		E54A8DA4228A494D0030FB2F /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = E54A8DA1228A494C0030FB2F /* Icons */; };
 		E5B78520228BA96E0089BC59 /* NotoSansJP-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B7851E228BA9560089BC59 /* NotoSansJP-Bold.otf */; };
 		E5B78521228BA9720089BC59 /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B7851F228BA9560089BC59 /* NotoSansJP-Regular.otf */; };
@@ -100,6 +107,13 @@
 		20B63A5F229066E700EA1814 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		20C2C1FA228E5E1000E3B0D7 /* SelectTemplate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectTemplate.xib; sourceTree = "<group>"; };
 		20C2C1FC228E5E6000E3B0D7 /* SelectTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTemplate.swift; sourceTree = "<group>"; };
+		20D360A022A449EE00CBF8DE /* ResumePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumePreviewViewController.swift; sourceTree = "<group>"; };
+		20D360A222A46B3D00CBF8DE /* traditional.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = traditional.css; path = ../../../Resumes/traditional.css; sourceTree = "<group>"; };
+		20D360A322A46B3D00CBF8DE /* red.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = red.css; path = ../../../Resumes/red.css; sourceTree = "<group>"; };
+		20D360A422A46B3D00CBF8DE /* column.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = column.css; path = ../../../Resumes/column.css; sourceTree = "<group>"; };
+		20D360A522A46B3D00CBF8DE /* resume.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = resume.html; path = ../../../Resumes/resume.html; sourceTree = "<group>"; };
+		20D360A622A46B3D00CBF8DE /* roboto.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = roboto.css; path = ../../../Resumes/roboto.css; sourceTree = "<group>"; };
+		20D360AD22A46CA500CBF8DE /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		E54A8DA1228A494C0030FB2F /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
 		E54A8DA7228A49770030FB2F /* UITextFieldHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldHelper.swift; sourceTree = "<group>"; };
 		E54A8DA8228A49770030FB2F /* UITextViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewHelper.swift; sourceTree = "<group>"; };
@@ -201,19 +215,19 @@
 		208C22EF228675B300F91C4F /* Rambo */ = {
 			isa = PBXGroup;
 			children = (
+				20D360AC22A46C9400CBF8DE /* Helper Classes */,
+				20D3609522A449A100CBF8DE /* Resumes */,
+				20D3609422A4496700CBF8DE /* ViewControllers */,
 				2042B1772291AA7C00DEAD80 /* Home */,
-				2042B173229070E500DEAD80 /* sample_two.html */,
-				20B63A5D2290652200EA1814 /* sample_one.html */,
 				20C2C1F9228E5DB000E3B0D7 /* Resume Flow */,
-				202606BE228DE08C0017BDCD /* Rambo.entitlements */,
 				2011B870228B688C00067C1C /* OnBoarding */,
 				2011B869228B640900067C1C /* Account Stuff */,
+				20B63A5D2290652200EA1814 /* sample_one.html */,
+				2042B173229070E500DEAD80 /* sample_two.html */,
+				202606BE228DE08C0017BDCD /* Rambo.entitlements */,
 				208C22F4228675B300F91C4F /* Main.storyboard */,
 				E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */,
-				2011B86E228B67C600067C1C /* OnBoardingViewController.swift */,
 				208C22F0228675B300F91C4F /* AppDelegate.swift */,
-				208C22F2228675B300F91C4F /* SelectATemplateViewController.swift */,
-				207062FF2288A27100ADE876 /* SplashScreenViewController.swift */,
 				208C22FF228675B400F91C4F /* Info.plist */,
 				208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */,
 				208C22FA228675B400F91C4F /* Assets.xcassets */,
@@ -223,8 +237,6 @@
 				E5B78522228BA9CE0089BC59 /* NotoSansJP-Medium.otf */,
 				E54A8DA6228A49770030FB2F /* Layout Helper */,
 				E54A8DA1228A494C0030FB2F /* Icons */,
-				202606B8228DD59F0017BDCD /* SignUpViewController.swift */,
-				2042B1752291A6D700DEAD80 /* MainViewController.swift */,
 			);
 			path = Rambo;
 			sourceTree = "<group>";
@@ -258,6 +270,39 @@
 				20B63A5B2290647900EA1814 /* TemplateWeb.swift */,
 			);
 			path = "Resume Flow";
+			sourceTree = "<group>";
+		};
+		20D3609422A4496700CBF8DE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2011B86E228B67C600067C1C /* OnBoardingViewController.swift */,
+				208C22F2228675B300F91C4F /* SelectATemplateViewController.swift */,
+				207062FF2288A27100ADE876 /* SplashScreenViewController.swift */,
+				202606B8228DD59F0017BDCD /* SignUpViewController.swift */,
+				2042B1752291A6D700DEAD80 /* MainViewController.swift */,
+				20D360A022A449EE00CBF8DE /* ResumePreviewViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		20D3609522A449A100CBF8DE /* Resumes */ = {
+			isa = PBXGroup;
+			children = (
+				20D360A422A46B3D00CBF8DE /* column.css */,
+				20D360A322A46B3D00CBF8DE /* red.css */,
+				20D360A522A46B3D00CBF8DE /* resume.html */,
+				20D360A622A46B3D00CBF8DE /* roboto.css */,
+				20D360A222A46B3D00CBF8DE /* traditional.css */,
+			);
+			path = Resumes;
+			sourceTree = "<group>";
+		};
+		20D360AC22A46C9400CBF8DE /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				20D360AD22A46CA500CBF8DE /* Node.swift */,
+			);
+			path = "Helper Classes";
 			sourceTree = "<group>";
 		};
 		E54A8DA6228A49770030FB2F /* Layout Helper */ = {
@@ -387,14 +432,19 @@
 			files = (
 				2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */,
 				20C2C1FB228E5E1000E3B0D7 /* SelectTemplate.xib in Resources */,
+				20D360A722A46B3D00CBF8DE /* traditional.css in Resources */,
+				20D360A922A46B3D00CBF8DE /* column.css in Resources */,
 				208C22FB228675B400F91C4F /* Assets.xcassets in Resources */,
+				20D360AB22A46B3D00CBF8DE /* roboto.css in Resources */,
 				208C22F6228675B300F91C4F /* Main.storyboard in Resources */,
 				E5BBC24D228A61DE00D778C6 /* worthy-logo.png in Resources */,
 				2042B174229070E500DEAD80 /* sample_two.html in Resources */,
 				E5B78521228BA9720089BC59 /* NotoSansJP-Regular.otf in Resources */,
 				20B63A56229062AC00EA1814 /* TemplateScroll.xib in Resources */,
+				20D360A822A46B3D00CBF8DE /* red.css in Resources */,
 				20B63A5E2290652200EA1814 /* sample_one.html in Resources */,
 				E5BBC24A228A60C100D778C6 /* LaunchScreen.storyboard in Resources */,
+				20D360AA22A46B3D00CBF8DE /* resume.html in Resources */,
 				E5B78523228BA9CE0089BC59 /* NotoSansJP-Medium.otf in Resources */,
 				E54A8DA4228A494D0030FB2F /* Icons in Resources */,
 				20B63A5A2290646B00EA1814 /* TemplateWeb.xib in Resources */,
@@ -423,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D360A122A449EE00CBF8DE /* ResumePreviewViewController.swift in Sources */,
 				202606BD228DDF370017BDCD /* AccountKit.swift in Sources */,
 				E5B7852A228BB5690089BC59 /* UIButtonHelper.swift in Sources */,
 				2011B86B228B642300067C1C /* CoreDataHelper.swift in Sources */,
@@ -431,6 +482,7 @@
 				E5B78527228BB5690089BC59 /* UITextViewHelper.swift in Sources */,
 				208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */,
 				20B63A5C2290647900EA1814 /* TemplateWeb.swift in Sources */,
+				20D360AE22A46CA500CBF8DE /* Node.swift in Sources */,
 				20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */,
 				E5B78528228BB5690089BC59 /* NSLayoutHelper.swift in Sources */,
 				2042B17E2291AAC000DEAD80 /* MainTableViewCell.swift in Sources */,

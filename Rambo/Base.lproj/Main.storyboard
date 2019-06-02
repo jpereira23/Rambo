@@ -123,6 +123,35 @@
             </objects>
             <point key="canvasLocation" x="811.59420289855075" y="-618.08035714285711"/>
         </scene>
+        <!--Resume Preview View Controller-->
+        <scene sceneID="4le-Ki-RZ3">
+            <objects>
+                <viewController id="EYN-1i-LCy" customClass="ResumePreviewViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rYp-15-GrX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EV8-n9-jdZ">
+                                <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rF3-9p-nee"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="EV8-n9-jdZ" id="00u-Y1-XOh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fql-3X-MDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1855.072463768116" y="-606.02678571428567"/>
+        </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="mu3-c0-9e5">
             <objects>
@@ -240,7 +269,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Build New"/>
                                 <connections>
-                                    <segue destination="Z5J-NL-CnJ" kind="show" id="7jQ-Y5-d6q"/>
+                                    <segue destination="EYN-1i-LCy" kind="show" id="ZyZ-Sx-Ut4"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NZ-FM-nx8">
