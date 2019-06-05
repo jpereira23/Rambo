@@ -39,10 +39,23 @@
 		20B63A5C2290647900EA1814 /* TemplateWeb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63A5B2290647900EA1814 /* TemplateWeb.swift */; };
 		20B63A5E2290652200EA1814 /* sample_one.html in Resources */ = {isa = PBXBuildFile; fileRef = 20B63A5D2290652200EA1814 /* sample_one.html */; };
 		20B63A60229066E700EA1814 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20B63A5F229066E700EA1814 /* WebKit.framework */; };
+		20C0362F22A87A950049B068 /* MainFlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C0362E22A87A950049B068 /* MainFlowViewController.swift */; };
+		20C0363222A87E3D0049B068 /* MainNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C0363122A87E3D0049B068 /* MainNavBar.swift */; };
+		20C0363422A87E500049B068 /* MainNavBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C0363322A87E500049B068 /* MainNavBar.xib */; };
 		20C2C1FB228E5E1000E3B0D7 /* SelectTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20C2C1FA228E5E1000E3B0D7 /* SelectTemplate.xib */; };
 		20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C1FC228E5E6000E3B0D7 /* SelectTemplate.swift */; };
 		20D360A122A449EE00CBF8DE /* ResumePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D360A022A449EE00CBF8DE /* ResumePreviewViewController.swift */; };
 		20D360AE22A46CA500CBF8DE /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D360AD22A46CA500CBF8DE /* Node.swift */; };
+		20F2036022A8832700CAF938 /* StepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2035F22A8832600CAF938 /* StepOne.swift */; };
+		20F2036222A8832F00CAF938 /* StepOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F2036122A8832F00CAF938 /* StepOne.xib */; };
+		20F2036422A8848400CAF938 /* StepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2036322A8848400CAF938 /* StepTwo.swift */; };
+		20F2036622A8849100CAF938 /* StepTwo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F2036522A8849100CAF938 /* StepTwo.xib */; };
+		20F2036822A886B200CAF938 /* StepThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2036722A886B200CAF938 /* StepThree.swift */; };
+		20F2036A22A886BD00CAF938 /* StepThree.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F2036922A886BD00CAF938 /* StepThree.xib */; };
+		20F2036C22A8886C00CAF938 /* StepFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2036B22A8886C00CAF938 /* StepFour.swift */; };
+		20F2036E22A8887300CAF938 /* StepFour.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F2036D22A8887300CAF938 /* StepFour.xib */; };
+		20F2037022A8899800CAF938 /* StepFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2036F22A8899800CAF938 /* StepFive.swift */; };
+		20F2037222A889A200CAF938 /* StepFive.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F2037122A889A200CAF938 /* StepFive.xib */; };
 		E54A8DA4228A494D0030FB2F /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = E54A8DA1228A494C0030FB2F /* Icons */; };
 		E5B78520228BA96E0089BC59 /* NotoSansJP-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B7851E228BA9560089BC59 /* NotoSansJP-Bold.otf */; };
 		E5B78521228BA9720089BC59 /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B7851F228BA9560089BC59 /* NotoSansJP-Regular.otf */; };
@@ -114,10 +127,23 @@
 		20B63A5B2290647900EA1814 /* TemplateWeb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateWeb.swift; sourceTree = "<group>"; };
 		20B63A5D2290652200EA1814 /* sample_one.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample_one.html; sourceTree = "<group>"; };
 		20B63A5F229066E700EA1814 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		20C0362E22A87A950049B068 /* MainFlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowViewController.swift; sourceTree = "<group>"; };
+		20C0363122A87E3D0049B068 /* MainNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavBar.swift; sourceTree = "<group>"; };
+		20C0363322A87E500049B068 /* MainNavBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainNavBar.xib; sourceTree = "<group>"; };
 		20C2C1FA228E5E1000E3B0D7 /* SelectTemplate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectTemplate.xib; sourceTree = "<group>"; };
 		20C2C1FC228E5E6000E3B0D7 /* SelectTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTemplate.swift; sourceTree = "<group>"; };
 		20D360A022A449EE00CBF8DE /* ResumePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumePreviewViewController.swift; sourceTree = "<group>"; };
 		20D360AD22A46CA500CBF8DE /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		20F2035F22A8832600CAF938 /* StepOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOne.swift; sourceTree = "<group>"; };
+		20F2036122A8832F00CAF938 /* StepOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepOne.xib; sourceTree = "<group>"; };
+		20F2036322A8848400CAF938 /* StepTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwo.swift; sourceTree = "<group>"; };
+		20F2036522A8849100CAF938 /* StepTwo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepTwo.xib; sourceTree = "<group>"; };
+		20F2036722A886B200CAF938 /* StepThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepThree.swift; sourceTree = "<group>"; };
+		20F2036922A886BD00CAF938 /* StepThree.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepThree.xib; sourceTree = "<group>"; };
+		20F2036B22A8886C00CAF938 /* StepFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFour.swift; sourceTree = "<group>"; };
+		20F2036D22A8887300CAF938 /* StepFour.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepFour.xib; sourceTree = "<group>"; };
+		20F2036F22A8899800CAF938 /* StepFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFive.swift; sourceTree = "<group>"; };
+		20F2037122A889A200CAF938 /* StepFive.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepFive.xib; sourceTree = "<group>"; };
 		E54A8DA1228A494C0030FB2F /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
 		E54A8DA7228A49770030FB2F /* UITextFieldHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldHelper.swift; sourceTree = "<group>"; };
 		E54A8DA8228A49770030FB2F /* UITextViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewHelper.swift; sourceTree = "<group>"; };
@@ -228,6 +254,8 @@
 		208C22EF228675B300F91C4F /* Rambo */ = {
 			isa = PBXGroup;
 			children = (
+				20F2035E22A8830000CAF938 /* MainFlow */,
+				20C0363022A87E240049B068 /* NavBar */,
 				20614F6A22A86E4F008567DC /* Template */,
 				20D360AC22A46C9400CBF8DE /* Helper Classes */,
 				20D3609522A449A100CBF8DE /* Resumes */,
@@ -273,6 +301,15 @@
 			path = RamboUITests;
 			sourceTree = "<group>";
 		};
+		20C0363022A87E240049B068 /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				20C0363122A87E3D0049B068 /* MainNavBar.swift */,
+				20C0363322A87E500049B068 /* MainNavBar.xib */,
+			);
+			path = NavBar;
+			sourceTree = "<group>";
+		};
 		20C2C1F9228E5DB000E3B0D7 /* Resume Flow */ = {
 			isa = PBXGroup;
 			children = (
@@ -289,6 +326,7 @@
 		20D3609422A4496700CBF8DE /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				20C0362E22A87A950049B068 /* MainFlowViewController.swift */,
 				2011B86E228B67C600067C1C /* OnBoardingViewController.swift */,
 				208C22F2228675B300F91C4F /* SelectATemplateViewController.swift */,
 				207062FF2288A27100ADE876 /* SplashScreenViewController.swift */,
@@ -317,6 +355,23 @@
 				20D360AD22A46CA500CBF8DE /* Node.swift */,
 			);
 			path = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		20F2035E22A8830000CAF938 /* MainFlow */ = {
+			isa = PBXGroup;
+			children = (
+				20F2035F22A8832600CAF938 /* StepOne.swift */,
+				20F2036122A8832F00CAF938 /* StepOne.xib */,
+				20F2036322A8848400CAF938 /* StepTwo.swift */,
+				20F2036522A8849100CAF938 /* StepTwo.xib */,
+				20F2036722A886B200CAF938 /* StepThree.swift */,
+				20F2036922A886BD00CAF938 /* StepThree.xib */,
+				20F2036B22A8886C00CAF938 /* StepFour.swift */,
+				20F2036D22A8887300CAF938 /* StepFour.xib */,
+				20F2036F22A8899800CAF938 /* StepFive.swift */,
+				20F2037122A889A200CAF938 /* StepFive.xib */,
+			);
+			path = MainFlow;
 			sourceTree = "<group>";
 		};
 		E54A8DA6228A49770030FB2F /* Layout Helper */ = {
@@ -446,8 +501,11 @@
 			files = (
 				2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */,
 				20614F7622A871AE008567DC /* red.css in Resources */,
+				20F2036A22A886BD00CAF938 /* StepThree.xib in Resources */,
 				20C2C1FB228E5E1000E3B0D7 /* SelectTemplate.xib in Resources */,
 				208C22FB228675B400F91C4F /* Assets.xcassets in Resources */,
+				20F2037222A889A200CAF938 /* StepFive.xib in Resources */,
+				20F2036222A8832F00CAF938 /* StepOne.xib in Resources */,
 				208C22F6228675B300F91C4F /* Main.storyboard in Resources */,
 				E5BBC24D228A61DE00D778C6 /* worthy-logo.png in Resources */,
 				2042B174229070E500DEAD80 /* sample_two.html in Resources */,
@@ -458,7 +516,10 @@
 				20B63A5E2290652200EA1814 /* sample_one.html in Resources */,
 				E5BBC24A228A60C100D778C6 /* LaunchScreen.storyboard in Resources */,
 				E5B78523228BA9CE0089BC59 /* NotoSansJP-Medium.otf in Resources */,
+				20C0363422A87E500049B068 /* MainNavBar.xib in Resources */,
+				20F2036622A8849100CAF938 /* StepTwo.xib in Resources */,
 				20614F7822A871AE008567DC /* resume.html in Resources */,
+				20F2036E22A8887300CAF938 /* StepFour.xib in Resources */,
 				20614F7522A871AE008567DC /* column.css in Resources */,
 				E54A8DA4228A494D0030FB2F /* Icons in Resources */,
 				20614F6C22A86EF2008567DC /* Template.xib in Resources */,
@@ -488,27 +549,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20F2037022A8899800CAF938 /* StepFive.swift in Sources */,
 				20D360A122A449EE00CBF8DE /* ResumePreviewViewController.swift in Sources */,
+				20F2036C22A8886C00CAF938 /* StepFour.swift in Sources */,
 				202606BD228DDF370017BDCD /* AccountKit.swift in Sources */,
 				E5B7852A228BB5690089BC59 /* UIButtonHelper.swift in Sources */,
 				2011B86B228B642300067C1C /* CoreDataHelper.swift in Sources */,
 				E5B78529228BB5690089BC59 /* DeviceHelper.swift in Sources */,
 				20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */,
+				20F2036822A886B200CAF938 /* StepThree.swift in Sources */,
 				E5B78527228BB5690089BC59 /* UITextViewHelper.swift in Sources */,
 				208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */,
 				20B63A5C2290647900EA1814 /* TemplateWeb.swift in Sources */,
 				20D360AE22A46CA500CBF8DE /* Node.swift in Sources */,
 				20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */,
 				E5B78528228BB5690089BC59 /* NSLayoutHelper.swift in Sources */,
+				20C0363222A87E3D0049B068 /* MainNavBar.swift in Sources */,
 				2042B17E2291AAC000DEAD80 /* MainTableViewCell.swift in Sources */,
 				2011B86F228B67C600067C1C /* OnBoardingViewController.swift in Sources */,
 				2011B86D228B64FF00067C1C /* User.swift in Sources */,
+				20C0362F22A87A950049B068 /* MainFlowViewController.swift in Sources */,
 				E5B78526228BB5690089BC59 /* UITextFieldHelper.swift in Sources */,
+				20F2036422A8848400CAF938 /* StepTwo.swift in Sources */,
 				202606B9228DD59F0017BDCD /* SignUpViewController.swift in Sources */,
 				208C22F3228675B300F91C4F /* SelectATemplateViewController.swift in Sources */,
 				2011B872228B68B100067C1C /* OnBoardingView.swift in Sources */,
 				207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */,
 				E5B7852B228BB5690089BC59 /* UILabelHelper.swift in Sources */,
+				20F2036022A8832700CAF938 /* StepOne.swift in Sources */,
 				20614F6E22A86FA1008567DC /* Template.swift in Sources */,
 				208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */,
 				2042B1762291A6D700DEAD80 /* MainViewController.swift in Sources */,
