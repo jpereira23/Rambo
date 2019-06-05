@@ -65,8 +65,8 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
     @IBAction func backToMain(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "mainView") as! SelectATemplateViewController
         UIApplication.shared.keyWindow?.rootViewController = vc
-        vc.aChange = false
-        self.present(vc, animated: true, completion: nil)
+        //vc.aChange = false
+        //self.present(vc, animated: true, completion: nil)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
