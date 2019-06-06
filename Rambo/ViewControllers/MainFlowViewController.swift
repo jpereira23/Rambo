@@ -10,6 +10,7 @@ import UIKit
 
 class MainFlowViewController: UIViewController {
 
+    @IBOutlet var saveContinue: UIButton!
     @IBOutlet weak var mainNavBar: UIView!
     @IBOutlet weak var theView: UIView!
     let stepOne: StepOne = Bundle.main.loadNibNamed("StepOne", owner: self, options: nil)?.first as! StepOne
@@ -27,9 +28,31 @@ class MainFlowViewController: UIViewController {
         
         aMainNavBar.aDelegate = self
         
+        //Save and Continue Button
+        saveContinue.layer.cornerRadius = 5
+        
+        //TextFields Inside Padding
+        let indentView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+        stepOne.fullName.leftView = indentView
+        stepOne.fullName.leftViewMode = .always
+        
+        let indentView2 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+        stepOne.email.leftView = indentView2
+        stepOne.email.leftViewMode = .always
+        
+        let indentView3 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+        stepOne.phoneNumber.leftView = indentView3
+        stepOne.phoneNumber.leftViewMode = .always
+        
+        let indentView4 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+        stepOne.link.leftView = indentView4
+        stepOne.link.leftViewMode = .always
+        
+        
         mainNavBar.addSubview(aMainNavBar)
         theView.addSubview(stepOne)
         // Do any additional setup after loading the view.
+    
     }
     
     @IBAction func nextAction(_ sender: Any) {

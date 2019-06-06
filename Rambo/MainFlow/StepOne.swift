@@ -14,8 +14,7 @@ class StepOne: UIView {
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var link: UITextField!
-    
-    
+
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
