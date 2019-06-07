@@ -10,6 +10,7 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet var buildNew: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var accountLabel: UILabel!
     @IBOutlet weak var accountButton: UIButton!
@@ -28,6 +29,10 @@ class MainViewController: UIViewController {
             accountLabel.text = "Hi User!"
             isSignedIn = false
         }
+        
+        
+        buildNew.layer.cornerRadius = 3
+        
         // Do any additional setup after loading the view.
     }
     

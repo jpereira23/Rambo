@@ -9,73 +9,63 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="NotoSansJP-Regular.otf">
-            <string>NotoSansJP-Regular</string>
-        </array>
-    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OnBoardingView" customModule="Rambo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="539"/>
+            <rect key="frame" x="0.0" y="0.0" width="340" height="413"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OS4-1z-OXF">
-                    <rect key="frame" x="30" y="436" width="354" height="43"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="354" id="W43-yg-wiz"/>
-                        <constraint firstAttribute="height" constant="43" id="r3I-ut-y3J"/>
-                    </constraints>
-                    <attributedString key="attributedText">
-                        <fragment content="Some Sub Header">
-                            <attributes>
-                                <color key="NSColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                <font key="NSFont" size="18" name="NotoSansJP-Bold"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
-                <textView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="redraw" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sI3-qw-Sri">
-                    <rect key="frame" x="30" y="479" width="354" height="60"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="354" id="M40-vh-bEq"/>
-                        <constraint firstAttribute="height" constant="60" id="h1b-ah-p6W"/>
-                    </constraints>
-                    <attributedString key="attributedText">
-                        <fragment content="Some Sub Header">
-                            <attributes>
-                                <color key="NSColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <font key="NSFont" size="16" name="NotoSansJP-Regular"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dT1-XC-7VJ">
-                    <rect key="frame" x="30" y="107" width="354" height="304"/>
+                    <rect key="frame" x="30" y="30" width="280" height="235"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="354" id="6TE-nd-HJc"/>
-                        <constraint firstAttribute="height" constant="304" id="7ci-XH-f8F"/>
+                        <constraint firstAttribute="width" constant="280" id="i9I-4Q-Ewk"/>
+                        <constraint firstAttribute="height" constant="235" id="w0p-wM-zqr"/>
                     </constraints>
                 </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9hB-Bk-xWK">
+                    <rect key="frame" x="30" y="310" width="280" height="103"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OS4-1z-OXF">
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Some Sub Header">
+                                    <attributes>
+                                        <color key="NSColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="18" name="NotoSansJP-Bold"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="redraw" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sI3-qw-Sri">
+                            <rect key="frame" x="0.0" y="43" width="280" height="60"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Some Sub Header">
+                                    <attributes>
+                                        <color key="NSColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" size="16" name="NotoSansJP-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="OS4-1z-OXF" firstAttribute="top" secondItem="dT1-XC-7VJ" secondAttribute="bottom" constant="25" id="0Ws-Da-UEt"/>
-                <constraint firstItem="sI3-qw-Sri" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="4He-NY-goG"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OS4-1z-OXF" secondAttribute="trailing" constant="30" id="51S-eO-nYJ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sI3-qw-Sri" secondAttribute="trailing" constant="30" id="Ds2-5g-pmq"/>
-                <constraint firstItem="dT1-XC-7VJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="RNj-gV-0JY"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dT1-XC-7VJ" secondAttribute="trailing" constant="30" id="XZe-Jv-g7S"/>
-                <constraint firstAttribute="bottom" secondItem="sI3-qw-Sri" secondAttribute="bottom" id="g69-wG-Vq1"/>
-                <constraint firstItem="sI3-qw-Sri" firstAttribute="top" secondItem="OS4-1z-OXF" secondAttribute="bottom" id="mAE-MV-UcA"/>
-                <constraint firstItem="OS4-1z-OXF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="msZ-u3-rgm"/>
+                <constraint firstItem="9hB-Bk-xWK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="Q0g-e2-3Xh"/>
+                <constraint firstItem="dT1-XC-7VJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="UFo-RH-cnN"/>
+                <constraint firstItem="9hB-Bk-xWK" firstAttribute="top" secondItem="dT1-XC-7VJ" secondAttribute="bottom" constant="45" id="dJ9-j7-3if"/>
+                <constraint firstAttribute="trailing" secondItem="9hB-Bk-xWK" secondAttribute="trailing" constant="30" id="jD7-NR-WOC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dT1-XC-7VJ" secondAttribute="trailing" constant="30" id="mG1-y0-aDn"/>
+                <constraint firstAttribute="bottom" secondItem="9hB-Bk-xWK" secondAttribute="bottom" id="mZ5-Ul-xNK"/>
+                <constraint firstItem="dT1-XC-7VJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="x8q-0t-rtq"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -84,7 +74,7 @@
                 <outlet property="subHeader" destination="sI3-qw-Sri" id="zjS-hC-THt"/>
                 <outlet property="title" destination="OS4-1z-OXF" id="CTk-8j-mKi"/>
             </connections>
-            <point key="canvasLocation" x="88.405797101449281" y="-58.59375"/>
+            <point key="canvasLocation" x="36.231884057971016" y="-100.78125"/>
         </view>
     </objects>
 </document>

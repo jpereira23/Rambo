@@ -60,12 +60,6 @@
 		E5B78520228BA96E0089BC59 /* NotoSansJP-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B7851E228BA9560089BC59 /* NotoSansJP-Bold.otf */; };
 		E5B78521228BA9720089BC59 /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B7851F228BA9560089BC59 /* NotoSansJP-Regular.otf */; };
 		E5B78523228BA9CE0089BC59 /* NotoSansJP-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B78522228BA9CE0089BC59 /* NotoSansJP-Medium.otf */; };
-		E5B78526228BB5690089BC59 /* UITextFieldHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A8DA7228A49770030FB2F /* UITextFieldHelper.swift */; };
-		E5B78527228BB5690089BC59 /* UITextViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A8DA8228A49770030FB2F /* UITextViewHelper.swift */; };
-		E5B78528228BB5690089BC59 /* NSLayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A8DA9228A49770030FB2F /* NSLayoutHelper.swift */; };
-		E5B78529228BB5690089BC59 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A8DAA228A49770030FB2F /* DeviceHelper.swift */; };
-		E5B7852A228BB5690089BC59 /* UIButtonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A8DAB228A49770030FB2F /* UIButtonHelper.swift */; };
-		E5B7852B228BB5690089BC59 /* UILabelHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54A8DAC228A49770030FB2F /* UILabelHelper.swift */; };
 		E5BBC24A228A60C100D778C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */; };
 		E5BBC24D228A61DE00D778C6 /* worthy-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BBC24C228A61DE00D778C6 /* worthy-logo.png */; };
 /* End PBXBuildFile section */
@@ -145,12 +139,6 @@
 		20F2036F22A8899800CAF938 /* StepFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFive.swift; sourceTree = "<group>"; };
 		20F2037122A889A200CAF938 /* StepFive.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepFive.xib; sourceTree = "<group>"; };
 		E54A8DA1228A494C0030FB2F /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
-		E54A8DA7228A49770030FB2F /* UITextFieldHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldHelper.swift; sourceTree = "<group>"; };
-		E54A8DA8228A49770030FB2F /* UITextViewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewHelper.swift; sourceTree = "<group>"; };
-		E54A8DA9228A49770030FB2F /* NSLayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSLayoutHelper.swift; sourceTree = "<group>"; };
-		E54A8DAA228A49770030FB2F /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
-		E54A8DAB228A49770030FB2F /* UIButtonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonHelper.swift; sourceTree = "<group>"; };
-		E54A8DAC228A49770030FB2F /* UILabelHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelHelper.swift; sourceTree = "<group>"; };
 		E5B7851E228BA9560089BC59 /* NotoSansJP-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-Bold.otf"; sourceTree = "<group>"; };
 		E5B7851F228BA9560089BC59 /* NotoSansJP-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-Regular.otf"; sourceTree = "<group>"; };
 		E5B78522228BA9CE0089BC59 /* NotoSansJP-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Medium.otf"; path = "../../../Library/Fonts/NotoSansJP-Medium.otf"; sourceTree = "<group>"; };
@@ -264,11 +252,10 @@
 				20C2C1F9228E5DB000E3B0D7 /* Resume Flow */,
 				2011B870228B688C00067C1C /* OnBoarding */,
 				2011B869228B640900067C1C /* Account Stuff */,
+				208C22F4228675B300F91C4F /* Main.storyboard */,
 				20B63A5D2290652200EA1814 /* sample_one.html */,
 				2042B173229070E500DEAD80 /* sample_two.html */,
 				202606BE228DE08C0017BDCD /* Rambo.entitlements */,
-				208C22F4228675B300F91C4F /* Main.storyboard */,
-				E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */,
 				208C22F0228675B300F91C4F /* AppDelegate.swift */,
 				208C22FF228675B400F91C4F /* Info.plist */,
 				208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */,
@@ -277,7 +264,7 @@
 				E5B7851E228BA9560089BC59 /* NotoSansJP-Bold.otf */,
 				E5B7851F228BA9560089BC59 /* NotoSansJP-Regular.otf */,
 				E5B78522228BA9CE0089BC59 /* NotoSansJP-Medium.otf */,
-				E54A8DA6228A49770030FB2F /* Layout Helper */,
+				E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */,
 				E54A8DA1228A494C0030FB2F /* Icons */,
 			);
 			path = Rambo;
@@ -372,19 +359,6 @@
 				20F2037122A889A200CAF938 /* StepFive.xib */,
 			);
 			path = MainFlow;
-			sourceTree = "<group>";
-		};
-		E54A8DA6228A49770030FB2F /* Layout Helper */ = {
-			isa = PBXGroup;
-			children = (
-				E54A8DA7228A49770030FB2F /* UITextFieldHelper.swift */,
-				E54A8DA8228A49770030FB2F /* UITextViewHelper.swift */,
-				E54A8DA9228A49770030FB2F /* NSLayoutHelper.swift */,
-				E54A8DAA228A49770030FB2F /* DeviceHelper.swift */,
-				E54A8DAB228A49770030FB2F /* UIButtonHelper.swift */,
-				E54A8DAC228A49770030FB2F /* UILabelHelper.swift */,
-			);
-			path = "Layout Helper";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,29 +527,23 @@
 				20D360A122A449EE00CBF8DE /* ResumePreviewViewController.swift in Sources */,
 				20F2036C22A8886C00CAF938 /* StepFour.swift in Sources */,
 				202606BD228DDF370017BDCD /* AccountKit.swift in Sources */,
-				E5B7852A228BB5690089BC59 /* UIButtonHelper.swift in Sources */,
 				2011B86B228B642300067C1C /* CoreDataHelper.swift in Sources */,
-				E5B78529228BB5690089BC59 /* DeviceHelper.swift in Sources */,
 				20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */,
 				20F2036822A886B200CAF938 /* StepThree.swift in Sources */,
-				E5B78527228BB5690089BC59 /* UITextViewHelper.swift in Sources */,
 				208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */,
 				20B63A5C2290647900EA1814 /* TemplateWeb.swift in Sources */,
 				20D360AE22A46CA500CBF8DE /* Node.swift in Sources */,
 				20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */,
-				E5B78528228BB5690089BC59 /* NSLayoutHelper.swift in Sources */,
 				20C0363222A87E3D0049B068 /* MainNavBar.swift in Sources */,
 				2042B17E2291AAC000DEAD80 /* MainTableViewCell.swift in Sources */,
 				2011B86F228B67C600067C1C /* OnBoardingViewController.swift in Sources */,
 				2011B86D228B64FF00067C1C /* User.swift in Sources */,
 				20C0362F22A87A950049B068 /* MainFlowViewController.swift in Sources */,
-				E5B78526228BB5690089BC59 /* UITextFieldHelper.swift in Sources */,
 				20F2036422A8848400CAF938 /* StepTwo.swift in Sources */,
 				202606B9228DD59F0017BDCD /* SignUpViewController.swift in Sources */,
 				208C22F3228675B300F91C4F /* SelectATemplateViewController.swift in Sources */,
 				2011B872228B68B100067C1C /* OnBoardingView.swift in Sources */,
 				207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */,
-				E5B7852B228BB5690089BC59 /* UILabelHelper.swift in Sources */,
 				20F2036022A8832700CAF938 /* StepOne.swift in Sources */,
 				20614F6E22A86FA1008567DC /* Template.swift in Sources */,
 				208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */,
