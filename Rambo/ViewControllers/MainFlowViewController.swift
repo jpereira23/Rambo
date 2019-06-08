@@ -10,7 +10,6 @@ import UIKit
 
 class MainFlowViewController: UIViewController {
 
-    @IBOutlet var saveContinue: UIButton!
     @IBOutlet weak var mainNavBar: UIView!
     @IBOutlet weak var theView: UIView!
     let stepOne: StepOne = Bundle.main.loadNibNamed("StepOne", owner: self, options: nil)?.first as! StepOne
@@ -29,7 +28,7 @@ class MainFlowViewController: UIViewController {
         aMainNavBar.aDelegate = self
         
         //Save and Continue Button
-        saveContinue.layer.cornerRadius = 5
+        //saveContinue.layer.cornerRadius = 5
         
         //TextFields Inside Padding
         let indentView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))

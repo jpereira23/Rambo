@@ -35,7 +35,7 @@
                                     <attributedString key="attributedText">
                                         <fragment content="Full Name">
                                             <attributes>
-                                                <font key="NSFont" size="13" name="NotoSansJP-Regular"/>
+                                                <font key="NSFont" metaFont="system"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -63,7 +63,7 @@
                                     <attributedString key="attributedText">
                                         <fragment content="Email">
                                             <attributes>
-                                                <font key="NSFont" size="12" name="NotoSansJP-Regular"/>
+                                                <font key="NSFont" metaFont="cellTitle"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>

@@ -56,6 +56,9 @@
 		20F2036E22A8887300CAF938 /* StepFour.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F2036D22A8887300CAF938 /* StepFour.xib */; };
 		20F2037022A8899800CAF938 /* StepFive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2036F22A8899800CAF938 /* StepFive.swift */; };
 		20F2037222A889A200CAF938 /* StepFive.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F2037122A889A200CAF938 /* StepFive.xib */; };
+		20FCF42E22AC3E2A005B553D /* AddSkillTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCF42C22AC3E2A005B553D /* AddSkillTableViewCell.swift */; };
+		20FCF42F22AC3E2A005B553D /* AddSkillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20FCF42D22AC3E2A005B553D /* AddSkillTableViewCell.xib */; };
+		20FCF43122AC6AD3005B553D /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCF43022AC6AD3005B553D /* School.swift */; };
 		E54A8DA4228A494D0030FB2F /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = E54A8DA1228A494C0030FB2F /* Icons */; };
 		E5B78520228BA96E0089BC59 /* NotoSansJP-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B7851E228BA9560089BC59 /* NotoSansJP-Bold.otf */; };
 		E5B78521228BA9720089BC59 /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B7851F228BA9560089BC59 /* NotoSansJP-Regular.otf */; };
@@ -138,6 +141,9 @@
 		20F2036D22A8887300CAF938 /* StepFour.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepFour.xib; sourceTree = "<group>"; };
 		20F2036F22A8899800CAF938 /* StepFive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepFive.swift; sourceTree = "<group>"; };
 		20F2037122A889A200CAF938 /* StepFive.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepFive.xib; sourceTree = "<group>"; };
+		20FCF42C22AC3E2A005B553D /* AddSkillTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSkillTableViewCell.swift; sourceTree = "<group>"; };
+		20FCF42D22AC3E2A005B553D /* AddSkillTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSkillTableViewCell.xib; sourceTree = "<group>"; };
+		20FCF43022AC6AD3005B553D /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		E54A8DA1228A494C0030FB2F /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
 		E5B7851E228BA9560089BC59 /* NotoSansJP-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-Bold.otf"; sourceTree = "<group>"; };
 		E5B7851F228BA9560089BC59 /* NotoSansJP-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-Regular.otf"; sourceTree = "<group>"; };
@@ -340,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				20D360AD22A46CA500CBF8DE /* Node.swift */,
+				20FCF43022AC6AD3005B553D /* School.swift */,
 			);
 			path = "Helper Classes";
 			sourceTree = "<group>";
@@ -357,6 +364,8 @@
 				20F2036D22A8887300CAF938 /* StepFour.xib */,
 				20F2036F22A8899800CAF938 /* StepFive.swift */,
 				20F2037122A889A200CAF938 /* StepFive.xib */,
+				20FCF42C22AC3E2A005B553D /* AddSkillTableViewCell.swift */,
+				20FCF42D22AC3E2A005B553D /* AddSkillTableViewCell.xib */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
@@ -488,6 +497,7 @@
 				20614F7422A871AE008567DC /* traditional.css in Resources */,
 				20614F7722A871AE008567DC /* roboto.css in Resources */,
 				20B63A5E2290652200EA1814 /* sample_one.html in Resources */,
+				20FCF42F22AC3E2A005B553D /* AddSkillTableViewCell.xib in Resources */,
 				E5BBC24A228A60C100D778C6 /* LaunchScreen.storyboard in Resources */,
 				E5B78523228BA9CE0089BC59 /* NotoSansJP-Medium.otf in Resources */,
 				20C0363422A87E500049B068 /* MainNavBar.xib in Resources */,
@@ -526,6 +536,7 @@
 				20F2037022A8899800CAF938 /* StepFive.swift in Sources */,
 				20D360A122A449EE00CBF8DE /* ResumePreviewViewController.swift in Sources */,
 				20F2036C22A8886C00CAF938 /* StepFour.swift in Sources */,
+				20FCF42E22AC3E2A005B553D /* AddSkillTableViewCell.swift in Sources */,
 				202606BD228DDF370017BDCD /* AccountKit.swift in Sources */,
 				2011B86B228B642300067C1C /* CoreDataHelper.swift in Sources */,
 				20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */,
@@ -535,6 +546,7 @@
 				20D360AE22A46CA500CBF8DE /* Node.swift in Sources */,
 				20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */,
 				20C0363222A87E3D0049B068 /* MainNavBar.swift in Sources */,
+				20FCF43122AC6AD3005B553D /* School.swift in Sources */,
 				2042B17E2291AAC000DEAD80 /* MainTableViewCell.swift in Sources */,
 				2011B86F228B67C600067C1C /* OnBoardingViewController.swift in Sources */,
 				2011B86D228B64FF00067C1C /* User.swift in Sources */,

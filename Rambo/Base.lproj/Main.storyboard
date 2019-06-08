@@ -291,7 +291,7 @@
                                             <fragment content="Hi Tony!">
                                                 <attributes>
                                                     <color key="NSColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="22" name="NotoSansJP-Bold"/>
+                                                    <font key="NSFont" metaFont="system" size="22"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -307,7 +307,7 @@
                                             <fragment content="Download your resume to apply to jobs.">
                                                 <attributes>
                                                     <color key="NSColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <font key="NSFont" size="16" name="NotoSansJP-Regular"/>
+                                                    <font key="NSFont" metaFont="system" size="16"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -489,7 +489,7 @@
                                                     <fragment content="Select a Template">
                                                         <attributes>
                                                             <color key="NSColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <font key="NSFont" size="22" name="NotoSansJP-Bold"/>
+                                                            <font key="NSFont" metaFont="system" size="22"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -574,26 +574,6 @@
                                 <rect key="frame" x="0.0" y="298" width="414" height="526"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1h8-9b-Llk">
-                                <rect key="frame" x="30" y="812" width="354" height="50"/>
-                                <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Hqi-J7-l8e"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Save &amp; Continue">
-                                            <attributes>
-                                                <font key="NSFont" size="14" name="NotoSansJP-Medium"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="nextAction:" destination="UO7-mc-UVa" eventType="touchUpInside" id="qnL-kz-LUL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -602,10 +582,7 @@
                             <constraint firstItem="Mkj-iQ-vEc" firstAttribute="trailing" secondItem="hhQ-3A-obV" secondAttribute="trailing" id="E1R-JX-WtW"/>
                             <constraint firstItem="hhQ-3A-obV" firstAttribute="leading" secondItem="gik-20-Nm2" secondAttribute="leading" id="Fl9-4l-Hjv"/>
                             <constraint firstItem="gik-20-Nm2" firstAttribute="bottom" secondItem="Mkj-iQ-vEc" secondAttribute="bottom" constant="38" id="Mgm-K9-oeH"/>
-                            <constraint firstItem="1h8-9b-Llk" firstAttribute="centerX" secondItem="Mkj-iQ-vEc" secondAttribute="centerX" id="QEj-iI-cZB"/>
-                            <constraint firstItem="1h8-9b-Llk" firstAttribute="leading" secondItem="gik-20-Nm2" secondAttribute="leading" constant="30" id="W7h-pz-ncr"/>
                             <constraint firstItem="Mkj-iQ-vEc" firstAttribute="top" secondItem="hhQ-3A-obV" secondAttribute="bottom" id="aol-mJ-ieT"/>
-                            <constraint firstItem="1h8-9b-Llk" firstAttribute="bottom" secondItem="gik-20-Nm2" secondAttribute="bottom" id="l27-lT-lPe"/>
                             <constraint firstItem="hhQ-3A-obV" firstAttribute="top" secondItem="gik-20-Nm2" secondAttribute="top" id="pmO-Jk-WtW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gik-20-Nm2"/>
@@ -613,7 +590,6 @@
                     <navigationItem key="navigationItem" id="1tI-un-S8r"/>
                     <connections>
                         <outlet property="mainNavBar" destination="hhQ-3A-obV" id="VCL-29-ogt"/>
-                        <outlet property="saveContinue" destination="1h8-9b-Llk" id="3cB-az-bEF"/>
                         <outlet property="theView" destination="Mkj-iQ-vEc" id="6bq-eP-Z71"/>
                     </connections>
                 </viewController>
