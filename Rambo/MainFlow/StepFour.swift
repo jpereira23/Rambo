@@ -21,25 +21,75 @@ class StepFour: UIView {
     }
     */
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
     
+    @IBAction func addSchool(_ sender: Any) {
+        let last = arrayOfSchools.count - 1
+        getData(aCell: tableview.cellForRow(at: IndexPath(row: last, section: 0)) as! AddSchoolTableViewCell, index: last)
+        
+        let aSchool = School()
+        arrayOfSchools.append(aSchool)
+        
+        tableview.reloadData()
+        tableview.scrollToRow(at: IndexPath(row: (arrayOfSchools.count-1), section: 0), at: .middle, animated: true)
+    }
+    
+    @IBAction func next(_ sender: Any) {
+        for i in 0...arrayOfSchools.count{
+            getData(aCell: tableview.cellForRow(at: IndexPath(row: i, section: 0)) as! AddSchoolTableViewCell, index: i)
+        }
+    }
+    
+    
+    func getData(aCell: AddSchoolTableViewCell, index: Int){
+        arrayOfSchools[index].schoolName = aCell.schoolName.text
+        arrayOfSchools[index].areaOfStudy = aCell.areaOfStudy.text
+        arrayOfSchools[index].city = aCell.city.text
+        arrayOfSchools[index].degree = aCell.degree.text
+        arrayOfSchools[index].startDate = Date()
+        arrayOfSchools[index].endDate = Date()
+        arrayOfSchools[index].stillEmployee = aCell.isEmployee.isOn
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        //fatalError("init(coder:) has not been implemented")
+    }
     override func awakeFromNib() {
         NSLog("awakeFromNib")
-        //tableview.delegate = self
-        //tableview.dataSource = self
-        tableview.reloadData()
+        let bundle = Bundle(for: type(of: self))
+        let aSchool = School()
+        arrayOfSchools.append(aSchool)
+        let nib = UINib(nibName: "AddSchoolTableViewCell", bundle: bundle)
+        self.tableview.register(nib, forCellReuseIdentifier: "aCell")
+        self.tableview.delegate = self
+        self.tableview.dataSource = self
+        
+        self.tableview.reloadData()
     }
 
 }
-/*
+
 extension StepFour: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        self.arrayOfSchools.count
+        return self.arrayOfSchools.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 387.0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "aCell") as! AddSchoolTableViewCell
         
+        cell.schoolName.text = self.arrayOfSchools[indexPath.row].schoolName
+        
+        return cell
     }
     
     
+    
 }
-*/

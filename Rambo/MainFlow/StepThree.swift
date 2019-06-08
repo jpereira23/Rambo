@@ -10,6 +10,9 @@ import UIKit
 
 class StepThree: UIView {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var arrayOfWorks: [Work] = []
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -18,4 +21,10 @@ class StepThree: UIView {
     }
     */
 
+    @IBAction func next(_ sender: Any) {
+    }
+    
+    @IBAction func addEmployer(_ sender: Any) {
+    }
+    
 }

@@ -25,6 +25,7 @@
 		20614F7622A871AE008567DC /* red.css in Resources */ = {isa = PBXBuildFile; fileRef = 20614F7122A871AE008567DC /* red.css */; };
 		20614F7722A871AE008567DC /* roboto.css in Resources */ = {isa = PBXBuildFile; fileRef = 20614F7222A871AE008567DC /* roboto.css */; };
 		20614F7822A871AE008567DC /* resume.html in Resources */ = {isa = PBXBuildFile; fileRef = 20614F7322A871AE008567DC /* resume.html */; };
+		206BBB2522AC783B003E9681 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BBB2422AC783B003E9681 /* Work.swift */; };
 		207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207062FF2288A27100ADE876 /* SplashScreenViewController.swift */; };
 		208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F0228675B300F91C4F /* AppDelegate.swift */; };
 		208C22F3228675B300F91C4F /* SelectATemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F2228675B300F91C4F /* SelectATemplateViewController.swift */; };
@@ -46,6 +47,8 @@
 		20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C1FC228E5E6000E3B0D7 /* SelectTemplate.swift */; };
 		20D360A122A449EE00CBF8DE /* ResumePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D360A022A449EE00CBF8DE /* ResumePreviewViewController.swift */; };
 		20D360AE22A46CA500CBF8DE /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D360AD22A46CA500CBF8DE /* Node.swift */; };
+		20D861FB22AC6D0A00E72879 /* AddSchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D861F922AC6D0A00E72879 /* AddSchoolTableViewCell.swift */; };
+		20D861FC22AC6D0A00E72879 /* AddSchoolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D861FA22AC6D0A00E72879 /* AddSchoolTableViewCell.xib */; };
 		20F2036022A8832700CAF938 /* StepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2035F22A8832600CAF938 /* StepOne.swift */; };
 		20F2036222A8832F00CAF938 /* StepOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F2036122A8832F00CAF938 /* StepOne.xib */; };
 		20F2036422A8848400CAF938 /* StepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2036322A8848400CAF938 /* StepTwo.swift */; };
@@ -104,6 +107,7 @@
 		20614F7122A871AE008567DC /* red.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = red.css; path = Rambo/red.css; sourceTree = SOURCE_ROOT; };
 		20614F7222A871AE008567DC /* roboto.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = roboto.css; path = Rambo/roboto.css; sourceTree = SOURCE_ROOT; };
 		20614F7322A871AE008567DC /* resume.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = resume.html; path = Rambo/resume.html; sourceTree = SOURCE_ROOT; };
+		206BBB2422AC783B003E9681 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		207062FF2288A27100ADE876 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		208C22ED228675B300F91C4F /* Rambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C22F0228675B300F91C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 		20C2C1FC228E5E6000E3B0D7 /* SelectTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTemplate.swift; sourceTree = "<group>"; };
 		20D360A022A449EE00CBF8DE /* ResumePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumePreviewViewController.swift; sourceTree = "<group>"; };
 		20D360AD22A46CA500CBF8DE /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		20D861F922AC6D0A00E72879 /* AddSchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchoolTableViewCell.swift; sourceTree = "<group>"; };
+		20D861FA22AC6D0A00E72879 /* AddSchoolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSchoolTableViewCell.xib; sourceTree = "<group>"; };
 		20F2035F22A8832600CAF938 /* StepOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOne.swift; sourceTree = "<group>"; };
 		20F2036122A8832F00CAF938 /* StepOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepOne.xib; sourceTree = "<group>"; };
 		20F2036322A8848400CAF938 /* StepTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwo.swift; sourceTree = "<group>"; };
@@ -347,6 +353,7 @@
 			children = (
 				20D360AD22A46CA500CBF8DE /* Node.swift */,
 				20FCF43022AC6AD3005B553D /* School.swift */,
+				206BBB2422AC783B003E9681 /* Work.swift */,
 			);
 			path = "Helper Classes";
 			sourceTree = "<group>";
@@ -362,6 +369,8 @@
 				20F2036922A886BD00CAF938 /* StepThree.xib */,
 				20F2036B22A8886C00CAF938 /* StepFour.swift */,
 				20F2036D22A8887300CAF938 /* StepFour.xib */,
+				20D861F922AC6D0A00E72879 /* AddSchoolTableViewCell.swift */,
+				20D861FA22AC6D0A00E72879 /* AddSchoolTableViewCell.xib */,
 				20F2036F22A8899800CAF938 /* StepFive.swift */,
 				20F2037122A889A200CAF938 /* StepFive.xib */,
 				20FCF42C22AC3E2A005B553D /* AddSkillTableViewCell.swift */,
@@ -505,6 +514,7 @@
 				20614F7822A871AE008567DC /* resume.html in Resources */,
 				20F2036E22A8887300CAF938 /* StepFour.xib in Resources */,
 				20614F7522A871AE008567DC /* column.css in Resources */,
+				20D861FC22AC6D0A00E72879 /* AddSchoolTableViewCell.xib in Resources */,
 				E54A8DA4228A494D0030FB2F /* Icons in Resources */,
 				20614F6C22A86EF2008567DC /* Template.xib in Resources */,
 				20B63A5A2290646B00EA1814 /* TemplateWeb.xib in Resources */,
@@ -548,8 +558,10 @@
 				20C0363222A87E3D0049B068 /* MainNavBar.swift in Sources */,
 				20FCF43122AC6AD3005B553D /* School.swift in Sources */,
 				2042B17E2291AAC000DEAD80 /* MainTableViewCell.swift in Sources */,
+				20D861FB22AC6D0A00E72879 /* AddSchoolTableViewCell.swift in Sources */,
 				2011B86F228B67C600067C1C /* OnBoardingViewController.swift in Sources */,
 				2011B86D228B64FF00067C1C /* User.swift in Sources */,
+				206BBB2522AC783B003E9681 /* Work.swift in Sources */,
 				20C0362F22A87A950049B068 /* MainFlowViewController.swift in Sources */,
 				20F2036422A8848400CAF938 /* StepTwo.swift in Sources */,
 				202606B9228DD59F0017BDCD /* SignUpViewController.swift in Sources */,
