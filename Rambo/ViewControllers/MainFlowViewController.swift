@@ -23,6 +23,11 @@ class MainFlowViewController: UIViewController {
     let stepFive: StepFive = Bundle.main.loadNibNamed("StepFive", owner: self, options: nil)?.first as! StepFive
     
     var aView: Int = 0
+    var datePicker: UIDatePicker = UIDatePicker()
+    let toolbar = UIToolbar()
+    
+    var dateAlert: UIAlertController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -140,21 +145,53 @@ class MainFlowViewController: UIViewController {
         aView = 4
     }
     
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func doDatePicker(){
+        self.datePicker = UIDatePicker(frame: CGRect(x: 0, y: self.view.frame.size.height - 220, width: self.view.frame.size.width, height: 216))
+        self.datePicker.backgroundColor = UIColor.white
+        datePicker.datePickerMode = .date
+        
+        toolbar.barStyle = .default
+        toolbar.isTranslucent = true
+        toolbar.tintColor = UIColor(red: 92/255, green: 216/255, blue:255/255, alpha: 1)
+        toolbar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneClick))
+        self.toolbar.setItems([doneButton], animated: true)
+        self.toolbar.isUserInteractionEnabled = true
+        self.toolbar.isHidden = false
     }
-    */
+    
+    @objc func doneClick(){
+        let dateFormatter1 = DateFormatter()
+        dateFormatter1.dateStyle = .medium
+        dateFormatter1.timeStyle = .none
+        dateAlert.textFields![0].text = dateFormatter1.string(from: datePicker.date)
+        datePicker.isHidden = true
+        self.toolbar.isHidden = true
+    }
 
 }
 
 extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDelegate, StepThreeDelegate, StepFourDelegate{
+    
+    func addDate(index: Int){
+        self.dateAlert = UIAlertController(title: "Select Date", message: "", preferredStyle: .alert)
+        self.dateAlert.addTextField(configurationHandler: { (textField) in
+                self.doDatePicker()
+                textField.inputView = self.datePicker
+                textField.inputAccessoryView = self.toolbar
+            })
+    
+        self.dateAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+            let cell = self.stepFour.tableview.cellForRow(at: IndexPath(row: index, section: 0)) as! AddSchoolTableViewCell
+            NSLog("\(index)")
+            //cell.startDate.text = self.dateAlert.textFields![0].text
+            
+            cell.printSomething(text: self.dateAlert.textFields![0].text!)
+        }))
+        self.present(self.dateAlert, animated: true, completion: nil)
+    }
+    
     func contactWasSelected() {
         if aView != 0{
             selectContact()

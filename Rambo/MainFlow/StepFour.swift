@@ -11,6 +11,7 @@ import UIKit
 protocol StepFourDelegate{
     func DANextOne()
     func stepFourAlertCell()
+    func addDate(index: Int)
 }
 class StepFour: UIView {
 
@@ -66,7 +67,7 @@ class StepFour: UIView {
         arrayOfSchools[index].areaOfStudy = aCell.areaOfStudy.text
         arrayOfSchools[index].city = aCell.city.text
         arrayOfSchools[index].degree = aCell.degree.text
-        arrayOfSchools[index].startDate = Date()
+        arrayOfSchools[index].startDate = aCell.startDate.text
         arrayOfSchools[index].endDate = Date()
         arrayOfSchools[index].stillEmployee = aCell.isEmployee.isOn
     }
@@ -103,7 +104,7 @@ extension StepFour: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "aCell") as! AddSchoolTableViewCell
         
-        
+        cell.aDelegate = self
         //Textfields Right Padding
         let indentView0 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         cell.schoolName.leftView = indentView0
@@ -130,14 +131,21 @@ extension StepFour: UITableViewDataSource, UITableViewDelegate{
         cell.city.leftViewMode = .always
         
         
-        
+        cell.index = indexPath.row
         cell.schoolName.text = self.arrayOfSchools[indexPath.row].schoolName
         cell.areaOfStudy.text = self.arrayOfSchools[indexPath.row].areaOfStudy
         cell.city.text = self.arrayOfSchools[indexPath.row].city
         cell.degree.text = self.arrayOfSchools[indexPath.row].degree
         cell.isEmployee.isOn = self.arrayOfSchools[indexPath.row].stillEmployee
+        cell.startDate.text = self.arrayOfSchools[indexPath.row].startDate
         
         return cell
     }
     
+}
+
+extension StepFour: AddSchoolTableViewCellDelegate{
+    func addStartDate(index: Int) {
+        self.aDelegate.addDate(index: index)
+    }
 }

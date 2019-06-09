@@ -8,6 +8,10 @@
 
 import UIKit
 
+
+protocol AddSchoolTableViewCellDelegate{
+    func addStartDate(index: Int)
+}
 class AddSchoolTableViewCell: UITableViewCell {
 
     @IBOutlet weak var schoolName: UITextField!
@@ -17,10 +21,16 @@ class AddSchoolTableViewCell: UITableViewCell {
     @IBOutlet weak var endDate: UITextField!
     @IBOutlet weak var city: UITextField!
     @IBOutlet weak var isEmployee: UISwitch!
-    
+    var aDelegate: AddSchoolTableViewCellDelegate!
+    var index: Int! 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        startDate.addTarget(self, action: #selector(startDateSelected), for: .editingDidBegin)
+       
+    }
+    
+    @objc func startDateSelected(textField: UITextField){
+        aDelegate.addStartDate(index: index)
     }
     
     func checkUse() -> Bool {
@@ -29,6 +39,10 @@ class AddSchoolTableViewCell: UITableViewCell {
         }
         
         return false
+    }
+    
+    func printSomething(text: String){
+        startDate.text = text
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
