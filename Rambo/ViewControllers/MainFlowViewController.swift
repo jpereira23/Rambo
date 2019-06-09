@@ -9,6 +9,7 @@
 import UIKit
 
 class MainFlowViewController: UIViewController {
+    
 
     @IBOutlet weak var mainNavBar: UIView!
     @IBOutlet weak var theView: UIView!
@@ -26,9 +27,7 @@ class MainFlowViewController: UIViewController {
         let aMainNavBar: MainNavBar = Bundle.main.loadNibNamed("MainNavBar", owner: self, options: nil)?.first as! MainNavBar
         
         aMainNavBar.aDelegate = self
-        
-        //Save and Continue Button
-        //saveContinue.layer.cornerRadius = 5
+    
         
         //TextFields Inside Padding
         let indentView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))

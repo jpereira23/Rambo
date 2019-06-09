@@ -11,6 +11,7 @@ import UIKit
 class StepTwo: UIView {
 
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var objectiveSummary: UITextField!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
