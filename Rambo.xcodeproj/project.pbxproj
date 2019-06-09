@@ -15,6 +15,8 @@
 		202606B9228DD59F0017BDCD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202606B8228DD59F0017BDCD /* SignUpViewController.swift */; };
 		202606BD228DDF370017BDCD /* AccountKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202606BC228DDF370017BDCD /* AccountKit.swift */; };
 		202606C1228DE0950017BDCD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202606C0228DE0950017BDCD /* CloudKit.framework */; };
+		2030E68122AC810C00FB7028 /* AddWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030E67F22AC810C00FB7028 /* AddWorkTableViewCell.swift */; };
+		2030E68222AC810C00FB7028 /* AddWorkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2030E68022AC810C00FB7028 /* AddWorkTableViewCell.xib */; };
 		2042B174229070E500DEAD80 /* sample_two.html in Resources */ = {isa = PBXBuildFile; fileRef = 2042B173229070E500DEAD80 /* sample_two.html */; };
 		2042B1762291A6D700DEAD80 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042B1752291A6D700DEAD80 /* MainViewController.swift */; };
 		2042B17E2291AAC000DEAD80 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042B17C2291AAC000DEAD80 /* MainTableViewCell.swift */; };
@@ -97,6 +99,8 @@
 		202606BC228DDF370017BDCD /* AccountKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountKit.swift; sourceTree = "<group>"; };
 		202606BE228DE08C0017BDCD /* Rambo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rambo.entitlements; sourceTree = "<group>"; };
 		202606C0228DE0950017BDCD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		2030E67F22AC810C00FB7028 /* AddWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkTableViewCell.swift; sourceTree = "<group>"; };
+		2030E68022AC810C00FB7028 /* AddWorkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddWorkTableViewCell.xib; sourceTree = "<group>"; };
 		2042B173229070E500DEAD80 /* sample_two.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample_two.html; sourceTree = "<group>"; };
 		2042B1752291A6D700DEAD80 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2042B17C2291AAC000DEAD80 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -375,6 +379,8 @@
 				20F2037122A889A200CAF938 /* StepFive.xib */,
 				20FCF42C22AC3E2A005B553D /* AddSkillTableViewCell.swift */,
 				20FCF42D22AC3E2A005B553D /* AddSkillTableViewCell.xib */,
+				2030E67F22AC810C00FB7028 /* AddWorkTableViewCell.swift */,
+				2030E68022AC810C00FB7028 /* AddWorkTableViewCell.xib */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
@@ -502,6 +508,7 @@
 				E5BBC24D228A61DE00D778C6 /* worthy-logo.png in Resources */,
 				2042B174229070E500DEAD80 /* sample_two.html in Resources */,
 				E5B78521228BA9720089BC59 /* NotoSansJP-Regular.otf in Resources */,
+				2030E68222AC810C00FB7028 /* AddWorkTableViewCell.xib in Resources */,
 				20B63A56229062AC00EA1814 /* TemplateScroll.xib in Resources */,
 				20614F7422A871AE008567DC /* traditional.css in Resources */,
 				20614F7722A871AE008567DC /* roboto.css in Resources */,
@@ -549,6 +556,7 @@
 				20FCF42E22AC3E2A005B553D /* AddSkillTableViewCell.swift in Sources */,
 				202606BD228DDF370017BDCD /* AccountKit.swift in Sources */,
 				2011B86B228B642300067C1C /* CoreDataHelper.swift in Sources */,
+				2030E68122AC810C00FB7028 /* AddWorkTableViewCell.swift in Sources */,
 				20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */,
 				20F2036822A886B200CAF938 /* StepThree.swift in Sources */,
 				208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */,

@@ -13,13 +13,6 @@ class StepFour: UIView {
 
     @IBOutlet weak var tableview: UITableView!
     var arrayOfSchools: [School] = []
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -59,7 +52,6 @@ class StepFour: UIView {
         //fatalError("init(coder:) has not been implemented")
     }
     override func awakeFromNib() {
-        NSLog("awakeFromNib")
         let bundle = Bundle(for: type(of: self))
         let aSchool = School()
         arrayOfSchools.append(aSchool)
@@ -86,6 +78,10 @@ extension StepFour: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "aCell") as! AddSchoolTableViewCell
         
         cell.schoolName.text = self.arrayOfSchools[indexPath.row].schoolName
+        cell.areaOfStudy.text = self.arrayOfSchools[indexPath.row].areaOfStudy
+        cell.city.text = self.arrayOfSchools[indexPath.row].city
+        cell.degree.text = self.arrayOfSchools[indexPath.row].degree
+        cell.isEmployee.isOn = self.arrayOfSchools[indexPath.row].stillEmployee
         
         return cell
     }
