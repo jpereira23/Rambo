@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rambo/MainFlow/StepFour.swift"
-            timestampString = "581739396.098349"
+            timestampString = "581727599.486621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "addSchool(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rambo/MainFlow/StepFour.swift"
-            timestampString = "581739396.099084"
+            timestampString = "581727599.487802"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "init(coder:)"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "next(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

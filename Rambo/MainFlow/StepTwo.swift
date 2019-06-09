@@ -15,6 +15,7 @@ protocol StepTwoDelegate{
 class StepTwo: UIView {
 
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var objectiveSummary: UITextField!
     var aDelegate: StepTwoDelegate!
     /*
     // Only override draw() if you perform custom drawing.

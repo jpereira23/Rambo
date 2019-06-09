@@ -564,10 +564,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhQ-3A-obV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="254"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="298"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="RGo-iU-ih7"/>
-                                    <constraint firstAttribute="height" constant="254" id="uVE-Rk-t18"/>
+                                    <constraint firstAttribute="height" constant="298" id="uVE-Rk-t18"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mkj-iQ-vEc">
@@ -575,7 +575,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mkj-iQ-vEc" firstAttribute="leading" secondItem="hhQ-3A-obV" secondAttribute="leading" id="AAW-WW-duo"/>
                             <constraint firstItem="hhQ-3A-obV" firstAttribute="trailing" secondItem="gik-20-Nm2" secondAttribute="trailing" id="DYX-y4-jEY"/>
@@ -583,7 +583,7 @@
                             <constraint firstItem="hhQ-3A-obV" firstAttribute="leading" secondItem="gik-20-Nm2" secondAttribute="leading" id="Fl9-4l-Hjv"/>
                             <constraint firstItem="gik-20-Nm2" firstAttribute="bottom" secondItem="Mkj-iQ-vEc" secondAttribute="bottom" constant="38" id="Mgm-K9-oeH"/>
                             <constraint firstItem="Mkj-iQ-vEc" firstAttribute="top" secondItem="hhQ-3A-obV" secondAttribute="bottom" id="aol-mJ-ieT"/>
-                            <constraint firstItem="hhQ-3A-obV" firstAttribute="top" secondItem="gik-20-Nm2" secondAttribute="top" id="pmO-Jk-WtW"/>
+                            <constraint firstItem="hhQ-3A-obV" firstAttribute="top" secondItem="gik-20-Nm2" secondAttribute="top" constant="-44" id="pmO-Jk-WtW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gik-20-Nm2"/>
                     </view>

@@ -16,19 +16,44 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="537"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Objective/Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM6-g7-EXD">
-                    <rect key="frame" x="20" y="88" width="151" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM6-g7-EXD">
+                    <rect key="frame" x="30" y="0.0" width="354" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20.5" id="uQX-24-ycQ"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="Objective / Summary">
+                            <attributes>
+                                <font key="NSFont" size="12" name="NotoSansJP-Regular"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <nil key="highlightedColor"/>
                 </label>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Vjy-yZ-9mz">
-                    <rect key="frame" x="20" y="130" width="374" height="185"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rOf-yX-xQ4">
+                    <rect key="frame" x="30" y="26" width="354" height="123"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="123" id="9jS-LR-KMR"/>
+                    </constraints>
+                    <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vjy-yZ-9mz">
+                    <rect key="frame" x="40" y="31" width="334" height="113"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="113" id="Ad3-wW-sAK"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment content="Example: I am a results-driven contributor who doesn’t mind working out the details to deliver quality work to clients.">
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="14" name=".SFNSText"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUD-af-mbX">
@@ -41,9 +66,21 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rOf-yX-xQ4" firstAttribute="top" secondItem="kM6-g7-EXD" secondAttribute="bottom" constant="5.5" id="139-FD-Lff"/>
+                <constraint firstItem="Vjy-yZ-9mz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="24N-VQ-E6A"/>
+                <constraint firstAttribute="trailing" secondItem="kM6-g7-EXD" secondAttribute="trailing" constant="30" id="5Pw-S0-0Ei"/>
+                <constraint firstItem="Vjy-yZ-9mz" firstAttribute="top" secondItem="kM6-g7-EXD" secondAttribute="bottom" constant="10.5" id="O7X-aV-chi"/>
+                <constraint firstItem="rOf-yX-xQ4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="UM3-Kz-Cxk"/>
+                <constraint firstItem="kM6-g7-EXD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="gHm-zs-Ner"/>
+                <constraint firstItem="kM6-g7-EXD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="haG-Am-2lK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rOf-yX-xQ4" secondAttribute="trailing" constant="30" id="nfo-xW-Soe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vjy-yZ-9mz" secondAttribute="trailing" constant="40" id="rCl-Fq-SQp"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="objectiveSummary" destination="rOf-yX-xQ4" id="zNc-KS-Hr6"/>
                 <outlet property="textView" destination="Vjy-yZ-9mz" id="bhh-ez-8DD"/>
             </connections>
             <point key="canvasLocation" x="89.855072463768124" y="86.71875"/>
