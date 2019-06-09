@@ -242,4 +242,8 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
         self.present(alert, animated: true)
     }
     
+    func goBack(){
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

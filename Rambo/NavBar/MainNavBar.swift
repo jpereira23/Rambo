@@ -14,6 +14,7 @@ protocol MainNavBarDelegate{
     func workWasSelected()
     func educationWasSelected()
     func skillsWasSelected()
+    func goBack()
 }
 
 class MainNavBar: UIView {
@@ -56,6 +57,11 @@ class MainNavBar: UIView {
     @IBAction func skillsSelected(_ sender: Any) {
         aDelegate?.skillsWasSelected()
     }
+    
+    @IBAction func goBack(_ sender: Any) {
+        aDelegate?.goBack()
+    }
+    
     
     
     
