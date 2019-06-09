@@ -28,26 +28,13 @@ class MainNavBar: UIView {
     var aDelegate: MainNavBarDelegate?
     
     @IBOutlet weak var contactButton: UIButton!
-    
+    @IBOutlet weak var objectiveButton: UIButton!
+    @IBOutlet weak var workButton: UIButton!
+    @IBOutlet weak var educationButton: UIButton!
+    @IBOutlet weak var skillsButton: UIButton!
     
     
     override func awakeFromNib(){
-        /*
-        let url = Bundle.main.url(forResource: "contact-empty", withExtension: "png") as! URL
-        
-        do {
-            let data = try Data(contentsOf: url)
-            contactButton.setImage(UIImage(data: data), for: .normal)
-        } catch let error as NSError {
-            NSLog(error.localizedDescription)
-        }
-        */
-        
-        let image = UIImage(named: "contact-empty.png")
-        contactButton.setImage(image, for: .normal)
-        
-        
-        
     }
     
     @IBAction func contactSelected(_ sender: Any) {

@@ -7,11 +7,14 @@
 //
 
 import UIKit
-
+protocol StepThreeDelegate{
+    func zeNextOne()
+    func stepThreeAlertCell()
+}
 class StepThree: UIView {
 
     @IBOutlet weak var tableView: UITableView!
-    
+    var aDelegate: StepThreeDelegate!
     var arrayOfWorks: [Work] = []
     
     override init(frame: CGRect){
@@ -26,6 +29,7 @@ class StepThree: UIView {
         self.tableView.register(nib, forCellReuseIdentifier: "laCell")
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.allowsSelection = false
         self.tableView.reloadData()
     }
     
@@ -39,6 +43,16 @@ class StepThree: UIView {
         
     }
     
+    func checkUse() -> Bool{
+        let last = arrayOfWorks.count - 1
+        let aCell = tableView.cellForRow(at: IndexPath(row: last, section: 0)) as! AddWorkTableViewCell
+        if arrayOfWorks.count > 0 && aCell.checkUse(){
+            return true
+        }
+        
+        return false
+    }
+    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -46,20 +60,34 @@ class StepThree: UIView {
     }
 
     @IBAction func next(_ sender: Any) {
-        for i in 0...arrayOfWorks.count{
-            getData(aCell: tableView.cellForRow(at: IndexPath(row: i, section: 0)) as! AddWorkTableViewCell, index: i)
+        
+        if checkUse(){
+            for i in 0..<arrayOfWorks.count{
+                getData(aCell: tableView.cellForRow(at: IndexPath(row: i, section: 0)) as! AddWorkTableViewCell, index: i)
+            }
+            
+            aDelegate.zeNextOne()
+        } else {
+            aDelegate.stepThreeAlertCell()
         }
     }
     
     @IBAction func addEmployer(_ sender: Any) {
         let last = arrayOfWorks.count - 1
-        getData(aCell: tableView.cellForRow(at: IndexPath(row: last, section: 0)) as! AddWorkTableViewCell, index: last)
+        let aCell = tableView.cellForRow(at: IndexPath(row: last, section: 0)) as! AddWorkTableViewCell
+        if aCell.checkUse(){
+            getData(aCell: aCell, index: last)
+            let aWork = Work()
+            
+            arrayOfWorks.append(aWork)
+            
+            tableView.reloadData()
+            tableView.scrollToRow(at: IndexPath(row: (arrayOfWorks.count-1), section: 0), at: .middle, animated: true)
+        } else {
+            aDelegate.stepThreeAlertCell()
+        }
         
-        let aWork = Work()
-        arrayOfWorks.append(aWork)
         
-        tableView.reloadData()
-        tableView.scrollToRow(at: IndexPath(row: (arrayOfWorks.count-1), section: 0), at: .middle, animated: true)
     }
     
 }

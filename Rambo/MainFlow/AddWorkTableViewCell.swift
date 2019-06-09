@@ -21,6 +21,14 @@ class AddWorkTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func checkUse() -> Bool{
+        if jobTitle.text!.count > 0 && companyName.text!.count > 0 && startDate.text!.count > 0 && endDate.text!.count > 0 && CITY.text!.count > 0 && aDescription.text!.count > 0{
+            return true
+        }
+        
+        return false
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

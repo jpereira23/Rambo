@@ -232,6 +232,10 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="contactButton" destination="54u-KD-agz" id="liE-Oz-leD"/>
+                <outlet property="educationButton" destination="1ag-Mu-hWH" id="xw5-aY-swA"/>
+                <outlet property="objectiveButton" destination="uHV-1O-ct6" id="rNx-Di-ugO"/>
+                <outlet property="skillsButton" destination="0aW-jT-C8e" id="Oxr-Qv-3Mz"/>
+                <outlet property="workButton" destination="Koz-fe-3fU" id="2dx-g9-4Tm"/>
             </connections>
             <point key="canvasLocation" x="66.666666666666671" y="17.745535714285712"/>
         </view>

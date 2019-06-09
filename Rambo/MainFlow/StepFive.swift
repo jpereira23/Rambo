@@ -48,7 +48,13 @@ class StepFive: UIView {
         tableView.reloadData()
     }
     
-    
+    func checkUse() -> Bool{
+        if skills.count > 1 {
+            return true
+        }
+        
+        return false
+    }
     
 }
 

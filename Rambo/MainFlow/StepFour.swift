@@ -8,30 +8,55 @@
 
 import UIKit
 
-
+protocol StepFourDelegate{
+    func DANextOne()
+    func stepFourAlertCell()
+}
 class StepFour: UIView {
 
     @IBOutlet weak var tableview: UITableView!
     var arrayOfSchools: [School] = []
-    
+    var aDelegate: StepFourDelegate!
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
     
     @IBAction func addSchool(_ sender: Any) {
         let last = arrayOfSchools.count - 1
-        getData(aCell: tableview.cellForRow(at: IndexPath(row: last, section: 0)) as! AddSchoolTableViewCell, index: last)
+        let aCell = tableview.cellForRow(at: IndexPath(row: last, section: 0)) as! AddSchoolTableViewCell
         
-        let aSchool = School()
-        arrayOfSchools.append(aSchool)
+        if aCell.checkUse(){
+            getData(aCell: aCell, index: last)
+            
+            let aSchool = School()
+            arrayOfSchools.append(aSchool)
+            
+            tableview.reloadData()
+            tableview.scrollToRow(at: IndexPath(row: (arrayOfSchools.count-1), section: 0), at: .middle, animated: true)
+        } else {
+            aDelegate.stepFourAlertCell()
+        }
+    }
+    
+    func checkUse() -> Bool{
+        let last = arrayOfSchools.count - 1
+        let aCell = tableview.cellForRow(at: IndexPath(row: last, section: 0)) as! AddSchoolTableViewCell
+        if arrayOfSchools.count > 1 && aCell.checkUse() {
+            return true
+        }
         
-        tableview.reloadData()
-        tableview.scrollToRow(at: IndexPath(row: (arrayOfSchools.count-1), section: 0), at: .middle, animated: true)
+        return false
     }
     
     @IBAction func next(_ sender: Any) {
-        for i in 0...arrayOfSchools.count{
-            getData(aCell: tableview.cellForRow(at: IndexPath(row: i, section: 0)) as! AddSchoolTableViewCell, index: i)
+        if checkUse(){
+            for i in 0..<arrayOfSchools.count{
+                getData(aCell: tableview.cellForRow(at: IndexPath(row: i, section: 0)) as! AddSchoolTableViewCell, index: i)
+            }
+            
+            aDelegate.DANextOne()
+        } else {
+            aDelegate.stepFourAlertCell()
         }
     }
     
@@ -58,6 +83,7 @@ class StepFour: UIView {
         let nib = UINib(nibName: "AddSchoolTableViewCell", bundle: bundle)
         self.tableview.register(nib, forCellReuseIdentifier: "aCell")
         self.tableview.delegate = self
+        self.tableview.allowsSelection = false
         self.tableview.dataSource = self
         
         self.tableview.reloadData()
