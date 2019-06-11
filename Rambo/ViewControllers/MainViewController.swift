@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController{
 
     @IBOutlet var buildNew: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -19,6 +19,9 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: "ThirdWayTableViewCell", bundle: bundle)
+        self.tableView.register(nib, forCellReuseIdentifier: "cellBitch")
         tableView.reloadData()
         if let aProfile: User = coreDataHelper.loadProfile(){
             accountButton.setTitle("Sign Out", for: .normal)
@@ -56,8 +59,15 @@ class MainViewController: UIViewController {
 
 }
 
-extension MainViewController: UITableViewDelegate, UITableViewDataSource{
+extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdWayTableViewCellDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row == 1{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellBitch") as! ThirdWayTableViewCell
+            cell.aDelegate = self
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "theCell") as! MainTableViewCell
         let url = Bundle.main.url(forResource: "sample_one", withExtension: "html")
         let request = URLRequest(url: url!)
@@ -73,6 +83,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
+    }
+    
+    func triggerIt() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "selectTemplate") as! SelectATemplateViewController
+        
+        self.present(vc, animated: true, completion: nil)
     }
 }

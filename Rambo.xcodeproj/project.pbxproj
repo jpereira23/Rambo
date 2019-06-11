@@ -38,6 +38,8 @@
 		208C2314228675B400F91C4F /* RamboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2313228675B400F91C4F /* RamboUITests.swift */; };
 		20A5E3EB22B061AF009D44D5 /* DateKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A5E3EA22B061AF009D44D5 /* DateKeyboard.xib */; };
 		20A5E3ED22B06233009D44D5 /* DateKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5E3EC22B06233009D44D5 /* DateKeyboard.swift */; };
+		20A5E3F022B073DF009D44D5 /* ThirdWayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5E3EE22B073DF009D44D5 /* ThirdWayTableViewCell.swift */; };
+		20A5E3F122B073DF009D44D5 /* ThirdWayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A5E3EF22B073DF009D44D5 /* ThirdWayTableViewCell.xib */; };
 		20B63A56229062AC00EA1814 /* TemplateScroll.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B63A55229062AC00EA1814 /* TemplateScroll.xib */; };
 		20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63A57229062B800EA1814 /* TemplateScroll.swift */; };
 		20B63A5A2290646B00EA1814 /* TemplateWeb.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B63A592290646B00EA1814 /* TemplateWeb.xib */; };
@@ -130,6 +132,8 @@
 		208C2315228675B400F91C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20A5E3EA22B061AF009D44D5 /* DateKeyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateKeyboard.xib; sourceTree = "<group>"; };
 		20A5E3EC22B06233009D44D5 /* DateKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateKeyboard.swift; sourceTree = "<group>"; };
+		20A5E3EE22B073DF009D44D5 /* ThirdWayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdWayTableViewCell.swift; sourceTree = "<group>"; };
+		20A5E3EF22B073DF009D44D5 /* ThirdWayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdWayTableViewCell.xib; sourceTree = "<group>"; };
 		20B63A55229062AC00EA1814 /* TemplateScroll.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateScroll.xib; sourceTree = "<group>"; };
 		20B63A57229062B800EA1814 /* TemplateScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateScroll.swift; sourceTree = "<group>"; };
 		20B63A592290646B00EA1814 /* TemplateWeb.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateWeb.xib; sourceTree = "<group>"; };
@@ -225,6 +229,8 @@
 			isa = PBXGroup;
 			children = (
 				2042B17C2291AAC000DEAD80 /* MainTableViewCell.swift */,
+				20A5E3EE22B073DF009D44D5 /* ThirdWayTableViewCell.swift */,
+				20A5E3EF22B073DF009D44D5 /* ThirdWayTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 				20F2037222A889A200CAF938 /* StepFive.xib in Resources */,
 				20F2036222A8832F00CAF938 /* StepOne.xib in Resources */,
 				208C22F6228675B300F91C4F /* Main.storyboard in Resources */,
+				20A5E3F122B073DF009D44D5 /* ThirdWayTableViewCell.xib in Resources */,
 				E5BBC24D228A61DE00D778C6 /* worthy-logo.png in Resources */,
 				2042B174229070E500DEAD80 /* sample_two.html in Resources */,
 				E5B78521228BA9720089BC59 /* NotoSansJP-Regular.otf in Resources */,
@@ -570,6 +577,7 @@
 				20F2036C22A8886C00CAF938 /* StepFour.swift in Sources */,
 				20FCF42E22AC3E2A005B553D /* AddSkillTableViewCell.swift in Sources */,
 				202606BD228DDF370017BDCD /* AccountKit.swift in Sources */,
+				20A5E3F022B073DF009D44D5 /* ThirdWayTableViewCell.swift in Sources */,
 				2011B86B228B642300067C1C /* CoreDataHelper.swift in Sources */,
 				2030E68122AC810C00FB7028 /* AddWorkTableViewCell.swift in Sources */,
 				20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */,
