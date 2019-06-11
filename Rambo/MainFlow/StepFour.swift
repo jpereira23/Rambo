@@ -11,7 +11,6 @@ import UIKit
 protocol StepFourDelegate{
     func DANextOne()
     func stepFourAlertCell()
-    func addDate(index: Int)
 }
 class StepFour: UIView {
 
@@ -42,7 +41,7 @@ class StepFour: UIView {
     func checkUse() -> Bool{
         let last = arrayOfSchools.count - 1
         let aCell = tableview.cellForRow(at: IndexPath(row: last, section: 0)) as! AddSchoolTableViewCell
-        if arrayOfSchools.count > 1 && aCell.checkUse() {
+        if arrayOfSchools.count > 0 && aCell.checkUse() {
             return true
         }
         
@@ -145,7 +144,4 @@ extension StepFour: UITableViewDataSource, UITableViewDelegate{
 }
 
 extension StepFour: AddSchoolTableViewCellDelegate{
-    func addStartDate(index: Int) {
-        self.aDelegate.addDate(index: index)
-    }
 }

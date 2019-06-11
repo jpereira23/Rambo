@@ -10,9 +10,8 @@ import UIKit
 
 
 protocol AddSchoolTableViewCellDelegate{
-    func addStartDate(index: Int)
 }
-class AddSchoolTableViewCell: UITableViewCell {
+class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
 
     @IBOutlet weak var schoolName: UITextField!
     @IBOutlet weak var degree: UITextField!
@@ -21,16 +20,49 @@ class AddSchoolTableViewCell: UITableViewCell {
     @IBOutlet weak var endDate: UITextField!
     @IBOutlet weak var city: UITextField!
     @IBOutlet weak var isEmployee: UISwitch!
+    
+    let keyboardView = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
     var aDelegate: AddSchoolTableViewCellDelegate!
-    var index: Int! 
+    var index: Int!
+    var isStart: Bool = false
+    var isEnd: Bool = false
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        // Intialization code
         startDate.addTarget(self, action: #selector(startDateSelected), for: .editingDidBegin)
-       
+        endDate.addTarget(self, action: #selector(endDateSelected), for: .editingDidBegin)
+        startDate.inputView = keyboardView
+        endDate.inputView = keyboardView
+        keyboardView.delegate = self
     }
     
     @objc func startDateSelected(textField: UITextField){
-        aDelegate.addStartDate(index: index)
+        isStart = true
+    }
+    
+    @objc func endDateSelected(textField: UITextField){
+        isEnd = true
+    }
+    
+    func keyWasTapped(date: String) {
+        NSLog(date)
+        if isStart{
+            startDate.text = date
+            startDate.inputView = nil
+            startDate.reloadInputViews()
+            startDate.endEditing(true)
+            isStart = false
+        }
+        
+        if isEnd{
+            endDate.text = date
+            endDate.inputView = nil
+            endDate.reloadInputViews()
+            endDate.endEditing(true)
+            isEnd = false
+        }
+        
     }
     
     func checkUse() -> Bool {
@@ -39,10 +71,6 @@ class AddSchoolTableViewCell: UITableViewCell {
         }
         
         return false
-    }
-    
-    func printSomething(text: String){
-        startDate.text = text
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

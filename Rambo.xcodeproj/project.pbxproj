@@ -36,6 +36,8 @@
 		208C22FB228675B400F91C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208C22FA228675B400F91C4F /* Assets.xcassets */; };
 		208C2309228675B400F91C4F /* RamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2308228675B400F91C4F /* RamboTests.swift */; };
 		208C2314228675B400F91C4F /* RamboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2313228675B400F91C4F /* RamboUITests.swift */; };
+		20A5E3EB22B061AF009D44D5 /* DateKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A5E3EA22B061AF009D44D5 /* DateKeyboard.xib */; };
+		20A5E3ED22B06233009D44D5 /* DateKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5E3EC22B06233009D44D5 /* DateKeyboard.swift */; };
 		20B63A56229062AC00EA1814 /* TemplateScroll.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B63A55229062AC00EA1814 /* TemplateScroll.xib */; };
 		20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63A57229062B800EA1814 /* TemplateScroll.swift */; };
 		20B63A5A2290646B00EA1814 /* TemplateWeb.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B63A592290646B00EA1814 /* TemplateWeb.xib */; };
@@ -126,6 +128,8 @@
 		208C230F228675B400F91C4F /* RamboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C2313228675B400F91C4F /* RamboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamboUITests.swift; sourceTree = "<group>"; };
 		208C2315228675B400F91C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20A5E3EA22B061AF009D44D5 /* DateKeyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateKeyboard.xib; sourceTree = "<group>"; };
+		20A5E3EC22B06233009D44D5 /* DateKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateKeyboard.swift; sourceTree = "<group>"; };
 		20B63A55229062AC00EA1814 /* TemplateScroll.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateScroll.xib; sourceTree = "<group>"; };
 		20B63A57229062B800EA1814 /* TemplateScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateScroll.swift; sourceTree = "<group>"; };
 		20B63A592290646B00EA1814 /* TemplateWeb.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateWeb.xib; sourceTree = "<group>"; };
@@ -304,6 +308,15 @@
 			path = RamboUITests;
 			sourceTree = "<group>";
 		};
+		20A5E3E922B06196009D44D5 /* DateKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				20A5E3EA22B061AF009D44D5 /* DateKeyboard.xib */,
+				20A5E3EC22B06233009D44D5 /* DateKeyboard.swift */,
+			);
+			path = DateKeyboard;
+			sourceTree = "<group>";
+		};
 		20C0363022A87E240049B068 /* NavBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +378,7 @@
 		20F2035E22A8830000CAF938 /* MainFlow */ = {
 			isa = PBXGroup;
 			children = (
+				20A5E3E922B06196009D44D5 /* DateKeyboard */,
 				20F2035F22A8832600CAF938 /* StepOne.swift */,
 				20F2036122A8832F00CAF938 /* StepOne.xib */,
 				20F2036322A8848400CAF938 /* StepTwo.swift */,
@@ -525,6 +539,7 @@
 				E54A8DA4228A494D0030FB2F /* Icons in Resources */,
 				20614F6C22A86EF2008567DC /* Template.xib in Resources */,
 				20B63A5A2290646B00EA1814 /* TemplateWeb.xib in Resources */,
+				20A5E3EB22B061AF009D44D5 /* DateKeyboard.xib in Resources */,
 				E5B78520228BA96E0089BC59 /* NotoSansJP-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -567,6 +582,7 @@
 				20FCF43122AC6AD3005B553D /* School.swift in Sources */,
 				2042B17E2291AAC000DEAD80 /* MainTableViewCell.swift in Sources */,
 				20D861FB22AC6D0A00E72879 /* AddSchoolTableViewCell.swift in Sources */,
+				20A5E3ED22B06233009D44D5 /* DateKeyboard.swift in Sources */,
 				2011B86F228B67C600067C1C /* OnBoardingViewController.swift in Sources */,
 				2011B86D228B64FF00067C1C /* User.swift in Sources */,
 				206BBB2522AC783B003E9681 /* Work.swift in Sources */,
