@@ -25,6 +25,7 @@ class StepTwo: UIView {
     }
     */
     @IBAction func next(_ sender: Any) {
+    
         if checkUse(){
             aDelegate.nextOne()
         } else {

@@ -69,11 +69,10 @@
 		20FCF42F22AC3E2A005B553D /* AddSkillTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20FCF42D22AC3E2A005B553D /* AddSkillTableViewCell.xib */; };
 		20FCF43122AC6AD3005B553D /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FCF43022AC6AD3005B553D /* School.swift */; };
 		E54A8DA4228A494D0030FB2F /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = E54A8DA1228A494C0030FB2F /* Icons */; };
-		E5B78520228BA96E0089BC59 /* NotoSansJP-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B7851E228BA9560089BC59 /* NotoSansJP-Bold.otf */; };
-		E5B78521228BA9720089BC59 /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B7851F228BA9560089BC59 /* NotoSansJP-Regular.otf */; };
-		E5B78523228BA9CE0089BC59 /* NotoSansJP-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E5B78522228BA9CE0089BC59 /* NotoSansJP-Medium.otf */; };
+		E583737C22B0B1D800A84C64 /* NotoSansJP-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = E583737922B0AD0900A84C64 /* NotoSansJP-Medium.otf */; };
+		E583737D22B0B1DB00A84C64 /* NotoSansJP-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E583737A22B0AD0900A84C64 /* NotoSansJP-Regular.otf */; };
+		E583737E22B0B1DE00A84C64 /* NotoSansJP-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E583737B22B0AD0A00A84C64 /* NotoSansJP-Bold.otf */; };
 		E5BBC24A228A60C100D778C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */; };
-		E5BBC24D228A61DE00D778C6 /* worthy-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BBC24C228A61DE00D778C6 /* worthy-logo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +100,6 @@
 		2011B873228B68BE00067C1C /* OnBoardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
 		202606B8228DD59F0017BDCD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		202606BC228DDF370017BDCD /* AccountKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountKit.swift; sourceTree = "<group>"; };
-		202606BE228DE08C0017BDCD /* Rambo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rambo.entitlements; sourceTree = "<group>"; };
 		202606C0228DE0950017BDCD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2030E67F22AC810C00FB7028 /* AddWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkTableViewCell.swift; sourceTree = "<group>"; };
 		2030E68022AC810C00FB7028 /* AddWorkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddWorkTableViewCell.xib; sourceTree = "<group>"; };
@@ -163,11 +161,10 @@
 		20FCF42D22AC3E2A005B553D /* AddSkillTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSkillTableViewCell.xib; sourceTree = "<group>"; };
 		20FCF43022AC6AD3005B553D /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		E54A8DA1228A494C0030FB2F /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
-		E5B7851E228BA9560089BC59 /* NotoSansJP-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-Bold.otf"; sourceTree = "<group>"; };
-		E5B7851F228BA9560089BC59 /* NotoSansJP-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-Regular.otf"; sourceTree = "<group>"; };
-		E5B78522228BA9CE0089BC59 /* NotoSansJP-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Medium.otf"; path = "../../../Library/Fonts/NotoSansJP-Medium.otf"; sourceTree = "<group>"; };
+		E583737922B0AD0900A84C64 /* NotoSansJP-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansJP-Medium.otf"; path = "Icons/NotoSansJP-Medium.otf"; sourceTree = "<group>"; };
+		E583737A22B0AD0900A84C64 /* NotoSansJP-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-Regular.otf"; sourceTree = "<group>"; };
+		E583737B22B0AD0A00A84C64 /* NotoSansJP-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansJP-Bold.otf"; sourceTree = "<group>"; };
 		E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		E5BBC24C228A61DE00D778C6 /* worthy-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "worthy-logo.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,18 +276,16 @@
 				2011B870228B688C00067C1C /* OnBoarding */,
 				2011B869228B640900067C1C /* Account Stuff */,
 				208C22F4228675B300F91C4F /* Main.storyboard */,
+				208C22FA228675B400F91C4F /* Assets.xcassets */,
+				E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */,
 				20B63A5D2290652200EA1814 /* sample_one.html */,
 				2042B173229070E500DEAD80 /* sample_two.html */,
-				202606BE228DE08C0017BDCD /* Rambo.entitlements */,
 				208C22F0228675B300F91C4F /* AppDelegate.swift */,
 				208C22FF228675B400F91C4F /* Info.plist */,
 				208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */,
-				208C22FA228675B400F91C4F /* Assets.xcassets */,
-				E5BBC24C228A61DE00D778C6 /* worthy-logo.png */,
-				E5B7851E228BA9560089BC59 /* NotoSansJP-Bold.otf */,
-				E5B7851F228BA9560089BC59 /* NotoSansJP-Regular.otf */,
-				E5B78522228BA9CE0089BC59 /* NotoSansJP-Medium.otf */,
-				E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */,
+				E583737B22B0AD0A00A84C64 /* NotoSansJP-Bold.otf */,
+				E583737922B0AD0900A84C64 /* NotoSansJP-Medium.otf */,
+				E583737A22B0AD0900A84C64 /* NotoSansJP-Regular.otf */,
 				E54A8DA1228A494C0030FB2F /* Icons */,
 			);
 			path = Rambo;
@@ -522,13 +517,14 @@
 				20F2036A22A886BD00CAF938 /* StepThree.xib in Resources */,
 				20C2C1FB228E5E1000E3B0D7 /* SelectTemplate.xib in Resources */,
 				208C22FB228675B400F91C4F /* Assets.xcassets in Resources */,
+				E583737C22B0B1D800A84C64 /* NotoSansJP-Medium.otf in Resources */,
 				20F2037222A889A200CAF938 /* StepFive.xib in Resources */,
+				E583737E22B0B1DE00A84C64 /* NotoSansJP-Bold.otf in Resources */,
 				20F2036222A8832F00CAF938 /* StepOne.xib in Resources */,
+				E583737D22B0B1DB00A84C64 /* NotoSansJP-Regular.otf in Resources */,
 				208C22F6228675B300F91C4F /* Main.storyboard in Resources */,
 				20A5E3F122B073DF009D44D5 /* ThirdWayTableViewCell.xib in Resources */,
-				E5BBC24D228A61DE00D778C6 /* worthy-logo.png in Resources */,
 				2042B174229070E500DEAD80 /* sample_two.html in Resources */,
-				E5B78521228BA9720089BC59 /* NotoSansJP-Regular.otf in Resources */,
 				2030E68222AC810C00FB7028 /* AddWorkTableViewCell.xib in Resources */,
 				20B63A56229062AC00EA1814 /* TemplateScroll.xib in Resources */,
 				20614F7422A871AE008567DC /* traditional.css in Resources */,
@@ -536,7 +532,6 @@
 				20B63A5E2290652200EA1814 /* sample_one.html in Resources */,
 				20FCF42F22AC3E2A005B553D /* AddSkillTableViewCell.xib in Resources */,
 				E5BBC24A228A60C100D778C6 /* LaunchScreen.storyboard in Resources */,
-				E5B78523228BA9CE0089BC59 /* NotoSansJP-Medium.otf in Resources */,
 				20C0363422A87E500049B068 /* MainNavBar.xib in Resources */,
 				20F2036622A8849100CAF938 /* StepTwo.xib in Resources */,
 				20614F7822A871AE008567DC /* resume.html in Resources */,
@@ -547,7 +542,6 @@
 				20614F6C22A86EF2008567DC /* Template.xib in Resources */,
 				20B63A5A2290646B00EA1814 /* TemplateWeb.xib in Resources */,
 				20A5E3EB22B061AF009D44D5 /* DateKeyboard.xib in Resources */,
-				E5B78520228BA96E0089BC59 /* NotoSansJP-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

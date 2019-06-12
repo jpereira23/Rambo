@@ -104,6 +104,7 @@ extension StepFour: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "aCell") as! AddSchoolTableViewCell
         
         cell.aDelegate = self
+        
         //Textfields Right Padding
         let indentView0 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         cell.schoolName.leftView = indentView0

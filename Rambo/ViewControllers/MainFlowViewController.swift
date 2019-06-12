@@ -36,10 +36,8 @@ class MainFlowViewController: UIViewController {
         stepTwo.aDelegate = self
         stepThree.aDelegate = self
         stepFour.aDelegate = self
-        
+    
         aMainNavBar.aDelegate = self
-        
-        //Save and Continue Button
         
         //TextFields Inside Padding
         let indentView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))

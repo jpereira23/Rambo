@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="NotoSansJP-Medium.otf">
+            <string>NotoSansJP-Medium</string>
+        </array>
         <array key="NotoSansJP-Regular.otf">
             <string>NotoSansJP-Regular</string>
         </array>
@@ -41,13 +44,13 @@
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tony Stark" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qby-tX-4iU">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="John Smith" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qby-tX-4iU">
                                     <rect key="frame" x="0.0" y="25.5" width="354" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="9dM-u5-KK4"/>
                                     </constraints>
                                     <nil key="textColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <fontDescription key="fontDescription" name="NotoSansJP-Regular" family="Noto Sans JP Regular" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                             </subviews>
@@ -69,7 +72,7 @@
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tonystark@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5SR-7W-y84">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="john_smith@gmail.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5SR-7W-y84">
                                     <rect key="frame" x="0.0" y="25.5" width="354" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="HZE-Kh-4rc"/>
@@ -115,7 +118,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="www.tonystark.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ko5-JJ-poX">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="www.johnsmith.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ko5-JJ-poX">
                                     <rect key="frame" x="0.0" y="26" width="354" height="44"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="44" id="zbf-h9-Lkn"/>
@@ -128,10 +131,16 @@
                         </stackView>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWC-PJ-a0C">
-                    <rect key="frame" x="191" y="443" width="32" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Next"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWC-PJ-a0C">
+                    <rect key="frame" x="30" y="389" width="354" height="50"/>
+                    <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Knf-Sg-nvG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
+                    <state key="normal" title="Save &amp; Continue">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <connections>
                         <action selector="next:" destination="iN0-l3-epB" eventType="touchUpInside" id="1zS-eJ-6Na"/>
                     </connections>
@@ -139,6 +148,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lWC-PJ-a0C" secondAttribute="trailing" constant="30" id="3Un-MY-4FD"/>
+                <constraint firstItem="lWC-PJ-a0C" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="9Lp-HJ-A4B"/>
+                <constraint firstItem="lWC-PJ-a0C" firstAttribute="top" secondItem="ko5-JJ-poX" secondAttribute="bottom" constant="20" id="Cv3-d9-5b1"/>
                 <constraint firstItem="cdl-4d-Xf0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="DYH-cg-WWd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cdl-4d-Xf0" secondAttribute="trailing" constant="30" id="LYe-pE-y6T"/>
                 <constraint firstItem="cdl-4d-Xf0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="ckw-rZ-xb8"/>

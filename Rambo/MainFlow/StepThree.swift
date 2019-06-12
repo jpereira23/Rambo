@@ -98,14 +98,74 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 387.0
+        return 625.0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "laCell") as! AddWorkTableViewCell
+        
+        //Textfields Right Padding
+        let indentView0 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+        cell.jobTitle.leftView = indentView0
+        cell.jobTitle.leftViewMode = .always
+        
+        let indentView1 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+        cell.CITY.leftView = indentView1
+        cell.CITY.leftViewMode = .always
+        
+        //let indentView2 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+        //cell.aDescription.leftView = indentView2
+        //cell.aDescription.leftViewMode = .always
+        
+        let indentView3 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+        cell.startDate.leftView = indentView3
+        cell.startDate.leftViewMode = .always
+        
+        let indentView4 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+        cell.endDate.leftView = indentView4
+        cell.endDate.leftViewMode = .always
+        
+        let indentView5 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+        cell.companyName.leftView = indentView5
+        cell.companyName.leftViewMode = .always
+        
         
         return cell
     }
     
     
 }
+
+/*
+ 
+ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+ let cell = tableView.dequeueReusableCell(withIdentifier: "aCell") as! AddSchoolTableViewCell
+ 
+ cell.aDelegate = self
+ 
+ //Textfields Right Padding
+ let indentView0 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+ cell.schoolName.leftView = indentView0
+ cell.schoolName.leftViewMode = .always
+ 
+ let indentView1 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+ cell.degree.leftView = indentView1
+ cell.degree.leftViewMode = .always
+ 
+ let indentView2 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+ cell.areaOfStudy.leftView = indentView2
+ cell.areaOfStudy.leftViewMode = .always
+ 
+ let indentView3 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+ cell.startDate.leftView = indentView3
+ cell.startDate.leftViewMode = .always
+ 
+ let indentView4 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+ cell.endDate.leftView = indentView4
+ cell.endDate.leftViewMode = .always
+ 
+ let indentView5 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+ cell.city.leftView = indentView5
+ cell.city.leftViewMode = .always
+ 
+ */
