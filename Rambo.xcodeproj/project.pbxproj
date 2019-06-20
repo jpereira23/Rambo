@@ -20,6 +20,7 @@
 		2042B174229070E500DEAD80 /* sample_two.html in Resources */ = {isa = PBXBuildFile; fileRef = 2042B173229070E500DEAD80 /* sample_two.html */; };
 		2042B1762291A6D700DEAD80 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042B1752291A6D700DEAD80 /* MainViewController.swift */; };
 		2042B17E2291AAC000DEAD80 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042B17C2291AAC000DEAD80 /* MainTableViewCell.swift */; };
+		205F7F4622BC4DDF0096676D /* world-cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 205F7F4522BC4DDF0096676D /* world-cities.txt */; };
 		20614F6C22A86EF2008567DC /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20614F6B22A86EF2008567DC /* Template.xib */; };
 		20614F6E22A86FA1008567DC /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20614F6D22A86FA1008567DC /* Template.swift */; };
 		20614F7422A871AE008567DC /* traditional.css in Resources */ = {isa = PBXBuildFile; fileRef = 20614F6F22A871AE008567DC /* traditional.css */; };
@@ -106,6 +107,7 @@
 		2042B173229070E500DEAD80 /* sample_two.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample_two.html; sourceTree = "<group>"; };
 		2042B1752291A6D700DEAD80 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2042B17C2291AAC000DEAD80 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		205F7F4522BC4DDF0096676D /* world-cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "world-cities.txt"; sourceTree = "<group>"; };
 		20614F6B22A86EF2008567DC /* Template.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Template.xib; sourceTree = "<group>"; };
 		20614F6D22A86FA1008567DC /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		20614F6F22A871AE008567DC /* traditional.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = traditional.css; path = Rambo/traditional.css; sourceTree = SOURCE_ROOT; };
@@ -265,6 +267,7 @@
 		208C22EF228675B300F91C4F /* Rambo */ = {
 			isa = PBXGroup;
 			children = (
+				205F7F4522BC4DDF0096676D /* world-cities.txt */,
 				20F2035E22A8830000CAF938 /* MainFlow */,
 				20C0363022A87E240049B068 /* NavBar */,
 				20614F6A22A86E4F008567DC /* Template */,
@@ -514,6 +517,7 @@
 			files = (
 				2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */,
 				20614F7622A871AE008567DC /* red.css in Resources */,
+				205F7F4622BC4DDF0096676D /* world-cities.txt in Resources */,
 				20F2036A22A886BD00CAF938 /* StepThree.xib in Resources */,
 				20C2C1FB228E5E1000E3B0D7 /* SelectTemplate.xib in Resources */,
 				208C22FB228675B400F91C4F /* Assets.xcassets in Resources */,

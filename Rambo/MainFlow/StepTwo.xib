@@ -29,7 +29,7 @@
                     <attributedString key="attributedText">
                         <fragment content="Objective / Summary">
                             <attributes>
-                                <font key="NSFont" size="12" name="NotoSansJP-Regular"/>
+                                <font key="NSFont" metaFont="cellTitle"/>
                             </attributes>
                         </fragment>
                     </attributedString>

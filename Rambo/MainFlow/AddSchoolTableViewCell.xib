@@ -12,11 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aCell" rowHeight="572" id="KGk-i7-Jjw" customClass="AddSchoolTableViewCell" customModule="Rambo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="619"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aCell" rowHeight="714" id="KGk-i7-Jjw" customClass="AddSchoolTableViewCell" customModule="Rambo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="761"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="618.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="760.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lQ7-fP-Hil">
@@ -150,29 +150,60 @@
                             </switch>
                         </subviews>
                     </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="58r-o9-u2p">
-                        <rect key="frame" x="30" y="519" width="260" height="69.5"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5h-ay-2EO">
-                                <rect key="frame" x="0.0" y="0.0" width="260" height="20.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20.5" id="vHJ-Pd-XYt"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="San Francisco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mwl-WG-lKP">
-                                <rect key="frame" x="0.0" y="25.5" width="260" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="bQd-Wq-VEi"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbD-0N-9pF">
+                        <rect key="frame" x="30" y="571" width="112" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20.5" id="mIA-li-3gF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5h-ay-2EO">
+                        <rect key="frame" x="30" y="500" width="260" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20.5" id="vHJ-Pd-XYt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYb-u2-Ttc">
+                        <rect key="frame" x="30" y="651" width="112" height="20.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20.5" id="IMz-dA-VHZ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="San Francisco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZEp-XX-aU3">
+                        <rect key="frame" x="30" y="599" width="260" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="lt4-ck-Ndk"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="San Francisco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LUc-Je-mDf">
+                        <rect key="frame" x="30" y="679" width="260" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="P1X-c6-aRT"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="San Francisco" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mwl-WG-lKP">
+                        <rect key="frame" x="30" y="519" width="260" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="bQd-Wq-VEi"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
                 <constraints>
                     <constraint firstItem="lQ7-fP-Hil" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="2YS-FX-2KS"/>
@@ -187,12 +218,9 @@
                     <constraint firstItem="Bcx-Fy-1YE" firstAttribute="top" secondItem="lQ7-fP-Hil" secondAttribute="bottom" constant="20" id="QFS-kR-U0n"/>
                     <constraint firstAttribute="trailing" secondItem="DZd-28-5JS" secondAttribute="trailing" constant="30" id="SOH-Zy-dnN"/>
                     <constraint firstItem="lQ7-fP-Hil" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="U2V-8G-VnG"/>
-                    <constraint firstItem="58r-o9-u2p" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="XiG-VS-378"/>
                     <constraint firstItem="Bcx-Fy-1YE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="fqh-V3-zUH"/>
                     <constraint firstAttribute="trailing" secondItem="Bcx-Fy-1YE" secondAttribute="trailing" constant="30" id="hee-d0-fNc"/>
-                    <constraint firstItem="58r-o9-u2p" firstAttribute="top" secondItem="DZd-28-5JS" secondAttribute="bottom" constant="20" id="hsY-lA-ZDu"/>
                     <constraint firstItem="pig-6j-JPA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="pdX-s8-BjK"/>
-                    <constraint firstAttribute="trailing" secondItem="58r-o9-u2p" secondAttribute="trailing" constant="30" id="qBf-ab-Zfo"/>
                     <constraint firstItem="pig-6j-JPA" firstAttribute="top" secondItem="Bcx-Fy-1YE" secondAttribute="bottom" constant="20" id="sUL-qs-92z"/>
                     <constraint firstAttribute="trailing" secondItem="GaJ-4f-j4K" secondAttribute="trailing" constant="30" id="ytt-i9-i7u"/>
                 </constraints>
@@ -201,14 +229,16 @@
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="areaOfStudy" destination="Bgq-fU-kfa" id="nkR-FG-64w"/>
-                <outlet property="city" destination="Mwl-WG-lKP" id="hcS-1B-jF7"/>
+                <outlet property="city" destination="LUc-Je-mDf" id="LEg-Xh-Yk9"/>
+                <outlet property="country" destination="Mwl-WG-lKP" id="KPP-bL-Ge8"/>
                 <outlet property="degree" destination="TGn-3x-aBB" id="QdZ-ya-sPK"/>
                 <outlet property="endDate" destination="FAt-zy-e3p" id="Ywb-s6-ljE"/>
                 <outlet property="isEmployee" destination="6kt-ND-ICk" id="6Tf-ip-nfh"/>
                 <outlet property="schoolName" destination="DOs-YO-lBL" id="dBw-U3-dl3"/>
                 <outlet property="startDate" destination="iEL-cv-53v" id="xg5-uY-bfO"/>
+                <outlet property="state" destination="ZEp-XX-aU3" id="EiN-H7-9Xc"/>
             </connections>
-            <point key="canvasLocation" x="139.13043478260872" y="64.620535714285708"/>
+            <point key="canvasLocation" x="139.13043478260872" y="112.16517857142857"/>
         </tableViewCell>
     </objects>
 </document>

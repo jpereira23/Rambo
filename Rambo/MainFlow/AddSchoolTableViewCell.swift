@@ -20,6 +20,8 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
     @IBOutlet weak var endDate: UITextField!
     @IBOutlet weak var city: UITextField!
     @IBOutlet weak var isEmployee: UISwitch!
+    @IBOutlet weak var state: UITextField!
+    @IBOutlet weak var country: UITextField!
     
     let keyboardView = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
     var aDelegate: AddSchoolTableViewCellDelegate!
@@ -30,11 +32,16 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
         super.awakeFromNib()
         
         // Intialization code
+        
         startDate.addTarget(self, action: #selector(startDateSelected), for: .editingDidBegin)
         endDate.addTarget(self, action: #selector(endDateSelected), for: .editingDidBegin)
         startDate.inputView = keyboardView
         endDate.inputView = keyboardView
         keyboardView.delegate = self
+    }
+    
+    @objc func countryStartEditing(textField: UITextField){
+        NSLog(country.text!)
     }
     
     @objc func startDateSelected(textField: UITextField){
