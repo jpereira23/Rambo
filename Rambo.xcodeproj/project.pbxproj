@@ -14,13 +14,15 @@
 		2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2011B873228B68BE00067C1C /* OnBoardingView.xib */; };
 		202606B9228DD59F0017BDCD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202606B8228DD59F0017BDCD /* SignUpViewController.swift */; };
 		202606BD228DDF370017BDCD /* AccountKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202606BC228DDF370017BDCD /* AccountKit.swift */; };
-		202606C1228DE0950017BDCD /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 202606C0228DE0950017BDCD /* CloudKit.framework */; };
 		2030E68122AC810C00FB7028 /* AddWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030E67F22AC810C00FB7028 /* AddWorkTableViewCell.swift */; };
 		2030E68222AC810C00FB7028 /* AddWorkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2030E68022AC810C00FB7028 /* AddWorkTableViewCell.xib */; };
 		2042B174229070E500DEAD80 /* sample_two.html in Resources */ = {isa = PBXBuildFile; fileRef = 2042B173229070E500DEAD80 /* sample_two.html */; };
 		2042B1762291A6D700DEAD80 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042B1752291A6D700DEAD80 /* MainViewController.swift */; };
 		2042B17E2291AAC000DEAD80 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042B17C2291AAC000DEAD80 /* MainTableViewCell.swift */; };
 		205F7F4622BC4DDF0096676D /* world-cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 205F7F4522BC4DDF0096676D /* world-cities.txt */; };
+		205F7F4822BC54B20096676D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F7F4722BC54B20096676D /* SignInViewController.swift */; };
+		205F7F4B22BC58020096676D /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F7F4A22BC58020096676D /* CloudKitHelper.swift */; };
+		205F7F4D22BC5B4F0096676D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205F7F4C22BC5B4F0096676D /* CloudKit.framework */; };
 		20614F6C22A86EF2008567DC /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20614F6B22A86EF2008567DC /* Template.xib */; };
 		20614F6E22A86FA1008567DC /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20614F6D22A86FA1008567DC /* Template.swift */; };
 		20614F7422A871AE008567DC /* traditional.css in Resources */ = {isa = PBXBuildFile; fileRef = 20614F6F22A871AE008567DC /* traditional.css */; };
@@ -101,13 +103,16 @@
 		2011B873228B68BE00067C1C /* OnBoardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
 		202606B8228DD59F0017BDCD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		202606BC228DDF370017BDCD /* AccountKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountKit.swift; sourceTree = "<group>"; };
-		202606C0228DE0950017BDCD /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		2030E67F22AC810C00FB7028 /* AddWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkTableViewCell.swift; sourceTree = "<group>"; };
 		2030E68022AC810C00FB7028 /* AddWorkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddWorkTableViewCell.xib; sourceTree = "<group>"; };
 		2042B173229070E500DEAD80 /* sample_two.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample_two.html; sourceTree = "<group>"; };
 		2042B1752291A6D700DEAD80 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2042B17C2291AAC000DEAD80 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		205F7F4522BC4DDF0096676D /* world-cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "world-cities.txt"; sourceTree = "<group>"; };
+		205F7F4722BC54B20096676D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		205F7F4922BC569C0096676D /* Rambo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rambo.entitlements; sourceTree = "<group>"; };
+		205F7F4A22BC58020096676D /* CloudKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
+		205F7F4C22BC5B4F0096676D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		20614F6B22A86EF2008567DC /* Template.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Template.xib; sourceTree = "<group>"; };
 		20614F6D22A86FA1008567DC /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
 		20614F6F22A871AE008567DC /* traditional.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = traditional.css; path = Rambo/traditional.css; sourceTree = SOURCE_ROOT; };
@@ -175,7 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20B63A60229066E700EA1814 /* WebKit.framework in Frameworks */,
-				202606C1228DE0950017BDCD /* CloudKit.framework in Frameworks */,
+				205F7F4D22BC5B4F0096676D /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,8 +223,8 @@
 		202606BF228DE0950017BDCD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				205F7F4C22BC5B4F0096676D /* CloudKit.framework */,
 				20B63A5F229066E700EA1814 /* WebKit.framework */,
-				202606C0228DE0950017BDCD /* CloudKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -267,7 +272,7 @@
 		208C22EF228675B300F91C4F /* Rambo */ = {
 			isa = PBXGroup;
 			children = (
-				205F7F4522BC4DDF0096676D /* world-cities.txt */,
+				205F7F4922BC569C0096676D /* Rambo.entitlements */,
 				20F2035E22A8830000CAF938 /* MainFlow */,
 				20C0363022A87E240049B068 /* NavBar */,
 				20614F6A22A86E4F008567DC /* Template */,
@@ -282,6 +287,7 @@
 				208C22FA228675B400F91C4F /* Assets.xcassets */,
 				E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */,
 				20B63A5D2290652200EA1814 /* sample_one.html */,
+				205F7F4522BC4DDF0096676D /* world-cities.txt */,
 				2042B173229070E500DEAD80 /* sample_two.html */,
 				208C22F0228675B300F91C4F /* AppDelegate.swift */,
 				208C22FF228675B400F91C4F /* Info.plist */,
@@ -353,6 +359,7 @@
 				202606B8228DD59F0017BDCD /* SignUpViewController.swift */,
 				2042B1752291A6D700DEAD80 /* MainViewController.swift */,
 				20D360A022A449EE00CBF8DE /* ResumePreviewViewController.swift */,
+				205F7F4722BC54B20096676D /* SignInViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -375,6 +382,7 @@
 				20D360AD22A46CA500CBF8DE /* Node.swift */,
 				20FCF43022AC6AD3005B553D /* School.swift */,
 				206BBB2422AC783B003E9681 /* Work.swift */,
+				205F7F4A22BC58020096676D /* CloudKitHelper.swift */,
 			);
 			path = "Helper Classes";
 			sourceTree = "<group>";
@@ -580,7 +588,9 @@
 				2030E68122AC810C00FB7028 /* AddWorkTableViewCell.swift in Sources */,
 				20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */,
 				20F2036822A886B200CAF938 /* StepThree.swift in Sources */,
+				205F7F4B22BC58020096676D /* CloudKitHelper.swift in Sources */,
 				208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */,
+				205F7F4822BC54B20096676D /* SignInViewController.swift in Sources */,
 				20B63A5C2290647900EA1814 /* TemplateWeb.swift in Sources */,
 				20D360AE22A46CA500CBF8DE /* Node.swift in Sources */,
 				20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */,

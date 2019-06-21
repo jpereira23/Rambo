@@ -41,9 +41,14 @@ class MainViewController: UIViewController{
     
     @IBAction func accountAction(_ sender: Any) {
         if isSignedIn{
-            
+            NSLog("Its SignedIn")
         } else {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "signIn") as! SignInViewController
             
+            vc.modalTransitionStyle = .crossDissolve
+            vc.modalPresentationStyle = .overCurrentContext
+            
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
