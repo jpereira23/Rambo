@@ -524,10 +524,12 @@ Terms of Service and Privacy Policy</string>
                                 <rect key="frame" x="0.0" y="208" width="414" height="332"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rR4-Mb-nyu">
-                                <rect key="frame" x="136" y="572" width="143" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rR4-Mb-nyu">
+                                <rect key="frame" x="30" y="782" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DTd-u4-Zkf"/>
+                                </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Continue">
@@ -543,11 +545,14 @@ Terms of Service and Privacy Policy</string>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Yuh-YO-hjn" firstAttribute="leading" secondItem="ShR-nk-r4b" secondAttribute="leading" id="0HC-g9-4x0"/>
                             <constraint firstItem="Yuh-YO-hjn" firstAttribute="trailing" secondItem="ShR-nk-r4b" secondAttribute="trailing" id="5Eq-Mv-gu3"/>
+                            <constraint firstItem="ShR-nk-r4b" firstAttribute="trailing" secondItem="rR4-Mb-nyu" secondAttribute="trailing" constant="30" id="Su4-Rw-cJO"/>
+                            <constraint firstItem="rR4-Mb-nyu" firstAttribute="leading" secondItem="ShR-nk-r4b" secondAttribute="leading" constant="30" id="Xmp-zo-AXR"/>
                             <constraint firstItem="Yuh-YO-hjn" firstAttribute="top" secondItem="ShR-nk-r4b" secondAttribute="top" id="rwW-Jc-rjs"/>
+                            <constraint firstItem="ShR-nk-r4b" firstAttribute="bottom" secondItem="rR4-Mb-nyu" secondAttribute="bottom" constant="30" id="t5j-PY-PoM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ShR-nk-r4b"/>
                     </view>
