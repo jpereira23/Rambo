@@ -132,7 +132,7 @@
                     </subviews>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWC-PJ-a0C">
-                    <rect key="frame" x="30" y="389" width="354" height="50"/>
+                    <rect key="frame" x="30" y="423" width="354" height="50"/>
                     <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Knf-Sg-nvG"/>
@@ -150,10 +150,10 @@
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lWC-PJ-a0C" secondAttribute="trailing" constant="30" id="3Un-MY-4FD"/>
                 <constraint firstItem="lWC-PJ-a0C" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="9Lp-HJ-A4B"/>
-                <constraint firstItem="lWC-PJ-a0C" firstAttribute="top" secondItem="ko5-JJ-poX" secondAttribute="bottom" constant="20" id="Cv3-d9-5b1"/>
                 <constraint firstItem="cdl-4d-Xf0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="DYH-cg-WWd"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cdl-4d-Xf0" secondAttribute="trailing" constant="30" id="LYe-pE-y6T"/>
                 <constraint firstItem="cdl-4d-Xf0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="ckw-rZ-xb8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="lWC-PJ-a0C" secondAttribute="bottom" constant="30" id="fFx-ZO-lsM"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
