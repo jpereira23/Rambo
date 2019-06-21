@@ -177,16 +177,16 @@ Terms of Service and Privacy Policy</string>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="A4j-63-O5o">
-                                <rect key="frame" x="30" y="78" width="354" height="56"/>
+                                <rect key="frame" x="30" y="78" width="354" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAVE YOUR RESUME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nL6-06-bVO">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="18"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="14"/>
                                         <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP Bold" pointSize="12"/>
                                         <color key="textColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeX-HA-r1J">
-                                        <rect key="frame" x="0.0" y="23" width="354" height="33"/>
+                                        <rect key="frame" x="0.0" y="19" width="354" height="26"/>
                                         <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP Bold" pointSize="22"/>
                                         <color key="textColor" red="0.1843137255" green="0.18039215689999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -626,6 +626,9 @@ Terms of Service and Privacy Policy</string>
                                 <rect key="frame" x="61" y="481" width="256" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log in"/>
+                                <connections>
+                                    <action selector="signIn:" destination="fYY-Az-c8B" eventType="touchUpInside" id="sRv-5X-hA7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome Back" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj8-oC-1eg">
                                 <rect key="frame" x="58" y="189" width="114" height="21"/>
@@ -653,14 +656,14 @@ Terms of Service and Privacy Policy</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cci-4t-e46">
                                 <rect key="frame" x="58" y="381" width="259" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctV-tc-iZ6">
                                 <rect key="frame" x="61" y="540" width="256" height="30"/>
@@ -671,6 +674,10 @@ Terms of Service and Privacy Policy</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dfH-oV-8vt"/>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="hmb-kN-zOg" id="JRR-bV-hha"/>
+                        <outlet property="passwordField" destination="cci-4t-e46" id="8ko-Il-WTR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xr9-VR-ZDV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

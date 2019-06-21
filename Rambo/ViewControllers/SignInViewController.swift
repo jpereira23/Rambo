@@ -7,19 +7,23 @@
 //
 
 import UIKit
+import CloudKit
+
 
 class SignInViewController: UIViewController {
-    let cloudKitHelper = CloudKitHelper()
+    let accountKit: AccountKit! = AccountKit()
+    
+    let username: String! = "User"
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
         // Do any additional setup after loading the view.
     }
     
     @IBAction func backButton(_ sender: Any) {
-        cloudKitHelper.printStuff()
+        
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -33,5 +37,17 @@ class SignInViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func signIn(_ sender: Any) {
+        if accountKit.checkAccount(email: emailField.text!, password: passwordField.text!, view: self){
+            
+            NSLog("Successful")
+            //accountKit.saveProfile(email: emailField.text, password: passwordField.text, username: <#T##String#>, view: <#T##UIViewController#>)
+            
+            //self.dismiss(animated: true, completion: nil)
+            
+        } else {
+            NSLog("Unsuccessful")
+        }
+    }
+    
 }

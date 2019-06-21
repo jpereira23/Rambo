@@ -21,7 +21,6 @@
 		2042B17E2291AAC000DEAD80 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042B17C2291AAC000DEAD80 /* MainTableViewCell.swift */; };
 		205F7F4622BC4DDF0096676D /* world-cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 205F7F4522BC4DDF0096676D /* world-cities.txt */; };
 		205F7F4822BC54B20096676D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F7F4722BC54B20096676D /* SignInViewController.swift */; };
-		205F7F4B22BC58020096676D /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F7F4A22BC58020096676D /* CloudKitHelper.swift */; };
 		205F7F4D22BC5B4F0096676D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205F7F4C22BC5B4F0096676D /* CloudKit.framework */; };
 		20614F6C22A86EF2008567DC /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20614F6B22A86EF2008567DC /* Template.xib */; };
 		20614F6E22A86FA1008567DC /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20614F6D22A86FA1008567DC /* Template.swift */; };
@@ -58,6 +57,7 @@
 		20D360AE22A46CA500CBF8DE /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D360AD22A46CA500CBF8DE /* Node.swift */; };
 		20D861FB22AC6D0A00E72879 /* AddSchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D861F922AC6D0A00E72879 /* AddSchoolTableViewCell.swift */; };
 		20D861FC22AC6D0A00E72879 /* AddSchoolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D861FA22AC6D0A00E72879 /* AddSchoolTableViewCell.xib */; };
+		20EB411A22BD831A001D0ACB /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EB411922BD831A001D0ACB /* CloudKitHelper.swift */; };
 		20F2036022A8832700CAF938 /* StepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2035F22A8832600CAF938 /* StepOne.swift */; };
 		20F2036222A8832F00CAF938 /* StepOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F2036122A8832F00CAF938 /* StepOne.xib */; };
 		20F2036422A8848400CAF938 /* StepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2036322A8848400CAF938 /* StepTwo.swift */; };
@@ -111,7 +111,6 @@
 		205F7F4522BC4DDF0096676D /* world-cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "world-cities.txt"; sourceTree = "<group>"; };
 		205F7F4722BC54B20096676D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		205F7F4922BC569C0096676D /* Rambo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rambo.entitlements; sourceTree = "<group>"; };
-		205F7F4A22BC58020096676D /* CloudKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
 		205F7F4C22BC5B4F0096676D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		20614F6B22A86EF2008567DC /* Template.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Template.xib; sourceTree = "<group>"; };
 		20614F6D22A86FA1008567DC /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
@@ -154,6 +153,7 @@
 		20D360AD22A46CA500CBF8DE /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		20D861F922AC6D0A00E72879 /* AddSchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchoolTableViewCell.swift; sourceTree = "<group>"; };
 		20D861FA22AC6D0A00E72879 /* AddSchoolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSchoolTableViewCell.xib; sourceTree = "<group>"; };
+		20EB411922BD831A001D0ACB /* CloudKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
 		20F2035F22A8832600CAF938 /* StepOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOne.swift; sourceTree = "<group>"; };
 		20F2036122A8832F00CAF938 /* StepOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepOne.xib; sourceTree = "<group>"; };
 		20F2036322A8848400CAF938 /* StepTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwo.swift; sourceTree = "<group>"; };
@@ -382,7 +382,7 @@
 				20D360AD22A46CA500CBF8DE /* Node.swift */,
 				20FCF43022AC6AD3005B553D /* School.swift */,
 				206BBB2422AC783B003E9681 /* Work.swift */,
-				205F7F4A22BC58020096676D /* CloudKitHelper.swift */,
+				20EB411922BD831A001D0ACB /* CloudKitHelper.swift */,
 			);
 			path = "Helper Classes";
 			sourceTree = "<group>";
@@ -588,7 +588,7 @@
 				2030E68122AC810C00FB7028 /* AddWorkTableViewCell.swift in Sources */,
 				20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */,
 				20F2036822A886B200CAF938 /* StepThree.swift in Sources */,
-				205F7F4B22BC58020096676D /* CloudKitHelper.swift in Sources */,
+				20EB411A22BD831A001D0ACB /* CloudKitHelper.swift in Sources */,
 				208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */,
 				205F7F4822BC54B20096676D /* SignInViewController.swift in Sources */,
 				20B63A5C2290647900EA1814 /* TemplateWeb.swift in Sources */,

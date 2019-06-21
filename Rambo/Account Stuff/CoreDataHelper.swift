@@ -52,8 +52,9 @@ class CoreDataHelper{
         if(managedObjects.count > 0){
             let theEmail = (managedObjects[0].value(forKeyPath: "email") as! String)
             let thePassword = (managedObjects[0].value(forKeyPath: "password") as! String)
+            let theUsername = (managedObjects[0].value(forKeyPath: "username") as! String)
             
-            tempUser = User(aPassword: thePassword, aEmail: theEmail)
+            tempUser = User(aPassword: thePassword, aEmail: theEmail, aUsername: theUsername)
             
             return tempUser
         }

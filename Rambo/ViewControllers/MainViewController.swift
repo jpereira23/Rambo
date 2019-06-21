@@ -33,7 +33,6 @@ class MainViewController: UIViewController{
             isSignedIn = false
         }
         
-        
         buildNew.layer.cornerRadius = 3
         
         // Do any additional setup after loading the view.
