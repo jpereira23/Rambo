@@ -24,7 +24,8 @@ class MainViewController: UIViewController{
     }
     
     func refreshPage(){
-        coreDataHelper.resetCoreData()
+        NSLog("Refreshing MainViewController")
+        //coreDataHelper.resetCoreData()
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "ThirdWayTableViewCell", bundle: bundle)
         self.tableView.register(nib, forCellReuseIdentifier: "cellBitch")

@@ -18,6 +18,29 @@ class AccountKit{
         fetchUserRecord()
     }
     
+    func saveProfile(email: String, password: String, username: String) {
+        let privateDatabase = CKContainer.default().privateCloudDatabase
+        
+        if user == nil{
+            user = CKRecord(recordType: "Profile")
+        }
+        
+        user?.setObject(email as __CKRecordObjCValue, forKey: "email")
+        user?.setObject(password as __CKRecordObjCValue, forKey: "password")
+        user?.setObject(username as __CKRecordObjCValue, forKey: "username")
+        
+        privateDatabase.save(user!){ (record, error) -> Void in
+            DispatchQueue.main.sync {
+                if (error != nil) {
+                    NSLog(error!.localizedDescription)
+                }
+                
+                let user: User = User(aPassword: password, aEmail: email, aUsername: username)
+                self.coreDataHelper.saveProfile(user: user)
+                //view.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
     func saveProfile(email: String, password: String, username: String, view: UIViewController){
         let privateDatabase = CKContainer.default().privateCloudDatabase
         
@@ -37,6 +60,8 @@ class AccountKit{
                 
                 let user: User = User(aPassword: password, aEmail: email, aUsername: username)
                 self.coreDataHelper.saveProfile(user: user)
+                let aView = view.presentingViewController as! MainViewController
+                aView.refreshPage()
                 view.dismiss(animated: true, completion: nil)
             }
         }

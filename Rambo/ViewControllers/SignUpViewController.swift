@@ -34,7 +34,7 @@ class SignUpViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
     
     @IBAction func createAccount(_ sender: Any) {
-        accountKit.saveProfile(email: emailTextField.text!, password: passwordTextField.text!, username: "", view: self)
+        accountKit.saveProfile(email: emailTextField.text!, password: passwordTextField.text!, username: "")
     }
 }
 

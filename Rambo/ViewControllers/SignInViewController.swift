@@ -45,7 +45,7 @@ class SignInViewController: UIViewController {
             NSLog("Successful")
             //accountKit.saveProfile(email: emailField.text, password: passwordField.text, username: <#T##String#>, view: <#T##UIViewController#>)
             
-            self.dismiss(animated: true, completion: nil)
+            //self.dismiss(animated: true, completion: nil)
             
         } else {
             NSLog("Unsuccessful")
