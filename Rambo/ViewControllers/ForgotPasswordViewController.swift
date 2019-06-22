@@ -10,9 +10,11 @@ import UIKit
 
 class ForgotPasswordViewController: UIViewController {
 
+    let requestEmail: RequestEmail = Bundle.main.loadNibNamed("RequestEmail", owner: self, options: nil)?.first as! RequestEmail
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.addSubview(requestEmail)
         // Do any additional setup after loading the view.
     }
     
