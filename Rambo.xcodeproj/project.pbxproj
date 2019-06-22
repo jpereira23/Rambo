@@ -397,6 +397,8 @@
 				20F2036522A8849100CAF938 /* StepTwo.xib */,
 				20F2036722A886B200CAF938 /* StepThree.swift */,
 				20F2036922A886BD00CAF938 /* StepThree.xib */,
+				2030E67F22AC810C00FB7028 /* AddWorkTableViewCell.swift */,
+				2030E68022AC810C00FB7028 /* AddWorkTableViewCell.xib */,
 				20F2036B22A8886C00CAF938 /* StepFour.swift */,
 				20F2036D22A8887300CAF938 /* StepFour.xib */,
 				20D861F922AC6D0A00E72879 /* AddSchoolTableViewCell.swift */,
@@ -405,8 +407,6 @@
 				20F2037122A889A200CAF938 /* StepFive.xib */,
 				20FCF42C22AC3E2A005B553D /* AddSkillTableViewCell.swift */,
 				20FCF42D22AC3E2A005B553D /* AddSkillTableViewCell.xib */,
-				2030E67F22AC810C00FB7028 /* AddWorkTableViewCell.swift */,
-				2030E68022AC810C00FB7028 /* AddWorkTableViewCell.xib */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";

@@ -12,6 +12,7 @@ class StepFive: UIView {
     
     var skills: [String] = []
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var continue5: UIButton!
     @IBOutlet weak var skillField: UITextField!
     
     /*

@@ -13,6 +13,7 @@ protocol StepThreeDelegate{
 }
 class StepThree: UIView {
 
+    @IBOutlet weak var continue3: UIButton!
     @IBOutlet weak var tableView: UITableView!
     var aDelegate: StepThreeDelegate!
     var arrayOfWorks: [Work] = []

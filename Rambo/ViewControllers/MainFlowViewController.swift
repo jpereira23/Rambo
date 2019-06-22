@@ -39,6 +39,18 @@ class MainFlowViewController: UIViewController {
     
         aMainNavBar.aDelegate = self
         
+        
+        //rounded buttons
+        stepOne.continue1.layer.cornerRadius = 5
+//        stepOne.continue1.layer.shadowColor = UIColor.lightGray.cgColor
+//        stepOne.continue1.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
+//        stepOne.continue1.layer.shadowOpacity = 0.5
+//        stepOne.continue1.layer.shadowRadius = 3
+        stepTwo.continue2.layer.cornerRadius = 5
+        stepThree.continue3.layer.cornerRadius = 5
+        stepFour.continue4.layer.cornerRadius = 5
+        stepFive.continue5.layer.cornerRadius = 5
+        
         //TextFields Inside Padding
         let indentView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         stepOne.fullName.leftView = indentView
@@ -238,4 +250,27 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
         self.dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension CALayer {
+    func applySketchShadow(
+        color: UIColor = .black,
+        alpha: Float = 0.5,
+        x: CGFloat = 0,
+        y: CGFloat = 2,
+        blur: CGFloat = 4,
+        spread: CGFloat = 0)
+    {
+        shadowColor = color.cgColor
+        shadowOpacity = alpha
+        shadowOffset = CGSize(width: x, height: y)
+        shadowRadius = blur / 2.0
+        if spread == 0 {
+            shadowPath = nil
+        } else {
+            let dx = -spread
+            let rect = bounds.insetBy(dx: dx, dy: dx)
+            shadowPath = UIBezierPath(rect: rect).cgPath
+        }
+    }
 }

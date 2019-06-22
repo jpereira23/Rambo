@@ -81,7 +81,7 @@
                                 </subviews>
                             </stackView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pT-BN-5MS">
-                                <rect key="frame" x="30" y="254" width="354" height="402.5"/>
+                                <rect key="frame" x="30" y="209" width="354" height="402.5"/>
                                 <connections>
                                     <outlet property="delegate" destination="uto-zT-MCG" id="Wua-u9-ZGf"/>
                                 </connections>
@@ -89,13 +89,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="9pT-BN-5MS" firstAttribute="top" secondItem="fuV-yJ-CN1" secondAttribute="top" constant="165" id="5YA-Ei-RVg"/>
                             <constraint firstItem="fuV-yJ-CN1" firstAttribute="trailing" secondItem="dLX-26-Lm0" secondAttribute="trailing" constant="30" id="7s8-HH-CzS"/>
                             <constraint firstItem="dLX-26-Lm0" firstAttribute="leading" secondItem="fuV-yJ-CN1" secondAttribute="leading" constant="30" id="9Q0-bQ-ezR"/>
-                            <constraint firstItem="9pT-BN-5MS" firstAttribute="trailing" secondItem="dLX-26-Lm0" secondAttribute="trailing" id="KOq-vw-6nK"/>
-                            <constraint firstItem="dLX-26-Lm0" firstAttribute="top" secondItem="9pT-BN-5MS" secondAttribute="bottom" constant="30" id="SHb-Wk-HXf"/>
+                            <constraint firstItem="9pT-BN-5MS" firstAttribute="leading" secondItem="fuV-yJ-CN1" secondAttribute="leading" constant="30" id="Oea-1y-mBQ"/>
+                            <constraint firstItem="fuV-yJ-CN1" firstAttribute="trailing" secondItem="9pT-BN-5MS" secondAttribute="trailing" constant="30" id="dnF-h2-SMs"/>
+                            <constraint firstItem="fuV-yJ-CN1" firstAttribute="bottom" secondItem="9pT-BN-5MS" secondAttribute="bottom" constant="250.5" id="dvX-iF-kNh"/>
                             <constraint firstItem="fuV-yJ-CN1" firstAttribute="bottom" secondItem="dLX-26-Lm0" secondAttribute="bottom" constant="30" id="ji1-Af-QYT"/>
-                            <constraint firstItem="9pT-BN-5MS" firstAttribute="top" secondItem="fuV-yJ-CN1" secondAttribute="top" priority="250" constant="210" id="stS-7t-Vdy"/>
-                            <constraint firstItem="9pT-BN-5MS" firstAttribute="leading" secondItem="dLX-26-Lm0" secondAttribute="leading" id="y38-56-oyX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fuV-yJ-CN1"/>
                     </view>
@@ -177,16 +177,16 @@ Terms of Service and Privacy Policy</string>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="A4j-63-O5o">
-                                <rect key="frame" x="30" y="78" width="354" height="45"/>
+                                <rect key="frame" x="30" y="78" width="354" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAVE YOUR RESUME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nL6-06-bVO">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="18"/>
                                         <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP Bold" pointSize="12"/>
                                         <color key="textColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeX-HA-r1J">
-                                        <rect key="frame" x="0.0" y="19" width="354" height="26"/>
+                                        <rect key="frame" x="0.0" y="23" width="354" height="33"/>
                                         <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP Bold" pointSize="22"/>
                                         <color key="textColor" red="0.1843137255" green="0.18039215689999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -310,7 +310,6 @@ Terms of Service and Privacy Policy</string>
                                         <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="CDm-K1-3zn"/>
-                                            <constraint firstAttribute="width" constant="100" id="TwU-2l-ehA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -525,7 +524,7 @@ Terms of Service and Privacy Policy</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rR4-Mb-nyu">
-                                <rect key="frame" x="30" y="782" width="354" height="50"/>
+                                <rect key="frame" x="30" y="802" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DTd-u4-Zkf"/>
@@ -541,7 +540,7 @@ Terms of Service and Privacy Policy</string>
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="UO7-mc-UVa" kind="showDetail" id="oby-tg-Wvc"/>
+                                    <segue destination="UO7-mc-UVa" kind="showDetail" animates="NO" id="oby-tg-Wvc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -549,14 +548,15 @@ Terms of Service and Privacy Policy</string>
                         <constraints>
                             <constraint firstItem="Yuh-YO-hjn" firstAttribute="leading" secondItem="ShR-nk-r4b" secondAttribute="leading" id="0HC-g9-4x0"/>
                             <constraint firstItem="Yuh-YO-hjn" firstAttribute="trailing" secondItem="ShR-nk-r4b" secondAttribute="trailing" id="5Eq-Mv-gu3"/>
+                            <constraint firstItem="rR4-Mb-nyu" firstAttribute="bottom" secondItem="ShR-nk-r4b" secondAttribute="bottom" constant="-10" id="I9N-Dj-KMz"/>
                             <constraint firstItem="ShR-nk-r4b" firstAttribute="trailing" secondItem="rR4-Mb-nyu" secondAttribute="trailing" constant="30" id="Su4-Rw-cJO"/>
                             <constraint firstItem="rR4-Mb-nyu" firstAttribute="leading" secondItem="ShR-nk-r4b" secondAttribute="leading" constant="30" id="Xmp-zo-AXR"/>
                             <constraint firstItem="Yuh-YO-hjn" firstAttribute="top" secondItem="ShR-nk-r4b" secondAttribute="top" id="rwW-Jc-rjs"/>
-                            <constraint firstItem="ShR-nk-r4b" firstAttribute="bottom" secondItem="rR4-Mb-nyu" secondAttribute="bottom" constant="30" id="t5j-PY-PoM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ShR-nk-r4b"/>
                     </view>
                     <connections>
+                        <outlet property="continue0" destination="rR4-Mb-nyu" id="pjB-cC-wW7"/>
                         <outlet property="scrollView" destination="a66-f4-Rix" id="KXP-1u-POO"/>
                     </connections>
                 </viewController>

@@ -18,6 +18,7 @@ class StepOne: UIView {
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var link: UITextField!
     var aDelegate: StepOneDelegate!
+    @IBOutlet weak var continue1: UIButton!
     
     
     

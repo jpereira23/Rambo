@@ -18,7 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StepTwo" customModule="Rambo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="537"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="611"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM6-g7-EXD">
@@ -62,7 +62,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUD-af-mbX">
-                    <rect key="frame" x="30" y="423" width="354" height="50"/>
+                    <rect key="frame" x="30" y="467" width="354" height="50"/>
                     <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="ALk-W2-jfU"/>
@@ -82,7 +82,7 @@
                 <constraint firstItem="Vjy-yZ-9mz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="24N-VQ-E6A"/>
                 <constraint firstItem="OUD-af-mbX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="4w8-Ca-a0k"/>
                 <constraint firstAttribute="trailing" secondItem="kM6-g7-EXD" secondAttribute="trailing" constant="30" id="5Pw-S0-0Ei"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="OUD-af-mbX" secondAttribute="bottom" constant="30" id="EW3-oh-biP"/>
+                <constraint firstItem="OUD-af-mbX" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-60" id="ANb-jK-qjb"/>
                 <constraint firstItem="Vjy-yZ-9mz" firstAttribute="top" secondItem="kM6-g7-EXD" secondAttribute="bottom" constant="10.5" id="O7X-aV-chi"/>
                 <constraint firstItem="rOf-yX-xQ4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="UM3-Kz-Cxk"/>
                 <constraint firstItem="kM6-g7-EXD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="gHm-zs-Ner"/>
@@ -94,6 +94,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="continue2" destination="OUD-af-mbX" id="1GZ-8h-lpB"/>
                 <outlet property="objectiveSummary" destination="rOf-yX-xQ4" id="zNc-KS-Hr6"/>
                 <outlet property="textView" destination="Vjy-yZ-9mz" id="bhh-ez-8DD"/>
             </connections>

@@ -11,9 +11,12 @@ import UIKit
 class SelectATemplateViewController: UIViewController {
     let coreDataHelper: CoreDataHelper = CoreDataHelper()
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var continue0: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        continue0.layer.cornerRadius = 5
         
         let aSlide = Bundle.main.loadNibNamed("Template", owner: self, options: nil)?.first as! Template
         

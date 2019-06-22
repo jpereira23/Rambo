@@ -13,23 +13,22 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="StepFour" customModule="Rambo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="708"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="611"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3lC-qg-NRm">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="490"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3lC-qg-NRm">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="412"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="separatorColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="separatorColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="C7n-AK-SqQ">
-                    <rect key="frame" x="30" y="525" width="354" height="119"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="C7n-AK-SqQ">
+                    <rect key="frame" x="30" y="427" width="354" height="90"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZm-yC-hak">
-                            <rect key="frame" x="0.0" y="0.0" width="354" height="50"/>
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="25"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="50" id="yIr-1r-QhX"/>
+                                <constraint firstAttribute="height" constant="25" id="yIr-1r-QhX"/>
                             </constraints>
                             <state key="normal" title="Add School">
                                 <color key="titleColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,7 +38,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdC-vM-cst">
-                            <rect key="frame" x="0.0" y="69" width="354" height="50"/>
+                            <rect key="frame" x="0.0" y="40" width="354" height="50"/>
                             <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Ljz-Q7-JGK"/>
@@ -56,16 +55,21 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="C7n-AK-SqQ" secondAttribute="bottom" constant="30" id="WpZ-Pf-gEx"/>
+                <constraint firstItem="C7n-AK-SqQ" firstAttribute="top" secondItem="3lC-qg-NRm" secondAttribute="bottom" constant="15" id="3Db-Df-oVq"/>
+                <constraint firstItem="C7n-AK-SqQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-60" id="A9m-I3-Wmh"/>
+                <constraint firstItem="3lC-qg-NRm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Anx-4Z-BEk"/>
+                <constraint firstItem="3lC-qg-NRm" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="FoW-YO-yrG"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="C7n-AK-SqQ" secondAttribute="trailing" constant="30" id="pqL-tq-9mE"/>
                 <constraint firstItem="C7n-AK-SqQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="qax-gO-l7K"/>
+                <constraint firstItem="3lC-qg-NRm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zLc-ed-p8c"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="continue4" destination="vdC-vM-cst" id="XAh-XN-fZT"/>
                 <outlet property="tableview" destination="3lC-qg-NRm" id="190-11-99H"/>
             </connections>
-            <point key="canvasLocation" x="-259.4202898550725" y="-60.9375"/>
+            <point key="canvasLocation" x="-259.4202898550725" y="-62.946428571428569"/>
         </view>
     </objects>
 </document>
