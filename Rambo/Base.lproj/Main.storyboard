@@ -77,6 +77,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </state>
+                                        <connections>
+                                            <action selector="login:" destination="uto-zT-MCG" eventType="touchUpInside" id="BOs-es-nVq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -177,16 +180,16 @@ Terms of Service and Privacy Policy</string>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="A4j-63-O5o">
-                                <rect key="frame" x="30" y="78" width="354" height="45"/>
+                                <rect key="frame" x="30" y="78" width="354" height="56"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SAVE YOUR RESUME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nL6-06-bVO">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="14"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="18"/>
                                         <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP Bold" pointSize="12"/>
                                         <color key="textColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xeX-HA-r1J">
-                                        <rect key="frame" x="0.0" y="19" width="354" height="26"/>
+                                        <rect key="frame" x="0.0" y="23" width="354" height="33"/>
                                         <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP Bold" pointSize="22"/>
                                         <color key="textColor" red="0.1843137255" green="0.18039215689999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>

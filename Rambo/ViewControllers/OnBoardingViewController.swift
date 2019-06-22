@@ -63,7 +63,7 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func backToMain(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "mainView") as! SelectATemplateViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "selectTemplate") as! SelectATemplateViewController
         UIApplication.shared.keyWindow?.rootViewController = vc
         //vc.aChange = false
         //self.present(vc, animated: true, completion: nil)
@@ -113,6 +113,17 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         
     }
     
+    @IBAction func login(_ sender: Any) {
+        let aView = self.presentingViewController as! MainViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "signIn") as! SignInViewController
+        
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        aView.dismiss(animated: true, completion: {() -> Void in
+            aView.present(vc, animated: true, completion: nil)
+        })
+        
+    }
     
     
     

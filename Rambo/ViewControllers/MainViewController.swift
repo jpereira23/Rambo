@@ -19,16 +19,14 @@ class MainViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName: "ThirdWayTableViewCell", bundle: bundle)
+        self.tableView.register(nib, forCellReuseIdentifier: "cellBitch")
         refreshPage()
         // Do any additional setup after loading the view.
     }
     
     func refreshPage(){
-        NSLog("Refreshing MainViewController")
-        //coreDataHelper.resetCoreData()
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "ThirdWayTableViewCell", bundle: bundle)
-        self.tableView.register(nib, forCellReuseIdentifier: "cellBitch")
         tableView.reloadData()
         if let aProfile: User = coreDataHelper.loadProfile(){
             accountButton.setTitle("Sign Out", for: .normal)
@@ -51,7 +49,8 @@ class MainViewController: UIViewController{
     
     @IBAction func accountAction(_ sender: Any) {
         if isSignedIn{
-            NSLog("Its SignedIn")
+            coreDataHelper.resetCoreData()
+            refreshPage()
         } else {
             let vc = storyboard?.instantiateViewController(withIdentifier: "signIn") as! SignInViewController
             
