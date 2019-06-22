@@ -27,6 +27,7 @@ class CoreDataHelper{
         
         theProfile.setValue(user.email, forKeyPath: "email")
         theProfile.setValue(user.password, forKeyPath: "password")
+        theProfile.setValue(user.username, forKeyPath: "username")
         
         do{
             try self.managedContext.save()

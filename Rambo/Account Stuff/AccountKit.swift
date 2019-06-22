@@ -70,6 +70,7 @@ class AccountKit{
             NSLog("account password: \(account.password), password: \(password)")
             if account.email == email && account.password == password{
                 self.saveProfile(email: account.email, password: account.password, username: account.username, view: view)
+                
                 return true
             }
         }

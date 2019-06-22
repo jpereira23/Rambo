@@ -19,23 +19,33 @@ class MainViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        refreshPage()
+        // Do any additional setup after loading the view.
+    }
+    
+    func refreshPage(){
+        coreDataHelper.resetCoreData()
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "ThirdWayTableViewCell", bundle: bundle)
         self.tableView.register(nib, forCellReuseIdentifier: "cellBitch")
         tableView.reloadData()
         if let aProfile: User = coreDataHelper.loadProfile(){
             accountButton.setTitle("Sign Out", for: .normal)
-            accountLabel.text = "Hi " + aProfile.email + "!"
+            accountLabel.text = "Hi " + aProfile.username + "!"
             isSignedIn = true
+            NSLog("Signed In")
         } else {
+            NSLog("Not Signed In")
             accountButton.setTitle("Sign In", for: .normal)
             accountLabel.text = "Hi User!"
             isSignedIn = false
         }
         
         buildNew.layer.cornerRadius = 3
-        
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        refreshPage()
     }
     
     @IBAction func accountAction(_ sender: Any) {
