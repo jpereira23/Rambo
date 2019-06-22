@@ -41,14 +41,11 @@ class SignInViewController: UIViewController {
     */
     @IBAction func signIn(_ sender: Any) {
         if accountKit.checkAccount(email: emailField.text!, password: passwordField.text!, view: self){
-            
-            NSLog("Successful")
-            //accountKit.saveProfile(email: emailField.text, password: passwordField.text, username: <#T##String#>, view: <#T##UIViewController#>)
-            
-            //self.dismiss(animated: true, completion: nil)
-            
         } else {
-            NSLog("Unsuccessful")
+            let alert = UIAlertController(title: "Sign In Unsuccessful", message: "Email and/or password is not recognized. Please review and try again.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true)
         }
     }
     
