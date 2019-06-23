@@ -21,7 +21,7 @@ class CoreDataHelper{
         self.managedContext = self.appDelegate.persistentContainer.viewContext
         self.profileEntity = NSEntityDescription.entity(forEntityName: "Profile", in: self.managedContext)
     }
-    
+    /*
     public func saveProfile(user: User){
         let theProfile = NSManagedObject(entity: self.profileEntity!, insertInto: self.managedContext)
         
@@ -74,4 +74,5 @@ class CoreDataHelper{
             print("Could not save. \(error). \(error.userInfo)")
         }
     }
+ */
 }

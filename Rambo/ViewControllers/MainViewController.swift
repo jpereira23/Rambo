@@ -13,7 +13,6 @@ class MainViewController: UIViewController{
     @IBOutlet var buildNew: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var accountLabel: UILabel!
-    @IBOutlet weak var accountButton: UIButton!
     let coreDataHelper: CoreDataHelper = CoreDataHelper()
     var isSignedIn: Bool = false
     
@@ -22,43 +21,7 @@ class MainViewController: UIViewController{
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "ThirdWayTableViewCell", bundle: bundle)
         self.tableView.register(nib, forCellReuseIdentifier: "cellBitch")
-        refreshPage()
         // Do any additional setup after loading the view.
-    }
-    
-    func refreshPage(){
-        tableView.reloadData()
-        if let aProfile: User = coreDataHelper.loadProfile(){
-            accountButton.setTitle("Sign Out", for: .normal)
-            accountLabel.text = "Hi " + aProfile.username + "!"
-            isSignedIn = true
-            NSLog("Signed In")
-        } else {
-            NSLog("Not Signed In")
-            accountButton.setTitle("Sign In", for: .normal)
-            accountLabel.text = "Hi User!"
-            isSignedIn = false
-        }
-        
-        buildNew.layer.cornerRadius = 3
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        refreshPage()
-    }
-    
-    @IBAction func accountAction(_ sender: Any) {
-        if isSignedIn{
-            coreDataHelper.resetCoreData()
-            refreshPage()
-        } else {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "signIn") as! SignInViewController
-            
-            vc.modalTransitionStyle = .crossDissolve
-            vc.modalPresentationStyle = .overCurrentContext
-            
-            self.present(vc, animated: true, completion: nil)
-        }
     }
     
     /*

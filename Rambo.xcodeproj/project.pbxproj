@@ -8,22 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2011B86B228B642300067C1C /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B86A228B642300067C1C /* CoreDataHelper.swift */; };
-		2011B86D228B64FF00067C1C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B86C228B64FF00067C1C /* User.swift */; };
 		2011B86F228B67C600067C1C /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B86E228B67C600067C1C /* OnBoardingViewController.swift */; };
 		2011B872228B68B100067C1C /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2011B871228B68B100067C1C /* OnBoardingView.swift */; };
 		2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2011B873228B68BE00067C1C /* OnBoardingView.xib */; };
-		202606B9228DD59F0017BDCD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202606B8228DD59F0017BDCD /* SignUpViewController.swift */; };
-		202606BD228DDF370017BDCD /* AccountKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202606BC228DDF370017BDCD /* AccountKit.swift */; };
-		202B15FF22BE6C30000BA124 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202B15FE22BE6C30000BA124 /* ForgotPasswordViewController.swift */; };
-		202B160422BE74AA000BA124 /* RequestEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202B160322BE74AA000BA124 /* RequestEmail.swift */; };
-		202B160622BE74B9000BA124 /* RequestEmail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 202B160522BE74B9000BA124 /* RequestEmail.xib */; };
 		2030E68122AC810C00FB7028 /* AddWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030E67F22AC810C00FB7028 /* AddWorkTableViewCell.swift */; };
 		2030E68222AC810C00FB7028 /* AddWorkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2030E68022AC810C00FB7028 /* AddWorkTableViewCell.xib */; };
 		2042B174229070E500DEAD80 /* sample_two.html in Resources */ = {isa = PBXBuildFile; fileRef = 2042B173229070E500DEAD80 /* sample_two.html */; };
 		2042B1762291A6D700DEAD80 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042B1752291A6D700DEAD80 /* MainViewController.swift */; };
 		2042B17E2291AAC000DEAD80 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042B17C2291AAC000DEAD80 /* MainTableViewCell.swift */; };
 		205F7F4622BC4DDF0096676D /* world-cities.txt in Resources */ = {isa = PBXBuildFile; fileRef = 205F7F4522BC4DDF0096676D /* world-cities.txt */; };
-		205F7F4822BC54B20096676D /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205F7F4722BC54B20096676D /* SignInViewController.swift */; };
 		205F7F4D22BC5B4F0096676D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205F7F4C22BC5B4F0096676D /* CloudKit.framework */; };
 		20614F6C22A86EF2008567DC /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20614F6B22A86EF2008567DC /* Template.xib */; };
 		20614F6E22A86FA1008567DC /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20614F6D22A86FA1008567DC /* Template.swift */; };
@@ -100,22 +93,15 @@
 
 /* Begin PBXFileReference section */
 		2011B86A228B642300067C1C /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
-		2011B86C228B64FF00067C1C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2011B86E228B67C600067C1C /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 		2011B871228B68B100067C1C /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		2011B873228B68BE00067C1C /* OnBoardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
-		202606B8228DD59F0017BDCD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		202606BC228DDF370017BDCD /* AccountKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountKit.swift; sourceTree = "<group>"; };
-		202B15FE22BE6C30000BA124 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		202B160322BE74AA000BA124 /* RequestEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestEmail.swift; path = Rambo/ViewControllers/RequestEmail.swift; sourceTree = SOURCE_ROOT; };
-		202B160522BE74B9000BA124 /* RequestEmail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RequestEmail.xib; path = Rambo/ViewControllers/RequestEmail.xib; sourceTree = SOURCE_ROOT; };
 		2030E67F22AC810C00FB7028 /* AddWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkTableViewCell.swift; sourceTree = "<group>"; };
 		2030E68022AC810C00FB7028 /* AddWorkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddWorkTableViewCell.xib; sourceTree = "<group>"; };
 		2042B173229070E500DEAD80 /* sample_two.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample_two.html; sourceTree = "<group>"; };
 		2042B1752291A6D700DEAD80 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2042B17C2291AAC000DEAD80 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		205F7F4522BC4DDF0096676D /* world-cities.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "world-cities.txt"; sourceTree = "<group>"; };
-		205F7F4722BC54B20096676D /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		205F7F4922BC569C0096676D /* Rambo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Rambo.entitlements; sourceTree = "<group>"; };
 		205F7F4C22BC5B4F0096676D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		20614F6B22A86EF2008567DC /* Template.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Template.xib; sourceTree = "<group>"; };
@@ -211,8 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				2011B86A228B642300067C1C /* CoreDataHelper.swift */,
-				2011B86C228B64FF00067C1C /* User.swift */,
-				202606BC228DDF370017BDCD /* AccountKit.swift */,
 			);
 			path = "Account Stuff";
 			sourceTree = "<group>";
@@ -233,15 +217,6 @@
 				20B63A5F229066E700EA1814 /* WebKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		202B160022BE6C85000BA124 /* ForgotPassword */ = {
-			isa = PBXGroup;
-			children = (
-				202B160322BE74AA000BA124 /* RequestEmail.swift */,
-				202B160522BE74B9000BA124 /* RequestEmail.xib */,
-			);
-			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		2042B1772291AA7C00DEAD80 /* Home */ = {
@@ -287,7 +262,6 @@
 		208C22EF228675B300F91C4F /* Rambo */ = {
 			isa = PBXGroup;
 			children = (
-				202B160022BE6C85000BA124 /* ForgotPassword */,
 				205F7F4922BC569C0096676D /* Rambo.entitlements */,
 				20F2035E22A8830000CAF938 /* MainFlow */,
 				20C0363022A87E240049B068 /* NavBar */,
@@ -372,11 +346,8 @@
 				2011B86E228B67C600067C1C /* OnBoardingViewController.swift */,
 				208C22F2228675B300F91C4F /* SelectATemplateViewController.swift */,
 				207062FF2288A27100ADE876 /* SplashScreenViewController.swift */,
-				202606B8228DD59F0017BDCD /* SignUpViewController.swift */,
 				2042B1752291A6D700DEAD80 /* MainViewController.swift */,
 				20D360A022A449EE00CBF8DE /* ResumePreviewViewController.swift */,
-				205F7F4722BC54B20096676D /* SignInViewController.swift */,
-				202B15FE22BE6C30000BA124 /* ForgotPasswordViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -558,7 +529,6 @@
 				20B63A56229062AC00EA1814 /* TemplateScroll.xib in Resources */,
 				20614F7422A871AE008567DC /* traditional.css in Resources */,
 				20614F7722A871AE008567DC /* roboto.css in Resources */,
-				202B160622BE74B9000BA124 /* RequestEmail.xib in Resources */,
 				20B63A5E2290652200EA1814 /* sample_one.html in Resources */,
 				20FCF42F22AC3E2A005B553D /* AddSkillTableViewCell.xib in Resources */,
 				E5BBC24A228A60C100D778C6 /* LaunchScreen.storyboard in Resources */,
@@ -597,11 +567,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				20F2037022A8899800CAF938 /* StepFive.swift in Sources */,
-				202B15FF22BE6C30000BA124 /* ForgotPasswordViewController.swift in Sources */,
 				20D360A122A449EE00CBF8DE /* ResumePreviewViewController.swift in Sources */,
 				20F2036C22A8886C00CAF938 /* StepFour.swift in Sources */,
 				20FCF42E22AC3E2A005B553D /* AddSkillTableViewCell.swift in Sources */,
-				202606BD228DDF370017BDCD /* AccountKit.swift in Sources */,
 				20A5E3F022B073DF009D44D5 /* ThirdWayTableViewCell.swift in Sources */,
 				2011B86B228B642300067C1C /* CoreDataHelper.swift in Sources */,
 				2030E68122AC810C00FB7028 /* AddWorkTableViewCell.swift in Sources */,
@@ -609,8 +577,6 @@
 				20F2036822A886B200CAF938 /* StepThree.swift in Sources */,
 				20EB411A22BD831A001D0ACB /* CloudKitHelper.swift in Sources */,
 				208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */,
-				205F7F4822BC54B20096676D /* SignInViewController.swift in Sources */,
-				202B160422BE74AA000BA124 /* RequestEmail.swift in Sources */,
 				20B63A5C2290647900EA1814 /* TemplateWeb.swift in Sources */,
 				20D360AE22A46CA500CBF8DE /* Node.swift in Sources */,
 				20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */,
@@ -620,11 +586,9 @@
 				20D861FB22AC6D0A00E72879 /* AddSchoolTableViewCell.swift in Sources */,
 				20A5E3ED22B06233009D44D5 /* DateKeyboard.swift in Sources */,
 				2011B86F228B67C600067C1C /* OnBoardingViewController.swift in Sources */,
-				2011B86D228B64FF00067C1C /* User.swift in Sources */,
 				206BBB2522AC783B003E9681 /* Work.swift in Sources */,
 				20C0362F22A87A950049B068 /* MainFlowViewController.swift in Sources */,
 				20F2036422A8848400CAF938 /* StepTwo.swift in Sources */,
-				202606B9228DD59F0017BDCD /* SignUpViewController.swift in Sources */,
 				208C22F3228675B300F91C4F /* SelectATemplateViewController.swift in Sources */,
 				2011B872228B68B100067C1C /* OnBoardingView.swift in Sources */,
 				207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */,
