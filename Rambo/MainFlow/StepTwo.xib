@@ -21,46 +21,42 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="611"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM6-g7-EXD">
-                    <rect key="frame" x="30" y="30" width="354" height="20.5"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="20.5" id="uQX-24-ycQ"/>
-                    </constraints>
-                    <attributedString key="attributedText">
-                        <fragment content="Objective / Summary">
-                            <attributes>
-                                <font key="NSFont" metaFont="cellTitle"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <nil key="highlightedColor"/>
-                </label>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" borderStyle="roundedRect" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rOf-yX-xQ4">
-                    <rect key="frame" x="30" y="56" width="354" height="123"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="123" id="9jS-LR-KMR"/>
-                    </constraints>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vjy-yZ-9mz">
-                    <rect key="frame" x="40" y="61" width="334" height="113"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="113" id="Ad3-wW-sAK"/>
-                    </constraints>
-                    <attributedString key="attributedText">
-                        <fragment content="Example: I am a results-driven contributor who doesn’t mind working out the details to deliver quality work to clients.">
-                            <attributes>
-                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                <font key="NSFont" size="14" name=".SFNSText"/>
-                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2" tighteningFactorForTruncation="0.0"/>
-                            </attributes>
-                        </fragment>
-                    </attributedString>
-                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                </textView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MJ6-Fe-vXV">
+                    <rect key="frame" x="30" y="30" width="354" height="143.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM6-g7-EXD">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20.5" id="uQX-24-ycQ"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="Objective / Summary">
+                                    <attributes>
+                                        <font key="NSFont" metaFont="cellTitle"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vjy-yZ-9mz">
+                            <rect key="frame" x="0.0" y="30.5" width="354" height="113"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="113" id="Ad3-wW-sAK"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="Example: I am a results-driven contributor who doesn’t mind working out the details to deliver quality work to clients.">
+                                    <attributes>
+                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                        <font key="NSFont" size="14" name=".SFNSText"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="2" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUD-af-mbX">
                     <rect key="frame" x="30" y="467" width="354" height="50"/>
                     <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -78,24 +74,17 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="rOf-yX-xQ4" firstAttribute="top" secondItem="kM6-g7-EXD" secondAttribute="bottom" constant="5.5" id="139-FD-Lff"/>
-                <constraint firstItem="Vjy-yZ-9mz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="24N-VQ-E6A"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MJ6-Fe-vXV" secondAttribute="trailing" constant="30" id="3CP-4m-zcA"/>
                 <constraint firstItem="OUD-af-mbX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="4w8-Ca-a0k"/>
-                <constraint firstAttribute="trailing" secondItem="kM6-g7-EXD" secondAttribute="trailing" constant="30" id="5Pw-S0-0Ei"/>
                 <constraint firstItem="OUD-af-mbX" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-60" id="ANb-jK-qjb"/>
-                <constraint firstItem="Vjy-yZ-9mz" firstAttribute="top" secondItem="kM6-g7-EXD" secondAttribute="bottom" constant="10.5" id="O7X-aV-chi"/>
-                <constraint firstItem="rOf-yX-xQ4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="UM3-Kz-Cxk"/>
-                <constraint firstItem="kM6-g7-EXD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="gHm-zs-Ner"/>
-                <constraint firstItem="kM6-g7-EXD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="haG-Am-2lK"/>
+                <constraint firstItem="MJ6-Fe-vXV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="I6e-yl-PGf"/>
+                <constraint firstItem="MJ6-Fe-vXV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="SaA-M5-JTX"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OUD-af-mbX" secondAttribute="trailing" constant="30" id="hoU-L5-Z1k"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rOf-yX-xQ4" secondAttribute="trailing" constant="30" id="nfo-xW-Soe"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Vjy-yZ-9mz" secondAttribute="trailing" constant="40" id="rCl-Fq-SQp"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="continue2" destination="OUD-af-mbX" id="1GZ-8h-lpB"/>
-                <outlet property="objectiveSummary" destination="rOf-yX-xQ4" id="zNc-KS-Hr6"/>
                 <outlet property="textView" destination="Vjy-yZ-9mz" id="bhh-ez-8DD"/>
             </connections>
             <point key="canvasLocation" x="89.855072463768124" y="86.71875"/>
