@@ -51,6 +51,7 @@
 		20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C2C1FC228E5E6000E3B0D7 /* SelectTemplate.swift */; };
 		20D360A122A449EE00CBF8DE /* ResumePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D360A022A449EE00CBF8DE /* ResumePreviewViewController.swift */; };
 		20D360AE22A46CA500CBF8DE /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D360AD22A46CA500CBF8DE /* Node.swift */; };
+		20D4D03B22C190F900A049F0 /* MonthYearPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4D03A22C190F900A049F0 /* MonthYearPickerView.swift */; };
 		20D861FB22AC6D0A00E72879 /* AddSchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D861F922AC6D0A00E72879 /* AddSchoolTableViewCell.swift */; };
 		20D861FC22AC6D0A00E72879 /* AddSchoolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D861FA22AC6D0A00E72879 /* AddSchoolTableViewCell.xib */; };
 		20EB411A22BD831A001D0ACB /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EB411922BD831A001D0ACB /* CloudKitHelper.swift */; };
@@ -143,6 +144,7 @@
 		20C2C1FC228E5E6000E3B0D7 /* SelectTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTemplate.swift; sourceTree = "<group>"; };
 		20D360A022A449EE00CBF8DE /* ResumePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumePreviewViewController.swift; sourceTree = "<group>"; };
 		20D360AD22A46CA500CBF8DE /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		20D4D03A22C190F900A049F0 /* MonthYearPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthYearPickerView.swift; sourceTree = "<group>"; };
 		20D861F922AC6D0A00E72879 /* AddSchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchoolTableViewCell.swift; sourceTree = "<group>"; };
 		20D861FA22AC6D0A00E72879 /* AddSchoolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSchoolTableViewCell.xib; sourceTree = "<group>"; };
 		20EB411922BD831A001D0ACB /* CloudKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
@@ -375,9 +377,18 @@
 			path = "Helper Classes";
 			sourceTree = "<group>";
 		};
+		20D4D03922C190E300A049F0 /* MonthYearPicker */ = {
+			isa = PBXGroup;
+			children = (
+				20D4D03A22C190F900A049F0 /* MonthYearPickerView.swift */,
+			);
+			path = MonthYearPicker;
+			sourceTree = "<group>";
+		};
 		20F2035E22A8830000CAF938 /* MainFlow */ = {
 			isa = PBXGroup;
 			children = (
+				20D4D03922C190E300A049F0 /* MonthYearPicker */,
 				20A5E3E922B06196009D44D5 /* DateKeyboard */,
 				20F2035F22A8832600CAF938 /* StepOne.swift */,
 				20F2036122A8832F00CAF938 /* StepOne.xib */,
@@ -571,6 +582,7 @@
 				20F2036C22A8886C00CAF938 /* StepFour.swift in Sources */,
 				20FCF42E22AC3E2A005B553D /* AddSkillTableViewCell.swift in Sources */,
 				20A5E3F022B073DF009D44D5 /* ThirdWayTableViewCell.swift in Sources */,
+				20D4D03B22C190F900A049F0 /* MonthYearPickerView.swift in Sources */,
 				2011B86B228B642300067C1C /* CoreDataHelper.swift in Sources */,
 				2030E68122AC810C00FB7028 /* AddWorkTableViewCell.swift in Sources */,
 				20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */,

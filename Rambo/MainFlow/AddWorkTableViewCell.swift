@@ -26,8 +26,13 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
         super.awakeFromNib()
         // Initialization code
         
+        endDate.text = "Present"
+        endDate.isEnabled = false
+        
         startDate.addTarget(self, action: #selector(startDateSelected), for: .editingDidBegin)
         endDate.addTarget(self, action: #selector(endDateSelected), for: .editingDidBegin)
+        isEmployed.addTarget(self, action: #selector(employedSelected), for: .valueChanged)
+        
         startDate.inputView = keyboardView
         endDate.inputView = keyboardView
         keyboardView.delegate = self
@@ -39,6 +44,16 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     
     @objc func endDateSelected(textField: UITextField){
         isEnd = true
+    }
+    
+    @objc func employedSelected(){
+        if isEmployed.isOn {
+            endDate.text = "Present"
+            endDate.isEnabled = false
+        } else {
+            endDate.text = ""
+            endDate.isEnabled = true
+        }
     }
     
     func checkUse() -> Bool{
