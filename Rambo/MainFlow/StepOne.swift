@@ -23,17 +23,17 @@ class StepOne: UIView {
     
     
     @IBAction func next(_ sender: Any) {
-        if checkUse(){
-            aDelegate.goNext()
-        }else{
-            aDelegate.stepOneAlert()
-        }
+        checkUse()
     }
     
     func checkUse() -> Bool{
         if fullName.text!.count > 0 && email.text!.count > 0 && phoneNumber.text!.count > 0{
+            aDelegate.goNext()
+            NSLog("Next")
             return true
         }
+        NSLog("FUCKING NOT")
+        aDelegate.stepOneAlert()
         return false
     }
     

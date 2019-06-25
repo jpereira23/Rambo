@@ -82,26 +82,31 @@ class MainFlowViewController: UIViewController {
         aView = 0
     }
     
-    func checkUse(){
+    func checkUse() -> Bool{
         if stepOne.checkUse() {
             let image = UIImage(named: "contact-filled.png")
             aMainNavBar.contactButton.setImage(image, for: .normal)
+            return true
         } else {
             let image = UIImage(named: "contact-empty.png")
             aMainNavBar.contactButton.setImage(image, for: .normal)
         }
         
         if stepTwo.checkUse(){
+            NSLog("IT WORKED?")
             let image = UIImage(named: "objective-filled.png")
             aMainNavBar.objectiveButton.setImage(image, for: .normal)
+            return true
         } else {
             let image = UIImage(named: "objective-empty.png")
             aMainNavBar.objectiveButton.setImage(image, for: .normal)
         }
         
         if stepThree.checkUse(){
+            
             let image = UIImage(named: "work-filled.png")
             aMainNavBar.workButton.setImage(image, for: .normal)
+            return true
         } else {
             let image = UIImage(named: "work-empty.png")
             aMainNavBar.workButton.setImage(image, for: .normal)
@@ -110,6 +115,7 @@ class MainFlowViewController: UIViewController {
         if stepFour.checkUse(){
             let image = UIImage(named: "education-filled.png")
             aMainNavBar.educationButton.setImage(image, for: .normal)
+            return true
         } else {
             let image = UIImage(named: "education-empty.png")
             aMainNavBar.educationButton.setImage(image, for: .normal)
@@ -118,41 +124,48 @@ class MainFlowViewController: UIViewController {
         if stepFive.checkUse(){
             let image = UIImage(named: "skills-filled.png")
             aMainNavBar.skillsButton.setImage(image, for: .normal)
+            return true
         } else {
             let image = UIImage(named: "skills-empty.png")
             aMainNavBar.skillsButton.setImage(image, for: .normal)
         }
         
         
-       
+       return false
     }
     
     func selectObjective(){
-        checkUse()
-        self.theView.subviews[0].removeFromSuperview()
-        self.theView.addSubview(stepTwo)
-        aView = 1
+        
+        if checkUse(){
+            self.theView.subviews[0].removeFromSuperview()
+            self.theView.addSubview(stepTwo)
+            aView = 1
+        }
+    
     }
     
     func selectWork(){
-        checkUse()
-        self.theView.subviews[0].removeFromSuperview()
-        self.theView.addSubview(stepThree)
-        aView = 2
+        if checkUse(){
+            self.theView.subviews[0].removeFromSuperview()
+            self.theView.addSubview(stepThree)
+            aView = 2
+        }
     }
     
     func selectEducation(){
-        checkUse()
-        self.theView.subviews[0].removeFromSuperview()
-        self.theView.addSubview(stepFour)
-        aView = 3
+        if checkUse(){
+            self.theView.subviews[0].removeFromSuperview()
+            self.theView.addSubview(stepFour)
+            aView = 3
+        }
     }
     
     func selectSkill(){
-        checkUse()
-        self.theView.subviews[0].removeFromSuperview()
-        self.theView.addSubview(stepFive)
-        aView = 4
+        if checkUse(){
+            self.theView.subviews[0].removeFromSuperview()
+            self.theView.addSubview(stepFive)
+            aView = 4
+        }
     }
 
 }

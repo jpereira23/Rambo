@@ -26,6 +26,7 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
         super.awakeFromNib()
         // Initialization code
         
+        isEmployed.isOn = true
         endDate.text = "Present"
         endDate.isEnabled = false
         

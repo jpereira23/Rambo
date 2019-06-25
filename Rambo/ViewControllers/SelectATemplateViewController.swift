@@ -12,6 +12,7 @@ class SelectATemplateViewController: UIViewController {
     let coreDataHelper: CoreDataHelper = CoreDataHelper()
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var continue0: UIButton!
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,10 @@ class SelectATemplateViewController: UIViewController {
         let request = URLRequest(url: url)
         aSlide.webView.load(request)
         scrollView.addSubview(aSlide)
+    }
+    
+    @IBAction func goBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

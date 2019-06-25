@@ -32,6 +32,7 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
         super.awakeFromNib()
         
         // Intialization code
+        isEmployee.isOn = true
         endDate.text = "Present"
         endDate.isEnabled = false
         

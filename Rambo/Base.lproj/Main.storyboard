@@ -362,6 +362,9 @@
                                             <constraint firstAttribute="width" constant="9" id="jMw-2i-6Vn"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="chevron-left"/>
+                                        <connections>
+                                            <action selector="goBack:" destination="Z5J-NL-CnJ" eventType="touchUpInside" id="lzE-6W-YcD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -411,6 +414,7 @@
                         <viewLayoutGuide key="safeArea" id="ShR-nk-r4b"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="qpC-Ho-faQ" id="llT-b9-aYw"/>
                         <outlet property="continue0" destination="rR4-Mb-nyu" id="up5-6J-RvY"/>
                         <outlet property="scrollView" destination="a66-f4-Rix" id="KXP-1u-POO"/>
                     </connections>
