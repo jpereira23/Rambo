@@ -43,6 +43,7 @@ class MainNavBar: UIView {
     }
     
     @IBAction func objectiveSelected(_ sender: Any) {
+        NSLog("Objective was selected")
         aDelegate?.objectiveWasSelected()
     }
     

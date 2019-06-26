@@ -82,11 +82,29 @@ class MainFlowViewController: UIViewController {
         aView = 0
     }
     
-    func checkUse() -> Bool{
+    func failed(){
+        switch(aView){
+        case 0:
+            stepOne.aDelegate.stepOneAlert()
+            break
+        case 1:
+            stepTwo.aDelegate.stepTwoAlert()
+            break
+        case 2:
+            stepThree.aDelegate.stepThreeAlertCell()
+            break
+        case 3:
+            stepFour.aDelegate.stepFourAlertCell()
+            break
+        default:
+            break
+        }
+    }
+    
+    func checkUse(){
         if stepOne.checkUse() {
             let image = UIImage(named: "contact-filled.png")
             aMainNavBar.contactButton.setImage(image, for: .normal)
-            return true
         } else {
             let image = UIImage(named: "contact-empty.png")
             aMainNavBar.contactButton.setImage(image, for: .normal)
@@ -96,7 +114,6 @@ class MainFlowViewController: UIViewController {
             NSLog("IT WORKED?")
             let image = UIImage(named: "objective-filled.png")
             aMainNavBar.objectiveButton.setImage(image, for: .normal)
-            return true
         } else {
             let image = UIImage(named: "objective-empty.png")
             aMainNavBar.objectiveButton.setImage(image, for: .normal)
@@ -106,7 +123,6 @@ class MainFlowViewController: UIViewController {
             
             let image = UIImage(named: "work-filled.png")
             aMainNavBar.workButton.setImage(image, for: .normal)
-            return true
         } else {
             let image = UIImage(named: "work-empty.png")
             aMainNavBar.workButton.setImage(image, for: .normal)
@@ -115,7 +131,6 @@ class MainFlowViewController: UIViewController {
         if stepFour.checkUse(){
             let image = UIImage(named: "education-filled.png")
             aMainNavBar.educationButton.setImage(image, for: .normal)
-            return true
         } else {
             let image = UIImage(named: "education-empty.png")
             aMainNavBar.educationButton.setImage(image, for: .normal)
@@ -124,47 +139,57 @@ class MainFlowViewController: UIViewController {
         if stepFive.checkUse(){
             let image = UIImage(named: "skills-filled.png")
             aMainNavBar.skillsButton.setImage(image, for: .normal)
-            return true
         } else {
             let image = UIImage(named: "skills-empty.png")
             aMainNavBar.skillsButton.setImage(image, for: .normal)
         }
-        
-        
-       return false
     }
     
     func selectObjective(){
         
-        if checkUse(){
+        if stepOne.checkUse(){
+            checkUse()
+            NSLog("selectObjective")
             self.theView.subviews[0].removeFromSuperview()
             self.theView.addSubview(stepTwo)
             aView = 1
+        } else {
+            failed()
         }
     
     }
     
     func selectWork(){
-        if checkUse(){
+        if stepTwo.checkUse(){
+            checkUse()
             self.theView.subviews[0].removeFromSuperview()
             self.theView.addSubview(stepThree)
             aView = 2
+        } else {
+            failed()
         }
     }
     
     func selectEducation(){
-        if checkUse(){
+        if stepThree.checkUse()
+        {
+            checkUse()
             self.theView.subviews[0].removeFromSuperview()
             self.theView.addSubview(stepFour)
             aView = 3
+        } else {
+            failed()
         }
     }
     
     func selectSkill(){
-        if checkUse(){
+        if stepFour.checkUse(){
+            checkUse()
             self.theView.subviews[0].removeFromSuperview()
             self.theView.addSubview(stepFive)
             aView = 4
+        } else {
+            failed()
         }
     }
 
@@ -180,11 +205,11 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
     }
     
     func objectiveWasSelected() {
-        
+        NSLog("objective was selected")
         if aView != 1{
             selectObjective()
         }
-        NSLog("objective was selected")
+        
     }
     
     func workWasSelected() {

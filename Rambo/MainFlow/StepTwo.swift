@@ -26,8 +26,7 @@ class StepTwo: UIView {
     }
     */
     @IBAction func next(_ sender: Any) {
-    
-        if checkUse(){
+        if checkUse() {
             aDelegate.nextOne()
         } else {
             aDelegate.stepTwoAlert()
@@ -39,7 +38,6 @@ class StepTwo: UIView {
         if textView.text.count > 0{
             return true
         }
-        
         return false
     }
     
