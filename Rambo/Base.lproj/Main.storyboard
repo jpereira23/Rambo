@@ -151,10 +151,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="196" translatesAutoresizingMaskIntoConstraints="NO" id="SaZ-rs-5uB">
-                                <rect key="frame" x="30" y="84" width="354" height="36"/>
+                                <rect key="frame" x="30" y="84" width="354" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CI8-2L-MRh">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="33"/>
+                                        <state key="normal" title="FUCK JEFF"/>
+                                        <connections>
+                                            <segue destination="uto-zT-MCG" kind="show" id="rNi-Rn-Ril"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8e5-Vg-fdU">
+                                        <rect key="frame" x="286" y="0.0" width="68" height="33"/>
+                                        <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Build New"/>
+                                        <connections>
+                                            <segue destination="Z5J-NL-CnJ" kind="show" id="srZ-Dz-vlu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ioh-bB-gem">
-                                <rect key="frame" x="30" y="150" width="354" height="59"/>
+                                <rect key="frame" x="30" y="147" width="354" height="59"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Tony!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI7-79-3gJ">
                                         <rect key="frame" x="0.0" y="0.0" width="354" height="33"/>
@@ -176,18 +195,8 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CI8-2L-MRh">
-                                <rect key="frame" x="163" y="96" width="88" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="WrN-0r-o6y"/>
-                                </constraints>
-                                <state key="normal" title="FUCK JEFF"/>
-                                <connections>
-                                    <segue destination="uto-zT-MCG" kind="show" id="rNi-Rn-Ril"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ptk-ik-ypt">
-                                <rect key="frame" x="0.0" y="239" width="414" height="623"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ptk-ik-ypt">
+                                <rect key="frame" x="0.0" y="236" width="414" height="626"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="theCell" rowHeight="475" id="WC6-0y-hDh" customClass="MainTableViewCell" customModule="Rambo" customModuleProvider="target">
@@ -277,37 +286,19 @@
                                     <outlet property="delegate" destination="LQ2-H1-qA9" id="xYs-hK-5RG"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8e5-Vg-fdU">
-                                <rect key="frame" x="271" y="115" width="100" height="36"/>
-                                <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="CDm-K1-3zn"/>
-                                    <constraint firstAttribute="width" constant="100" id="TwU-2l-ehA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Build New"/>
-                                <connections>
-                                    <segue destination="Z5J-NL-CnJ" kind="show" id="srZ-Dz-vlu"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Eh6-8t-rbg" firstAttribute="trailing" secondItem="ioh-bB-gem" secondAttribute="trailing" constant="30" id="0pW-aE-y4g"/>
-                            <constraint firstItem="Ptk-ik-ypt" firstAttribute="top" secondItem="8e5-Vg-fdU" secondAttribute="bottom" constant="88" id="5Gh-1r-Xgb"/>
-                            <constraint firstItem="CI8-2L-MRh" firstAttribute="centerX" secondItem="Ptk-ik-ypt" secondAttribute="centerX" id="CQS-iI-KFW"/>
+                            <constraint firstItem="Ptk-ik-ypt" firstAttribute="bottom" secondItem="Eh6-8t-rbg" secondAttribute="bottom" id="9mY-kA-nmP"/>
                             <constraint firstItem="ioh-bB-gem" firstAttribute="leading" secondItem="Eh6-8t-rbg" secondAttribute="leading" constant="30" id="Gwv-Kl-6Rz"/>
-                            <constraint firstItem="CI8-2L-MRh" firstAttribute="top" secondItem="Eh6-8t-rbg" secondAttribute="top" constant="52" id="RVa-76-zmq"/>
+                            <constraint firstItem="Ptk-ik-ypt" firstAttribute="top" secondItem="ioh-bB-gem" secondAttribute="bottom" constant="30" id="OOi-ZC-Ls2"/>
+                            <constraint firstItem="Ptk-ik-ypt" firstAttribute="leading" secondItem="Eh6-8t-rbg" secondAttribute="leading" id="ULm-wr-8bf"/>
                             <constraint firstItem="SaZ-rs-5uB" firstAttribute="leading" secondItem="Eh6-8t-rbg" secondAttribute="leading" constant="30" id="VHU-TL-AX7"/>
-                            <constraint firstItem="Eh6-8t-rbg" firstAttribute="trailing" secondItem="8e5-Vg-fdU" secondAttribute="trailing" constant="43" id="WV0-6Z-xzY"/>
-                            <constraint firstItem="8e5-Vg-fdU" firstAttribute="leading" secondItem="CI8-2L-MRh" secondAttribute="trailing" constant="35" id="heT-VC-41F"/>
+                            <constraint firstItem="Ptk-ik-ypt" firstAttribute="trailing" secondItem="Eh6-8t-rbg" secondAttribute="trailing" id="lgk-W7-HMB"/>
                             <constraint firstItem="SaZ-rs-5uB" firstAttribute="top" secondItem="Eh6-8t-rbg" secondAttribute="top" constant="40" id="ovf-6G-M3Y"/>
-                            <constraint firstItem="ioh-bB-gem" firstAttribute="top" secondItem="CI8-2L-MRh" secondAttribute="bottom" constant="18" id="phS-HL-TMd"/>
                             <constraint firstItem="Eh6-8t-rbg" firstAttribute="trailing" secondItem="SaZ-rs-5uB" secondAttribute="trailing" constant="30" id="rAR-Fe-D9I"/>
-                            <constraint firstItem="8e5-Vg-fdU" firstAttribute="top" secondItem="Eh6-8t-rbg" secondAttribute="top" constant="71" id="wgH-Md-9jN"/>
                             <constraint firstItem="ioh-bB-gem" firstAttribute="top" secondItem="SaZ-rs-5uB" secondAttribute="bottom" constant="30" id="xJd-SE-BZu"/>
-                            <constraint firstItem="CI8-2L-MRh" firstAttribute="centerX" secondItem="SaZ-rs-5uB" secondAttribute="centerX" id="yps-lh-dF1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Eh6-8t-rbg"/>
                     </view>
