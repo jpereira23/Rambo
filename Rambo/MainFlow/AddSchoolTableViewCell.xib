@@ -54,7 +54,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bachelor's Degree" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TGn-3x-aBB">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bachelor's Degree" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TGn-3x-aBB" customClass="SearchFieldClass" customModule="Rambo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="25.5" width="260" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="fcn-9P-rXL"/>
@@ -77,7 +77,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Liberal Studies" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bgq-fU-kfa">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Liberal Studies" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bgq-fU-kfa" customClass="SearchFieldClass" customModule="Rambo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="25.5" width="260" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="4dj-Uv-yvj"/>

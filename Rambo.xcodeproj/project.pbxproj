@@ -13,6 +13,9 @@
 		2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2011B873228B68BE00067C1C /* OnBoardingView.xib */; };
 		2030E68122AC810C00FB7028 /* AddWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2030E67F22AC810C00FB7028 /* AddWorkTableViewCell.swift */; };
 		2030E68222AC810C00FB7028 /* AddWorkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2030E68022AC810C00FB7028 /* AddWorkTableViewCell.xib */; };
+		203D181D22C56DBB006BC1F0 /* SearchFieldClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203D181C22C56DBB006BC1F0 /* SearchFieldClass.swift */; };
+		203D181E22C585C4006BC1F0 /* SearchFieldClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203D181C22C56DBB006BC1F0 /* SearchFieldClass.swift */; };
+		203D182022C58CBB006BC1F0 /* InstitutionCampus.csv in Resources */ = {isa = PBXBuildFile; fileRef = 203D181F22C58CBA006BC1F0 /* InstitutionCampus.csv */; };
 		2042B174229070E500DEAD80 /* sample_two.html in Resources */ = {isa = PBXBuildFile; fileRef = 2042B173229070E500DEAD80 /* sample_two.html */; };
 		2042B1762291A6D700DEAD80 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042B1752291A6D700DEAD80 /* MainViewController.swift */; };
 		2042B17E2291AAC000DEAD80 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2042B17C2291AAC000DEAD80 /* MainTableViewCell.swift */; };
@@ -99,6 +102,8 @@
 		2011B873228B68BE00067C1C /* OnBoardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingView.xib; sourceTree = "<group>"; };
 		2030E67F22AC810C00FB7028 /* AddWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkTableViewCell.swift; sourceTree = "<group>"; };
 		2030E68022AC810C00FB7028 /* AddWorkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddWorkTableViewCell.xib; sourceTree = "<group>"; };
+		203D181C22C56DBB006BC1F0 /* SearchFieldClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldClass.swift; sourceTree = "<group>"; };
+		203D181F22C58CBA006BC1F0 /* InstitutionCampus.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InstitutionCampus.csv; sourceTree = "<group>"; };
 		2042B173229070E500DEAD80 /* sample_two.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample_two.html; sourceTree = "<group>"; };
 		2042B1752291A6D700DEAD80 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2042B17C2291AAC000DEAD80 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -277,6 +282,7 @@
 				2011B869228B640900067C1C /* Account Stuff */,
 				208C22F4228675B300F91C4F /* Main.storyboard */,
 				208C22FA228675B400F91C4F /* Assets.xcassets */,
+				203D181F22C58CBA006BC1F0 /* InstitutionCampus.csv */,
 				E5BBC249228A60C100D778C6 /* LaunchScreen.storyboard */,
 				20B63A5D2290652200EA1814 /* sample_one.html */,
 				205F7F4522BC4DDF0096676D /* world-cities.txt */,
@@ -406,6 +412,7 @@
 				20F2037122A889A200CAF938 /* StepFive.xib */,
 				20FCF42C22AC3E2A005B553D /* AddSkillTableViewCell.swift */,
 				20FCF42D22AC3E2A005B553D /* AddSkillTableViewCell.xib */,
+				203D181C22C56DBB006BC1F0 /* SearchFieldClass.swift */,
 			);
 			path = MainFlow;
 			sourceTree = "<group>";
@@ -524,6 +531,7 @@
 			files = (
 				2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */,
 				20614F7622A871AE008567DC /* red.css in Resources */,
+				203D182022C58CBB006BC1F0 /* InstitutionCampus.csv in Resources */,
 				205F7F4622BC4DDF0096676D /* world-cities.txt in Resources */,
 				20F2036A22A886BD00CAF938 /* StepThree.xib in Resources */,
 				20C2C1FB228E5E1000E3B0D7 /* SelectTemplate.xib in Resources */,
@@ -578,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20F2037022A8899800CAF938 /* StepFive.swift in Sources */,
+				203D181D22C56DBB006BC1F0 /* SearchFieldClass.swift in Sources */,
 				20D360A122A449EE00CBF8DE /* ResumePreviewViewController.swift in Sources */,
 				20F2036C22A8886C00CAF938 /* StepFour.swift in Sources */,
 				20FCF42E22AC3E2A005B553D /* AddSkillTableViewCell.swift in Sources */,
@@ -616,6 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				208C2309228675B400F91C4F /* RamboTests.swift in Sources */,
+				203D181E22C585C4006BC1F0 /* SearchFieldClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
