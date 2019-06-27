@@ -197,6 +197,7 @@ class MainFlowViewController: UIViewController {
 
 extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDelegate, StepThreeDelegate, StepFourDelegate{
     
+    
     func contactWasSelected() {
         if aView != 0{
             selectContact()
@@ -254,6 +255,20 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
     func DANextOne(){
         self.aView += 1
         self.selectSkill()
+    }
+    
+    func emailDontWork(){
+        let alert = UIAlertController(title: "Email is not valid.", message: "Please check that the email you have entered is a valid email.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
+    }
+    
+    func phoneNumberDontWork(){
+        let alert = UIAlertController(title: "Phone Number is not valid.", message: "Please check that the phone number you have entered is a valid phone number.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
     }
     
     func stepOneAlert(){
