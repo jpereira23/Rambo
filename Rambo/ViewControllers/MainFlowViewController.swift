@@ -147,50 +147,50 @@ class MainFlowViewController: UIViewController {
     
     func selectObjective(){
         
-        if stepOne.checkUse(){
-            checkUse()
-            NSLog("selectObjective")
+        //if stepOne.checkUse(){
+            //checkUse()
+            //NSLog("selectObjective")
             self.theView.subviews[0].removeFromSuperview()
             self.theView.addSubview(stepTwo)
             aView = 1
-        } else {
-            failed()
-        }
+        //} else {
+            //failed()
+        //}
     
     }
     
     func selectWork(){
-        if stepTwo.checkUse(){
-            checkUse()
+        //if stepTwo.checkUse(){
+            //checkUse()
             self.theView.subviews[0].removeFromSuperview()
             self.theView.addSubview(stepThree)
             aView = 2
-        } else {
-            failed()
-        }
+        //} else {
+            //failed()
+        //}
     }
     
     func selectEducation(){
-        if stepThree.checkUse()
-        {
-            checkUse()
+        //if stepThree.checkUse()
+        //{
+            //checkUse()
             self.theView.subviews[0].removeFromSuperview()
             self.theView.addSubview(stepFour)
             aView = 3
-        } else {
-            failed()
-        }
+        //} else {
+            //failed()
+        //}
     }
     
     func selectSkill(){
-        if stepFour.checkUse(){
-            checkUse()
+        //if stepFour.checkUse(){
+            //checkUse()
             self.theView.subviews[0].removeFromSuperview()
             self.theView.addSubview(stepFive)
             aView = 4
-        } else {
-            failed()
-        }
+        //} else {
+            //failed()
+        //}
     }
 
 }

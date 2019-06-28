@@ -33,7 +33,7 @@ class StepOne: UIView, UITextFieldDelegate{
     }
     
     func checkUse() -> Bool{
-        
+        /**
         if !checkPhone(){
             aDelegate.phoneNumberDontWork()
             return false
@@ -42,6 +42,7 @@ class StepOne: UIView, UITextFieldDelegate{
             aDelegate.emailDontWork()
             return false
         }
+        **/
         if fullName.text!.count > 0 && email.text!.count > 0 && phoneNumber.text!.count > 0{
             return true
         }
