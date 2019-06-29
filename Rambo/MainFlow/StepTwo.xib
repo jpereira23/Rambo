@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MJ6-Fe-vXV">
-                    <rect key="frame" x="30" y="30" width="354" height="143.5"/>
+                    <rect key="frame" x="30" y="30" width="334" height="143.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM6-g7-EXD">
-                            <rect key="frame" x="0.0" y="0.0" width="354" height="20.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20.5" id="uQX-24-ycQ"/>
                             </constraints>
@@ -39,7 +39,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vjy-yZ-9mz">
-                            <rect key="frame" x="0.0" y="30.5" width="354" height="113"/>
+                            <rect key="frame" x="0.0" y="30.5" width="334" height="113"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="113" id="Ad3-wW-sAK"/>
@@ -74,7 +74,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MJ6-Fe-vXV" secondAttribute="trailing" constant="30" id="3CP-4m-zcA"/>
+                <constraint firstAttribute="trailingMargin" secondItem="MJ6-Fe-vXV" secondAttribute="trailing" constant="30" id="3CP-4m-zcA"/>
                 <constraint firstItem="OUD-af-mbX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="4w8-Ca-a0k"/>
                 <constraint firstItem="OUD-af-mbX" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-60" id="ANb-jK-qjb"/>
                 <constraint firstItem="MJ6-Fe-vXV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="I6e-yl-PGf"/>
