@@ -74,6 +74,7 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
         super.awakeFromNib()
         
         // Intialization code
+        /*
         do {
             let theUrl = Bundle.main.path(forResource: "InstitutionCampus", ofType: "csv") as! String
             let u = URL(fileURLWithPath: theUrl)
@@ -81,6 +82,8 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
         } catch {
             print("error processing: \(error)")
         }
+        */
+        
         isEmployee.isOn = true
         endDate.text = "Present"
         endDate.isEnabled = false
