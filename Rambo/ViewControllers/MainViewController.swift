@@ -18,6 +18,9 @@ class MainViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        buildNew.layer.cornerRadius = 5
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "ThirdWayTableViewCell", bundle: bundle)
         self.tableView.register(nib, forCellReuseIdentifier: "cellBitch")
