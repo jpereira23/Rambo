@@ -13,6 +13,7 @@ class OnBoardingView: UIView {
     @IBOutlet weak var subHeader: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     
+    //atrying to commit
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

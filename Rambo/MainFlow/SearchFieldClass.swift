@@ -94,7 +94,9 @@ extension SearchFieldClass: UITableViewDelegate, UITableViewDataSource{
         cell.backgroundColor = UIColor(red: 12.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
         cell.textLabel?.textColor = UIColor.white
         cell.textLabel?.text = resultList[indexPath.row]
+        cell.textLabel?.font = UIFont.systemFont(ofSize: 14.0)
         return cell
+    
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
