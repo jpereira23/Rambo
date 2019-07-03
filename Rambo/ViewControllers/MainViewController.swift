@@ -36,7 +36,7 @@ class MainViewController: UIViewController{
 
 }
 
-extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdWayTableViewCellDelegate{
+extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdWayTableViewCellDelegate, MainTableViewCellDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 1{
@@ -46,6 +46,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "theCell") as! MainTableViewCell
+        cell.aDelegate = self
         let url = Bundle.main.url(forResource: "sample_one", withExtension: "html")
         let request = URLRequest(url: url!)
         cell.webView.load(request)
@@ -65,6 +66,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
     
     func triggerIt() {
         let vc = storyboard?.instantiateViewController(withIdentifier: "selectTemplate") as! SelectATemplateViewController
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func editSelected() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "mainFlow") as! MainFlowViewController
         
         self.present(vc, animated: true, completion: nil)
     }

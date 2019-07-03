@@ -9,10 +9,14 @@
 import UIKit
 import WebKit
 
+protocol MainTableViewCellDelegate{
+    func editSelected()
+}
+
 class MainTableViewCell: UITableViewCell {
 
     @IBOutlet weak var webView: WKWebView!
-    
+    var aDelegate: MainTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,6 +30,7 @@ class MainTableViewCell: UITableViewCell {
     }
     
     @IBAction func editAction(_ sender: Any) {
+        self.aDelegate?.editSelected()
     }
     
     @IBAction func exportAction(_ sender: Any) {

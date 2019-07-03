@@ -60,22 +60,41 @@ class StepOne: UIView, UITextFieldDelegate{
     }
     
     func checkPhone() -> Bool{
+        /*
+ 
         let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
         let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
         let result =  phoneTest.evaluate(with:phoneNumber.text)
-        return result
+        */
+        return true
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        /*
+ 
         var aString: String! = phoneNumber!.text
-        if aString.count == 3{
-            aString.append("-")
+        if aString.count == 6{
+            aString.insert("-", at: aString.index(aString.startIndex, offsetBy: 3))
             phoneNumber.text = aString
-        }else if aString.count == 7{
-            aString.append("-")
+            
+ 
+        }else if aString.count < 7 && aString.contains("-"){
+            
+        }else if aString.count == 10{
+            aString.remove(at: aString.index(aString.startIndex, offsetBy: 3))
+            aString.insert("-", at: aString.index(aString.startIndex, offsetBy: 6))
+            aString.insert("(", at: aString.startIndex)
+            aString.insert(")", at : aString.index(aString.startIndex, offsetBy: 4))
+            
+            phoneNumber.text = aString
+        }else if aString.count < 13 && aString.contains("("){
+            NSLog("WHAT THE FUCK")
+            aString.remove(at: aString.startIndex)
+            aString.remove(at: aString.index(aString.startIndex, offsetBy:3))
             phoneNumber.text = aString
         }
-        
+ 
+        */
         
         return true
     }
