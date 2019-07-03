@@ -58,6 +58,7 @@
 		20D861FB22AC6D0A00E72879 /* AddSchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D861F922AC6D0A00E72879 /* AddSchoolTableViewCell.swift */; };
 		20D861FC22AC6D0A00E72879 /* AddSchoolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20D861FA22AC6D0A00E72879 /* AddSchoolTableViewCell.xib */; };
 		20EB411A22BD831A001D0ACB /* CloudKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EB411922BD831A001D0ACB /* CloudKitHelper.swift */; };
+		20F1723822CD742700A844DF /* ExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F1723722CD741D00A844DF /* ExportViewController.swift */; };
 		20F2036022A8832700CAF938 /* StepOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2035F22A8832600CAF938 /* StepOne.swift */; };
 		20F2036222A8832F00CAF938 /* StepOne.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20F2036122A8832F00CAF938 /* StepOne.xib */; };
 		20F2036422A8848400CAF938 /* StepTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F2036322A8848400CAF938 /* StepTwo.swift */; };
@@ -153,6 +154,7 @@
 		20D861F922AC6D0A00E72879 /* AddSchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchoolTableViewCell.swift; sourceTree = "<group>"; };
 		20D861FA22AC6D0A00E72879 /* AddSchoolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddSchoolTableViewCell.xib; sourceTree = "<group>"; };
 		20EB411922BD831A001D0ACB /* CloudKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitHelper.swift; sourceTree = "<group>"; };
+		20F1723722CD741D00A844DF /* ExportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExportViewController.swift; sourceTree = "<group>"; };
 		20F2035F22A8832600CAF938 /* StepOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepOne.swift; sourceTree = "<group>"; };
 		20F2036122A8832F00CAF938 /* StepOne.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StepOne.xib; sourceTree = "<group>"; };
 		20F2036322A8848400CAF938 /* StepTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTwo.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				207062FF2288A27100ADE876 /* SplashScreenViewController.swift */,
 				2042B1752291A6D700DEAD80 /* MainViewController.swift */,
 				20D360A022A449EE00CBF8DE /* ResumePreviewViewController.swift */,
+				20F1723722CD741D00A844DF /* ExportViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -599,6 +602,7 @@
 				20EB411A22BD831A001D0ACB /* CloudKitHelper.swift in Sources */,
 				208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */,
 				20B63A5C2290647900EA1814 /* TemplateWeb.swift in Sources */,
+				20F1723822CD742700A844DF /* ExportViewController.swift in Sources */,
 				20D360AE22A46CA500CBF8DE /* Node.swift in Sources */,
 				20C2C1FD228E5E6000E3B0D7 /* SelectTemplate.swift in Sources */,
 				20C0363222A87E3D0049B068 /* MainNavBar.swift in Sources */,

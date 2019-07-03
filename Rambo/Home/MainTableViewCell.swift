@@ -11,6 +11,7 @@ import WebKit
 
 protocol MainTableViewCellDelegate{
     func editSelected()
+    func exportSelected()
 }
 
 class MainTableViewCell: UITableViewCell {
@@ -34,6 +35,7 @@ class MainTableViewCell: UITableViewCell {
     }
     
     @IBAction func exportAction(_ sender: Any) {
+        self.aDelegate?.exportSelected()
     }
     
     @IBAction func miscAction(_ sender: Any) {

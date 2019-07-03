@@ -75,4 +75,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         
         self.present(vc, animated: true, completion: nil)
     }
+    
+    func exportSelected(){
+        let vc = storyboard?.instantiateViewController(withIdentifier: "exportView") as! ExportViewController
+        
+        self.present(vc, animated: true, completion: nil)
+    }
 }

@@ -454,6 +454,30 @@
             </objects>
             <point key="canvasLocation" x="1765" y="852"/>
         </scene>
+        <!--Export View Controller-->
+        <scene sceneID="5vL-T9-xoE">
+            <objects>
+                <viewController restorationIdentifier="exportView" storyboardIdentifier="exportView" id="U0i-x3-sUS" customClass="ExportViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HCy-b0-dez">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Export View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCn-kA-M1h">
+                                <rect key="frame" x="161" y="340" width="92" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="s0A-BP-VKG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XcL-6k-1G9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2931.8840579710145" y="854.46428571428567"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chevron-left" width="55" height="100"/>
