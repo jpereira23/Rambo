@@ -33,7 +33,6 @@
 		208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F0228675B300F91C4F /* AppDelegate.swift */; };
 		208C22F3228675B300F91C4F /* SelectATemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F2228675B300F91C4F /* SelectATemplateViewController.swift */; };
 		208C22F6228675B300F91C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 208C22F4228675B300F91C4F /* Main.storyboard */; };
-		208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */; };
 		208C22FB228675B400F91C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208C22FA228675B400F91C4F /* Assets.xcassets */; };
 		208C2309228675B400F91C4F /* RamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2308228675B400F91C4F /* RamboTests.swift */; };
 		208C2314228675B400F91C4F /* RamboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2313228675B400F91C4F /* RamboUITests.swift */; };
@@ -124,7 +123,6 @@
 		208C22F0228675B300F91C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		208C22F2228675B300F91C4F /* SelectATemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectATemplateViewController.swift; sourceTree = "<group>"; };
 		208C22F5228675B300F91C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		208C22F8228675B300F91C4F /* Rambo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rambo.xcdatamodel; sourceTree = "<group>"; };
 		208C22FA228675B400F91C4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		208C22FF228675B400F91C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		208C2304228675B400F91C4F /* RamboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,7 +289,6 @@
 				2042B173229070E500DEAD80 /* sample_two.html */,
 				208C22F0228675B300F91C4F /* AppDelegate.swift */,
 				208C22FF228675B400F91C4F /* Info.plist */,
-				208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */,
 				E583737B22B0AD0A00A84C64 /* NotoSansJP-Bold.otf */,
 				E583737922B0AD0900A84C64 /* NotoSansJP-Medium.otf */,
 				E583737A22B0AD0900A84C64 /* NotoSansJP-Regular.otf */,
@@ -600,7 +597,6 @@
 				20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */,
 				20F2036822A886B200CAF938 /* StepThree.swift in Sources */,
 				20EB411A22BD831A001D0ACB /* CloudKitHelper.swift in Sources */,
-				208C22F9228675B300F91C4F /* Rambo.xcdatamodeld in Sources */,
 				20B63A5C2290647900EA1814 /* TemplateWeb.swift in Sources */,
 				20F1723822CD742700A844DF /* ExportViewController.swift in Sources */,
 				20D360AE22A46CA500CBF8DE /* Node.swift in Sources */,
@@ -944,19 +940,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		208C22F7228675B300F91C4F /* Rambo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				208C22F8228675B300F91C4F /* Rambo.xcdatamodel */,
-			);
-			currentVersion = 208C22F8228675B300F91C4F /* Rambo.xcdatamodel */;
-			path = Rambo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 208C22E5228675B300F91C4F /* Project object */;
 }

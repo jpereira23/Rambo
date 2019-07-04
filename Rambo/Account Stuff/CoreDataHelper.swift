@@ -18,8 +18,11 @@ class CoreDataHelper{
     private var profileEntity: NSEntityDescription!
     
     init(){
+        /*
+ 
         self.managedContext = self.appDelegate.persistentContainer.viewContext
         self.profileEntity = NSEntityDescription.entity(forEntityName: "Profile", in: self.managedContext)
+        */
     }
     /*
     public func saveProfile(user: User){

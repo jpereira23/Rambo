@@ -118,6 +118,8 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
         }
     }
     func process(string: String) throws{
+        /*
+ 
         let stringOfWordsArray = try string.components(separatedBy: ",")
         for i in 0..<stringOfWordsArray.count{
             //NSLog("\(i%14): \(stringOfWordsArray[i])")
@@ -127,7 +129,7 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
             }
         }
         schoolName.dataList = arrayOfSchools
-        
+        */
     }
     func processFile(at url: URL) throws{
         let s = try String(contentsOf: url)
