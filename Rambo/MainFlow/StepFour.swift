@@ -146,4 +146,10 @@ extension StepFour: UITableViewDataSource, UITableViewDelegate{
 }
 
 extension StepFour: AddSchoolTableViewCellDelegate{
+    func startedEditing(y: Int) {
+        var point = CGPoint(x: 0, y: y)
+        NSLog("point = \(point)")
+        //point.y = point.y - 5
+        self.tableview.setContentOffset(point, animated: true)
+    }
 }

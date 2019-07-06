@@ -10,6 +10,7 @@ import UIKit
 
 
 protocol AddSchoolTableViewCellDelegate{
+    func startedEditing(y: Int)
 }
 
 struct SchoolStuff{
@@ -80,6 +81,14 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
             print("error processing: \(error)")
         }
         */
+        
+        schoolName.delegate = self
+        degree.delegate = self
+        areaOfStudy.delegate = self
+        startDate.delegate = self
+        endDate.delegate = self
+        city.delegate = self
+        
         
         isEmployee.isOn = true
         endDate.text = "Present"
@@ -171,3 +180,23 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
     }
     
 }
+
+extension AddSchoolTableViewCell: UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        var aPoint = CGPoint(x: 0, y: 20)
+        
+        if textField == self.degree{
+            aPoint.y += 100
+        }
+        
+        if textField == self.areaOfStudy{
+            aPoint.y += 175
+        }
+        
+        if textField == self.startDate{
+            aPoint.y += 280
+        }
+        self.aDelegate.startedEditing(y: Int(aPoint.y))
+    }
+}
+
