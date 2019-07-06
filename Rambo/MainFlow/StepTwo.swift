@@ -15,6 +15,7 @@ protocol StepTwoDelegate{
 class StepTwo: UIView {
 
     @IBOutlet weak var continue2: UIButton!
+    @IBOutlet weak var ctaBox2: UIView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var objectiveSummary: UITextField!
     var aDelegate: StepTwoDelegate!

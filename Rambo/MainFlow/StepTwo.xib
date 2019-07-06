@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MJ6-Fe-vXV">
-                    <rect key="frame" x="30" y="30" width="334" height="143.5"/>
+                    <rect key="frame" x="20" y="30" width="374" height="143.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kM6-g7-EXD">
-                            <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20.5" id="uQX-24-ycQ"/>
                             </constraints>
@@ -39,7 +39,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vjy-yZ-9mz">
-                            <rect key="frame" x="0.0" y="30.5" width="334" height="113"/>
+                            <rect key="frame" x="0.0" y="30.5" width="374" height="113"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="113" id="Ad3-wW-sAK"/>
@@ -57,34 +57,47 @@
                         </textView>
                     </subviews>
                 </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUD-af-mbX">
-                    <rect key="frame" x="30" y="467" width="354" height="50"/>
-                    <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhl-wN-7cj">
+                    <rect key="frame" x="0.0" y="462" width="414" height="55"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUD-af-mbX">
+                            <rect key="frame" x="20" y="10" width="374" height="35"/>
+                            <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="jdu-Ya-yvL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
+                            <state key="normal" title="Save &amp; Continue">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="next:" destination="iN0-l3-epB" eventType="touchUpInside" id="0Fb-jw-fsm"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="ALk-W2-jfU"/>
+                        <constraint firstItem="OUD-af-mbX" firstAttribute="top" secondItem="zhl-wN-7cj" secondAttribute="top" constant="10" id="3fn-Oo-8ZF"/>
+                        <constraint firstAttribute="bottom" secondItem="OUD-af-mbX" secondAttribute="bottom" constant="10" id="JIJ-dH-iU5"/>
+                        <constraint firstItem="OUD-af-mbX" firstAttribute="leading" secondItem="zhl-wN-7cj" secondAttribute="leading" constant="20" id="ZpS-fr-l7C"/>
+                        <constraint firstAttribute="trailing" secondItem="OUD-af-mbX" secondAttribute="trailing" constant="20" id="xiR-f6-gPF"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
-                    <state key="normal" title="Save &amp; Continue">
-                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                    <connections>
-                        <action selector="next:" destination="iN0-l3-epB" eventType="touchUpInside" id="0Fb-jw-fsm"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailingMargin" secondItem="MJ6-Fe-vXV" secondAttribute="trailing" constant="30" id="3CP-4m-zcA"/>
-                <constraint firstItem="OUD-af-mbX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="4w8-Ca-a0k"/>
-                <constraint firstItem="OUD-af-mbX" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-60" id="ANb-jK-qjb"/>
+                <constraint firstAttribute="trailing" secondItem="MJ6-Fe-vXV" secondAttribute="trailing" constant="20" id="3CP-4m-zcA"/>
                 <constraint firstItem="MJ6-Fe-vXV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="I6e-yl-PGf"/>
-                <constraint firstItem="MJ6-Fe-vXV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="SaA-M5-JTX"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OUD-af-mbX" secondAttribute="trailing" constant="30" id="hoU-L5-Z1k"/>
+                <constraint firstItem="MJ6-Fe-vXV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="SaA-M5-JTX"/>
+                <constraint firstItem="zhl-wN-7cj" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="al0-Pt-3s6"/>
+                <constraint firstItem="zhl-wN-7cj" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-60" id="gKp-Na-8Jb"/>
+                <constraint firstItem="zhl-wN-7cj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="pfu-ca-zUY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="continue2" destination="OUD-af-mbX" id="1GZ-8h-lpB"/>
+                <outlet property="ctaBox2" destination="zhl-wN-7cj" id="WHr-Wd-4FF"/>
                 <outlet property="textView" destination="Vjy-yZ-9mz" id="bhh-ez-8DD"/>
             </connections>
             <point key="canvasLocation" x="89.855072463768124" y="86.71875"/>

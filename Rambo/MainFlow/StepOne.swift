@@ -21,6 +21,7 @@ class StepOne: UIView, UITextFieldDelegate{
     @IBOutlet weak var link: UITextField!
     var aDelegate: StepOneDelegate!
     @IBOutlet weak var continue1: UIButton!
+    @IBOutlet weak var ctaBox1: UIView!
     
     
     

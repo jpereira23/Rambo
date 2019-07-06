@@ -17,50 +17,63 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3lC-qg-NRm">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="412"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="427"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="C7n-AK-SqQ">
-                    <rect key="frame" x="30" y="427" width="354" height="90"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N9G-06-lyg">
+                    <rect key="frame" x="0.0" y="427" width="414" height="90"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZm-yC-hak">
-                            <rect key="frame" x="0.0" y="0.0" width="354" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="yIr-1r-QhX"/>
-                            </constraints>
-                            <state key="normal" title="Add School">
-                                <color key="titleColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="addSchool:" destination="iN0-l3-epB" eventType="touchUpInside" id="7Yi-LC-6dD"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdC-vM-cst">
-                            <rect key="frame" x="0.0" y="40" width="354" height="50"/>
-                            <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="Ljz-Q7-JGK"/>
-                            </constraints>
-                            <state key="normal" title="Save &amp; Continue">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <connections>
-                                <action selector="next:" destination="iN0-l3-epB" eventType="touchUpInside" id="5VR-Az-Hbx"/>
-                            </connections>
-                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C7n-AK-SqQ">
+                            <rect key="frame" x="20" y="10" width="374" height="70"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZm-yC-hak">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="25" id="yIr-1r-QhX"/>
+                                    </constraints>
+                                    <state key="normal" title="Add School">
+                                        <color key="titleColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="addSchool:" destination="iN0-l3-epB" eventType="touchUpInside" id="7Yi-LC-6dD"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdC-vM-cst">
+                                    <rect key="frame" x="0.0" y="35" width="374" height="35"/>
+                                    <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="Ljz-Q7-JGK"/>
+                                    </constraints>
+                                    <state key="normal" title="Save &amp; Continue">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="next:" destination="iN0-l3-epB" eventType="touchUpInside" id="5VR-Az-Hbx"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
-                </stackView>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="C7n-AK-SqQ" secondAttribute="trailing" constant="20" id="Aau-35-spl"/>
+                        <constraint firstAttribute="height" constant="90" id="UiD-AT-IFg"/>
+                        <constraint firstAttribute="bottom" secondItem="C7n-AK-SqQ" secondAttribute="bottom" constant="10" id="VTC-1a-AyR"/>
+                        <constraint firstItem="C7n-AK-SqQ" firstAttribute="leading" secondItem="N9G-06-lyg" secondAttribute="leading" constant="20" id="XUe-gZ-TD2"/>
+                        <constraint firstItem="C7n-AK-SqQ" firstAttribute="top" secondItem="N9G-06-lyg" secondAttribute="top" constant="10" id="hFD-1j-C1A"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="C7n-AK-SqQ" firstAttribute="top" secondItem="3lC-qg-NRm" secondAttribute="bottom" constant="15" id="3Db-Df-oVq"/>
-                <constraint firstItem="C7n-AK-SqQ" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-60" id="A9m-I3-Wmh"/>
+                <constraint firstItem="N9G-06-lyg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="6FD-Zv-Ygr"/>
                 <constraint firstItem="3lC-qg-NRm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Anx-4Z-BEk"/>
                 <constraint firstItem="3lC-qg-NRm" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="FoW-YO-yrG"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="C7n-AK-SqQ" secondAttribute="trailing" constant="30" id="pqL-tq-9mE"/>
-                <constraint firstItem="C7n-AK-SqQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="qax-gO-l7K"/>
+                <constraint firstItem="N9G-06-lyg" firstAttribute="top" secondItem="3lC-qg-NRm" secondAttribute="bottom" id="LGK-h2-feB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="N9G-06-lyg" secondAttribute="trailing" id="NSt-nf-Tmh"/>
+                <constraint firstItem="N9G-06-lyg" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-60" id="xoy-kZ-EIY"/>
                 <constraint firstItem="3lC-qg-NRm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zLc-ed-p8c"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

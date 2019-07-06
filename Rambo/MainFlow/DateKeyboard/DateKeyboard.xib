@@ -42,7 +42,6 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eWq-cF-Ieu" secondAttribute="trailing" constant="30" id="NNi-qs-8zi"/>
                 <constraint firstItem="eWq-cF-Ieu" firstAttribute="top" secondItem="Oit-dD-Dqb" secondAttribute="bottom" constant="8" id="iyg-MF-x05"/>
                 <constraint firstItem="Oit-dD-Dqb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="j51-MB-X19"/>
-                <constraint firstItem="Oit-dD-Dqb" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="y2Q-0v-wNl"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
