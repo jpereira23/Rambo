@@ -70,6 +70,14 @@ class MainFlowViewController: UIViewController {
         
         
         mainNavBar.addSubview(aMainNavBar)
+        
+        
+        
+        
+        theView.addSubview(stepFive)
+        theView.addSubview(stepFour)
+        theView.addSubview(stepThree)
+        theView.addSubview(stepTwo)
         theView.addSubview(stepOne)
         // Do any additional setup after loading the view.
     
@@ -77,8 +85,7 @@ class MainFlowViewController: UIViewController {
     
     func selectContact(){
         checkUse()
-        self.theView.subviews[0].removeFromSuperview()
-        self.theView.addSubview(stepOne)
+        self.theView.bringSubviewToFront(self.theView.subviews[4])
         aView = 0
     }
     
@@ -150,8 +157,8 @@ class MainFlowViewController: UIViewController {
         //if stepOne.checkUse(){
             //checkUse()
             //NSLog("selectObjective")
-            self.theView.subviews[0].removeFromSuperview()
-            self.theView.addSubview(stepTwo)
+        
+            self.theView.bringSubviewToFront(self.theView.subviews[3])
             aView = 1
         //} else {
             //failed()
@@ -162,8 +169,7 @@ class MainFlowViewController: UIViewController {
     func selectWork(){
         //if stepTwo.checkUse(){
             //checkUse()
-            self.theView.subviews[0].removeFromSuperview()
-            self.theView.addSubview(stepThree)
+            self.theView.bringSubviewToFront(self.theView.subviews[2])
             aView = 2
         //} else {
             //failed()
@@ -174,8 +180,7 @@ class MainFlowViewController: UIViewController {
         //if stepThree.checkUse()
         //{
             //checkUse()
-            self.theView.subviews[0].removeFromSuperview()
-            self.theView.addSubview(stepFour)
+            self.theView.bringSubviewToFront(self.theView.subviews[1])
             aView = 3
         //} else {
             //failed()
@@ -185,8 +190,7 @@ class MainFlowViewController: UIViewController {
     func selectSkill(){
         //if stepFour.checkUse(){
             //checkUse()
-            self.theView.subviews[0].removeFromSuperview()
-            self.theView.addSubview(stepFive)
+            self.theView.bringSubviewToFront(self.theView.subviews[0])
             aView = 4
         //} else {
             //failed()
