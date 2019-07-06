@@ -71,31 +71,58 @@ class StepOne: UIView, UITextFieldDelegate{
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        /*
- 
+        
+        
         var aString: String! = phoneNumber!.text
-        if aString.count == 6{
-            aString.insert("-", at: aString.index(aString.startIndex, offsetBy: 3))
-            phoneNumber.text = aString
+        let isBackspace: Int32! = strcmp(string.cString(using: String.Encoding.utf8), "\\b")
+        
+        NSLog("\(aString.count)")
+        if aString.count == 3 && isBackspace != -92{
+            let index = aString.index(aString.startIndex, offsetBy: 3)
+            aString.insert("-", at: index)
             
- 
-        }else if aString.count < 7 && aString.contains("-"){
             
-        }else if aString.count == 10{
-            aString.remove(at: aString.index(aString.startIndex, offsetBy: 3))
-            aString.insert("-", at: aString.index(aString.startIndex, offsetBy: 6))
-            aString.insert("(", at: aString.startIndex)
-            aString.insert(")", at : aString.index(aString.startIndex, offsetBy: 4))
-            
-            phoneNumber.text = aString
-        }else if aString.count < 13 && aString.contains("("){
-            NSLog("WHAT THE FUCK")
-            aString.remove(at: aString.startIndex)
-            aString.remove(at: aString.index(aString.startIndex, offsetBy:3))
             phoneNumber.text = aString
         }
- 
-        */
+        
+        if aString.count == 12 && aString.contains("("){
+            if (isBackspace == -92){
+                let index = aString.index(aString.startIndex, offsetBy: 9)
+                aString.remove(at:index)
+                
+                let index1 = aString.index(aString.startIndex, offsetBy: 4)
+                aString.remove(at: index1)
+                
+                aString.remove(at: index1)
+                
+                let index2 = aString.index(aString.startIndex, offsetBy: 0)
+                aString.remove(at: index2)
+                
+                let index3 = aString.index(aString.startIndex, offsetBy: 3)
+                aString.insert("-", at: index3)
+                
+                phoneNumber.text = aString
+            }
+        }else if aString.count == 8 && isBackspace != -92{
+            
+            let index = aString.index(aString.startIndex, offsetBy: 0)
+            aString.insert("(", at: index)
+            let index1 = aString.index(aString.startIndex, offsetBy: 4)
+            aString.insert(")", at: index1)
+            
+            let index2 = aString.index(aString.startIndex, offsetBy: 5)
+            aString.remove(at: index2)
+            
+            aString.insert(" ", at: index2)
+            
+            let index3 = aString.index(aString.startIndex, offsetBy: 9)
+            aString.insert("-", at: index3)
+            
+            phoneNumber.text = aString
+        }
+        
+        
+        
         
         return true
     }
