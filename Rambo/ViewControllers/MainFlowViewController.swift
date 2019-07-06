@@ -72,8 +72,11 @@ class MainFlowViewController: UIViewController {
         mainNavBar.addSubview(aMainNavBar)
         
         
-        
-        
+        stepOne.tag = 1
+        stepTwo.tag = 2
+        stepThree.tag = 3
+        stepFour.tag = 4
+        stepFive.tag = 5
         theView.addSubview(stepFive)
         theView.addSubview(stepFour)
         theView.addSubview(stepThree)
@@ -84,9 +87,14 @@ class MainFlowViewController: UIViewController {
     }
     
     func selectContact(){
+        
         checkUse()
-        self.theView.bringSubviewToFront(self.theView.subviews[4])
-        aView = 0
+        
+        if let zeView = self.theView.viewWithTag(1){
+            self.theView.bringSubviewToFront(zeView)
+            aView = 0
+        }
+        
     }
     
     func failed(){
@@ -153,13 +161,18 @@ class MainFlowViewController: UIViewController {
     }
     
     func selectObjective(){
-        
+        NSLog("subview[0].tag = \(self.theView.subviews[0].tag)")
+        NSLog("subview[1].tag = \(self.theView.subviews[1].tag)")
+        NSLog("subview[2].tag = \(self.theView.subviews[2].tag)")
+        NSLog("subview[3].tag = \(self.theView.subviews[3].tag)")
         //if stepOne.checkUse(){
             //checkUse()
             //NSLog("selectObjective")
         
-            self.theView.bringSubviewToFront(self.theView.subviews[3])
-            aView = 1
+            if let zeView = self.theView.viewWithTag(2){
+                self.theView.bringSubviewToFront(zeView)
+                aView = 1
+            }
         //} else {
             //failed()
         //}
@@ -169,8 +182,10 @@ class MainFlowViewController: UIViewController {
     func selectWork(){
         //if stepTwo.checkUse(){
             //checkUse()
-            self.theView.bringSubviewToFront(self.theView.subviews[2])
+        if let zeView = self.theView.viewWithTag(3){
+            self.theView.bringSubviewToFront(zeView)
             aView = 2
+        }
         //} else {
             //failed()
         //}
@@ -180,8 +195,10 @@ class MainFlowViewController: UIViewController {
         //if stepThree.checkUse()
         //{
             //checkUse()
-            self.theView.bringSubviewToFront(self.theView.subviews[1])
-            aView = 3
+            if let zeView = self.theView.viewWithTag(4){
+                self.theView.bringSubviewToFront(zeView)
+                aView = 3
+            }
         //} else {
             //failed()
         //}
@@ -190,8 +207,10 @@ class MainFlowViewController: UIViewController {
     func selectSkill(){
         //if stepFour.checkUse(){
             //checkUse()
-            self.theView.bringSubviewToFront(self.theView.subviews[0])
-            aView = 4
+            if let zeView = self.theView.viewWithTag(5){
+                self.theView.bringSubviewToFront(zeView)
+                aView = 4
+            }
         //} else {
             //failed()
         //}
