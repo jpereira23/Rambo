@@ -31,7 +31,7 @@ class MainFlowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.modalPresentationStyle = .fullScreen
         stepOne.aDelegate = self
         stepTwo.aDelegate = self
         stepThree.aDelegate = self
