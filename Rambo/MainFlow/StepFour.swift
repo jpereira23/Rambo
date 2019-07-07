@@ -137,7 +137,7 @@ extension StepFour: UITableViewDataSource, UITableViewDelegate{
         cell.areaOfStudy.text = self.arrayOfSchools[indexPath.row].areaOfStudy
         cell.city.text = self.arrayOfSchools[indexPath.row].city
         cell.degree.text = self.arrayOfSchools[indexPath.row].degree
-        cell.isEmployee.isOn = self.arrayOfSchools[indexPath.row].stillEmployee
+        //cell.isEmployee.isOn = self.arrayOfSchools[indexPath.row].stillEmployee
         cell.startDate.text = self.arrayOfSchools[indexPath.row].startDate
         
         return cell
