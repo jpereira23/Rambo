@@ -226,6 +226,19 @@ class MainFlowViewController: UIViewController {
             //failed()
         //}
     }
+    
+    func compileInformation() -> FullResume{
+        let basic: BasicInfo = BasicInfo(fN: stepOne.fullName.text!, e: stepOne.email.text!, pN: stepOne.phoneNumber.text!, l: stepOne.link.text!)
+        let objective: String = stepTwo.textView.text! 
+        let arrayOfWorks: [Work] = stepThree.arrayOfWorks
+        let arrayOfSchools: [School] = stepFour.arrayOfSchools
+        let skills: [String] = stepFive.skills
+        
+        let fullResume: FullResume = FullResume(bI: basic, o: objective, aW: arrayOfWorks, aS: arrayOfSchools, s: skills)
+        
+        
+        return fullResume
+    }
 
 }
 
@@ -236,39 +249,30 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
         if aView != 0{
             selectContact()
         }
-        NSLog("contact was selected")
     }
     
     func objectiveWasSelected() {
-        NSLog("objective was selected")
         if aView != 1{
             selectObjective()
         }
-        
     }
     
     func workWasSelected() {
-        
         if aView != 2{
             selectWork()
         }
-        NSLog("work was selected")
     }
     
     func educationWasSelected() {
-        
         if aView != 3{
             selectEducation()
         }
-        NSLog("education was selected")
     }
     
     func skillsWasSelected() {
-        
         if aView != 4{
             selectSkill()
         }
-        NSLog("skills was selected")
     }
     
     func goNext() {
@@ -338,8 +342,9 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
     }
     
     func timeToExport() {
+        let fullResume = compileInformation()
         let vc = storyboard?.instantiateViewController(withIdentifier: "exportView") as! ExportViewController
-        
+        vc.fullResume = fullResume
         self.present(vc, animated: true, completion: nil)
     }
     

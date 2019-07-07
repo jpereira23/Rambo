@@ -499,6 +499,9 @@
                         <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="s0A-BP-VKG"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="uVH-fh-s5U" id="5bF-bl-syh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcL-6k-1G9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

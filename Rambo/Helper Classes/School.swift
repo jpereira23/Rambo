@@ -37,5 +37,12 @@ class School{
         city = ""
     }
     
+    func printThis(){
+        NSLog("schoolName: \(self.schoolName)")
+        NSLog("degree: \(self.degree)")
+        NSLog("areaOfStudy: \(self.areaOfStudy)")
+        NSLog("city: \(self.city)")
+    }
+    
     
 }
