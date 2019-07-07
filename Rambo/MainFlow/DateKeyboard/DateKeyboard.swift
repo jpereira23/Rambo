@@ -32,6 +32,7 @@ class DateKeyboard: UIView{
     func initializeSubviews(){
         let xibFileName = "DateKeyboard"
         let view = Bundle.main.loadNibNamed(xibFileName, owner: self, options: nil)![0] as! UIView
+        datePicker.frame = aPicker.frame
         aPicker.addSubview(datePicker)
         self.addSubview(view)
         view.frame = self.bounds

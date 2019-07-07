@@ -84,4 +84,23 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         
         self.present(vc, animated: true, completion: nil)
     }
+    
+    func miscSelected(){
+        
+         let optionMenu = UIAlertController(title: "nil", message: "Choose Option", preferredStyle: .actionSheet)
+         
+         let deleteAction = UIAlertAction(title: "Delete", style: .default)
+         let saveAction = UIAlertAction(title: "Save", style: .default)
+         
+         
+         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+         
+         
+         optionMenu.addAction(deleteAction)
+         optionMenu.addAction(saveAction)
+         optionMenu.addAction(cancelAction)
+         
+         self.present(optionMenu, animated: true, completion: nil)
+
+    }
 }
