@@ -55,6 +55,10 @@ class StepOne: UIView, UITextFieldDelegate{
         fullName.delegate = self
         email.delegate = self
         link.delegate = self
+        
+        phoneNumber.keyboardType = .numberPad
+        email.keyboardType = .emailAddress
+        
     }
     
     func checkEmail() -> Bool{
