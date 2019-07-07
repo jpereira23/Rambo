@@ -41,22 +41,25 @@ class MainFlowViewController: UIViewController {
         
         //butoons
         stepOne.continue1.layer.cornerRadius = 5
-        stepOne.ctaBox1.layer.shadowOffset = .zero
-        stepOne.ctaBox1.layer.shadowOpacity = 0.2
+        stepOne.ctaBox1.layer.shadowOffset = CGSize(width: 0, height: -5)
+        stepOne.ctaBox1.layer.shadowOpacity = 0.07
         stepOne.ctaBox1.layer.shadowRadius = 4.0
-        stepOne.ctaBox1.layer.shadowPath = UIBezierPath(rect: stepOne.ctaBox1.bounds).cgPath
+        stepOne.ctaBox1.layer.masksToBounds = false
+        stepOne.ctaBox1.layer.cornerRadius = 5
+        
         stepTwo.continue2.layer.cornerRadius = 5
         stepTwo.ctaBox2.layer.shadowColor = UIColor.black.cgColor
-        stepTwo.ctaBox2.layer.shadowOffset = .zero
-        stepTwo.ctaBox2.layer.shadowOpacity = 0.2
+        stepTwo.ctaBox2.layer.shadowOffset = CGSize(width: 0, height: -5)
+        stepTwo.ctaBox2.layer.shadowOpacity = 0.07
         stepTwo.ctaBox2.layer.shadowRadius = 4.0
-        stepTwo.ctaBox2.layer.shadowPath = UIBezierPath(rect: stepTwo.ctaBox2.bounds).cgPath
+        stepTwo.ctaBox2.layer.masksToBounds = false
+        
         stepThree.continue3.layer.cornerRadius = 5
         stepThree.ctaBox3.layer.shadowColor = UIColor.black.cgColor
-        stepThree.ctaBox3.layer.shadowOffset = .zero
-        stepThree.ctaBox3.layer.shadowOpacity = 0.2
+        stepThree.ctaBox3.layer.shadowOffset = CGSize(width: 0, height: -5)
+        stepThree.ctaBox3.layer.shadowOpacity = 0.07
         stepThree.ctaBox3.layer.shadowRadius = 4.0
-        stepThree.ctaBox3.layer.shadowPath = UIBezierPath(rect: stepThree.ctaBox3.bounds).cgPath
+        stepThree.ctaBox3.layer.masksToBounds = false
         
         stepFour.continue4.layer.cornerRadius = 5
         stepFive.continue5.layer.cornerRadius = 5
