@@ -8,6 +8,10 @@
 
 import UIKit
 
+
+protocol AddWorkTableViewCellDelegate{
+    func editingBegan(y: Int)
+}
 class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     @IBOutlet weak var jobTitle: UITextField!
     @IBOutlet weak var companyName: UITextField!
@@ -16,9 +20,17 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     @IBOutlet weak var isEmployed: UISwitch!
     @IBOutlet weak var CITY: UITextField!
     @IBOutlet weak var aDescription: UITextView!
+    @IBOutlet weak var jobTitleStack: UIStackView!
+    @IBOutlet weak var companyNameStack: UIStackView!
+    @IBOutlet weak var startDateStack: UIStackView!
+    @IBOutlet weak var endDateStack: UIStackView!
+    @IBOutlet weak var cityStack: UIStackView!
     
+    
+    var aDelegate: AddWorkTableViewCellDelegate?
     var isStart: Bool = false
     var isEnd: Bool = false
+    var index: Int!
     
     let keyboardView = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
     
@@ -29,6 +41,11 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
         isEmployed.isOn = true
         endDate.text = "Present"
         endDate.isEnabled = false
+        jobTitle.delegate = self
+        companyName.delegate = self
+        startDate.delegate = self
+        endDate.delegate = self
+        CITY.delegate = self
         
         startDate.addTarget(self, action: #selector(startDateSelected), for: .editingDidBegin)
         endDate.addTarget(self, action: #selector(endDateSelected), for: .editingDidBegin)
@@ -89,4 +106,29 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
         // Configure the view for the selected state
     }
     
+}
+
+extension AddWorkTableViewCell: UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        var aPoint = CGPoint(x: 0, y: 20)
+        
+        if textField == self.companyName{
+            aPoint.y = self.companyNameStack.frame.origin.y
+        }
+        
+        if textField == self.startDate{
+            aPoint.y = self.startDateStack.frame.origin.y
+        }
+        
+        if textField == self.endDate{
+            aPoint.y = self.endDateStack.frame.origin.y
+        }
+        
+        if textField == self.CITY{
+            aPoint.y = self.cityStack.frame.origin.y
+        }
+        
+        aPoint.y = CGFloat(Int(aPoint.y) + (self.index * Int(self.frame.height)))
+        self.aDelegate?.editingBegan(y: Int(aPoint.y))
+    }
 }
