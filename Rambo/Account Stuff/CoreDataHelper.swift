@@ -18,13 +18,14 @@ class CoreDataHelper{
     private var profileEntity: NSEntityDescription!
     
     init(){
-        /*
+        
  
         self.managedContext = self.appDelegate.persistentContainer.viewContext
-        self.profileEntity = NSEntityDescription.entity(forEntityName: "Profile", in: self.managedContext)
-        */
+        self.profileEntity = NSEntityDescription.entity(forEntityName: "FullResume", in: self.managedContext)
+        
     }
     /*
+     
     public func saveProfile(user: User){
         let theProfile = NSManagedObject(entity: self.profileEntity!, insertInto: self.managedContext)
         
