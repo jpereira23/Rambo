@@ -212,5 +212,11 @@ extension AddSchoolTableViewCell: UITextFieldDelegate{
         aPoint.y = CGFloat(Int(aPoint.y) + (self.index * Int(self.frame.height)))
         self.aDelegate.startedEditing(y: Int(aPoint.y))
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
 }
 

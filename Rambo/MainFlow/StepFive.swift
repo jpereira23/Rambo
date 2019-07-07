@@ -30,7 +30,8 @@ class StepFive: UIView {
     }
     
     override func awakeFromNib() {
-        NSLog("Are we getting here")
+        skillField.delegate = self
+        
         tableView.delegate = self
         tableView.dataSource = self
         let bundle = Bundle(for: type(of: self))
@@ -60,7 +61,7 @@ class StepFive: UIView {
 }
 
 
-extension StepFive: UITableViewDelegate, UITableViewDataSource{
+extension StepFive: UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.skills.count
     }
@@ -71,6 +72,13 @@ extension StepFive: UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true 
+    }
+    
 }
 
 
