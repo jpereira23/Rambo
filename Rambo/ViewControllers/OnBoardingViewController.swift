@@ -22,6 +22,8 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.modalPresentationStyle = .fullScreen
+        
         aSlides = createSlides()
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
@@ -35,6 +37,10 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.modalPresentationStyle = .fullScreen
     }
     
     func createSlides() -> [OnBoardingView]{

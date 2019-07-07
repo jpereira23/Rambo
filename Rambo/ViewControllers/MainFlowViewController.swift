@@ -36,6 +36,7 @@ class MainFlowViewController: UIViewController {
         stepTwo.aDelegate = self
         stepThree.aDelegate = self
         stepFour.aDelegate = self
+        stepFive.aDelegate = self
     
         aMainNavBar.aDelegate = self
         
@@ -228,7 +229,7 @@ class MainFlowViewController: UIViewController {
 
 }
 
-extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDelegate, StepThreeDelegate, StepFourDelegate{
+extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDelegate, StepThreeDelegate, StepFourDelegate, StepFiveDelegate{
     
     
     func contactWasSelected() {
@@ -334,6 +335,12 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
     
     func goBack(){
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func timeToExport() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "exportView") as! ExportViewController
+        
+        self.present(vc, animated: true, completion: nil)
     }
     
 }
