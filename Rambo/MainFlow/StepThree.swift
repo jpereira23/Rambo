@@ -84,7 +84,7 @@ class StepThree: UIView {
             arrayOfWorks.append(aWork)
             
             tableView.reloadData()
-            tableView.scrollToRow(at: IndexPath(row: (arrayOfWorks.count-1), section: 0), at: .middle, animated: true)
+            tableView.scrollToRow(at: IndexPath(row: (arrayOfWorks.count-1), section: 0), at: .top, animated: true)
         } else {
             aDelegate.stepThreeAlertCell()
         }
@@ -105,6 +105,9 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "laCell") as! AddWorkTableViewCell
+        
+        cell.index = indexPath.row
+        cell.aDelegate = self
         
         //Textfields Right Padding
         let indentView0 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
@@ -136,4 +139,11 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
     }
     
     
+}
+
+extension StepThree: AddWorkTableViewCellDelegate{
+    func editingBegan(y: Int) {
+        var point = CGPoint(x: 0, y: y)
+        self.tableView.setContentOffset(point, animated: true)
+    }
 }

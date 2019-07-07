@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,7 +14,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="599"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="598.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="599"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lQ7-fP-Hil">
@@ -201,12 +199,18 @@
             <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="areaOfStudy" destination="Bgq-fU-kfa" id="nkR-FG-64w"/>
+                <outlet property="areaOfStudyStack" destination="pig-6j-JPA" id="bBv-4m-A9l"/>
                 <outlet property="city" destination="LUc-Je-mDf" id="LEg-Xh-Yk9"/>
+                <outlet property="cityStack" destination="0vI-WJ-BOv" id="Rm2-g3-gVV"/>
                 <outlet property="degree" destination="TGn-3x-aBB" id="QdZ-ya-sPK"/>
+                <outlet property="degreeStack" destination="Bcx-Fy-1YE" id="MBI-cL-Km8"/>
                 <outlet property="endDate" destination="FAt-zy-e3p" id="Ywb-s6-ljE"/>
+                <outlet property="endDateStack" destination="GaJ-4f-j4K" id="bax-HJ-qfC"/>
                 <outlet property="isEmployee" destination="6kt-ND-ICk" id="6Tf-ip-nfh"/>
                 <outlet property="schoolName" destination="DOs-YO-lBL" id="dBw-U3-dl3"/>
+                <outlet property="schoolNameStack" destination="lQ7-fP-Hil" id="g1I-Y7-l2P"/>
                 <outlet property="startDate" destination="iEL-cv-53v" id="xg5-uY-bfO"/>
+                <outlet property="startDateStack" destination="7nU-z7-d08" id="2IS-BQ-SgH"/>
             </connections>
             <point key="canvasLocation" x="139.13043478260872" y="57.924107142857139"/>
         </tableViewCell>

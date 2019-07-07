@@ -33,7 +33,7 @@ class StepFour: UIView {
             arrayOfSchools.append(aSchool)
             
             tableview.reloadData()
-            tableview.scrollToRow(at: IndexPath(row: (arrayOfSchools.count-1), section: 0), at: .middle, animated: true)
+            tableview.scrollToRow(at: IndexPath(row: (arrayOfSchools.count-1), section: 0), at: .top, animated: true)
         } else {
             aDelegate.stepFourAlertCell()
         }
