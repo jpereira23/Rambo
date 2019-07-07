@@ -67,7 +67,7 @@ class StepFour: UIView {
         arrayOfSchools[index].areaOfStudy = aCell.areaOfStudy.text
         arrayOfSchools[index].city = aCell.city.text
         arrayOfSchools[index].degree = aCell.degree.text
-        arrayOfSchools[index].startDate = aCell.startDate.text
+        //arrayOfSchools[index].startDate = aCell.startDate.text
         arrayOfSchools[index].endDate = Date()
         arrayOfSchools[index].stillEmployee = aCell.isEmployee.isOn
     }
@@ -139,7 +139,7 @@ extension StepFour: UITableViewDataSource, UITableViewDelegate{
         cell.city.text = self.arrayOfSchools[indexPath.row].city
         cell.degree.text = self.arrayOfSchools[indexPath.row].degree
         //cell.isEmployee.isOn = self.arrayOfSchools[indexPath.row].stillEmployee
-        cell.startDate.text = self.arrayOfSchools[indexPath.row].startDate
+        //cell.startDate.text = self.arrayOfSchools[indexPath.row].startDate
         
         return cell
     }

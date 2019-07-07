@@ -42,7 +42,6 @@
 		20A5E3F122B073DF009D44D5 /* ThirdWayTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A5E3EF22B073DF009D44D5 /* ThirdWayTableViewCell.xib */; };
 		20AD721622D25D5900FA487D /* BasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD721522D25D5900FA487D /* BasicInfo.swift */; };
 		20AD721822D25DBE00FA487D /* FullResume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AD721722D25DBE00FA487D /* FullResume.swift */; };
-		20AD721E22D268DD00FA487D /* Rambo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 20AD721C22D268DD00FA487D /* Rambo.xcdatamodeld */; };
 		20B63A56229062AC00EA1814 /* TemplateScroll.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B63A55229062AC00EA1814 /* TemplateScroll.xib */; };
 		20B63A58229062B800EA1814 /* TemplateScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B63A57229062B800EA1814 /* TemplateScroll.swift */; };
 		20B63A5A2290646B00EA1814 /* TemplateWeb.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B63A592290646B00EA1814 /* TemplateWeb.xib */; };
@@ -140,7 +139,6 @@
 		20A5E3EF22B073DF009D44D5 /* ThirdWayTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThirdWayTableViewCell.xib; sourceTree = "<group>"; };
 		20AD721522D25D5900FA487D /* BasicInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInfo.swift; sourceTree = "<group>"; };
 		20AD721722D25DBE00FA487D /* FullResume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullResume.swift; sourceTree = "<group>"; };
-		20AD721D22D268DD00FA487D /* Rambo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Rambo.xcdatamodel; sourceTree = "<group>"; };
 		20B63A55229062AC00EA1814 /* TemplateScroll.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateScroll.xib; sourceTree = "<group>"; };
 		20B63A57229062B800EA1814 /* TemplateScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateScroll.swift; sourceTree = "<group>"; };
 		20B63A592290646B00EA1814 /* TemplateWeb.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateWeb.xib; sourceTree = "<group>"; };
@@ -299,7 +297,6 @@
 				E583737922B0AD0900A84C64 /* NotoSansJP-Medium.otf */,
 				E583737A22B0AD0900A84C64 /* NotoSansJP-Regular.otf */,
 				E54A8DA1228A494C0030FB2F /* Icons */,
-				20AD721C22D268DD00FA487D /* Rambo.xcdatamodeld */,
 			);
 			path = Rambo;
 			sourceTree = "<group>";
@@ -596,7 +593,6 @@
 			files = (
 				20F2037022A8899800CAF938 /* StepFive.swift in Sources */,
 				203D181D22C56DBB006BC1F0 /* SearchFieldClass.swift in Sources */,
-				20AD721E22D268DD00FA487D /* Rambo.xcdatamodeld in Sources */,
 				20D360A122A449EE00CBF8DE /* ResumePreviewViewController.swift in Sources */,
 				20F2036C22A8886C00CAF938 /* StepFour.swift in Sources */,
 				20FCF42E22AC3E2A005B553D /* AddSkillTableViewCell.swift in Sources */,
@@ -952,19 +948,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		20AD721C22D268DD00FA487D /* Rambo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				20AD721D22D268DD00FA487D /* Rambo.xcdatamodel */,
-			);
-			currentVersion = 20AD721D22D268DD00FA487D /* Rambo.xcdatamodel */;
-			path = Rambo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 208C22E5228675B300F91C4F /* Project object */;
 }
