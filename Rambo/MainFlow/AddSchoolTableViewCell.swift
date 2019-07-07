@@ -59,6 +59,12 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
     @IBOutlet weak var isEmployee: UISwitch!
     @IBOutlet weak var state: UITextField!
     @IBOutlet weak var country: UITextField!
+    @IBOutlet weak var schoolNameStack: UIStackView!
+    @IBOutlet weak var degreeStack: UIStackView!
+    @IBOutlet weak var areaOfStudyStack: UIStackView!
+    @IBOutlet weak var startDateStack: UIStackView!
+    @IBOutlet weak var endDateStack: UIStackView!
+    @IBOutlet weak var cityStack: UIStackView!
     
     let keyboardView = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
     var aDelegate: AddSchoolTableViewCellDelegate!
@@ -186,16 +192,22 @@ extension AddSchoolTableViewCell: UITextFieldDelegate{
         var aPoint = CGPoint(x: 0, y: 20)
         
         if textField == self.degree{
-            aPoint.y += 100
+            aPoint.y = self.degreeStack.frame.origin.y
         }
         
         if textField == self.areaOfStudy{
-            aPoint.y += 175
+            aPoint.y = self.areaOfStudyStack.frame.origin.y
         }
         
         if textField == self.startDate{
-            aPoint.y += 280
+            aPoint.y = self.startDateStack.frame.origin.y
         }
+        
+        if textField == self.city{
+            aPoint.y = self.cityStack.frame.origin.y
+        }
+        
+        aPoint.y = CGFloat(Int(aPoint.y) + (self.index * Int(self.frame.height)))
         self.aDelegate.startedEditing(y: Int(aPoint.y))
     }
 }
