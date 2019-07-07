@@ -15,6 +15,10 @@ class Template: UIView {
     @IBOutlet weak var recommended: UILabel!
     @IBOutlet weak var webView: WKWebView!
     
+    
+    override func awakeFromNib() {
+        NSLog("awakeFromNib()")
+    }
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

@@ -63,7 +63,7 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         
         
         for i in 0..<aSlides.count{
-            aSlides[i].frame = CGRect(x: 0, y: 0, width: 354 * CGFloat(i), height: 429)
+            aSlides[i].frame = CGRect(x: i * 354, y: 0, width: 354, height: 429)
             scrollView.addSubview(aSlides[i])
         }
     }
