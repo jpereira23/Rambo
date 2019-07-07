@@ -86,7 +86,8 @@ class StepFour: UIView {
         self.tableview.delegate = self
         self.tableview.allowsSelection = false
         self.tableview.dataSource = self
-        
+        let aPoint = CGPoint(x: 0, y: 0)
+        self.tableview.setContentOffset(aPoint, animated: true)
         self.tableview.reloadData()
     }
 
