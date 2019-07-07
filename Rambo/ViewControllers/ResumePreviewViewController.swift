@@ -17,7 +17,7 @@ class ResumePreviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.modalPresentationStyle = .fullScreen
         
         
         node.setFirstName(name: "Jeff")

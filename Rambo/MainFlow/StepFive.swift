@@ -8,25 +8,25 @@
 
 import UIKit
 
+
+protocol StepFiveDelegate{
+    func timeToExport()
+}
 class StepFive: UIView {
-    
-    var skills: [String] = []
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var continue5: UIButton!
     @IBOutlet weak var skillField: UITextField!
     
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    var skills: [String] = []
+    var aDelegate: StepFiveDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         
+    }
+    @IBAction func continueExport(_ sender: Any) {
+        aDelegate!.timeToExport()
     }
     
     override func awakeFromNib() {

@@ -20,11 +20,16 @@ class MainViewController: UIViewController{
         super.viewDidLoad()
         
         
+        
         buildNew.layer.cornerRadius = 5
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "ThirdWayTableViewCell", bundle: bundle)
         self.tableView.register(nib, forCellReuseIdentifier: "cellBitch")
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.modalPresentationStyle = .fullScreen
     }
     
     /*

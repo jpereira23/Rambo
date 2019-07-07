@@ -17,6 +17,8 @@ class SelectATemplateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.modalPresentationStyle = .fullScreen
+        
         continue0.layer.cornerRadius = 5
         
         let aSlide = Bundle.main.loadNibNamed("Template", owner: self, options: nil)?.first as! Template

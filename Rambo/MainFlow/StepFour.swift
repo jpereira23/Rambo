@@ -86,7 +86,8 @@ class StepFour: UIView {
         self.tableview.delegate = self
         self.tableview.allowsSelection = false
         self.tableview.dataSource = self
-        
+        let aPoint = CGPoint(x: 0, y: 0)
+        self.tableview.setContentOffset(aPoint, animated: true)
         self.tableview.reloadData()
     }
 
@@ -137,7 +138,7 @@ extension StepFour: UITableViewDataSource, UITableViewDelegate{
         cell.areaOfStudy.text = self.arrayOfSchools[indexPath.row].areaOfStudy
         cell.city.text = self.arrayOfSchools[indexPath.row].city
         cell.degree.text = self.arrayOfSchools[indexPath.row].degree
-        cell.isEmployee.isOn = self.arrayOfSchools[indexPath.row].stillEmployee
+        //cell.isEmployee.isOn = self.arrayOfSchools[indexPath.row].stillEmployee
         cell.startDate.text = self.arrayOfSchools[indexPath.row].startDate
         
         return cell

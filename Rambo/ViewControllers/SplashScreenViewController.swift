@@ -15,6 +15,8 @@ class SplashScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.modalPresentationStyle = .fullScreen
+        
         // Do any additional setup after loading the view.
         worthyLogoImgView = UIImageView(frame: CGRect(x: (self.view.bounds.width/2)-50, y: (self.view.bounds.height/2)-50, width: 93, height: 90))
         

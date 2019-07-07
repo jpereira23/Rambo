@@ -87,6 +87,11 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
             print("error processing: \(error)")
         }
         */
+        isEmployee.isOn = true
+        endDate.text = "Present"
+        endDate.isEnabled = false
+        degree.dataList = degrees
+        
         
         schoolName.delegate = self
         degree.delegate = self
@@ -96,10 +101,7 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
         city.delegate = self
         
         
-        isEmployee.isOn = true
-        endDate.text = "Present"
-        endDate.isEnabled = false
-        degree.dataList = degrees
+        
         areaOfStudy.dataList = majors
         
         startDate.addTarget(self, action: #selector(startDateSelected), for: .editingDidBegin)

@@ -64,7 +64,7 @@ class Node{
     }
     
     func setFirstName(name: String){
-        nameLine = nameLine.replacingOccurrences(of: "Logan", with: name)
+        nameLine = nameLine.replacingOccurrences(of: "Logan Fitzpatrick", with: name)
         
         runHTMLAppend()
     }
