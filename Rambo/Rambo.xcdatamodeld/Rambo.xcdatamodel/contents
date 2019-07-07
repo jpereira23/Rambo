@@ -1,43 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14838.19" systemVersion="18E194e" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="NO" userDefinedModelVersionIdentifier="">
-    <entity name="ResumeFull" representedClassName="ResumeFull" syncable="YES" codeGenerationType="class">
-        <attribute name="cssNum" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    <entity name="AResumeFull" representedClassName="AResumeFull" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="fullName" optional="YES" attributeType="String"/>
         <attribute name="link" optional="YES" attributeType="String"/>
         <attribute name="objective" optional="YES" attributeType="String"/>
         <attribute name="phoneNumber" optional="YES" attributeType="String"/>
-        <relationship name="schools" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="School"/>
-        <relationship name="skills" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Skill"/>
-        <relationship name="works" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Work"/>
     </entity>
-    <entity name="School" representedClassName="School" syncable="YES" codeGenerationType="class">
+    <entity name="ASchool" representedClassName="ASchool" syncable="YES" codeGenerationType="class">
         <attribute name="areaOfStudy" optional="YES" attributeType="String"/>
-        <attribute name="city" optional="YES" attributeType="String"/>
         <attribute name="degree" optional="YES" attributeType="String"/>
-        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="schoolName" optional="YES" attributeType="String"/>
-        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="stillEmployee" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <relationship name="resumeFull" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResumeFull"/>
-    </entity>
-    <entity name="Skill" representedClassName="Skill" syncable="YES" codeGenerationType="class">
-        <attribute name="skill" optional="YES" attributeType="String"/>
-        <relationship name="resumeFull" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResumeFull"/>
-    </entity>
-    <entity name="Work" representedClassName="Work" syncable="YES" codeGenerationType="class">
-        <attribute name="aDescription" optional="YES" attributeType="String"/>
-        <attribute name="city" optional="YES" attributeType="String"/>
-        <attribute name="companyName" optional="YES" attributeType="String"/>
-        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="jobTitle" optional="YES" attributeType="String"/>
-        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="resumeFull" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ResumeFull"/>
     </entity>
     <elements>
-        <element name="ResumeFull" positionX="-63" positionY="-18" width="128" height="28"/>
-        <element name="School" positionX="-54" positionY="-9" width="128" height="28"/>
-        <element name="Work" positionX="-45" positionY="0" width="128" height="28"/>
-        <element name="Skill" positionX="-36" positionY="9" width="128" height="28"/>
+        <element name="AResumeFull" positionX="-27" positionY="18" width="128" height="28"/>
+        <element name="ASchool" positionX="18" positionY="99" width="128" height="28"/>
     </elements>
 </model>
