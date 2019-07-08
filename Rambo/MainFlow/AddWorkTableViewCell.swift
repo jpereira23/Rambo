@@ -131,4 +131,10 @@ extension AddWorkTableViewCell: UITextFieldDelegate{
         aPoint.y = CGFloat(Int(aPoint.y) + (self.index * Int(self.frame.height)))
         self.aDelegate?.editingBegan(y: Int(aPoint.y))
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
+    }
 }

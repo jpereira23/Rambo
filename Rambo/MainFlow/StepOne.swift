@@ -52,6 +52,13 @@ class StepOne: UIView, UITextFieldDelegate{
     
     override func awakeFromNib() {
         phoneNumber.delegate = self
+        fullName.delegate = self
+        email.delegate = self
+        link.delegate = self
+        
+        phoneNumber.keyboardType = .numberPad
+        email.keyboardType = .emailAddress
+        
     }
     
     func checkEmail() -> Bool{
@@ -124,6 +131,12 @@ class StepOne: UIView, UITextFieldDelegate{
         
         
         
+        
+        return true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         
         return true
     }

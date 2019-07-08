@@ -35,6 +35,9 @@ class StepTwo: UIView {
         
     }
     
+    override func awakeFromNib() {
+    }
+    
     func checkUse() -> Bool{
         if textView.text.count > 0{
             return true
