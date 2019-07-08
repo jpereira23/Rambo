@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdC-uv-h9F">
-                    <rect key="frame" x="20" y="74" width="9" height="18"/>
+                    <rect key="frame" x="25" y="74" width="9" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="9" id="5kQ-Y8-uaJ"/>
                         <constraint firstAttribute="height" constant="18" id="GNj-sX-WhU"/>
@@ -36,24 +36,24 @@
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KFG-gi-SMO">
-                    <rect key="frame" x="20" y="122" width="364" height="56"/>
+                    <rect key="frame" x="25" y="122" width="359" height="56"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEP 2 OF 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usR-j1-KiQ">
-                            <rect key="frame" x="0.0" y="0.0" width="364" height="18"/>
+                            <rect key="frame" x="0.0" y="0.0" width="359" height="18"/>
                             <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP Bold" pointSize="12"/>
                             <color key="textColor" red="0.050980392156862744" green="0.7803921568627451" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Your Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZZ-Kp-Ij3">
-                            <rect key="frame" x="0.0" y="23" width="364" height="33"/>
+                            <rect key="frame" x="0.0" y="23" width="359" height="33"/>
                             <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP Bold" pointSize="22"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="JtB-G7-6Yk">
-                    <rect key="frame" x="20" y="208" width="373" height="25"/>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1QC-Eb-tA3">
+                    <rect key="frame" x="25" y="208" width="362" height="25"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54u-KD-agz">
                             <rect key="frame" x="0.0" y="0.0" width="55" height="25"/>
@@ -70,10 +70,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHV-1O-ct6">
-                            <rect key="frame" x="83" y="0.0" width="65" height="25"/>
+                            <rect key="frame" x="75" y="0.0" width="66" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="QK2-Dc-NNs"/>
-                                <constraint firstAttribute="width" constant="65" id="i39-aU-88P"/>
+                                <constraint firstAttribute="width" constant="66" id="i39-aU-88P"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
                             <state key="normal" title="Objective">
@@ -84,10 +84,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Koz-fe-3fU">
-                            <rect key="frame" x="176" y="0.0" width="35" height="25"/>
+                            <rect key="frame" x="161" y="0.0" width="55" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="MuZ-5h-g4C"/>
-                                <constraint firstAttribute="width" constant="35" id="fyT-xn-ZKS"/>
+                                <constraint firstAttribute="width" constant="55" id="fyT-xn-ZKS"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
                             <state key="normal" title="Work">
@@ -98,7 +98,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ag-Mu-hWH">
-                            <rect key="frame" x="239" y="0.0" width="70" height="25"/>
+                            <rect key="frame" x="236" y="0.0" width="70" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="70" id="Ci0-KQ-tZc"/>
                                 <constraint firstAttribute="height" constant="25" id="hYu-S1-bd9"/>
@@ -112,7 +112,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aW-jT-C8e">
-                            <rect key="frame" x="337" y="0.0" width="36" height="25"/>
+                            <rect key="frame" x="326" y="0.0" width="36" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="36" id="88H-6s-AzN"/>
                                 <constraint firstAttribute="height" constant="25" id="x7h-BX-o7i"/>
@@ -126,21 +126,18 @@
                             </connections>
                         </button>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="25" id="rBd-51-WXb"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1QC-Eb-tA3" secondAttribute="trailing" constant="27" id="24K-Kj-m0T"/>
                 <constraint firstItem="KFG-gi-SMO" firstAttribute="top" secondItem="IdC-uv-h9F" secondAttribute="bottom" constant="30" id="4IT-bu-3uB"/>
-                <constraint firstItem="KFG-gi-SMO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="D7E-Fk-F2e"/>
+                <constraint firstItem="KFG-gi-SMO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="D7E-Fk-F2e"/>
+                <constraint firstItem="1QC-Eb-tA3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="Dbh-Gg-9Jp"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KFG-gi-SMO" secondAttribute="trailing" constant="30" id="H6c-v3-jrR"/>
-                <constraint firstItem="JtB-G7-6Yk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Hsa-Bg-xHQ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="JtB-G7-6Yk" secondAttribute="trailing" constant="21" id="P6y-hX-m1X"/>
-                <constraint firstItem="IdC-uv-h9F" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Yva-yn-3CU"/>
+                <constraint firstItem="IdC-uv-h9F" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="Yva-yn-3CU"/>
                 <constraint firstItem="IdC-uv-h9F" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="ktp-jJ-4b9"/>
-                <constraint firstItem="JtB-G7-6Yk" firstAttribute="top" secondItem="EZZ-Kp-Ij3" secondAttribute="bottom" constant="30" id="zj4-Iy-iwG"/>
+                <constraint firstItem="1QC-Eb-tA3" firstAttribute="top" secondItem="KFG-gi-SMO" secondAttribute="bottom" constant="30" id="z0j-bq-EMq"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
