@@ -26,10 +26,10 @@
                     <rect key="frame" x="0.0" y="427" width="414" height="90"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C7n-AK-SqQ">
-                            <rect key="frame" x="20" y="10" width="374" height="70"/>
+                            <rect key="frame" x="25" y="10" width="364" height="70"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZm-yC-hak">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="364" height="25"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="25" id="yIr-1r-QhX"/>
                                     </constraints>
@@ -41,7 +41,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdC-vM-cst">
-                                    <rect key="frame" x="0.0" y="35" width="374" height="35"/>
+                                    <rect key="frame" x="0.0" y="35" width="364" height="35"/>
                                     <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="Ljz-Q7-JGK"/>
@@ -58,10 +58,10 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="C7n-AK-SqQ" secondAttribute="trailing" constant="20" id="Aau-35-spl"/>
+                        <constraint firstAttribute="trailing" secondItem="C7n-AK-SqQ" secondAttribute="trailing" constant="25" id="Aau-35-spl"/>
                         <constraint firstAttribute="height" constant="90" id="UiD-AT-IFg"/>
                         <constraint firstAttribute="bottom" secondItem="C7n-AK-SqQ" secondAttribute="bottom" constant="10" id="VTC-1a-AyR"/>
-                        <constraint firstItem="C7n-AK-SqQ" firstAttribute="leading" secondItem="N9G-06-lyg" secondAttribute="leading" constant="20" id="XUe-gZ-TD2"/>
+                        <constraint firstItem="C7n-AK-SqQ" firstAttribute="leading" secondItem="N9G-06-lyg" secondAttribute="leading" constant="25" id="XUe-gZ-TD2"/>
                         <constraint firstItem="C7n-AK-SqQ" firstAttribute="top" secondItem="N9G-06-lyg" secondAttribute="top" constant="10" id="hFD-1j-C1A"/>
                     </constraints>
                 </view>

@@ -40,7 +40,10 @@ class MainFlowViewController: UIViewController {
     
         aMainNavBar.aDelegate = self
         
-        //butoons
+        
+        //mainNavBar.contactButton.setTitleColor(UIColor(red: 107.0/255.0, green: 199.0/255.0, blue: 217.0/255.0), forState: .normal)
+        
+        //buttons
         stepOne.continue1.layer.cornerRadius = 5
         stepOne.ctaBox1.layer.shadowOffset = CGSize(width: 0, height: -5)
         stepOne.ctaBox1.layer.shadowOpacity = 0.07

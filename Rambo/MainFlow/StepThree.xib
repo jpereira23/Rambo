@@ -30,10 +30,10 @@
                     <rect key="frame" x="0.0" y="427" width="414" height="90"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0jv-YE-grl">
-                            <rect key="frame" x="20" y="10" width="374" height="70"/>
+                            <rect key="frame" x="25" y="10" width="364" height="70"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pY1-Na-mLn">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="364" height="25"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="25" id="Blt-UF-Oif"/>
@@ -46,7 +46,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lp-gc-6v0">
-                                    <rect key="frame" x="0.0" y="35" width="374" height="35"/>
+                                    <rect key="frame" x="0.0" y="35" width="364" height="35"/>
                                     <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="f4B-WR-yXC"/>
@@ -64,10 +64,10 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="0jv-YE-grl" firstAttribute="leading" secondItem="lnN-jp-xhM" secondAttribute="leading" constant="20" id="0uM-3m-tsU"/>
+                        <constraint firstItem="0jv-YE-grl" firstAttribute="leading" secondItem="lnN-jp-xhM" secondAttribute="leading" constant="25" id="0uM-3m-tsU"/>
                         <constraint firstItem="0jv-YE-grl" firstAttribute="top" secondItem="lnN-jp-xhM" secondAttribute="top" constant="10" id="1Sf-8N-QYz"/>
                         <constraint firstAttribute="height" constant="90" id="ACt-9R-OTO"/>
-                        <constraint firstAttribute="trailing" secondItem="0jv-YE-grl" secondAttribute="trailing" constant="20" id="JlY-wB-kra"/>
+                        <constraint firstAttribute="trailing" secondItem="0jv-YE-grl" secondAttribute="trailing" constant="25" id="JlY-wB-kra"/>
                         <constraint firstAttribute="bottom" secondItem="0jv-YE-grl" secondAttribute="bottom" constant="10" id="Z1k-3b-bGp"/>
                     </constraints>
                 </view>

@@ -20,8 +20,8 @@ class CoreDataHelper{
     init(){
         
  
-        self.managedContext = self.appDelegate.persistentContainer.viewContext
-        self.profileEntity = NSEntityDescription.entity(forEntityName: "FullResume", in: self.managedContext)
+        //self.managedContext = self.appDelegate.persistentContainer.viewContext
+        //self.profileEntity = NSEntityDescription.entity(forEntityName: "FullResume", in: self.managedContext)
         
     }
     /*

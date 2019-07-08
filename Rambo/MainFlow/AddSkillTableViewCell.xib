@@ -25,10 +25,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3ji-yE-r64">
-                        <rect key="frame" x="30" y="30" width="354" height="21"/>
+                        <rect key="frame" x="25" y="30" width="364" height="21"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hAe-Ve-TjU">
-                                <rect key="frame" x="0.0" y="0.0" width="324" height="21"/>
+                                <rect key="frame" x="0.0" y="0.0" width="334" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gy2-JZ-zUu"/>
                                 </constraints>
@@ -37,7 +37,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqW-mE-X9d">
-                                <rect key="frame" x="334" y="1" width="20" height="20"/>
+                                <rect key="frame" x="344" y="1" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="fRX-cW-gYF"/>
                                     <constraint firstAttribute="width" constant="20" id="kaJ-mk-eow"/>
@@ -48,10 +48,10 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="3ji-yE-r64" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="Sng-LA-ufw"/>
+                    <constraint firstItem="3ji-yE-r64" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="Sng-LA-ufw"/>
                     <constraint firstAttribute="bottom" secondItem="3ji-yE-r64" secondAttribute="bottom" constant="30" id="bNz-Mc-6R8"/>
                     <constraint firstItem="3ji-yE-r64" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="jFc-4c-MOC"/>
-                    <constraint firstAttribute="trailing" secondItem="3ji-yE-r64" secondAttribute="trailing" constant="30" id="wTi-Ip-Bpp"/>
+                    <constraint firstAttribute="trailing" secondItem="3ji-yE-r64" secondAttribute="trailing" constant="25" id="wTi-Ip-Bpp"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
