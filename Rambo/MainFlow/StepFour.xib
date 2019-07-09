@@ -80,6 +80,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="continue4" destination="vdC-vM-cst" id="XAh-XN-fZT"/>
+                <outlet property="ctaBox4" destination="N9G-06-lyg" id="hMf-Gz-9dY"/>
                 <outlet property="tableview" destination="3lC-qg-NRm" id="190-11-99H"/>
             </connections>
             <point key="canvasLocation" x="-259.4202898550725" y="-62.946428571428569"/>

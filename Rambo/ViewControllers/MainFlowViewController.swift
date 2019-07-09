@@ -66,7 +66,18 @@ class MainFlowViewController: UIViewController {
         stepThree.ctaBox3.layer.masksToBounds = false
         
         stepFour.continue4.layer.cornerRadius = 5
+        stepFour.ctaBox4.layer.shadowColor = UIColor.black.cgColor
+        stepFour.ctaBox4.layer.shadowOffset = CGSize(width: 0, height: -5)
+        stepFour.ctaBox4.layer.shadowOpacity = 0.07
+        stepFour.ctaBox4.layer.shadowRadius = 4.0
+        stepFour.ctaBox4.layer.masksToBounds = false
+        
         stepFive.continue5.layer.cornerRadius = 5
+        stepFive.ctaBox5.layer.shadowColor = UIColor.black.cgColor
+        stepFive.ctaBox5.layer.shadowOffset = CGSize(width: 0, height: -5)
+        stepFive.ctaBox5.layer.shadowOpacity = 0.07
+        stepFive.ctaBox5.layer.shadowRadius = 4.0
+        stepFive.ctaBox5.layer.masksToBounds = false
         
         //TextFields Inside Padding
         let indentView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))

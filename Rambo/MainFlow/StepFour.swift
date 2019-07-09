@@ -15,6 +15,7 @@ protocol StepFourDelegate{
 class StepFour: UIView {
 
     @IBOutlet weak var continue4: UIButton!
+    @IBOutlet weak var ctaBox4: UIView!
     @IBOutlet weak var tableview: UITableView!
     var arrayOfSchools: [School] = []
     var aDelegate: StepFourDelegate!

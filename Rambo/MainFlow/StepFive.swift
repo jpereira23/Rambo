@@ -15,6 +15,7 @@ protocol StepFiveDelegate{
 class StepFive: UIView {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var continue5: UIButton!
+    @IBOutlet weak var ctaBox5: UIView!
     @IBOutlet weak var skillField: UITextField!
     
     var skills: [String] = []
