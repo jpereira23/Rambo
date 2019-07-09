@@ -55,7 +55,7 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIt-VO-dna">
-                    <rect key="frame" x="0.0" y="427" width="414" height="90"/>
+                    <rect key="frame" x="0.0" y="487" width="414" height="90"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wvp-im-DZI">
                             <rect key="frame" x="25" y="10" width="364" height="70"/>
@@ -101,7 +101,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="RIt-VO-dna" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3KD-bf-Q8G"/>
-                <constraint firstItem="RIt-VO-dna" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-60" id="H2S-Cn-pdr"/>
+                <constraint firstItem="RIt-VO-dna" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="H2S-Cn-pdr"/>
                 <constraint firstItem="3LV-1y-AFe" firstAttribute="top" secondItem="udh-95-yrk" secondAttribute="bottom" id="JxM-Sz-Gfa"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="udh-95-yrk" secondAttribute="trailing" constant="25" id="WvL-hB-6Pe"/>
                 <constraint firstItem="udh-95-yrk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="ahk-SV-nEU"/>

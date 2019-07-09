@@ -17,6 +17,13 @@ class ExportViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        webView.layer.shadowColor = UIColor.black.cgColor
+        webView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        webView.layer.shadowOpacity = 0.1
+        webView.layer.shadowRadius = 5.0
+        webView.layer.masksToBounds = false
+        
+        
         let url = Bundle.main.url(forResource: "sample_one", withExtension: "html")
         
         node.setFirstName(name: fullResume.basicInfo.fullName)

@@ -22,12 +22,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6XC-cB-aTe">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="427"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="487"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnN-jp-xhM">
-                    <rect key="frame" x="0.0" y="427" width="414" height="90"/>
+                    <rect key="frame" x="0.0" y="487" width="414" height="90"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0jv-YE-grl">
                             <rect key="frame" x="25" y="10" width="364" height="70"/>
@@ -78,7 +78,7 @@
                 <constraint firstItem="lnN-jp-xhM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aju-GJ-qNt"/>
                 <constraint firstItem="6XC-cB-aTe" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="bWg-cu-RQI"/>
                 <constraint firstItem="lnN-jp-xhM" firstAttribute="top" secondItem="6XC-cB-aTe" secondAttribute="bottom" id="ebF-PP-3LK"/>
-                <constraint firstItem="lnN-jp-xhM" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-60" id="nkq-Uh-S4i"/>
+                <constraint firstItem="lnN-jp-xhM" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="nkq-Uh-S4i"/>
                 <constraint firstItem="6XC-cB-aTe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qLS-6c-jbZ"/>
                 <constraint firstItem="6XC-cB-aTe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qix-CI-0Ae"/>
             </constraints>

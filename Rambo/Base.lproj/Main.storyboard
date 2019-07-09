@@ -370,10 +370,6 @@
                                     <constraint firstItem="qpC-Ho-faQ" firstAttribute="leading" secondItem="Yuh-YO-hjn" secondAttribute="leading" constant="25" id="tt3-r2-uSE"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a66-f4-Rix">
-                                <rect key="frame" x="0.0" y="208" width="414" height="332"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rR4-Mb-nyu">
                                 <rect key="frame" x="30" y="782" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -394,6 +390,10 @@
                                     <segue destination="UO7-mc-UVa" kind="showDetail" id="oby-tg-Wvc"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="a66-f4-Rix">
+                                <rect key="frame" x="0.0" y="208" width="414" height="332"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -426,26 +426,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhQ-3A-obV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="263"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="RGo-iU-ih7"/>
-                                    <constraint firstAttribute="height" constant="263" id="uVE-Rk-t18"/>
+                                    <constraint firstAttribute="height" constant="200" id="P6c-RH-JsS"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mkj-iQ-vEc">
-                                <rect key="frame" x="0.0" y="307" width="414" height="555"/>
+                                <rect key="frame" x="0.0" y="244" width="414" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Mkj-iQ-vEc" firstAttribute="leading" secondItem="hhQ-3A-obV" secondAttribute="leading" id="AAW-WW-duo"/>
-                            <constraint firstItem="hhQ-3A-obV" firstAttribute="trailing" secondItem="gik-20-Nm2" secondAttribute="trailing" id="DYX-y4-jEY"/>
-                            <constraint firstItem="Mkj-iQ-vEc" firstAttribute="trailing" secondItem="hhQ-3A-obV" secondAttribute="trailing" id="E1R-JX-WtW"/>
-                            <constraint firstItem="hhQ-3A-obV" firstAttribute="leading" secondItem="gik-20-Nm2" secondAttribute="leading" id="Fl9-4l-Hjv"/>
-                            <constraint firstItem="hhQ-3A-obV" firstAttribute="top" secondItem="gik-20-Nm2" secondAttribute="top" id="KN8-oi-F6Z"/>
-                            <constraint firstItem="gik-20-Nm2" firstAttribute="bottom" secondItem="Mkj-iQ-vEc" secondAttribute="bottom" id="Mgm-K9-oeH"/>
-                            <constraint firstItem="Mkj-iQ-vEc" firstAttribute="top" secondItem="hhQ-3A-obV" secondAttribute="bottom" id="aol-mJ-ieT"/>
+                            <constraint firstItem="hhQ-3A-obV" firstAttribute="leading" secondItem="gik-20-Nm2" secondAttribute="leading" id="DmC-AO-9HW"/>
+                            <constraint firstItem="Mkj-iQ-vEc" firstAttribute="top" secondItem="hhQ-3A-obV" secondAttribute="bottom" id="MWI-fC-nuv"/>
+                            <constraint firstItem="hhQ-3A-obV" firstAttribute="trailing" secondItem="gik-20-Nm2" secondAttribute="trailing" id="Pa5-38-pph"/>
+                            <constraint firstItem="Mkj-iQ-vEc" firstAttribute="trailing" secondItem="gik-20-Nm2" secondAttribute="trailing" id="eLF-1p-ce4"/>
+                            <constraint firstItem="hhQ-3A-obV" firstAttribute="top" secondItem="gik-20-Nm2" secondAttribute="top" id="hWW-7r-PkF"/>
+                            <constraint firstItem="Mkj-iQ-vEc" firstAttribute="leading" secondItem="gik-20-Nm2" secondAttribute="leading" id="ozr-qt-jjg"/>
+                            <constraint firstItem="Mkj-iQ-vEc" firstAttribute="bottom" secondItem="gik-20-Nm2" secondAttribute="bottom" id="uro-eU-tKQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gik-20-Nm2"/>
                     </view>
@@ -457,7 +456,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Sb-xf-doO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1765" y="852"/>
+            <point key="canvasLocation" x="1763.7681159420292" y="851.78571428571422"/>
         </scene>
         <!--Export View Controller-->
         <scene sceneID="5vL-T9-xoE">
@@ -492,27 +491,42 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVH-fh-s5U">
-                                <rect key="frame" x="87" y="243" width="240" height="365"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtW-Ep-023">
+                                <rect key="frame" x="25" y="782" width="364" height="50"/>
+                                <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tFj-m0-OCo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
+                                <state key="normal" title="Save to iPhone">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVH-fh-s5U">
+                                <rect key="frame" x="67.5" y="208" width="280" height="389"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="389" id="b6a-Pw-2CG"/>
+                                    <constraint firstAttribute="width" constant="280" id="m3a-xO-KX3"/>
+                                </constraints>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtW-Ep-023">
-                                <rect key="frame" x="156" y="713" width="102" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Save to iPhone"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="s0A-BP-VKG" firstAttribute="trailing" secondItem="UtW-Ep-023" secondAttribute="trailing" constant="25" id="7Es-X0-sfQ"/>
                             <constraint firstItem="9qm-Nx-wDY" firstAttribute="leading" secondItem="s0A-BP-VKG" secondAttribute="leading" constant="25" id="BRk-Tm-e8h"/>
+                            <constraint firstItem="uVH-fh-s5U" firstAttribute="top" secondItem="J3V-Pq-B4g" secondAttribute="bottom" constant="30" id="K4i-AB-oqH"/>
                             <constraint firstItem="i3x-8l-iRV" firstAttribute="leading" secondItem="s0A-BP-VKG" secondAttribute="leading" constant="25" id="PRF-ii-VYg"/>
                             <constraint firstItem="9qm-Nx-wDY" firstAttribute="top" secondItem="s0A-BP-VKG" secondAttribute="top" constant="30" id="X3l-vd-x5t"/>
+                            <constraint firstItem="uVH-fh-s5U" firstAttribute="leading" secondItem="s0A-BP-VKG" secondAttribute="leading" constant="67.5" id="YJ7-9j-sza"/>
+                            <constraint firstItem="UtW-Ep-023" firstAttribute="leading" secondItem="s0A-BP-VKG" secondAttribute="leading" constant="25" id="a0S-XM-hmy"/>
+                            <constraint firstItem="s0A-BP-VKG" firstAttribute="trailing" secondItem="uVH-fh-s5U" secondAttribute="trailing" constant="66.5" id="fgr-KE-Jfv"/>
                             <constraint firstItem="s0A-BP-VKG" firstAttribute="trailing" secondItem="i3x-8l-iRV" secondAttribute="trailing" constant="25" id="gP3-wT-62T"/>
+                            <constraint firstItem="s0A-BP-VKG" firstAttribute="bottom" secondItem="UtW-Ep-023" secondAttribute="bottom" constant="30" id="orX-wp-sdA"/>
                             <constraint firstItem="i3x-8l-iRV" firstAttribute="top" secondItem="9qm-Nx-wDY" secondAttribute="bottom" constant="30" id="s4h-zv-1o4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s0A-BP-VKG"/>

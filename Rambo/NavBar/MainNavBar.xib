@@ -21,7 +21,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MainNavBar" customModule="Rambo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="263"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="253"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdC-uv-h9F">
@@ -148,7 +148,7 @@
                 <outlet property="skillsButton" destination="0aW-jT-C8e" id="Oxr-Qv-3Mz"/>
                 <outlet property="workButton" destination="Koz-fe-3fU" id="2dx-g9-4Tm"/>
             </connections>
-            <point key="canvasLocation" x="66.666666666666671" y="25.78125"/>
+            <point key="canvasLocation" x="65.217391304347828" y="25.111607142857142"/>
         </view>
     </objects>
     <resources>
