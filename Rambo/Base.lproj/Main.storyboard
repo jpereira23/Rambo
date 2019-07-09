@@ -467,25 +467,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qm-Nx-wDY">
-                                <rect key="frame" x="30" y="70" width="9" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qm-Nx-wDY">
+                                <rect key="frame" x="25" y="74" width="9" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="9" id="Gdx-tK-5KQ"/>
+                                    <constraint firstAttribute="height" constant="18" id="zUn-0J-d0O"/>
+                                </constraints>
                                 <state key="normal" backgroundImage="chevron-left"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STEP 3 OF 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5v-rY-ia9">
-                                <rect key="frame" x="30" y="117" width="97" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Export to Apply to Jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3V-Pq-B4g">
-                                <rect key="frame" x="30" y="167" width="180" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i3x-8l-iRV">
+                                <rect key="frame" x="25" y="122" width="364" height="56"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEP 3 OF 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5v-rY-ia9">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="18"/>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP Bold" pointSize="12"/>
+                                        <color key="textColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Export to Apply to Jobs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3V-Pq-B4g">
+                                        <rect key="frame" x="0.0" y="23" width="250.5" height="33"/>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP Bold" pointSize="22"/>
+                                        <color key="textColor" red="0.1843137255" green="0.18039215689999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uVH-fh-s5U">
                                 <rect key="frame" x="87" y="243" width="240" height="365"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -502,6 +508,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9qm-Nx-wDY" firstAttribute="leading" secondItem="s0A-BP-VKG" secondAttribute="leading" constant="25" id="BRk-Tm-e8h"/>
+                            <constraint firstItem="i3x-8l-iRV" firstAttribute="leading" secondItem="s0A-BP-VKG" secondAttribute="leading" constant="25" id="PRF-ii-VYg"/>
+                            <constraint firstItem="9qm-Nx-wDY" firstAttribute="top" secondItem="s0A-BP-VKG" secondAttribute="top" constant="30" id="X3l-vd-x5t"/>
+                            <constraint firstItem="s0A-BP-VKG" firstAttribute="trailing" secondItem="i3x-8l-iRV" secondAttribute="trailing" constant="25" id="gP3-wT-62T"/>
+                            <constraint firstItem="i3x-8l-iRV" firstAttribute="top" secondItem="9qm-Nx-wDY" secondAttribute="bottom" constant="30" id="s4h-zv-1o4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="s0A-BP-VKG"/>
                     </view>
                     <connections>
