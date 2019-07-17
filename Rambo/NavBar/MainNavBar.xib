@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,19 +11,16 @@
         <array key="NotoSansJP-Bold.otf">
             <string>NotoSansJP-Bold</string>
         </array>
-        <array key="NotoSansJP-Medium.otf">
-            <string>NotoSansJP-Medium</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MainNavBar" customModule="Rambo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="253"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdC-uv-h9F">
-                    <rect key="frame" x="25" y="74" width="9" height="18"/>
+                    <rect key="frame" x="30" y="74" width="9" height="18"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="9" id="5kQ-Y8-uaJ"/>
                         <constraint firstAttribute="height" constant="18" id="GNj-sX-WhU"/>
@@ -36,119 +31,44 @@
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="KFG-gi-SMO">
-                    <rect key="frame" x="25" y="122" width="359" height="56"/>
+                    <rect key="frame" x="30" y="122" width="354" height="56"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STEP 2 OF 3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usR-j1-KiQ">
-                            <rect key="frame" x="0.0" y="0.0" width="359" height="18"/>
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="18"/>
                             <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP Bold" pointSize="12"/>
                             <color key="textColor" red="0.050980392156862744" green="0.7803921568627451" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Your Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZZ-Kp-Ij3">
-                            <rect key="frame" x="0.0" y="23" width="359" height="33"/>
+                            <rect key="frame" x="0.0" y="23" width="354" height="33"/>
                             <fontDescription key="fontDescription" name="NotoSansJP-Bold" family="Noto Sans JP Bold" pointSize="22"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1QC-Eb-tA3">
-                    <rect key="frame" x="25" y="208" width="362" height="25"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54u-KD-agz">
-                            <rect key="frame" x="0.0" y="0.0" width="55" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="552-g5-N5x"/>
-                                <constraint firstAttribute="width" constant="55" id="9ig-Xb-qCh"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
-                            <state key="normal" title="Contact">
-                                <color key="titleColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="contactSelected:" destination="iN0-l3-epB" eventType="touchUpInside" id="lv8-hZ-rRa"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHV-1O-ct6">
-                            <rect key="frame" x="75" y="0.0" width="66" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="QK2-Dc-NNs"/>
-                                <constraint firstAttribute="width" constant="66" id="i39-aU-88P"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
-                            <state key="normal" title="Objective">
-                                <color key="titleColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="objectiveSelected:" destination="iN0-l3-epB" eventType="touchUpInside" id="fpd-jD-f6w"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Koz-fe-3fU">
-                            <rect key="frame" x="161" y="0.0" width="55" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="MuZ-5h-g4C"/>
-                                <constraint firstAttribute="width" constant="55" id="fyT-xn-ZKS"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
-                            <state key="normal" title="Work">
-                                <color key="titleColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="workSelected:" destination="iN0-l3-epB" eventType="touchUpInside" id="0VF-zE-hIr"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ag-Mu-hWH">
-                            <rect key="frame" x="236" y="0.0" width="70" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="70" id="Ci0-KQ-tZc"/>
-                                <constraint firstAttribute="height" constant="25" id="hYu-S1-bd9"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
-                            <state key="normal" title="Education">
-                                <color key="titleColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="educationSelected:" destination="iN0-l3-epB" eventType="touchUpInside" id="OWG-Hc-4u7"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aW-jT-C8e">
-                            <rect key="frame" x="326" y="0.0" width="36" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="36" id="88H-6s-AzN"/>
-                                <constraint firstAttribute="height" constant="25" id="x7h-BX-o7i"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
-                            <state key="normal" title="Skills">
-                                <color key="titleColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
-                            </state>
-                            <connections>
-                                <action selector="skillsSelected:" destination="iN0-l3-epB" eventType="touchUpInside" id="yXT-Ge-NcM"/>
-                            </connections>
-                        </button>
-                    </subviews>
-                </stackView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lld-Gm-1GG">
+                    <rect key="frame" x="0.0" y="208" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="contentLayoutGuide" id="tsm-a9-umA"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="hsa-vl-mIQ"/>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1QC-Eb-tA3" secondAttribute="trailing" constant="27" id="24K-Kj-m0T"/>
                 <constraint firstItem="KFG-gi-SMO" firstAttribute="top" secondItem="IdC-uv-h9F" secondAttribute="bottom" constant="30" id="4IT-bu-3uB"/>
-                <constraint firstItem="KFG-gi-SMO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="D7E-Fk-F2e"/>
-                <constraint firstItem="1QC-Eb-tA3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="Dbh-Gg-9Jp"/>
+                <constraint firstItem="KFG-gi-SMO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="D7E-Fk-F2e"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IdC-uv-h9F" secondAttribute="trailing" constant="375" id="GTd-dd-UnI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KFG-gi-SMO" secondAttribute="trailing" constant="30" id="H6c-v3-jrR"/>
-                <constraint firstItem="IdC-uv-h9F" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="Yva-yn-3CU"/>
+                <constraint firstItem="IdC-uv-h9F" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="Yva-yn-3CU"/>
                 <constraint firstItem="IdC-uv-h9F" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="ktp-jJ-4b9"/>
-                <constraint firstItem="1QC-Eb-tA3" firstAttribute="top" secondItem="KFG-gi-SMO" secondAttribute="bottom" constant="30" id="z0j-bq-EMq"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
-                <outlet property="contactButton" destination="54u-KD-agz" id="liE-Oz-leD"/>
-                <outlet property="educationButton" destination="1ag-Mu-hWH" id="xw5-aY-swA"/>
-                <outlet property="objectiveButton" destination="uHV-1O-ct6" id="rNx-Di-ugO"/>
-                <outlet property="skillsButton" destination="0aW-jT-C8e" id="Oxr-Qv-3Mz"/>
-                <outlet property="workButton" destination="Koz-fe-3fU" id="2dx-g9-4Tm"/>
+                <outlet property="scrollView" destination="lld-Gm-1GG" id="ziA-kR-q95"/>
             </connections>
-            <point key="canvasLocation" x="65.217391304347828" y="25.111607142857142"/>
+            <point key="canvasLocation" x="66.666666666666671" y="28.125"/>
         </view>
     </objects>
     <resources>

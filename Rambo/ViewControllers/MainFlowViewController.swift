@@ -146,45 +146,45 @@ class MainFlowViewController: UIViewController {
     
     func checkUse(){
         if stepOne.checkUse() {
-            let image = UIImage(named: "contact-filled.png")
-            aMainNavBar.contactButton.setImage(image, for: .normal)
+            //let image = UIImage(named: "contact-filled.png")
+            //aMainNavBar.contactButton.setImage(image, for: .normal)
         } else {
-            let image = UIImage(named: "contact-empty.png")
-            aMainNavBar.contactButton.setImage(image, for: .normal)
+            //let image = UIImage(named: "contact-empty.png")
+            //aMainNavBar.contactButton.setImage(image, for: .normal)
         }
         
         if stepTwo.checkUse(){
             NSLog("IT WORKED?")
-            let image = UIImage(named: "objective-filled.png")
-            aMainNavBar.objectiveButton.setImage(image, for: .normal)
+            //let image = UIImage(named: "objective-filled.png")
+            //aMainNavBar.objectiveButton.setImage(image, for: .normal)
         } else {
-            let image = UIImage(named: "objective-empty.png")
-            aMainNavBar.objectiveButton.setImage(image, for: .normal)
+            //let image = UIImage(named: "objective-empty.png")
+            //aMainNavBar.objectiveButton.setImage(image, for: .normal)
         }
         
         if stepThree.checkUse(){
             
-            let image = UIImage(named: "work-filled.png")
-            aMainNavBar.workButton.setImage(image, for: .normal)
+            //let image = UIImage(named: "work-filled.png")
+            //aMainNavBar.workButton.setImage(image, for: .normal)
         } else {
-            let image = UIImage(named: "work-empty.png")
-            aMainNavBar.workButton.setImage(image, for: .normal)
+            //let image = UIImage(named: "work-empty.png")
+            //aMainNavBar.workButton.setImage(image, for: .normal)
         }
         
         if stepFour.checkUse(){
-            let image = UIImage(named: "education-filled.png")
-            aMainNavBar.educationButton.setImage(image, for: .normal)
+            //let image = UIImage(named: "education-filled.png")
+            //aMainNavBar.educationButton.setImage(image, for: .normal)
         } else {
-            let image = UIImage(named: "education-empty.png")
-            aMainNavBar.educationButton.setImage(image, for: .normal)
+            //let image = UIImage(named: "education-empty.png")
+            //aMainNavBar.educationButton.setImage(image, for: .normal)
         }
         
         if stepFive.checkUse(){
-            let image = UIImage(named: "skills-filled.png")
-            aMainNavBar.skillsButton.setImage(image, for: .normal)
+            //let image = UIImage(named: "skills-filled.png")
+            //aMainNavBar.skillsButton.setImage(image, for: .normal)
         } else {
-            let image = UIImage(named: "skills-empty.png")
-            aMainNavBar.skillsButton.setImage(image, for: .normal)
+            //let image = UIImage(named: "skills-empty.png")
+            //aMainNavBar.skillsButton.setImage(image, for: .normal)
         }
     }
     

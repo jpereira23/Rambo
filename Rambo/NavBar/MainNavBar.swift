@@ -18,14 +18,6 @@ protocol MainNavBarDelegate{
 }
 
 class MainNavBar: UIView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     var aDelegate: MainNavBarDelegate?
     
     @IBOutlet weak var contactButton: UIButton!
@@ -33,38 +25,89 @@ class MainNavBar: UIView {
     @IBOutlet weak var workButton: UIButton!
     @IBOutlet weak var educationButton: UIButton!
     @IBOutlet weak var skillsButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
+    let arrayOfButtonTitles: [String] = ["Contact", "Objective", "Work", "Education", "Skills"]
+    var arrayOfButtonViews: [NavButton] = []
     
     override func awakeFromNib(){
+        
+        scrollView.frame = CGRect(x: 0, y: 208, width: 414, height: 53)
+        scrollView.contentSize = CGSize(width: 414, height: 53)
+        for i in 0..<arrayOfButtonTitles.count{
+            let aContact: NavButton = Bundle.main.loadNibNamed("NavButton", owner: self, options: nil)?.first as! NavButton
+            aContact.frame = CGRect(x: i * 100, y: 0, width: 100, height: 44)
+            aContact.index = i
+            
+            aContact.aDelegate = self
+            aContact.theButton.setTitle(arrayOfButtonTitles[i], for: .normal)
+            scrollView.addSubview(aContact)
+            
+            
+        }
+        
+       
+        
+        
+        
     }
     
     @IBAction func contactSelected(_ sender: Any) {
-        aDelegate?.contactWasSelected()
+        
     }
     
     @IBAction func objectiveSelected(_ sender: Any) {
         NSLog("Objective was selected")
-        aDelegate?.objectiveWasSelected()
+        
     }
     
     @IBAction func workSelected(_ sender: Any) {
-        aDelegate?.workWasSelected()
+        
     }
     
     @IBAction func educationSelected(_ sender: Any) {
-        aDelegate?.educationWasSelected()
+        
     }
     
     @IBAction func skillsSelected(_ sender: Any) {
-        aDelegate?.skillsWasSelected()
+        
     }
     
     @IBAction func goBack(_ sender: Any) {
         aDelegate?.goBack()
     }
-    
-    
-    
-    
 
+}
+
+extension MainNavBar: NavButtonDelegate{
+    func buttonSelected(index: Int) {
+        var aPoint = CGPoint(x: 300, y: 0)
+        switch(index){
+        case 0:
+            aPoint.x = 0
+            aDelegate?.contactWasSelected()
+            break
+        case 1:
+            aPoint.x = 50
+            aDelegate?.objectiveWasSelected()
+            break
+        case 2:
+            aPoint.x = 100
+            aDelegate?.workWasSelected()
+            break
+        case 3:
+            aPoint.x = 150
+            aDelegate?.educationWasSelected()
+            break
+        case 4:
+            aPoint.x = 200
+            aDelegate?.skillsWasSelected()
+            break
+        default:
+            break
+        }
+        scrollView.setContentOffset(aPoint, animated: true)
+    }
+    
+    
 }
