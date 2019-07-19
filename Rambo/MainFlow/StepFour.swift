@@ -18,6 +18,7 @@ class StepFour: UIView {
     @IBOutlet weak var ctaBox4: UIView!
     @IBOutlet weak var tableview: UITableView!
     var arrayOfSchools: [School] = []
+    var arrayOfCells: [AddSchoolTableViewCell] = []
     var aDelegate: StepFourDelegate!
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,14 +26,14 @@ class StepFour: UIView {
     
     @IBAction func addSchool(_ sender: Any) {
         let last = arrayOfSchools.count - 1
-        let aCell = tableview.cellForRow(at: IndexPath(row: last, section: 0)) as! AddSchoolTableViewCell
+        let aCell = arrayOfCells[last]
         
         if aCell.checkUse(){
             getData(aCell: aCell, index: last)
             
             let aSchool = School()
             arrayOfSchools.append(aSchool)
-            
+            arrayOfCells = []
             tableview.reloadData()
             tableview.scrollToRow(at: IndexPath(row: (arrayOfSchools.count-1), section: 0), at: .top, animated: true)
         } else {
@@ -42,7 +43,7 @@ class StepFour: UIView {
     
     func checkUse() -> Bool{
         let last = arrayOfSchools.count - 1
-        let aCell = tableview.cellForRow(at: IndexPath(row: last, section: 0)) as! AddSchoolTableViewCell
+        let aCell = arrayOfCells[last]
         if arrayOfSchools.count > 0 && aCell.checkUse() {
             return true
         }
@@ -89,6 +90,7 @@ class StepFour: UIView {
         self.tableview.dataSource = self
         let aPoint = CGPoint(x: 0, y: 0)
         self.tableview.setContentOffset(aPoint, animated: true)
+        arrayOfCells = []
         self.tableview.reloadData()
     }
 
@@ -141,7 +143,7 @@ extension StepFour: UITableViewDataSource, UITableViewDelegate{
         cell.degree.text = self.arrayOfSchools[indexPath.row].degree
         //cell.isEmployee.isOn = self.arrayOfSchools[indexPath.row].stillEmployee
         //cell.startDate.text = self.arrayOfSchools[indexPath.row].startDate
-        
+        arrayOfCells.append(cell)
         return cell
     }
     

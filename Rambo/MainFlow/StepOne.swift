@@ -33,6 +33,28 @@ class StepOne: UIView, UITextFieldDelegate{
         }
     }
     
+    
+    func addDoneButtonToNumPad(){
+        let doneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        doneToolbar.barStyle = .default
+        
+        let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction))
+        
+        done.tintColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        
+        let items = [flexSpace, done]
+        doneToolbar.items = items
+        doneToolbar.sizeToFit()
+        
+        phoneNumber.inputAccessoryView = doneToolbar
+    }
+    
+    @objc func doneButtonAction(){
+        
+        phoneNumber.resignFirstResponder()
+    }
+    
     func checkUse() -> Bool{
         /**
         if !checkPhone(){
@@ -58,6 +80,8 @@ class StepOne: UIView, UITextFieldDelegate{
         
         phoneNumber.keyboardType = .numberPad
         email.keyboardType = .emailAddress
+        
+        addDoneButtonToNumPad()
         
     }
     

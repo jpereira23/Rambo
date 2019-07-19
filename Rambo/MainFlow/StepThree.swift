@@ -18,6 +18,7 @@ class StepThree: UIView {
     @IBOutlet weak var tableView: UITableView!
     var aDelegate: StepThreeDelegate!
     var arrayOfWorks: [Work] = []
+    var arrayOfCells: [AddWorkTableViewCell] = []
     
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -32,6 +33,7 @@ class StepThree: UIView {
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.allowsSelection = false
+        arrayOfCells = []
         self.tableView.reloadData()
     }
     
@@ -47,7 +49,7 @@ class StepThree: UIView {
     
     func checkUse() -> Bool{
         let last = arrayOfWorks.count - 1
-        let aCell = tableView.cellForRow(at: IndexPath(row: last, section: 0)) as! AddWorkTableViewCell
+        let aCell = arrayOfCells[last]
         if arrayOfWorks.count > 0 && aCell.checkUse(){
             return true
         }
@@ -65,7 +67,7 @@ class StepThree: UIView {
         
         if checkUse(){
             for i in 0..<arrayOfWorks.count{
-                getData(aCell: tableView.cellForRow(at: IndexPath(row: i, section: 0)) as! AddWorkTableViewCell, index: i)
+                getData(aCell: arrayOfCells[i], index: i)
             }
             
             aDelegate.zeNextOne()
@@ -76,13 +78,13 @@ class StepThree: UIView {
     
     @IBAction func addEmployer(_ sender: Any) {
         let last = arrayOfWorks.count - 1
-        let aCell = tableView.cellForRow(at: IndexPath(row: last, section: 0)) as! AddWorkTableViewCell
+        let aCell = arrayOfCells[last]
         if aCell.checkUse(){
             getData(aCell: aCell, index: last)
             let aWork = Work()
             
             arrayOfWorks.append(aWork)
-            
+            arrayOfCells = []
             tableView.reloadData()
             tableView.scrollToRow(at: IndexPath(row: (arrayOfWorks.count-1), section: 0), at: .top, animated: true)
         } else {
@@ -134,7 +136,7 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
         cell.companyName.leftView = indentView5
         cell.companyName.leftViewMode = .always
         
-        
+        arrayOfCells.append(cell)
         return cell
     }
     
