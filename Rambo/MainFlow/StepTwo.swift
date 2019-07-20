@@ -19,13 +19,7 @@ class StepTwo: UIView {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var objectiveSummary: UITextField!
     var aDelegate: StepTwoDelegate!
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    
     @IBAction func next(_ sender: Any) {
         if checkUse() {
             aDelegate.nextOne()
@@ -36,6 +30,8 @@ class StepTwo: UIView {
     }
     
     override func awakeFromNib() {
+        
+        textView.placeholder = "Example: I am a results-driven contributor who doesn’t mind working out the details to deliver quality work to clients."
     }
     
     func checkUse() -> Bool{
