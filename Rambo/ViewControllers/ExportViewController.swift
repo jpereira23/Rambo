@@ -12,10 +12,13 @@ import WebKit
 class ExportViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var saveToPhone: UIButton!
     var node: Node = Node()
     var fullResume: FullResume!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        saveToPhone.layer.cornerRadius = 5
         
         webView.layer.shadowColor = UIColor.black.cgColor
         webView.layer.shadowOffset = CGSize(width: 0, height: 1)
