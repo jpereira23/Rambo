@@ -19,8 +19,7 @@ class DateKeyboard: UIView{
     let datePicker = MonthYearPickerView()
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        
+        datePicker.commonSetup()
         initializeSubviews()
     }
     

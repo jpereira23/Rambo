@@ -11,19 +11,23 @@ class MonthYearPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataS
     
     var months: [String]!
     var years: [Int]!
+    var aDate = NSDate()
+    var year: Int = 2019
+    var aYear: Int = 2019
     
     var month = Calendar.current.component(.month, from: Date()) {
         didSet {
             selectRow(month-1, inComponent: 0, animated: false)
         }
     }
-    
+    /*
+ 
     var year = Calendar.current.component(.year, from: Date()) {
         didSet {
             selectRow(years.index(of: year)!, inComponent: 1, animated: true)
         }
     }
-    
+    */
     var onDateSelected: ((_ month: Int, _ year: Int) -> Void)?
     
     override init(frame: CGRect) {
@@ -40,10 +44,10 @@ class MonthYearPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataS
         // population years
         var years: [Int] = []
         if years.count == 0 {
-            var year = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
-            for _ in 1...15 {
-                years.append(year)
-                year += 1
+            //var year = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: aDate as Date)
+            for _ in 1...40 {
+                years.append(aYear)
+                aYear += 1
             }
         }
         self.years = years
@@ -60,7 +64,7 @@ class MonthYearPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataS
         self.delegate = self
         self.dataSource = self
         
-        let currentMonth = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.month, from: NSDate() as Date)
+        let currentMonth = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.month, from: aDate as Date)
         self.selectRow(currentMonth - 1, inComponent: 0, animated: false)
     }
     

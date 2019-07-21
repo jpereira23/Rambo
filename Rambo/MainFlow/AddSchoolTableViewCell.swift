@@ -108,6 +108,11 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
         endDate.addTarget(self, action: #selector(endDateSelected), for: .editingDidBegin)
         
         isEmployee.addTarget(self, action: #selector(employedSelected), for: .valueChanged)
+        
+        var aYear = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
+        aYear += 1
+        keyboardView.datePicker.aYear = (aYear - 40)
+        keyboardView.datePicker.commonSetup()
         startDate.inputView = keyboardView
         endDate.inputView = keyboardView
         keyboardView.delegate = self
@@ -163,6 +168,10 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
             startDate.reloadInputViews()
             startDate.endEditing(true)
             isStart = false
+            
+            keyboardView.datePicker.aYear = keyboardView.datePicker.year
+            keyboardView.datePicker.commonSetup()
+            endDate.inputView = keyboardView
         }
         
         if isEnd{
