@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,34 +47,27 @@
                         </label>
                     </subviews>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="o5q-JO-yP4">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lld-Gm-1GG">
                     <rect key="frame" x="0.0" y="203" width="414" height="50"/>
-                    <subviews>
-                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lld-Gm-1GG">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                            <color key="backgroundColor" red="0.88759903169999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <viewLayoutGuide key="contentLayoutGuide" id="tsm-a9-umA"/>
-                            <viewLayoutGuide key="frameLayoutGuide" id="hsa-vl-mIQ"/>
-                        </scrollView>
-                    </subviews>
+                    <color key="backgroundColor" red="0.88759903169999999" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="414" id="355-bh-lKk"/>
-                        <constraint firstAttribute="height" constant="50" id="wkt-fi-BRf"/>
+                        <constraint firstAttribute="width" constant="414" id="Kfe-vs-x0k"/>
+                        <constraint firstAttribute="height" constant="50" id="qZ4-2N-oVa"/>
                     </constraints>
-                </stackView>
+                    <viewLayoutGuide key="contentLayoutGuide" id="tsm-a9-umA"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="hsa-vl-mIQ"/>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="lld-Gm-1GG" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="3mn-mW-i8K"/>
                 <constraint firstItem="KFG-gi-SMO" firstAttribute="top" secondItem="IdC-uv-h9F" secondAttribute="bottom" constant="30" id="4IT-bu-3uB"/>
-                <constraint firstItem="KFG-gi-SMO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="D7E-Fk-F2e"/>
-                <constraint firstItem="o5q-JO-yP4" firstAttribute="top" secondItem="KFG-gi-SMO" secondAttribute="bottom" constant="25" id="Ezl-u8-fuJ"/>
+                <constraint firstItem="KFG-gi-SMO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" priority="750" constant="25" id="D7E-Fk-F2e"/>
+                <constraint firstItem="lld-Gm-1GG" firstAttribute="centerX" secondItem="KFG-gi-SMO" secondAttribute="centerX" id="FjE-qY-DAA"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IdC-uv-h9F" secondAttribute="trailing" constant="380" id="GTd-dd-UnI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="KFG-gi-SMO" secondAttribute="trailing" constant="25" id="H6c-v3-jrR"/>
-                <constraint firstItem="o5q-JO-yP4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="RVi-ZW-NUa"/>
-                <constraint firstItem="o5q-JO-yP4" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="T9Y-gl-MJf"/>
                 <constraint firstItem="IdC-uv-h9F" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="Yva-yn-3CU"/>
                 <constraint firstItem="IdC-uv-h9F" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="ktp-jJ-4b9"/>
-                <constraint firstAttribute="bottom" secondItem="o5q-JO-yP4" secondAttribute="bottom" id="tV9-vz-4yz"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

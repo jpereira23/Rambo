@@ -94,7 +94,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         
          let optionMenu = UIAlertController(title: "nil", message: "Choose Option", preferredStyle: .actionSheet)
          
-         let deleteAction = UIAlertAction(title: "Delete", style: .default)
+         let deleteAction = UIAlertAction(title: "Delete", style: .destructive)
          let saveAction = UIAlertAction(title: "Save", style: .default)
          
          
