@@ -23,6 +23,12 @@ class MainTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        webView.layer.shadowColor = UIColor.black.cgColor
+        webView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        webView.layer.shadowOpacity = 0.1
+        webView.layer.shadowRadius = 5.0
+        webView.layer.masksToBounds = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
