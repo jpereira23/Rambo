@@ -22,6 +22,8 @@ class StepOne: UIView, UITextFieldDelegate{
     var aDelegate: StepOneDelegate!
     @IBOutlet weak var continue1: UIButton!
     @IBOutlet weak var ctaBox1: UIView!
+    let barLabel = UILabel()
+    let aLabel = UILabel()
     
     
     
@@ -41,18 +43,47 @@ class StepOne: UIView, UITextFieldDelegate{
         let flexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         let done: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction))
         
+        
+        barLabel.text = phoneNumber.text
+        barLabel.frame = CGRect(x: 20, y: 20, width: 200, height: 50)
+        barLabel.textColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        let labelAsBarButton = UIBarButtonItem(customView: barLabel)
         done.tintColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
         
-        let items = [flexSpace, done]
+        let items = [labelAsBarButton, flexSpace, done]
         doneToolbar.items = items
         doneToolbar.sizeToFit()
         
         phoneNumber.inputAccessoryView = doneToolbar
+        
+        let aDoneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        doneToolbar.barStyle = .default
+        
+        let aFlexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let aDone: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.linkDoneButtonAction))
+        
+        aLabel.text = link.text
+        aLabel.frame = CGRect(x: 20, y: 20, width: 200, height: 50)
+        aLabel.textColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        
+        let aLabelAsBarButton = UIBarButtonItem(customView: aLabel)
+        aDone.tintColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        
+        let theItems = [aLabelAsBarButton, aFlexSpace, aDone]
+        aDoneToolbar.items = theItems
+        aDoneToolbar.sizeToFit()
+        
+        link.inputAccessoryView = aDoneToolbar
+        
     }
     
     @objc func doneButtonAction(){
         
         phoneNumber.resignFirstResponder()
+    }
+    
+    @objc func linkDoneButtonAction(){
+        link.resignFirstResponder()
     }
     
     func checkUse() -> Bool{
@@ -82,8 +113,16 @@ class StepOne: UIView, UITextFieldDelegate{
         email.keyboardType = .emailAddress
         
         addDoneButtonToNumPad()
-        
     }
+    
+    @IBAction func editingChanged(_ sender: Any) {
+        barLabel.text = phoneNumber.text
+    }
+    
+    @IBAction func itWasEditing(_ sender: Any) {
+        aLabel.text = link.text
+    }
+    
     
     func checkEmail() -> Bool{
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -102,8 +141,11 @@ class StepOne: UIView, UITextFieldDelegate{
         return true
     }
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
+    
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
+    {
+        NSLog("Hello, how are you")
         
         var aString: String! = phoneNumber!.text
         let isBackspace: Int32! = strcmp(string.cString(using: String.Encoding.utf8), "\\b")
@@ -115,6 +157,7 @@ class StepOne: UIView, UITextFieldDelegate{
             
             
             phoneNumber.text = aString
+            
         }
         
         if aString.count == 12 && aString.contains("("){
@@ -134,6 +177,7 @@ class StepOne: UIView, UITextFieldDelegate{
                 aString.insert("-", at: index3)
                 
                 phoneNumber.text = aString
+                
             }
         }else if aString.count == 8 && isBackspace != -92{
             
@@ -151,7 +195,9 @@ class StepOne: UIView, UITextFieldDelegate{
             aString.insert("-", at: index3)
             
             phoneNumber.text = aString
+            
         }
+        
         
         
         
@@ -164,6 +210,8 @@ class StepOne: UIView, UITextFieldDelegate{
         
         return true
     }
+    
+    
     
     /*
     // Only override draw() if you perform custom drawing.
