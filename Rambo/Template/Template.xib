@@ -18,11 +18,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Template" customModule="Rambo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="376" height="392"/>
+            <rect key="frame" x="0.0" y="0.0" width="376" height="418"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="usU-Dg-g4f">
-                    <rect key="frame" x="79" y="0.0" width="218" height="332"/>
+                    <rect key="frame" x="79" y="0.0" width="218" height="418"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zp3-5Y-YOJ">
                             <rect key="frame" x="0.0" y="0.0" width="218" height="21"/>
@@ -31,11 +31,11 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aY9-ea-O5H">
-                            <rect key="frame" x="0.0" y="31" width="218" height="301"/>
+                            <rect key="frame" x="0.0" y="31" width="218" height="387"/>
                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="218" id="4cW-9S-7Vf"/>
-                                <constraint firstAttribute="height" constant="301" id="93G-v0-bpV"/>
+                                <constraint firstAttribute="width" constant="265" id="4cW-9S-7Vf"/>
+                                <constraint firstAttribute="height" constant="387" id="93G-v0-bpV"/>
                             </constraints>
                             <wkWebViewConfiguration key="configuration">
                                 <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -57,7 +57,7 @@
                 <outlet property="title" destination="zp3-5Y-YOJ" id="jl7-jU-ef2"/>
                 <outlet property="webView" destination="aY9-ea-O5H" id="Flu-HH-Z2m"/>
             </connections>
-            <point key="canvasLocation" x="47.826086956521742" y="27.455357142857142"/>
+            <point key="canvasLocation" x="47.826086956521742" y="36.160714285714285"/>
         </view>
     </objects>
 </document>
