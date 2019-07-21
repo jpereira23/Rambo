@@ -32,11 +32,11 @@ class MainNavBar: UIView {
     
     override func awakeFromNib(){
         
-        scrollView.frame = CGRect(x: 0, y: 186, width: 414, height: 50)
-        scrollView.contentSize = CGSize(width: 414, height: 50)
+        scrollView.frame = CGRect(x: 0, y: 186, width: 425, height: 30)
+        scrollView.contentSize = CGSize(width: 425, height: 30)
         for i in 0..<arrayOfButtonTitles.count{
             let aContact: NavButton = Bundle.main.loadNibNamed("NavButton", owner: self, options: nil)?.first as! NavButton
-            aContact.frame = CGRect(x: i * 100, y: 0, width: 100, height: 50)
+            aContact.frame = CGRect(x: i * 85, y: 0, width: 85, height: 30)
             aContact.index = i
             
             aContact.aDelegate = self

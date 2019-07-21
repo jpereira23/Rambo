@@ -426,13 +426,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhQ-3A-obV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="253"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="233"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="253" id="P6c-RH-JsS"/>
+                                    <constraint firstAttribute="height" constant="233" id="P6c-RH-JsS"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mkj-iQ-vEc">
-                                <rect key="frame" x="0.0" y="297" width="414" height="599"/>
+                                <rect key="frame" x="0.0" y="277" width="414" height="619"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
