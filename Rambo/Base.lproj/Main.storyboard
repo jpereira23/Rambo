@@ -389,6 +389,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
+                                    <action selector="continuing:" destination="Z5J-NL-CnJ" eventType="touchUpInside" id="9Wu-nw-x4p"/>
                                     <segue destination="UO7-mc-UVa" kind="showDetail" id="oby-tg-Wvc"/>
                                 </connections>
                             </button>

@@ -9,7 +9,7 @@
 import Foundation
 
 class Node{
-    var headerFront: String = "<!DOCTYPE HTML><html><head>"
+    var headerFront: String = "<!DOCTYPE HTML><html><head><meta charset=\"utf-8\"><meta content=\"width=device-width, initial-scale=0.4, maximum-scale=1.0\" name=\"viewport\">"
     var cssLink: String = "<link rel=\"stylesheet\" type=\"text/css\" href=\"traditional.css\">"
     var headerEndToBody: String = "</head><body><div id=\"wrapper\">"
     var nameLine: String = "<h2 id=\"name\">Logan Fitzpatrick</h2>"
