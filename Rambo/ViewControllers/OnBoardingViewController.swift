@@ -22,7 +22,7 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.modalPresentationStyle = .fullScreen
+        //self.modalPresentationStyle = .fullScreen
         
         aSlides = createSlides()
         scrollView.showsVerticalScrollIndicator = false
@@ -34,7 +34,9 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         pageControl.currentPageIndicatorTintColor = UIColor(red: 12.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
         
         buildResume.layer.cornerRadius = 5
-        
+        scrollView.bringSubviewToFront(pageControl)
+        scrollView.bringSubviewToFront(buildResume)
+        //scrollView.isUserInteractionEnabled = false
         
         // Do any additional setup after loading the view.
     }
@@ -57,13 +59,12 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func setUpScrollView(aSlides: [OnBoardingView]){
-        scrollView.frame = CGRect(x: 30, y: 145, width: 354, height: 429)
-        scrollView.contentSize = CGSize(width: 354 * CGFloat(aSlides.count), height: 429)
+        scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: scrollView.frame.height)
+        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(aSlides.count), height: scrollView.frame.height)
         scrollView.isPagingEnabled = true
         
-        
         for i in 0..<aSlides.count{
-            aSlides[i].frame = CGRect(x: i * 354, y: 0, width: 354, height: 429)
+            aSlides[i].frame = CGRect(x: i * Int(view.frame.width), y: 0, width: Int(view.frame.width), height: Int(scrollView.frame.height))
             scrollView.addSubview(aSlides[i])
         }
     }
@@ -83,7 +84,7 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pageIndex = round(scrollView.contentOffset.x/354)
+        let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
         pageControl.currentPage = Int(pageIndex)
         
         /*
