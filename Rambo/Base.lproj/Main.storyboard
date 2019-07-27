@@ -23,26 +23,32 @@
         <scene sceneID="9e3-Ae-CeK">
             <objects>
                 <viewController storyboardIdentifier="onBoarding" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uto-zT-MCG" customClass="OnBoardingViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gke-hQ-L7P">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="gke-hQ-L7P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pT-BN-5MS">
-                                <rect key="frame" x="0.0" y="44" width="414" height="714"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9pT-BN-5MS">
+                                <rect key="frame" x="0.0" y="49" width="414" height="688"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="725.5" id="6mX-fj-xgX"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="uto-zT-MCG" id="Wua-u9-ZGf"/>
                                 </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-GR-9Ns">
-                                <rect key="frame" x="30" y="766" width="354" height="37"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-GR-9Ns">
+                                <rect key="frame" x="188" y="761" width="39" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="N8k-54-7K8"/>
+                                </constraints>
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="0.39772227112676056" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3l-tv-N0n">
-                                <rect key="frame" x="30" y="811" width="354" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3l-tv-N0n">
+                                <rect key="frame" x="30" y="802" width="354" height="33"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="354" id="drH-rT-b9z"/>
+                                    <constraint firstAttribute="height" constant="33" id="KIe-aD-QoM"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
@@ -68,18 +74,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="5Zd-GR-9Ns" firstAttribute="centerX" secondItem="gke-hQ-L7P" secondAttribute="centerX" id="6G9-n0-gLQ"/>
-                            <constraint firstItem="9pT-BN-5MS" firstAttribute="centerX" secondItem="5Zd-GR-9Ns" secondAttribute="centerX" id="8Bv-EQ-oYh"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="p3l-tv-N0n" secondAttribute="bottom" constant="20" id="F6f-83-zLT"/>
-                            <constraint firstItem="9pT-BN-5MS" firstAttribute="top" secondItem="fuV-yJ-CN1" secondAttribute="top" id="Ng9-on-VWK"/>
-                            <constraint firstItem="p3l-tv-N0n" firstAttribute="leading" secondItem="gke-hQ-L7P" secondAttribute="leading" constant="30" id="OA7-s2-Sam"/>
-                            <constraint firstItem="9pT-BN-5MS" firstAttribute="leading" secondItem="fuV-yJ-CN1" secondAttribute="leading" id="Ubc-Jh-yYl"/>
-                            <constraint firstItem="p3l-tv-N0n" firstAttribute="bottom" secondItem="gke-hQ-L7P" secondAttribute="bottom" constant="-57" id="avR-LO-kH0"/>
-                            <constraint firstAttribute="trailing" secondItem="5Zd-GR-9Ns" secondAttribute="trailing" constant="30" id="eS1-Dp-jU2"/>
-                            <constraint firstItem="p3l-tv-N0n" firstAttribute="top" secondItem="5Zd-GR-9Ns" secondAttribute="bottom" constant="8" id="hzi-cV-4Nr"/>
-                            <constraint firstItem="p3l-tv-N0n" firstAttribute="centerX" secondItem="9pT-BN-5MS" secondAttribute="centerX" id="j1D-nA-HZB"/>
-                            <constraint firstItem="5Zd-GR-9Ns" firstAttribute="top" secondItem="9pT-BN-5MS" secondAttribute="bottom" constant="8" id="t4M-90-0Gf"/>
-                            <constraint firstItem="5Zd-GR-9Ns" firstAttribute="leading" secondItem="gke-hQ-L7P" secondAttribute="leading" constant="30" id="wlo-xo-TFN"/>
+                            <constraint firstItem="p3l-tv-N0n" firstAttribute="top" secondItem="5Zd-GR-9Ns" secondAttribute="bottom" constant="5" id="2gM-gy-1mX"/>
+                            <constraint firstItem="fuV-yJ-CN1" firstAttribute="trailing" secondItem="5Zd-GR-9Ns" secondAttribute="trailing" constant="187" id="Dsv-3c-52B"/>
+                            <constraint firstItem="fuV-yJ-CN1" firstAttribute="trailing" secondItem="p3l-tv-N0n" secondAttribute="trailing" constant="30" id="GRe-Z6-gEc"/>
+                            <constraint firstItem="9pT-BN-5MS" firstAttribute="leading" secondItem="fuV-yJ-CN1" secondAttribute="leading" id="OII-r1-v3o"/>
+                            <constraint firstItem="fuV-yJ-CN1" firstAttribute="trailing" secondItem="9pT-BN-5MS" secondAttribute="trailing" id="ZPW-aq-Y2z"/>
+                            <constraint firstItem="p3l-tv-N0n" firstAttribute="leading" secondItem="fuV-yJ-CN1" secondAttribute="leading" constant="30" id="hHA-iT-JYV"/>
+                            <constraint firstItem="5Zd-GR-9Ns" firstAttribute="leading" secondItem="fuV-yJ-CN1" secondAttribute="leading" constant="188" id="jcV-da-pWI"/>
+                            <constraint firstItem="9pT-BN-5MS" firstAttribute="bottom" secondItem="5Zd-GR-9Ns" secondAttribute="top" constant="-30" id="l2k-TN-rn7"/>
+                            <constraint firstAttribute="top" secondItem="9pT-BN-5MS" secondAttribute="top" constant="-5" id="qpB-pX-cVg"/>
+                            <constraint firstItem="fuV-yJ-CN1" firstAttribute="bottom" secondItem="p3l-tv-N0n" secondAttribute="bottom" constant="30" id="xOm-K6-Ci7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fuV-yJ-CN1"/>
                     </view>

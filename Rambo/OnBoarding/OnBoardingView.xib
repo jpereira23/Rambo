@@ -14,57 +14,62 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="o4b-bd-JEh">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dT1-XC-7VJ">
+                    <rect key="frame" x="50" y="64" width="314" height="382"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="382" id="mn1-lz-h1V"/>
+                        <constraint firstAttribute="width" constant="314" id="nAb-mh-MTT"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FxD-Pc-yxp">
+                    <rect key="frame" x="20" y="446" width="374" height="87"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dT1-XC-7VJ">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="335"/>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OS4-1z-OXF">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="37"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <attributedString key="attributedText">
+                                <fragment content="Some Sub Header">
+                                    <attributes>
+                                        <color key="NSColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" metaFont="system" size="18"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="redraw" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sI3-qw-Sri">
+                            <rect key="frame" x="0.0" y="37" width="374" height="50"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="width" secondItem="dT1-XC-7VJ" secondAttribute="height" multiplier="21:17" id="z4b-2O-n34"/>
+                                <constraint firstAttribute="height" constant="50" id="x0J-0q-uAi"/>
                             </constraints>
-                        </imageView>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FxD-Pc-yxp">
-                            <rect key="frame" x="0.0" y="337" width="414" height="559"/>
-                            <subviews>
-                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OS4-1z-OXF">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="509"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <attributedString key="attributedText">
-                                        <fragment content="Some Sub Header">
-                                            <attributes>
-                                                <color key="NSColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" metaFont="system" size="18"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                </textView>
-                                <textView multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="redraw" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sI3-qw-Sri">
-                                    <rect key="frame" x="0.0" y="509" width="414" height="50"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <attributedString key="attributedText">
-                                        <fragment content="Some Sub Header">
-                                            <attributes>
-                                                <color key="NSColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="0.5" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" metaFont="system" size="16"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                </textView>
-                            </subviews>
-                        </stackView>
+                            <attributedString key="attributedText">
+                                <fragment content="Some Sub Header">
+                                    <attributes>
+                                        <color key="NSColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="0.5" colorSpace="calibratedRGB"/>
+                                        <font key="NSFont" metaFont="system" size="16"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
                     </subviews>
+                    <constraints>
+                        <constraint firstItem="sI3-qw-Sri" firstAttribute="top" secondItem="OS4-1z-OXF" secondAttribute="bottom" id="Y7b-YB-web"/>
+                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="o4b-bd-JEh" secondAttribute="bottom" id="N6D-CR-j8g"/>
-                <constraint firstItem="o4b-bd-JEh" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Yaf-Cf-pcC"/>
-                <constraint firstItem="o4b-bd-JEh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="aji-hs-6x0"/>
-                <constraint firstItem="o4b-bd-JEh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lp7-Dn-4mI"/>
+                <constraint firstItem="dT1-XC-7VJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="4jF-f6-EzM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sI3-qw-Sri" secondAttribute="trailing" constant="20" id="6cw-51-OYC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dT1-XC-7VJ" secondAttribute="trailing" constant="50" id="AFm-2g-NEt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="FxD-Pc-yxp" secondAttribute="bottom" constant="404" id="N4a-MD-pYY"/>
+                <constraint firstItem="sI3-qw-Sri" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="OOR-cj-Uvf"/>
+                <constraint firstItem="dT1-XC-7VJ" firstAttribute="bottom" secondItem="FxD-Pc-yxp" secondAttribute="top" id="ZJD-IM-yH6"/>
+                <constraint firstItem="dT1-XC-7VJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="gc9-Qd-dba"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
