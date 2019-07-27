@@ -169,6 +169,8 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
             startDate.endEditing(true)
             isStart = false
             
+            startDate.inputView = keyboardView
+            
             keyboardView.datePicker.aYear = keyboardView.datePicker.year
             keyboardView.datePicker.commonSetup()
             endDate.inputView = keyboardView
@@ -179,6 +181,8 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
             endDate.inputView = nil
             endDate.reloadInputViews()
             endDate.endEditing(true)
+            
+            endDate.inputView = keyboardView
             isEnd = false
         }
         
