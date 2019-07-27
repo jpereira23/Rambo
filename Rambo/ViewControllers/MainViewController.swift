@@ -57,7 +57,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         cell.aDelegate = self
         let url = Bundle.main.url(forResource: "sample_one", withExtension: "html")
         let request = URLRequest(url: url!)
-        cell.webView.load(request)
+        cell.webView.loadFileURL(url!, allowingReadAccessTo: url!)
         return cell
     }
     

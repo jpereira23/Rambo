@@ -29,6 +29,7 @@ class MainTableViewCell: UITableViewCell {
         webView.layer.shadowOpacity = 0.1
         webView.layer.shadowRadius = 5.0
         webView.layer.masksToBounds = false
+        webView.isUserInteractionEnabled = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
