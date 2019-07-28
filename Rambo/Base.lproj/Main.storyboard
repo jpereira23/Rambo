@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,8 +24,8 @@
         <!--On Boarding View Controller-->
         <scene sceneID="9e3-Ae-CeK">
             <objects>
-                <viewController storyboardIdentifier="onBoarding" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uto-zT-MCG" customClass="OnBoardingViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="gke-hQ-L7P">
+                <viewController storyboardIdentifier="onBoarding" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uto-zT-MCG" customClass="OnBoardingViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gke-hQ-L7P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -36,7 +38,7 @@
                                     <outlet property="delegate" destination="uto-zT-MCG" id="Wua-u9-ZGf"/>
                                 </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-GR-9Ns">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-GR-9Ns">
                                 <rect key="frame" x="188" y="744" width="39" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="N8k-54-7K8"/>
@@ -44,7 +46,7 @@
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="0.39772227112676056" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3l-tv-N0n">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3l-tv-N0n">
                                 <rect key="frame" x="30" y="782" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -100,7 +102,7 @@
         <!--Resume Preview View Controller-->
         <scene sceneID="4le-Ki-RZ3">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="EYN-1i-LCy" customClass="ResumePreviewViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EYN-1i-LCy" customClass="ResumePreviewViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rYp-15-GrX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,7 +149,7 @@
         <!--Main View Controller-->
         <scene sceneID="OAq-9k-SHe">
             <objects>
-                <viewController storyboardIdentifier="mainView" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LQ2-H1-qA9" customClass="MainViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LQ2-H1-qA9" customClass="MainViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t9Z-Nl-vQQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,10 +214,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XR7-4c-zTW">
-                                                    <rect key="frame" x="74" y="0.0" width="265" height="435"/>
+                                                    <rect key="frame" x="74" y="0.0" width="265" height="405"/>
                                                     <subviews>
                                                         <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCc-Lb-GDP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="265" height="387"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="265" height="357"/>
                                                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="265" id="aKF-pr-EEO"/>
@@ -226,7 +228,7 @@
                                                             </wkWebViewConfiguration>
                                                         </wkWebView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bAP-uc-tmf">
-                                                            <rect key="frame" x="43" y="402" width="179" height="33"/>
+                                                            <rect key="frame" x="43" y="372" width="179" height="33"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6O-jp-Qat">
                                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="33"/>
@@ -278,7 +280,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="XR7-4c-zTW" secondAttribute="trailing" constant="75" id="az1-jV-yaf"/>
                                                 <constraint firstItem="XR7-4c-zTW" firstAttribute="leading" secondItem="fyV-a3-tjn" secondAttribute="leading" constant="74" id="fG2-6f-W9Y"/>
                                                 <constraint firstItem="XR7-4c-zTW" firstAttribute="top" secondItem="fyV-a3-tjn" secondAttribute="top" id="rbk-qw-K4k"/>
-                                                <constraint firstAttribute="bottom" secondItem="XR7-4c-zTW" secondAttribute="bottom" constant="40" id="uJZ-ff-kPi"/>
+                                                <constraint firstAttribute="bottom" secondItem="XR7-4c-zTW" secondAttribute="bottom" constant="70" id="uJZ-ff-kPi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -320,7 +322,7 @@
         <!--SelectA Template View Controller-->
         <scene sceneID="2Rm-pw-Dix">
             <objects>
-                <viewController storyboardIdentifier="selectTemplate" modalPresentationStyle="fullScreen" id="Z5J-NL-CnJ" customClass="SelectATemplateViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectTemplate" id="Z5J-NL-CnJ" customClass="SelectATemplateViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D5v-wW-uLx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -352,12 +354,12 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpC-Ho-faQ">
-                                        <rect key="frame" x="25" y="30" width="9" height="18"/>
+                                        <rect key="frame" x="25" y="30" width="22" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="JHk-13-cBI"/>
-                                            <constraint firstAttribute="width" constant="9" id="jMw-2i-6Vn"/>
+                                            <constraint firstAttribute="width" constant="22" id="jMw-2i-6Vn"/>
                                         </constraints>
-                                        <state key="normal" backgroundImage="chevron-left"/>
+                                        <state key="normal" backgroundImage="arrow-left"/>
                                         <connections>
                                             <action selector="goBack:" destination="Z5J-NL-CnJ" eventType="touchUpInside" id="lzE-6W-YcD"/>
                                         </connections>
@@ -423,15 +425,15 @@
         <!--Main Flow View Controller-->
         <scene sceneID="39x-6x-bfF">
             <objects>
-                <viewController storyboardIdentifier="mainFlow" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UO7-mc-UVa" customClass="MainFlowViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainFlow" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UO7-mc-UVa" customClass="MainFlowViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I6g-Eu-dr0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhQ-3A-obV">
-                                <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="195"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="P6c-RH-JsS"/>
+                                    <constraint firstAttribute="height" constant="195" id="P6c-RH-JsS"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mkj-iQ-vEc">
@@ -442,7 +444,7 @@
                         <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hhQ-3A-obV" firstAttribute="leading" secondItem="gik-20-Nm2" secondAttribute="leading" id="DmC-AO-9HW"/>
-                            <constraint firstItem="Mkj-iQ-vEc" firstAttribute="top" secondItem="hhQ-3A-obV" secondAttribute="bottom" id="MWI-fC-nuv"/>
+                            <constraint firstItem="Mkj-iQ-vEc" firstAttribute="top" secondItem="hhQ-3A-obV" secondAttribute="bottom" constant="5" id="MWI-fC-nuv"/>
                             <constraint firstItem="hhQ-3A-obV" firstAttribute="trailing" secondItem="gik-20-Nm2" secondAttribute="trailing" id="Pa5-38-pph"/>
                             <constraint firstItem="Mkj-iQ-vEc" firstAttribute="trailing" secondItem="gik-20-Nm2" secondAttribute="trailing" id="eLF-1p-ce4"/>
                             <constraint firstItem="hhQ-3A-obV" firstAttribute="top" secondItem="gik-20-Nm2" secondAttribute="top" id="hWW-7r-PkF"/>
@@ -464,18 +466,18 @@
         <!--Export View Controller-->
         <scene sceneID="5vL-T9-xoE">
             <objects>
-                <viewController restorationIdentifier="exportView" storyboardIdentifier="exportView" modalPresentationStyle="fullScreen" id="U0i-x3-sUS" customClass="ExportViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="exportView" storyboardIdentifier="exportView" id="U0i-x3-sUS" customClass="ExportViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HCy-b0-dez">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qm-Nx-wDY">
-                                <rect key="frame" x="25" y="74" width="9" height="18"/>
+                                <rect key="frame" x="25" y="74" width="22" height="18"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="9" id="Gdx-tK-5KQ"/>
+                                    <constraint firstAttribute="width" constant="22" id="Gdx-tK-5KQ"/>
                                     <constraint firstAttribute="height" constant="18" id="zUn-0J-d0O"/>
                                 </constraints>
-                                <state key="normal" backgroundImage="chevron-left"/>
+                                <state key="normal" backgroundImage="arrow-left"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i3x-8l-iRV">
                                 <rect key="frame" x="25" y="122" width="364" height="56"/>
@@ -545,7 +547,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron-left" width="55" height="100"/>
+        <image name="arrow-left" width="240" height="200"/>
         <image name="more-dots" width="41.666667938232422" height="8.3333330154418945"/>
     </resources>
 </document>

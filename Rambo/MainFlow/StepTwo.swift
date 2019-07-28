@@ -30,7 +30,8 @@ class StepTwo: UIView {
     }
     
     override func awakeFromNib() {
-        textView.placeholder = "Example: I am a results-driven contributor who doesn’t mind working out the details to deliver quality work to clients."
+        textView.placeholder = "I am a results-driven contributor who doesn’t mind working out the details to deliver quality work to clients."
+        //add textview font-size and fon-family
     }
     
     func checkUse() -> Bool{

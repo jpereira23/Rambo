@@ -92,17 +92,17 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
     
     func miscSelected(){
         
-         let optionMenu = UIAlertController(title: "nil", message: "Choose Option", preferredStyle: .actionSheet)
+         let optionMenu = UIAlertController(title: "Are you sure you want to delete?", message: "If you delete, this action cannot be undone.", preferredStyle: .actionSheet)
          
          let deleteAction = UIAlertAction(title: "Delete", style: .destructive)
-         let saveAction = UIAlertAction(title: "Save", style: .default)
+         //let saveAction = UIAlertAction(title: "Save", style: .default)
          
          
          let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
          
          
          optionMenu.addAction(deleteAction)
-         optionMenu.addAction(saveAction)
+         //optionMenu.addAction(saveAction)
          optionMenu.addAction(cancelAction)
          
          self.present(optionMenu, animated: true, completion: nil)
