@@ -25,12 +25,14 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     @IBOutlet weak var startDateStack: UIStackView!
     @IBOutlet weak var endDateStack: UIStackView!
     @IBOutlet weak var cityStack: UIStackView!
+    @IBOutlet weak var descriptionStack: UIStackView!
     
     
     var aDelegate: AddWorkTableViewCellDelegate?
     var isStart: Bool = false
     var isEnd: Bool = false
     var index: Int!
+    let aLabel = UILabel()
     
     let keyboardView = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
     
@@ -47,20 +49,22 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
         endDate.delegate = self
         CITY.delegate = self
         
+        
         startDate.addTarget(self, action: #selector(startDateSelected), for: .editingDidBegin)
         endDate.addTarget(self, action: #selector(endDateSelected), for: .editingDidBegin)
         isEmployed.addTarget(self, action: #selector(employedSelected), for: .valueChanged)
         
         aDescription.placeholder = "Please place description here."
-        
+        aDescription.delegate = self
         
         var aYear = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
-        aYear += 1
         keyboardView.datePicker.aYear = (aYear)
         keyboardView.datePicker.commonSetup()
         startDate.inputView = keyboardView
         endDate.inputView = keyboardView
         keyboardView.delegate = self
+        
+        self.addDoneButton()
     }
     
     
@@ -82,6 +86,31 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
         }
     }
     
+    func addDoneButton(){
+        let aDoneToolbar: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        aDoneToolbar.barStyle = .default
+        
+        let aFlexSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let aDone: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.linkDoneButtonAction))
+        
+        aLabel.text = aDescription.text
+        aLabel.frame = CGRect(x: 20, y: 20, width: 200, height: 50)
+        aLabel.textColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        
+        let aLabelAsBarButton = UIBarButtonItem(customView: aLabel)
+        aDone.tintColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        
+        let theItems = [aLabelAsBarButton, aFlexSpace, aDone]
+        aDoneToolbar.items = theItems
+        aDoneToolbar.sizeToFit()
+        
+        aDescription.inputAccessoryView = aDoneToolbar
+    }
+    
+    @objc func linkDoneButtonAction(){
+        aDescription.resignFirstResponder()
+    }
+    
     func checkUse() -> Bool{
         if jobTitle.text!.count > 0 && companyName.text!.count > 0 && startDate.text!.count > 0 && endDate.text!.count > 0 && CITY.text!.count > 0 && aDescription.text!.count > 0{
             return true
@@ -100,7 +129,7 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
             
             startDate.inputView = keyboardView
             keyboardView.datePicker.aYear = keyboardView.datePicker.year
-            keyboardView.datePicker.commonSetup()
+            keyboardView.datePicker.commonSetup1()
             endDate.inputView = keyboardView
         }
         
@@ -123,7 +152,7 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     
 }
 
-extension AddWorkTableViewCell: UITextFieldDelegate{
+extension AddWorkTableViewCell: UITextFieldDelegate, UITextViewDelegate{
     func textFieldDidBeginEditing(_ textField: UITextField) {
         var aPoint = CGPoint(x: 0, y: 20)
         
@@ -152,4 +181,23 @@ extension AddWorkTableViewCell: UITextFieldDelegate{
         
         return true
     }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        var aPoint = CGPoint(x: 0, y: 20)
+        
+        aPoint.y = self.descriptionStack.frame.origin.y
+        
+        aPoint.y = CGFloat(Int(aPoint.y) + (self.index * Int(self.frame.height)))
+        self.aDelegate?.editingBegan(y: Int(aPoint.y))
+        self.aDescription.viewWithTag(100)!.isHidden = true
+    }
+    
+    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n"){
+            self.resignFirstResponder()
+        }
+        return true
+    }
+    
+    
 }
