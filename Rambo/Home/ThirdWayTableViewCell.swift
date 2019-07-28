@@ -12,10 +12,13 @@ protocol ThirdWayTableViewCellDelegate{
     func triggerIt()
 }
 class ThirdWayTableViewCell: UITableViewCell {
+    @IBOutlet weak var buildNew: UIButton!
     var aDelegate: ThirdWayTableViewCellDelegate!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        buildNew.layer.cornerRadius = 5
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

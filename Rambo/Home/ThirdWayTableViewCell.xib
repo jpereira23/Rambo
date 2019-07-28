@@ -80,6 +80,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="buildNew" destination="33p-js-HHV" id="6CP-Lb-cfj"/>
+            </connections>
             <point key="canvasLocation" x="166.66666666666669" y="98.4375"/>
         </tableViewCell>
     </objects>

@@ -67,7 +67,7 @@ class SplashScreenViewController: UIViewController {
             if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "HasLaunchedOnce"){
                self.performSegue(withIdentifier: "goToLogin", sender: self)
             } else {
-                 let vc = self.storyboard?.instantiateViewController(identifier: "onBoarding") as! OnBoardingViewController
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "onBoarding") as! OnBoardingViewController
                 self.present(vc, animated: true, completion: nil)
                 defaults.set(true, forKey: "HasLaunchedOnce")
                 
