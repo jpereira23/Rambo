@@ -36,7 +36,7 @@ class MainNavBar: UIView {
         scrollView.contentSize = CGSize(width: 425, height: 30)
         for i in 0..<arrayOfButtonTitles.count{
             let aContact: NavButton = Bundle.main.loadNibNamed("NavButton", owner: self, options: nil)?.first as! NavButton
-            aContact.frame = CGRect(x: i * 85, y: 0, width: 85, height: 30)
+            aContact.frame = CGRect(x: (i * 85) + 20, y: 0, width: 85, height: 30)
             aContact.index = i
             
             aContact.aDelegate = self
