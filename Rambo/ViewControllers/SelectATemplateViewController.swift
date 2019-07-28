@@ -30,6 +30,14 @@ class SelectATemplateViewController: UIViewController {
         continue0.layer.cornerRadius = 5
         
         setUpScrollView()
+        /*
+ 
+    UIView.animate(withDuration: 10.0, animations: { () -> Void in
+            self.scrollView.isPagingEnabled = false
+            self.scrollView.contentOffset = CGPoint(x: 414, y: 0)
+        })
+        */ 
+        
     }
     
     func setUpScrollView(){

@@ -24,6 +24,8 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         
         //self.modalPresentationStyle = .fullScreen
         
+        
+        
         aSlides = createSlides()
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
@@ -36,6 +38,7 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         buildResume.layer.cornerRadius = 5
         scrollView.bringSubviewToFront(pageControl)
         scrollView.bringSubviewToFront(buildResume)
+        
         //scrollView.isUserInteractionEnabled = false
         
         // Do any additional setup after loading the view.
