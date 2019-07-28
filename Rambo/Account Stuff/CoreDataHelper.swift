@@ -19,20 +19,21 @@ class CoreDataHelper{
     
     init(){
         
-        /*
+        
  
         self.managedContext = self.appDelegate.persistentContainer.viewContext
-        self.profileEntity = NSEntityDescription.entity(forEntityName: "FullResume", in: self.managedContext)
-        */
+        self.profileEntity = NSEntityDescription.entity(forEntityName: "ABasicInfo", in: self.managedContext)
     }
-    /*
+    
      
-    public func saveProfile(user: User){
+    public func saveResume(fullResume: BasicInfo){
         let theProfile = NSManagedObject(entity: self.profileEntity!, insertInto: self.managedContext)
         
-        theProfile.setValue(user.email, forKeyPath: "email")
-        theProfile.setValue(user.password, forKeyPath: "password")
-        theProfile.setValue(user.username, forKeyPath: "username")
+        theProfile.setValue(fullResume.email, forKeyPath: "email")
+        theProfile.setValue(fullResume.fullName, forKeyPath: "fullName")
+        theProfile.setValue(fullResume.link, forKeyPath: "link")
+        //theProfile.setValue(fullResume.objective, forKeyPath: "objective")
+        theProfile.setValue(fullResume.phoneNumber, forKeyPath: "phoneNumber")
         
         do{
             try self.managedContext.save()
@@ -42,11 +43,15 @@ class CoreDataHelper{
         }
         
     }
+     
+    public func saveSchool(school: School){
+     
+    }
     
-    public func loadProfile() -> User?{
-        var tempUser: User = User()
+    public func loadProfile() -> BasicInfo?{
+        var tempFullResume: BasicInfo!
         
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Profile")
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "ABasicInfo")
         
         do {
             managedObjects = []
@@ -57,12 +62,14 @@ class CoreDataHelper{
         
         if(managedObjects.count > 0){
             let theEmail = (managedObjects[0].value(forKeyPath: "email") as! String)
-            let thePassword = (managedObjects[0].value(forKeyPath: "password") as! String)
-            let theUsername = (managedObjects[0].value(forKeyPath: "username") as! String)
+            let theFullName = (managedObjects[0].value(forKeyPath: "fullName") as! String)
+            let theLink = (managedObjects[0].value(forKeyPath: "link") as! String)
+            //let theObjective = (managedObjects[0].value(forKeyPath: "objective") as! String)
+            let thePhoneNumber = (managedObjects[0].value(forKeyPath: "phoneNumber") as! String)
             
-            tempUser = User(aPassword: thePassword, aEmail: theEmail, aUsername: theUsername)
+            tempFullResume = BasicInfo(fN: theFullName, e: theEmail, pN: thePhoneNumber, l: theLink)
             
-            return tempUser
+            return tempFullResume
         }
         
         return nil
@@ -70,7 +77,7 @@ class CoreDataHelper{
     
     public func resetCoreData()
     {
-        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Profile")
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "ABasicInfo")
         let request = NSBatchDeleteRequest(fetchRequest: fetch)
         
         do {
@@ -79,5 +86,4 @@ class CoreDataHelper{
             print("Could not save. \(error). \(error.userInfo)")
         }
     }
- */
 }

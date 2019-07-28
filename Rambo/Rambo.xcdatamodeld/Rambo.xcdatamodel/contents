@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14838.19" systemVersion="18E194e" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="NO" userDefinedModelVersionIdentifier="">
-    <entity name="AResumeFull" representedClassName="AResumeFull" syncable="YES" codeGenerationType="class">
+    <entity name="ABasicInfo" representedClassName="ABasicInfo" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="fullName" optional="YES" attributeType="String"/>
         <attribute name="link" optional="YES" attributeType="String"/>
-        <attribute name="objective" optional="YES" attributeType="String"/>
         <attribute name="phoneNumber" optional="YES" attributeType="String"/>
+        <relationship name="aFullResume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AFullResume" inverseName="aBasicInfo" inverseEntity="AFullResume"/>
+    </entity>
+    <entity name="AFullResume" representedClassName="AFullResume" syncable="YES" codeGenerationType="class">
+        <relationship name="aBasicInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ABasicInfo" inverseName="aFullResume" inverseEntity="ABasicInfo"/>
     </entity>
     <entity name="ASchool" representedClassName="ASchool" syncable="YES" codeGenerationType="class">
         <attribute name="areaOfStudy" optional="YES" attributeType="String"/>
@@ -13,7 +16,8 @@
         <attribute name="schoolName" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="AResumeFull" positionX="-27" positionY="18" width="128" height="28"/>
-        <element name="ASchool" positionX="18" positionY="99" width="128" height="28"/>
+        <element name="ASchool" positionX="18" positionY="99" width="128" height="88"/>
+        <element name="ABasicInfo" positionX="36" positionY="144" width="128" height="118"/>
+        <element name="AFullResume" positionX="54" positionY="180" width="128" height="58"/>
     </elements>
 </model>
