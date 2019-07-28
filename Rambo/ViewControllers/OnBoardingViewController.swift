@@ -60,11 +60,11 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
     
     func setUpScrollView(aSlides: [OnBoardingView]){
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: scrollView.frame.height)
-        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(aSlides.count), height: scrollView.frame.height)
+        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(aSlides.count), height: scrollView.frame.height - 100.0)
         scrollView.isPagingEnabled = true
         
         for i in 0..<aSlides.count{
-            aSlides[i].frame = CGRect(x: i * Int(view.frame.width), y: 0, width: Int(view.frame.width), height: Int(scrollView.frame.height))
+            aSlides[i].frame = CGRect(x: i * Int(view.frame.width), y: 0, width: Int(view.frame.width), height: Int(scrollView.frame.height - 100.0))
             scrollView.addSubview(aSlides[i])
         }
     }
