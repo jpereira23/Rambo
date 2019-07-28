@@ -47,7 +47,7 @@ class MonthYearPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataS
             //var year = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: aDate as Date)
             for _ in 1...40 {
                 years.append(aYear)
-                aYear += 1
+                aYear -= 1
             }
         }
         self.years = years
