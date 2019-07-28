@@ -9,6 +9,7 @@
 import UIKit
 
 extension UITextView: UITextViewDelegate {
+    
     override open var bounds: CGRect {
         didSet{
             self.resizePlaceholder()
@@ -35,14 +36,15 @@ extension UITextView: UITextViewDelegate {
             }
         }
     }
-    
+    /*
+ 
     public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if (text == "\n"){
             self.resignFirstResponder()
         }
         return true
     }
-    
+    */
     public func textViewDidChange(_ textView: UITextView) {
         if let placeholderLabel = self.viewWithTag(100) as? UILabel {
             placeholderLabel.isHidden = self.text.count > 0

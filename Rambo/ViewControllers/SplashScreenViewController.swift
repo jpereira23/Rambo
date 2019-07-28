@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class SplashScreenViewController: UIViewController {
     
     var worthyLogoImgView:UIImageView?
@@ -61,7 +62,16 @@ class SplashScreenViewController: UIViewController {
             
         }, completion: { (finished) in
             
-            self.performSegue(withIdentifier: "goToLogin", sender: self)
+            let defaults = UserDefaults.standard
+            
+            if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "HasLaunchedOnce"){
+               self.performSegue(withIdentifier: "goToLogin", sender: self)
+            } else {
+                 let vc = self.storyboard?.instantiateViewController(identifier: "onBoarding") as! OnBoardingViewController
+                self.present(vc, animated: true, completion: nil)
+                defaults.set(true, forKey: "HasLaunchedOnce")
+                
+            }
             
         })
     }
