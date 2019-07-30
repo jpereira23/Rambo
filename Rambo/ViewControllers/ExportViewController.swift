@@ -36,11 +36,11 @@ class ExportViewController: UIViewController {
         node.setNumber(number: fullResume.basicInfo.phoneNumber)
         node.setObjective(objective: fullResume.objective)
         for school in fullResume.arrayOfSchools{
-            node.addInstitution(institution: school.schoolName, date: "Fuck it" , degree: school.degree)
+            node.addInstitution(institution: school.schoolName, date: school.startDate + " - " + school.endDate , degree: school.degree)
         }
         
         for work in fullResume.arrayOfWorks{
-            node.addWorkExperience(company: work.companyName, date: "Fuck it", sub: work.description)
+            node.addWorkExperience(company: work.companyName, date: work.startDate + " - " + work.endDate, sub: work.description)
         }
         
         for skill in fullResume.skills{

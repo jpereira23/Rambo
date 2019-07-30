@@ -42,8 +42,8 @@ class StepThree: UIView {
         arrayOfWorks[index].city = aCell.CITY.text
         arrayOfWorks[index].description = aCell.aDescription.text
         arrayOfWorks[index].companyName = aCell.companyName.text
-        arrayOfWorks[index].startDate = Date()
-        arrayOfWorks[index].endDate = Date()
+        arrayOfWorks[index].startDate = aCell.startDate.text
+        arrayOfWorks[index].endDate = aCell.endDate.text
         
     }
     

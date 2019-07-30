@@ -11,16 +11,16 @@ import Foundation
 class Work{
     var jobTitle: String!
     var companyName: String!
-    var startDate: Date!
-    var endDate: Date!
+    var startDate: String!
+    var endDate: String!
     var city: String!
     var description: String!
     
     init(){
         jobTitle = ""
         companyName = ""
-        startDate = Date()
-        endDate = Date()
+        startDate = ""
+        endDate = ""
         city = ""
         description = ""
     }

@@ -72,8 +72,8 @@ class StepFour: UIView {
         arrayOfSchools[index].areaOfStudy = aCell.areaOfStudy.text
         arrayOfSchools[index].city = aCell.city.text
         arrayOfSchools[index].degree = aCell.degree.text
-        //arrayOfSchools[index].startDate = aCell.startDate.text
-        arrayOfSchools[index].endDate = Date()
+        arrayOfSchools[index].startDate = aCell.startDate.text
+        arrayOfSchools[index].endDate = aCell.endDate.text
         arrayOfSchools[index].stillEmployee = aCell.isEmployee.isOn
     }
     

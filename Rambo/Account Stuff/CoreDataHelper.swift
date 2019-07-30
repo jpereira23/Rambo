@@ -72,8 +72,8 @@ class CoreDataHelper{
             aWork.setValue(work.city, forKeyPath: "city")
             aWork.setValue(work.companyName, forKeyPath: "companyName")
             aWork.setValue(work.description, forKeyPath: "aDescription")
-            aWork.setValue("9/7/2019", forKeyPath: "startDate")
-            aWork.setValue("9/7/2019", forKeyPath: "endDate")
+            aWork.setValue(work.startDate, forKeyPath: "startDate")
+            aWork.setValue(work.endDate, forKeyPath: "endDate")
             
             works.add(aWork)
         }
@@ -86,8 +86,8 @@ class CoreDataHelper{
             aSchool.setValue(school.areaOfStudy, forKeyPath: "areaOfStudy")
             aSchool.setValue(school.city, forKeyPath: "city")
             aSchool.setValue(school.degree, forKeyPath: "degree")
-            aSchool.setValue("9/7/2019", forKeyPath: "endDate")
-            aSchool.setValue("9/7/2019", forKeyPath: "startDate")
+            aSchool.setValue(school.endDate, forKeyPath: "endDate")
+            aSchool.setValue(school.startDate, forKeyPath: "startDate")
             aSchool.setValue(school.schoolName, forKeyPath: "schoolName")
             
             schools.add(aSchool)
@@ -148,8 +148,8 @@ class CoreDataHelper{
                     aWork.description = work.aDescription
                     aWork.city = work.city
                     aWork.companyName = work.companyName
-                    aWork.endDate = Date()
-                    aWork.startDate = Date()
+                    aWork.endDate = work.endDate
+                    aWork.startDate = work.startDate
                     arrayOfWorks.append(aWork)
                 }
                 
@@ -160,8 +160,8 @@ class CoreDataHelper{
                     aSchool.areaOfStudy = school.areaOfStudy
                     aSchool.city = school.city
                     aSchool.degree = school.degree
-                    aSchool.endDate = Date()
-                    aSchool.startDate = Date()
+                    aSchool.endDate = school.endDate
+                    aSchool.startDate = school.startDate
                     aSchool.schoolName = school.schoolName
                     arrayOfSchools.append(aSchool)
                 }

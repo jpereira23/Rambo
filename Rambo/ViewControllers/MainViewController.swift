@@ -73,11 +73,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         node.setNumber(number: aResume.basicInfo.phoneNumber)
         node.setObjective(objective: aResume.objective)
         for work in aResume.arrayOfWorks{
-            node.addWorkExperience(company: work.companyName, date: "9/7/2019", sub: work.jobTitle)
+            node.addWorkExperience(company: work.companyName, date: work.startDate + " - " + work.endDate, sub: work.jobTitle)
         }
         
         for school in aResume.arrayOfSchools{
-            node.addInstitution(institution: school.schoolName, date: "9/7/2019", degree: school.areaOfStudy)
+            node.addInstitution(institution: school.schoolName, date: school.startDate + " - " + school.endDate, degree: school.areaOfStudy)
         }
         
         for skill in aResume.skills{
