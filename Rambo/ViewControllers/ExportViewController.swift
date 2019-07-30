@@ -47,13 +47,13 @@ class ExportViewController: UIViewController {
             node.addSkill(skill: skill)
         }
         
-        node.setCSS(css: 1)
+        node.setCSS(css: fullResume.index)
         
         webView.loadHTMLString(node.combinedHTML, baseURL: url)
         // Do any additional setup after loading the view.
         
         
-        coreDataHelper.loadFullResume()
+        //coreDataHelper.loadFullResume()
         /*
         if let loadFullProfile = coreDataHelper.loadFullResume(){
             for profile in loadFullProfile{

@@ -70,6 +70,7 @@ class SelectATemplateViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toMainFlow"{
             let mainFlow = segue.destination as! MainFlowViewController
+            NSLog("Here is the index it is on \(Int(scrollView.contentOffset.x / scrollView.frame.size.width))")
             mainFlow.anIndex = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
         }
     }

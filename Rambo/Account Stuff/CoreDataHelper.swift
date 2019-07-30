@@ -61,6 +61,7 @@ class CoreDataHelper{
         theProfile.setValue(fullResume.basicInfo.fullName, forKeyPath: "fullName")
         theProfile.setValue(fullResume.basicInfo.link, forKeyPath: "link")
         theProfile.setValue(fullResume.basicInfo.phoneNumber, forKeyPath: "phoneNumber")
+        theFullResume.setValue(fullResume.index, forKeyPath: "index") 
         
         let works = theFullResume.mutableSetValue(forKey: "works")
         
@@ -171,7 +172,7 @@ class CoreDataHelper{
                     
                     arrayOfSkills.append(aSkill!)
                 }
-            
+                NSLog("object index is \(object.index)")
                 tmpFullResume = FullResume(bI: basicInfoTemplate, o: object.objective!, aW: arrayOfWorks, aS: arrayOfSchools, s: arrayOfSkills, i: Int(object.index))
                 tempFullResume.append(tmpFullResume)
             }
