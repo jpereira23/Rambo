@@ -75,7 +75,15 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         for work in aResume.arrayOfWorks{
             node.addWorkExperience(company: work.companyName, date: "9/7/2019", sub: work.jobTitle)
         }
-        node.setCSS(css: 1)
+        
+        for school in aResume.arrayOfSchools{
+            node.addInstitution(institution: school.schoolName, date: "9/7/2019", degree: school.areaOfStudy)
+        }
+        
+        for skill in aResume.skills{
+            node.addSkill(skill: skill)
+        }
+        node.setCSS(css: aResume.index)
         
         cell.webView.loadHTMLString(node.combinedHTML, baseURL: url)
         

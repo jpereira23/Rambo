@@ -66,5 +66,12 @@ class SelectATemplateViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMainFlow"{
+            let mainFlow = segue.destination as! MainFlowViewController
+            mainFlow.anIndex = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
+        }
+    }
 }
 

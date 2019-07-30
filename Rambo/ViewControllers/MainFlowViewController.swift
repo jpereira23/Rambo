@@ -25,6 +25,7 @@ class MainFlowViewController: UIViewController {
     var aView: Int = 0
     var datePicker: UIDatePicker = UIDatePicker()
     let toolbar = UIToolbar()
+    var anIndex: Int = 0
     
     var dateAlert: UIAlertController!
     
@@ -251,7 +252,7 @@ class MainFlowViewController: UIViewController {
         let arrayOfSchools: [School] = stepFour.arrayOfSchools
         let skills: [String] = stepFive.skills
         
-        let fullResume: FullResume = FullResume(bI: basic, o: objective, aW: arrayOfWorks, aS: arrayOfSchools, s: skills)
+        let fullResume: FullResume = FullResume(bI: basic, o: objective, aW: arrayOfWorks, aS: arrayOfSchools, s: skills, i: anIndex)
         
         
         return fullResume

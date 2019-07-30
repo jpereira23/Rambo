@@ -17,7 +17,9 @@ class CoreDataHelper{
     private var managedContext: NSManagedObjectContext!
     private var profileEntity: NSEntityDescription!
     private var workEntity: NSEntityDescription!
+    private var schoolEntity: NSEntityDescription!
     private var fullResumeEntity: NSEntityDescription!
+    private var skillsEntity: NSEntityDescription!
     
     init(){
         
@@ -27,6 +29,8 @@ class CoreDataHelper{
         self.profileEntity = NSEntityDescription.entity(forEntityName: "ABasicInfo", in: self.managedContext)
         self.fullResumeEntity = NSEntityDescription.entity(forEntityName: "AFullResume", in: self.managedContext)
         self.workEntity = NSEntityDescription.entity(forEntityName: "AWork", in: self.managedContext)
+        self.schoolEntity = NSEntityDescription.entity(forEntityName: "ASchool", in: self.managedContext)
+        self.skillsEntity = NSEntityDescription.entity(forEntityName: "ASkill", in: self.managedContext)
     }
     
      
@@ -36,7 +40,6 @@ class CoreDataHelper{
         theProfile.setValue(fullResume.email, forKeyPath: "email")
         theProfile.setValue(fullResume.fullName, forKeyPath: "fullName")
         theProfile.setValue(fullResume.link, forKeyPath: "link")
-        //theProfile.setValue(fullResume.objective, forKeyPath: "objective")
         theProfile.setValue(fullResume.phoneNumber, forKeyPath: "phoneNumber")
         
         do{
@@ -74,7 +77,29 @@ class CoreDataHelper{
             works.add(aWork)
         }
         
-        //theFullResume.setValue(theProfile, forKey: "aBasicInfo")
+        let schools = theFullResume.mutableSetValue(forKey: "schools")
+        
+        for school in fullResume.arrayOfSchools{
+            let aSchool = NSManagedObject(entity: self.schoolEntity!, insertInto: self.managedContext)
+            
+            aSchool.setValue(school.areaOfStudy, forKeyPath: "areaOfStudy")
+            aSchool.setValue(school.city, forKeyPath: "city")
+            aSchool.setValue(school.degree, forKeyPath: "degree")
+            aSchool.setValue("9/7/2019", forKeyPath: "endDate")
+            aSchool.setValue("9/7/2019", forKeyPath: "startDate")
+            aSchool.setValue(school.schoolName, forKeyPath: "schoolName")
+            
+            schools.add(aSchool)
+        }
+        
+        let skills = theFullResume.mutableSetValue(forKey: "skills")
+        
+        for skill in fullResume.skills{
+            let aSkill = NSManagedObject(entity: self.skillsEntity!, insertInto: self.managedContext)
+            
+            aSkill.setValue(skill, forKeyPath: "aSkill")
+            skills.add(aSkill)
+        }
         
         let aBasicInfos = theFullResume.mutableSetValue(forKey: "aBasicInfo")
         aBasicInfos.add(theProfile)
@@ -85,10 +110,6 @@ class CoreDataHelper{
         } catch let error as NSError {
             NSLog(error.localizedDescription)
         }
-    }
-     
-    public func saveSchool(school: School){
-     
     }
     
     public func loadFullResume() -> [FullResume] {
@@ -113,7 +134,8 @@ class CoreDataHelper{
             for object in theObjects{
                 let anObjects: [ABasicInfo] = (object.aBasicInfo?.allObjects)! as! [ABasicInfo]
                 let works: [AWork] = (object.works?.allObjects)! as! [AWork]
-                
+                let schools: [ASchool] = (object.schools?.allObjects)! as! [ASchool]
+                let skills: [ASkill] = (object.skills?.allObjects)! as! [ASkill]
                 
                 basicInfoTemplate = BasicInfo(fN: anObjects[0].fullName!, e: anObjects[0].email!, pN: anObjects[0].phoneNumber!, l: anObjects[0].link!)
                 
@@ -130,7 +152,27 @@ class CoreDataHelper{
                     arrayOfWorks.append(aWork)
                 }
                 
-                tmpFullResume = FullResume(bI: basicInfoTemplate, o: object.objective!, aW: arrayOfWorks, aS: [], s: [])
+                var arrayOfSchools: [School] = []
+                
+                for school in schools{
+                    let aSchool = School()
+                    aSchool.areaOfStudy = school.areaOfStudy
+                    aSchool.city = school.city
+                    aSchool.degree = school.degree
+                    aSchool.endDate = Date()
+                    aSchool.startDate = Date()
+                    aSchool.schoolName = school.schoolName
+                    arrayOfSchools.append(aSchool)
+                }
+                var arrayOfSkills: [String] = []
+                
+                for skill in skills{
+                    let aSkill = skill.aSkill
+                    
+                    arrayOfSkills.append(aSkill!)
+                }
+            
+                tmpFullResume = FullResume(bI: basicInfoTemplate, o: object.objective!, aW: arrayOfWorks, aS: arrayOfSchools, s: arrayOfSkills, i: Int(object.index))
                 tempFullResume.append(tmpFullResume)
             }
         }

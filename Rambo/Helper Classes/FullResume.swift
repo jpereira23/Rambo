@@ -14,13 +14,15 @@ class FullResume{
     var arrayOfWorks: [Work] = []
     var arrayOfSchools: [School] = []
     var skills: [String] = []
+    var index: Int
     
-    init(bI: BasicInfo, o: String, aW: [Work], aS: [School], s: [String]){
+    init(bI: BasicInfo, o: String, aW: [Work], aS: [School], s: [String], i: Int){
         basicInfo = bI
         objective = o
         arrayOfWorks = aW
         arrayOfSchools = aS
         skills = s
+        index = i
     }
     
     func printThis(){
