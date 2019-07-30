@@ -8,16 +8,33 @@
         <relationship name="aFullResume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AFullResume" inverseName="aBasicInfo" inverseEntity="AFullResume"/>
     </entity>
     <entity name="AFullResume" representedClassName="AFullResume" syncable="YES" codeGenerationType="class">
-        <relationship name="aBasicInfo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ABasicInfo" inverseName="aFullResume" inverseEntity="ABasicInfo"/>
+        <attribute name="objective" optional="YES" attributeType="String"/>
+        <relationship name="aBasicInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ABasicInfo" inverseName="aFullResume" inverseEntity="ABasicInfo"/>
+        <relationship name="schools" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ASchool" inverseName="resume" inverseEntity="ASchool"/>
+        <relationship name="works" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AWork" inverseName="resume" inverseEntity="AWork"/>
     </entity>
     <entity name="ASchool" representedClassName="ASchool" syncable="YES" codeGenerationType="class">
         <attribute name="areaOfStudy" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
         <attribute name="degree" optional="YES" attributeType="String"/>
+        <attribute name="endDate" optional="YES" attributeType="String"/>
         <attribute name="schoolName" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="YES" attributeType="String"/>
+        <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AFullResume" inverseName="schools" inverseEntity="AFullResume"/>
+    </entity>
+    <entity name="AWork" representedClassName="AWork" syncable="YES" codeGenerationType="class">
+        <attribute name="aDescription" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="companyName" optional="YES" attributeType="String"/>
+        <attribute name="endDate" optional="YES" attributeType="String"/>
+        <attribute name="jobTitle" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="YES" attributeType="String"/>
+        <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AFullResume" inverseName="works" inverseEntity="AFullResume"/>
     </entity>
     <elements>
-        <element name="ASchool" positionX="18" positionY="99" width="128" height="88"/>
         <element name="ABasicInfo" positionX="36" positionY="144" width="128" height="118"/>
-        <element name="AFullResume" positionX="54" positionY="180" width="128" height="58"/>
+        <element name="AFullResume" positionX="54" positionY="180" width="128" height="103"/>
+        <element name="ASchool" positionX="18" positionY="99" width="128" height="28"/>
+        <element name="AWork" positionX="36" positionY="171" width="128" height="148"/>
     </elements>
 </model>

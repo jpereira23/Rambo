@@ -15,16 +15,21 @@ class MainViewController: UIViewController{
     @IBOutlet weak var accountLabel: UILabel!
     let coreDataHelper: CoreDataHelper = CoreDataHelper()
     var isSignedIn: Bool = false
+    var arrayOfResumes: [FullResume] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        
+        //coreDataHelper.resetCoreData()
         buildNew.layer.cornerRadius = 5
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "ThirdWayTableViewCell", bundle: bundle)
         self.tableView.register(nib, forCellReuseIdentifier: "cellBitch")
+        
+        arrayOfResumes = coreDataHelper.loadFullResume()
+        
+        self.tableView.reloadData()
         // Do any additional setup after loading the view.
     }
     
@@ -44,10 +49,11 @@ class MainViewController: UIViewController{
 
 }
 
+
 extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdWayTableViewCellDelegate, MainTableViewCellDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 1{
+        if indexPath.row == arrayOfResumes.count{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellBitch") as! ThirdWayTableViewCell
             cell.aDelegate = self
             return cell
@@ -55,9 +61,26 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "theCell") as! MainTableViewCell
         cell.aDelegate = self
-        let url = Bundle.main.url(forResource: "sample_one", withExtension: "html")
-        let request = URLRequest(url: url!)
-        cell.webView.loadFileURL(url!, allowingReadAccessTo: url!)
+        
+        let node: Node = Node()
+        let aResume = arrayOfResumes[indexPath.row]
+        
+        
+        let url = Bundle.main.url(forResource: "resume", withExtension: "html")
+        
+        node.setFirstName(name: aResume.basicInfo.fullName)
+        node.setEmail(email: aResume.basicInfo.email)
+        node.setNumber(number: aResume.basicInfo.phoneNumber)
+        node.setObjective(objective: aResume.objective)
+        for work in aResume.arrayOfWorks{
+            node.addWorkExperience(company: work.companyName, date: "9/7/2019", sub: work.jobTitle)
+        }
+        node.setCSS(css: 1)
+        
+        cell.webView.loadHTMLString(node.combinedHTML, baseURL: url)
+        
+        //let request = URLRequest(url: url!)
+        //cell.webView.loadFileURL(url!, allowingReadAccessTo: url!)
         return cell
     }
     
@@ -69,7 +92,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return arrayOfResumes.count + 1
     }
     
     func triggerIt() {

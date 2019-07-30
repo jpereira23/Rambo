@@ -15,6 +15,7 @@ class ExportViewController: UIViewController {
     @IBOutlet weak var saveToPhone: UIButton!
     var node: Node = Node()
     var fullResume: FullResume!
+    var coreDataHelper: CoreDataHelper = CoreDataHelper()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +30,7 @@ class ExportViewController: UIViewController {
         
         let url = Bundle.main.url(forResource: "sample_one", withExtension: "html")
         
+        coreDataHelper.saveFullResume(fullResume: fullResume)
         node.setFirstName(name: fullResume.basicInfo.fullName)
         node.setEmail(email: fullResume.basicInfo.email)
         node.setNumber(number: fullResume.basicInfo.phoneNumber)
@@ -49,13 +51,30 @@ class ExportViewController: UIViewController {
         
         webView.loadHTMLString(node.combinedHTML, baseURL: url)
         // Do any additional setup after loading the view.
+        
+        
+        coreDataHelper.loadFullResume()
+        /*
+        if let loadFullProfile = coreDataHelper.loadFullResume(){
+            for profile in loadFullProfile{
+                NSLog(profile.basicInfo.fullName)
+            }
+        }
+        */
+        
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.modalPresentationStyle = .fullScreen
     }
     
-
+    @IBAction func saveToiPhone(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as! MainViewController
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
