@@ -79,11 +79,28 @@ class ExportViewController: UIViewController {
     
     @IBAction func saveToiPhone(_ sender: Any) {
         savePDFToiPhone()
+        
+        let alertMenu = UIAlertController(title: "Resume has been saved to Files application", message: "The file will be found under 'On my iPhone > Worthy'.", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { _ in
+            self.changeToMain()
+        }
+        
+        alertMenu.addAction(cancelAction)
+        
+        self.present(alertMenu, animated: true, completion:nil)
+        
+        
         /*
  
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as! MainViewController
         self.present(vc, animated: true, completion: nil)
         */
+    }
+    
+    func changeToMain(){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as! MainViewController
+        self.present(vc, animated: true, completion: nil)
     }
     
     func savePDFToiPhone(){
@@ -120,7 +137,8 @@ class ExportViewController: UIViewController {
         guard nil != (try? pdfData.write(to: outputURL, options: .atomic))
             else { fatalError("Error writing PDF data to file.") }
         
-        NSLog("WELL AGAIN")
+       
+        
     }
     
     /*
