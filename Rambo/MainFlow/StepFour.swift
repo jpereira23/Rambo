@@ -54,7 +54,10 @@ class StepFour: UIView {
     @IBAction func next(_ sender: Any) {
         if checkUse(){
             for i in 0..<arrayOfSchools.count{
-                getData(aCell: tableview.cellForRow(at: IndexPath(row: i, section: 0)) as! AddSchoolTableViewCell, index: i)
+                
+                let last = arrayOfSchools.count - 1
+                let aCell = arrayOfCells[last]
+                getData(aCell: aCell, index: i)
             }
             
             aDelegate.DANextOne()
@@ -69,8 +72,8 @@ class StepFour: UIView {
         arrayOfSchools[index].areaOfStudy = aCell.areaOfStudy.text
         arrayOfSchools[index].city = aCell.city.text
         arrayOfSchools[index].degree = aCell.degree.text
-        //arrayOfSchools[index].startDate = aCell.startDate.text
-        arrayOfSchools[index].endDate = Date()
+        arrayOfSchools[index].startDate = aCell.startDate.text
+        arrayOfSchools[index].endDate = aCell.endDate.text
         arrayOfSchools[index].stillEmployee = aCell.isEmployee.isOn
     }
     

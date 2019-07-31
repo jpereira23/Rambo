@@ -9,12 +9,20 @@
 import UIKit
 import WebKit
 
+
+class CustomPrintPageRenderer: UIPrintPageRenderer{
+    let A4PageWidth: CGFloat = 595.2
+    let A4PageHeight: CGFloat = 841.8
+}
+
+
 class ExportViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var saveToPhone: UIButton!
     var node: Node = Node()
     var fullResume: FullResume!
+    var coreDataHelper: CoreDataHelper = CoreDataHelper()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,33 +37,92 @@ class ExportViewController: UIViewController {
         
         let url = Bundle.main.url(forResource: "sample_one", withExtension: "html")
         
+        coreDataHelper.saveFullResume(fullResume: fullResume)
         node.setFirstName(name: fullResume.basicInfo.fullName)
         node.setEmail(email: fullResume.basicInfo.email)
         node.setNumber(number: fullResume.basicInfo.phoneNumber)
         node.setObjective(objective: fullResume.objective)
         for school in fullResume.arrayOfSchools{
-            node.addInstitution(institution: school.schoolName, date: "Fuck it" , degree: school.degree)
+            node.addInstitution(institution: school.schoolName, date: school.startDate + " - " + school.endDate , degree: school.degree)
         }
         
         for work in fullResume.arrayOfWorks{
-            node.addWorkExperience(company: work.companyName, date: "Fuck it", sub: work.description)
+            node.addWorkExperience(company: work.companyName, date: work.startDate + " - " + work.endDate, sub: work.description)
         }
         
         for skill in fullResume.skills{
             node.addSkill(skill: skill)
         }
         
-        node.setCSS(css: 1)
+        node.setCSS(css: fullResume.index)
         
         webView.loadHTMLString(node.combinedHTML, baseURL: url)
         // Do any additional setup after loading the view.
+        
+        
+        //coreDataHelper.loadFullResume()
+        /*
+        if let loadFullProfile = coreDataHelper.loadFullResume(){
+            for profile in loadFullProfile{
+                NSLog(profile.basicInfo.fullName)
+            }
+        }
+        */
+        
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.modalPresentationStyle = .fullScreen
     }
     
+    @IBAction func saveToiPhone(_ sender: Any) {
+        savePDFToiPhone()
+        /*
+ 
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as! MainViewController
+        self.present(vc, animated: true, completion: nil)
+        */
+    }
+    
+    func savePDFToiPhone(){
+        let render = UIPrintPageRenderer()
+        
+        render.addPrintFormatter(webView.viewPrintFormatter(), startingAtPageAt: 0)
+        
+        
+        let page = CGRect(x: 0, y: 0, width: 595.2, height: 841.8)
+        render.setValue(page, forKey: "paperRect")
+        render.setValue(page, forKey: "printableRect")
+        
+        NSLog("number of pages \(render.numberOfPages)")
+        
+        
+        let pdfData = NSMutableData()
+        UIGraphicsBeginPDFContextToData(pdfData, .zero, nil)
+        
+        for i in 0..<render.numberOfPages{
+            NSLog("Hello world")
+            UIGraphicsBeginPDFPage();
+            render.drawPage(at: i, in: UIGraphicsGetPDFContextBounds())
+        }
+        
 
+        UIGraphicsEndPDFContext();
+        
+        guard let outputURL = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("output").appendingPathExtension("pdf") else {
+            fatalError("Destination URL not created")
+        }
+        
+        NSLog("WE OUTCHERE")
+        
+        guard nil != (try? pdfData.write(to: outputURL, options: .atomic))
+            else { fatalError("Error writing PDF data to file.") }
+        
+        NSLog("WELL AGAIN")
+    }
+    
     /*
     // MARK: - Navigation
 

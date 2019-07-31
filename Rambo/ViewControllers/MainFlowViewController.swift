@@ -25,6 +25,7 @@ class MainFlowViewController: UIViewController {
     var aView: Int = 0
     var datePicker: UIDatePicker = UIDatePicker()
     let toolbar = UIToolbar()
+    var anIndex: Int = 0
     
     var dateAlert: UIAlertController!
     
@@ -39,7 +40,7 @@ class MainFlowViewController: UIViewController {
         stepFive.aDelegate = self
     
         aMainNavBar.aDelegate = self
-        
+        NSLog("The anIndex is \(anIndex)")
         
         //mainNavBar.contactButton.setTitleColor(UIColor(red: 107.0/255.0, green: 199.0/255.0, blue: 217.0/255.0), forState: .normal)
         
@@ -250,8 +251,8 @@ class MainFlowViewController: UIViewController {
         let arrayOfWorks: [Work] = stepThree.arrayOfWorks
         let arrayOfSchools: [School] = stepFour.arrayOfSchools
         let skills: [String] = stepFive.skills
-        
-        let fullResume: FullResume = FullResume(bI: basic, o: objective, aW: arrayOfWorks, aS: arrayOfSchools, s: skills)
+        NSLog("compiling Information and the anIndex is \(anIndex)")
+        let fullResume: FullResume = FullResume(bI: basic, o: objective, aW: arrayOfWorks, aS: arrayOfSchools, s: skills, i: anIndex)
         
         
         return fullResume

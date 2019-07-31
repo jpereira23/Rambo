@@ -1,19 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14838.19" systemVersion="18E194e" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="NO" userDefinedModelVersionIdentifier="">
-    <entity name="AResumeFull" representedClassName="AResumeFull" syncable="YES" codeGenerationType="class">
+    <entity name="ABasicInfo" representedClassName="ABasicInfo" syncable="YES" codeGenerationType="class">
         <attribute name="email" optional="YES" attributeType="String"/>
         <attribute name="fullName" optional="YES" attributeType="String"/>
         <attribute name="link" optional="YES" attributeType="String"/>
-        <attribute name="objective" optional="YES" attributeType="String"/>
         <attribute name="phoneNumber" optional="YES" attributeType="String"/>
+        <relationship name="aFullResume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AFullResume" inverseName="aBasicInfo" inverseEntity="AFullResume"/>
+    </entity>
+    <entity name="AFullResume" representedClassName="AFullResume" syncable="YES" codeGenerationType="class">
+        <attribute name="index" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="objective" optional="YES" attributeType="String"/>
+        <relationship name="aBasicInfo" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ABasicInfo" inverseName="aFullResume" inverseEntity="ABasicInfo"/>
+        <relationship name="schools" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ASchool" inverseName="resume" inverseEntity="ASchool"/>
+        <relationship name="skills" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ASkill" inverseName="resume" inverseEntity="ASkill"/>
+        <relationship name="works" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AWork" inverseName="resume" inverseEntity="AWork"/>
     </entity>
     <entity name="ASchool" representedClassName="ASchool" syncable="YES" codeGenerationType="class">
         <attribute name="areaOfStudy" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
         <attribute name="degree" optional="YES" attributeType="String"/>
+        <attribute name="endDate" optional="YES" attributeType="String"/>
         <attribute name="schoolName" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="YES" attributeType="String"/>
+        <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AFullResume" inverseName="schools" inverseEntity="AFullResume"/>
+    </entity>
+    <entity name="ASkill" representedClassName="ASkill" syncable="YES" codeGenerationType="class">
+        <attribute name="aSkill" optional="YES" attributeType="String"/>
+        <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AFullResume" inverseName="skills" inverseEntity="AFullResume"/>
+    </entity>
+    <entity name="AWork" representedClassName="AWork" syncable="YES" codeGenerationType="class">
+        <attribute name="aDescription" optional="YES" attributeType="String"/>
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="companyName" optional="YES" attributeType="String"/>
+        <attribute name="endDate" optional="YES" attributeType="String"/>
+        <attribute name="jobTitle" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="YES" attributeType="String"/>
+        <relationship name="resume" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AFullResume" inverseName="works" inverseEntity="AFullResume"/>
     </entity>
     <elements>
-        <element name="AResumeFull" positionX="-27" positionY="18" width="128" height="28"/>
+        <element name="ABasicInfo" positionX="36" positionY="144" width="128" height="118"/>
+        <element name="AFullResume" positionX="54" positionY="180" width="128" height="133"/>
         <element name="ASchool" positionX="18" positionY="99" width="128" height="28"/>
+        <element name="ASkill" positionX="36" positionY="198" width="128" height="73"/>
+        <element name="AWork" positionX="36" positionY="171" width="128" height="148"/>
     </elements>
 </model>

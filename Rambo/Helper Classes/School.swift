@@ -12,12 +12,12 @@ class School{
     var schoolName: String!
     var degree: String!
     var areaOfStudy: String!
-    var startDate: Date!
-    var endDate: Date!
+    var startDate: String!
+    var endDate: String!
     var stillEmployee: Bool!
     var city: String!
     
-    init(aSchoolName: String, aDegree: String, aAreaOfStudy: String, aStartDate: Date, aEndDate: Date, aStillEmployee: Bool, aCity: String){
+    init(aSchoolName: String, aDegree: String, aAreaOfStudy: String, aStartDate: String, aEndDate: String, aStillEmployee: Bool, aCity: String){
         schoolName = aSchoolName
         degree = aDegree
         areaOfStudy = aAreaOfStudy
@@ -31,8 +31,8 @@ class School{
         schoolName = ""
         degree = ""
         areaOfStudy = ""
-        startDate = Date()
-        endDate = Date()
+        startDate = ""
+        endDate = ""
         stillEmployee = false
         city = ""
     }

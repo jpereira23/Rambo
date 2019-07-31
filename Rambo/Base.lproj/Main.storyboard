@@ -153,10 +153,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="196" translatesAutoresizingMaskIntoConstraints="NO" id="SaZ-rs-5uB">
-                                <rect key="frame" x="250" y="84" width="134" height="33"/>
+                                <rect key="frame" x="250" y="84" width="76" height="33"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8e5-Vg-fdU">
-                                        <rect key="frame" x="0.0" y="0.0" width="134" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="33"/>
                                         <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="xsZ-1y-5iY"/>
@@ -171,10 +171,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ioh-bB-gem">
-                                <rect key="frame" x="30" y="147" width="354" height="59"/>
+                                <rect key="frame" x="30" y="147" width="296" height="59"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Tony!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI7-79-3gJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="296" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="Ppz-QE-Xzh"/>
                                         </constraints>
@@ -183,7 +183,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download your resume to apply to jobs." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFJ-ba-ZU1">
-                                        <rect key="frame" x="0.0" y="38" width="354" height="21"/>
+                                        <rect key="frame" x="0.0" y="38" width="296" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Tlp-bD-ph8"/>
                                         </constraints>
@@ -194,21 +194,21 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ptk-ik-ypt">
-                                <rect key="frame" x="0.0" y="236" width="414" height="626"/>
+                                <rect key="frame" x="0.0" y="236" width="356" height="626"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="theCell" rowHeight="475" id="WC6-0y-hDh" customClass="MainTableViewCell" customModule="Rambo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="475"/>
+                                        <rect key="frame" x="0.0" y="28" width="356" height="475"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WC6-0y-hDh" id="fyV-a3-tjn">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="475"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="356" height="475"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XR7-4c-zTW">
-                                                    <rect key="frame" x="74" y="0.0" width="265" height="405"/>
+                                                    <rect key="frame" x="74" y="0.0" width="207" height="405"/>
                                                     <subviews>
                                                         <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nCc-Lb-GDP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="265" height="357"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="207" height="357"/>
                                                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="265" id="aKF-pr-EEO"/>
@@ -219,7 +219,7 @@
                                                             </wkWebViewConfiguration>
                                                         </wkWebView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bAP-uc-tmf">
-                                                            <rect key="frame" x="43" y="372" width="179" height="33"/>
+                                                            <rect key="frame" x="14" y="372" width="179" height="33"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6O-jp-Qat">
                                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="33"/>
@@ -383,7 +383,7 @@
                                 </state>
                                 <connections>
                                     <action selector="continuing:" destination="Z5J-NL-CnJ" eventType="touchUpInside" id="9Wu-nw-x4p"/>
-                                    <segue destination="UO7-mc-UVa" kind="showDetail" id="oby-tg-Wvc"/>
+                                    <segue destination="UO7-mc-UVa" kind="showDetail" identifier="toMainFlow" id="oby-tg-Wvc"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a66-f4-Rix">
@@ -457,7 +457,7 @@
         <!--Export View Controller-->
         <scene sceneID="5vL-T9-xoE">
             <objects>
-                <viewController restorationIdentifier="exportView" storyboardIdentifier="exportView" id="U0i-x3-sUS" customClass="ExportViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="exportView" storyboardIdentifier="exportView" modalPresentationStyle="fullScreen" id="U0i-x3-sUS" customClass="ExportViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HCy-b0-dez">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -497,6 +497,9 @@
                                 <state key="normal" title="Save to iPhone">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveToiPhone:" destination="U0i-x3-sUS" eventType="touchUpInside" id="wvU-Lj-2uT"/>
+                                </connections>
                             </button>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVH-fh-s5U">
                                 <rect key="frame" x="67.5" y="208" width="280" height="389"/>
