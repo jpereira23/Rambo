@@ -12,13 +12,14 @@ import WebKit
 protocol MainTableViewCellDelegate{
     func editSelected()
     func exportSelected()
-    func miscSelected()
+    func miscSelected(index: Int)
 }
 
 class MainTableViewCell: UITableViewCell {
 
     @IBOutlet weak var webView: WKWebView!
     var aDelegate: MainTableViewCellDelegate?
+    var index: Int = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,6 +48,6 @@ class MainTableViewCell: UITableViewCell {
     }
     
     @IBAction func miscAction(_ sender: Any) {
-        self.aDelegate?.miscSelected()
+        self.aDelegate?.miscSelected(index: index)
     }
 }

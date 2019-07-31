@@ -181,6 +181,30 @@ class CoreDataHelper{
         
     }
     
+    public func deleteResume(index: Int){
+        var tempFullResume: [FullResume] = []
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "AFullResume")
+        
+        do {
+            managedObjects = []
+            managedObjects = try self.managedContext!.fetch(fetchRequest)
+        } catch let error as NSError {
+            NSLog(error.localizedDescription)
+        }
+        
+        let object = managedObjects[index]
+        self.managedContext.delete(object)
+        
+        do{
+            try self.managedContext.save()
+            managedObjects.remove(at: index)
+        } catch let error as NSError {
+            NSLog(error.localizedDescription)
+        }
+        
+    }
+    
     public func resetCoreData()
     {
         let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: "ABasicInfo")

@@ -62,6 +62,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         let cell = tableView.dequeueReusableCell(withIdentifier: "theCell") as! MainTableViewCell
         cell.aDelegate = self
         
+        cell.index = indexPath.row
+        
         let node: Node = Node()
         let aResume = arrayOfResumes[indexPath.row]
         
@@ -121,11 +123,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         self.present(vc, animated: true, completion: nil)
     }
     
-    func miscSelected(){
+    func miscSelected(index: Int){
         
          let optionMenu = UIAlertController(title: "Are you sure you want to delete?", message: "If you delete, this action cannot be undone.", preferredStyle: .actionSheet)
          
-         let deleteAction = UIAlertAction(title: "Delete", style: .destructive)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+            self.deleteingStuff(index: index)
+        }
+        
          //let saveAction = UIAlertAction(title: "Save", style: .default)
          
          
@@ -138,5 +143,11 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
          
          self.present(optionMenu, animated: true, completion: nil)
 
+    }
+    
+    func deleteingStuff(index: Int){
+        coreDataHelper.deleteResume(index: index)
+        arrayOfResumes.remove(at: index)
+        tableView.reloadData()
     }
 }
