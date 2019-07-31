@@ -9,6 +9,13 @@
 import UIKit
 import WebKit
 
+
+class CustomPrintPageRenderer: UIPrintPageRenderer{
+    let A4PageWidth: CGFloat = 595.2
+    let A4PageHeight: CGFloat = 841.8
+}
+
+
 class ExportViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
@@ -71,8 +78,49 @@ class ExportViewController: UIViewController {
     }
     
     @IBAction func saveToiPhone(_ sender: Any) {
+        savePDFToiPhone()
+        /*
+ 
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as! MainViewController
         self.present(vc, animated: true, completion: nil)
+        */
+    }
+    
+    func savePDFToiPhone(){
+        let render = UIPrintPageRenderer()
+        
+        render.addPrintFormatter(webView.viewPrintFormatter(), startingAtPageAt: 0)
+        
+        
+        let page = CGRect(x: 0, y: 0, width: 595.2, height: 841.8)
+        render.setValue(page, forKey: "paperRect")
+        render.setValue(page, forKey: "printableRect")
+        
+        NSLog("number of pages \(render.numberOfPages)")
+        
+        
+        let pdfData = NSMutableData()
+        UIGraphicsBeginPDFContextToData(pdfData, .zero, nil)
+        
+        for i in 0..<render.numberOfPages{
+            NSLog("Hello world")
+            UIGraphicsBeginPDFPage();
+            render.drawPage(at: i, in: UIGraphicsGetPDFContextBounds())
+        }
+        
+
+        UIGraphicsEndPDFContext();
+        
+        guard let outputURL = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("output").appendingPathExtension("pdf") else {
+            fatalError("Destination URL not created")
+        }
+        
+        NSLog("WE OUTCHERE")
+        
+        guard nil != (try? pdfData.write(to: outputURL, options: .atomic))
+            else { fatalError("Error writing PDF data to file.") }
+        
+        NSLog("WELL AGAIN")
     }
     
     /*
