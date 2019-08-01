@@ -23,6 +23,7 @@ class ExportViewController: UIViewController {
     var node: Node = Node()
     var fullResume: FullResume!
     var coreDataHelper: CoreDataHelper = CoreDataHelper()
+    var fileName = "output"
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,24 +83,25 @@ class ExportViewController: UIViewController {
     }
     
     @IBAction func saveToiPhone(_ sender: Any) {
-        savePDFToiPhone()
-        
         let alertMenu = UIAlertController(title: "Resume has been saved to Files application", message: "The file will be found under 'On my iPhone > Worthy'.", preferredStyle: .alert)
         
-        let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { _ in
+        alertMenu.addTextField(configurationHandler:  { (textField: UITextField!) -> Void in
+            textField.placeholder = "File Name"
+        })
+        let submitAction = UIAlertAction(title: "Submit", style: .default){ _ in
+            let firstTextField = alertMenu.textFields![0] as! UITextField
+            self.fileName = firstTextField.text!
+            
+            self.savePDFToiPhone()
             self.changeToMain()
         }
-        
+        let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { _ in
+            
+        }
+        alertMenu.addAction(submitAction)
         alertMenu.addAction(cancelAction)
         
         self.present(alertMenu, animated: true, completion:nil)
-        
-        
-        /*
- 
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "mainView") as! MainViewController
-        self.present(vc, animated: true, completion: nil)
-        */
     }
     
     func changeToMain(){
@@ -132,11 +134,9 @@ class ExportViewController: UIViewController {
 
         UIGraphicsEndPDFContext();
         
-        guard let outputURL = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("output").appendingPathExtension("pdf") else {
+        guard let outputURL = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(fileName).appendingPathExtension("pdf") else {
             fatalError("Destination URL not created")
         }
-        
-        NSLog("WE OUTCHERE")
         
         guard nil != (try? pdfData.write(to: outputURL, options: .atomic))
             else { fatalError("Error writing PDF data to file.") }
