@@ -73,6 +73,10 @@ class ExportViewController: UIViewController {
         
     }
     
+    @IBAction func goBack(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         self.modalPresentationStyle = .fullScreen
     }

@@ -469,6 +469,9 @@
                                     <constraint firstAttribute="height" constant="18" id="zUn-0J-d0O"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="arrow-left"/>
+                                <connections>
+                                    <action selector="goBack:" destination="U0i-x3-sUS" eventType="touchUpInside" id="Dxb-uV-DRq"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="i3x-8l-iRV">
                                 <rect key="frame" x="25" y="122" width="364" height="56"/>
