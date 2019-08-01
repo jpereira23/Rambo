@@ -127,10 +127,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
     
     func miscSelected(index: Int){
         
-         let optionMenu = UIAlertController(title: "Are you sure you want to delete?", message: "If you delete, this action cannot be undone.", preferredStyle: .actionSheet)
+         let optionMenu = UIAlertController(title: "Select An Option", message: "Not to many options.", preferredStyle: .actionSheet)
          
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
             self.deleteingStuff(index: index)
+        }
+        
+        let duplicateAction = UIAlertAction(title: "Duplicate", style: .default) { _ in
+            self.duplicateStuff(index: index)
         }
         
          //let saveAction = UIAlertAction(title: "Save", style: .default)
@@ -139,17 +143,37 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
          let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
          
          
-         optionMenu.addAction(deleteAction)
+        optionMenu.addAction(deleteAction)
          //optionMenu.addAction(saveAction)
-         optionMenu.addAction(cancelAction)
+        optionMenu.addAction(cancelAction)
+        optionMenu.addAction(duplicateAction)
          
          self.present(optionMenu, animated: true, completion: nil)
 
     }
     
     func deleteingStuff(index: Int){
-        coreDataHelper.deleteResume(index: index)
-        arrayOfResumes.remove(at: index)
+        
+         let optionMenu = UIAlertController(title: "Delete", message: "Are you sure you want to delete?", preferredStyle: .alert)
+        
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive){ _ in
+            self.coreDataHelper.deleteResume(index: index)
+            self.arrayOfResumes.remove(at: index)
+            self.tableView.reloadData()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+        
+        optionMenu.addAction(deleteAction)
+        optionMenu.addAction(cancelAction)
+        
+        self.present(optionMenu, animated: true, completion: nil)
+        
+    }
+    
+    func duplicateStuff(index: Int){
+        let object = arrayOfResumes[index]
+        arrayOfResumes.append(object)
+        coreDataHelper.saveFullResume(fullResume: object)
         tableView.reloadData()
     }
 }
