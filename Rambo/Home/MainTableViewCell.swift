@@ -10,8 +10,8 @@ import UIKit
 import WebKit
 
 protocol MainTableViewCellDelegate{
-    func editSelected()
-    func exportSelected()
+    func editSelected(fullResume: FullResume)
+    func exportSelected(fullResume: FullResume)
     func miscSelected(index: Int)
 }
 
@@ -20,6 +20,7 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var webView: WKWebView!
     var aDelegate: MainTableViewCellDelegate?
     var index: Int = 0
+    var fullResume: FullResume! 
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,11 +41,11 @@ class MainTableViewCell: UITableViewCell {
     }
     
     @IBAction func editAction(_ sender: Any) {
-        self.aDelegate?.editSelected()
+        self.aDelegate?.editSelected(fullResume: fullResume)
     }
     
     @IBAction func exportAction(_ sender: Any) {
-        self.aDelegate?.exportSelected()
+        self.aDelegate?.exportSelected(fullResume: self.fullResume)
     }
     
     @IBAction func miscAction(_ sender: Any) {

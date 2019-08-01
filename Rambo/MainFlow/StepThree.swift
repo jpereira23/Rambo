@@ -110,15 +110,18 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
         
         cell.index = indexPath.row
         cell.aDelegate = self
+    
         
         //Textfields Right Padding
         let indentView0 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         cell.jobTitle.leftView = indentView0
         cell.jobTitle.leftViewMode = .always
+        cell.jobTitle.text = arrayOfWorks[indexPath.row].jobTitle
         
         let indentView1 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         cell.CITY.leftView = indentView1
         cell.CITY.leftViewMode = .always
+        cell.CITY.text = arrayOfWorks[indexPath.row].city
         
         //let indentView2 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         //cell.aDescription.leftView = indentView2
@@ -127,14 +130,18 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
         let indentView3 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         cell.startDate.leftView = indentView3
         cell.startDate.leftViewMode = .always
+        cell.startDate.text = arrayOfWorks[indexPath.row].startDate
+        
         
         let indentView4 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         cell.endDate.leftView = indentView4
         cell.endDate.leftViewMode = .always
+        cell.endDate.text = arrayOfWorks[indexPath.row].endDate
         
         let indentView5 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         cell.companyName.leftView = indentView5
         cell.companyName.leftViewMode = .always
+        cell.companyName.text = arrayOfWorks[indexPath.row].companyName
         
         arrayOfCells.append(cell)
         return cell

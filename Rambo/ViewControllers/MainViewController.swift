@@ -63,6 +63,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         cell.aDelegate = self
         
         cell.index = indexPath.row
+        cell.fullResume = arrayOfResumes[indexPath.row]
         
         let node: Node = Node()
         let aResume = arrayOfResumes[indexPath.row]
@@ -111,15 +112,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         self.present(vc, animated: true, completion: nil)
     }
     
-    func editSelected() {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "mainFlow") as! MainFlowViewController
-        
+    func editSelected(fullResume: FullResume) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "selectTemplate") as! SelectATemplateViewController
+        vc.fullResume = fullResume
         self.present(vc, animated: true, completion: nil)
+        
     }
     
-    func exportSelected(){
+    func exportSelected(fullResume: FullResume){
         let vc = storyboard?.instantiateViewController(withIdentifier: "exportView") as! ExportViewController
-        
+        vc.fullResume = fullResume
         self.present(vc, animated: true, completion: nil)
     }
     

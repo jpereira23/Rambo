@@ -14,6 +14,8 @@ class MainFlowViewController: UIViewController {
     @IBOutlet weak var mainNavBar: UIView!
     @IBOutlet weak var theView: UIView!
     let aMainNavBar: MainNavBar = Bundle.main.loadNibNamed("MainNavBar", owner: self, options: nil)?.first as! MainNavBar
+    
+    
     let stepOne: StepOne = Bundle.main.loadNibNamed("StepOne", owner: self, options: nil)?.first as! StepOne
     let stepTwo: StepTwo = Bundle.main.loadNibNamed("StepTwo", owner: self, options: nil)?.first as! StepTwo
     let stepThree: StepThree = Bundle.main.loadNibNamed("StepThree", owner: self, options: nil)?.first as! StepThree
@@ -28,6 +30,7 @@ class MainFlowViewController: UIViewController {
     var anIndex: Int = 0
     
     var dateAlert: UIAlertController!
+    var fullResume: FullResume!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,9 +43,8 @@ class MainFlowViewController: UIViewController {
         stepFive.aDelegate = self
     
         aMainNavBar.aDelegate = self
-        NSLog("The anIndex is \(anIndex)")
         
-        //mainNavBar.contactButton.setTitleColor(UIColor(red: 107.0/255.0, green: 199.0/255.0, blue: 217.0/255.0), forState: .normal)
+        
         
         //buttons
         stepOne.continue1.layer.cornerRadius = 5
@@ -111,6 +113,21 @@ class MainFlowViewController: UIViewController {
         theView.addSubview(stepThree)
         theView.addSubview(stepTwo)
         theView.addSubview(stepOne)
+        
+        if fullResume != nil {
+            stepOne.fullName.text = fullResume.basicInfo.fullName
+            stepOne.email.text = fullResume.basicInfo.email
+            stepOne.phoneNumber.text = fullResume.basicInfo.phoneNumber
+            stepOne.link.text = fullResume.basicInfo.link
+            
+            stepTwo.textView.text = fullResume.objective
+            
+            stepThree.arrayOfWorks = fullResume.arrayOfWorks
+            
+            stepFour.arrayOfSchools = fullResume.arrayOfSchools
+            
+            stepFive.skills = fullResume.skills
+        }
         // Do any additional setup after loading the view.
     
     }
@@ -252,7 +269,7 @@ class MainFlowViewController: UIViewController {
         let arrayOfSchools: [School] = stepFour.arrayOfSchools
         let skills: [String] = stepFive.skills
         NSLog("compiling Information and the anIndex is \(anIndex)")
-        let fullResume: FullResume = FullResume(bI: basic, o: objective, aW: arrayOfWorks, aS: arrayOfSchools, s: skills, i: anIndex)
+        fullResume = FullResume(bI: basic, o: objective, aW: arrayOfWorks, aS: arrayOfSchools, s: skills, i: anIndex)
         
         
         return fullResume
