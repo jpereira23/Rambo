@@ -145,7 +145,7 @@ extension StepFour: UITableViewDataSource, UITableViewDelegate{
         cell.city.text = self.arrayOfSchools[indexPath.row].city
         cell.degree.text = self.arrayOfSchools[indexPath.row].degree
         //cell.isEmployee.isOn = self.arrayOfSchools[indexPath.row].stillEmployee
-        //cell.startDate.text = self.arrayOfSchools[indexPath.row].startDate
+        cell.startDate.text = self.arrayOfSchools[indexPath.row].startDate
         arrayOfCells.append(cell)
         return cell
     }

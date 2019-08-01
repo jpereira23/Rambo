@@ -112,7 +112,8 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     }
     
     func checkUse() -> Bool{
-        if jobTitle.text!.count > 0 && companyName.text!.count > 0 && startDate.text!.count > 0 && endDate.text!.count > 0 && CITY.text!.count > 0 && aDescription.text!.count > 0{
+        
+        if jobTitle.text!.count > 0 && companyName.text!.count > 0 && startDate.text!.count > 0 && CITY.text!.count > 0 && aDescription.text!.count > 0{
             return true
         }
         

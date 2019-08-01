@@ -44,7 +44,6 @@ class StepThree: UIView {
         arrayOfWorks[index].companyName = aCell.companyName.text
         arrayOfWorks[index].startDate = aCell.startDate.text
         arrayOfWorks[index].endDate = aCell.endDate.text
-        
     }
     
     func checkUse() -> Bool{
@@ -67,7 +66,9 @@ class StepThree: UIView {
         
         if checkUse(){
             for i in 0..<arrayOfWorks.count{
-                getData(aCell: arrayOfCells[i], index: i)
+                let last = arrayOfWorks.count - 1
+                let aCell = arrayOfCells[last]
+                getData(aCell: aCell, index: i)
             }
             
             aDelegate.zeNextOne()
@@ -116,12 +117,12 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
         let indentView0 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         cell.jobTitle.leftView = indentView0
         cell.jobTitle.leftViewMode = .always
-        cell.jobTitle.text = arrayOfWorks[indexPath.row].jobTitle
+        
         
         let indentView1 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         cell.CITY.leftView = indentView1
         cell.CITY.leftViewMode = .always
-        cell.CITY.text = arrayOfWorks[indexPath.row].city
+        
         
         //let indentView2 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         //cell.aDescription.leftView = indentView2
@@ -130,18 +131,25 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
         let indentView3 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         cell.startDate.leftView = indentView3
         cell.startDate.leftViewMode = .always
-        cell.startDate.text = arrayOfWorks[indexPath.row].startDate
+        
         
         
         let indentView4 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         cell.endDate.leftView = indentView4
         cell.endDate.leftViewMode = .always
-        cell.endDate.text = arrayOfWorks[indexPath.row].endDate
+        
         
         let indentView5 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         cell.companyName.leftView = indentView5
         cell.companyName.leftViewMode = .always
+        
+        cell.jobTitle.text = arrayOfWorks[indexPath.row].jobTitle
+        cell.CITY.text = arrayOfWorks[indexPath.row].city
+        cell.startDate.text = arrayOfWorks[indexPath.row].startDate
+        cell.endDate.text = arrayOfWorks[indexPath.row].endDate
         cell.companyName.text = arrayOfWorks[indexPath.row].companyName
+        cell.aDescription.text = arrayOfWorks[indexPath.row].description
+    
         
         arrayOfCells.append(cell)
         return cell
