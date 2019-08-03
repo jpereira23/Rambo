@@ -39,6 +39,7 @@ class ExportViewController: UIViewController {
         webView.layer.shadowOpacity = 0.1
         webView.layer.shadowRadius = 5.0
         webView.layer.masksToBounds = false
+        webView.isUserInteractionEnabled = false
         
         
         let url = Bundle.main.url(forResource: "sample_one", withExtension: "html")
