@@ -21,8 +21,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="611"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3LV-1y-AFe">
-                    <rect key="frame" x="0.0" y="99.5" width="414" height="332.5"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3LV-1y-AFe">
+                    <rect key="frame" x="0.0" y="99.5" width="414" height="477.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -31,20 +31,21 @@
                         <outlet property="delegate" destination="-1" id="XWU-O5-VL5"/>
                     </connections>
                 </tableView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="udh-95-yrk">
-                    <rect key="frame" x="25" y="30" width="364" height="69.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyM-pU-c7F">
+                    <rect key="frame" x="25" y="30" width="364" height="20.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="R3W-yl-sJK"/>
+                        <constraint firstAttribute="height" constant="20.5" id="th6-xF-PDq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="NotoSansJP-Regular" family="Noto Sans JP Regular" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="OmH-jr-Lec">
+                    <rect key="frame" x="25" y="55.5" width="364" height="44"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyM-pU-c7F">
-                            <rect key="frame" x="0.0" y="0.0" width="364" height="20.5"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="20.5" id="th6-xF-PDq"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="NotoSansJP-Regular" family="Noto Sans JP Regular" pointSize="12"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Microsoft Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6g9-Kh-ign">
-                            <rect key="frame" x="0.0" y="25.5" width="364" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="253" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="EAc-dl-3FT"/>
                             </constraints>
@@ -52,63 +53,63 @@
                             <fontDescription key="fontDescription" name="NotoSansJP-Regular" family="Noto Sans JP Regular" pointSize="14"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFp-up-O7b">
+                            <rect key="frame" x="263" y="0.0" width="101" height="44"/>
+                            <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="101" id="2VR-Gi-9fX"/>
+                                <constraint firstAttribute="height" constant="44" id="LQB-kz-GX0"/>
+                            </constraints>
+                            <state key="normal" title="Add Skills">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="addSkill:" destination="iN0-l3-epB" eventType="touchUpInside" id="fIw-9s-nVP"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIt-VO-dna">
-                    <rect key="frame" x="0.0" y="487" width="414" height="90"/>
+                    <rect key="frame" x="0.0" y="522" width="414" height="55"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wvp-im-DZI">
-                            <rect key="frame" x="25" y="10" width="364" height="70"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFp-up-O7b">
-                                    <rect key="frame" x="0.0" y="0.0" width="364" height="25"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="25" id="cvd-OO-UYq"/>
-                                    </constraints>
-                                    <state key="normal" title="Add Skills">
-                                        <color key="titleColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="addSkill:" destination="iN0-l3-epB" eventType="touchUpInside" id="fIw-9s-nVP"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUA-I6-1w9">
-                                    <rect key="frame" x="0.0" y="35" width="364" height="35"/>
-                                    <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="35" id="Uth-Ik-Aen"/>
-                                    </constraints>
-                                    <state key="normal" title="Save &amp; Continue">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="continueExport:" destination="iN0-l3-epB" eventType="touchUpInside" id="gRj-30-LCw"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUA-I6-1w9">
+                            <rect key="frame" x="25" y="10" width="364" height="35"/>
+                            <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="Uth-Ik-Aen"/>
+                            </constraints>
+                            <state key="normal" title="Save &amp; Continue">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="continueExport:" destination="iN0-l3-epB" eventType="touchUpInside" id="gRj-30-LCw"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="Wvp-im-DZI" secondAttribute="bottom" constant="10" id="4sK-3z-ao7"/>
-                        <constraint firstItem="Wvp-im-DZI" firstAttribute="leading" secondItem="RIt-VO-dna" secondAttribute="leading" constant="25" id="YLJ-4y-wyR"/>
-                        <constraint firstAttribute="trailing" secondItem="Wvp-im-DZI" secondAttribute="trailing" constant="25" id="avD-0X-83w"/>
-                        <constraint firstItem="Wvp-im-DZI" firstAttribute="top" secondItem="RIt-VO-dna" secondAttribute="top" constant="10" id="icJ-cg-Uq7"/>
-                        <constraint firstAttribute="height" constant="90" id="vPq-XP-ODk"/>
+                        <constraint firstItem="GUA-I6-1w9" firstAttribute="top" secondItem="RIt-VO-dna" secondAttribute="top" constant="10" id="B9f-Ci-mJP"/>
+                        <constraint firstAttribute="bottom" secondItem="GUA-I6-1w9" secondAttribute="bottom" constant="10" id="LdN-5g-ItU"/>
+                        <constraint firstItem="GUA-I6-1w9" firstAttribute="leading" secondItem="RIt-VO-dna" secondAttribute="leading" constant="25" id="aW6-am-n3S"/>
+                        <constraint firstAttribute="trailing" secondItem="GUA-I6-1w9" secondAttribute="trailing" constant="25" id="hZN-Ap-BCP"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="3LV-1y-AFe" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="0rv-HX-jDH"/>
+                <constraint firstItem="OmH-jr-Lec" firstAttribute="top" secondItem="IyM-pU-c7F" secondAttribute="bottom" constant="5" id="2EK-vw-6Ek"/>
                 <constraint firstItem="RIt-VO-dna" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3KD-bf-Q8G"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="IyM-pU-c7F" secondAttribute="trailing" constant="25" id="5cu-0c-Ivy"/>
                 <constraint firstItem="RIt-VO-dna" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="H2S-Cn-pdr"/>
-                <constraint firstItem="3LV-1y-AFe" firstAttribute="top" secondItem="udh-95-yrk" secondAttribute="bottom" id="JxM-Sz-Gfa"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="udh-95-yrk" secondAttribute="trailing" constant="25" id="WvL-hB-6Pe"/>
-                <constraint firstItem="udh-95-yrk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="ahk-SV-nEU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OmH-jr-Lec" secondAttribute="trailing" constant="25" id="N9o-WM-n1k"/>
+                <constraint firstItem="IyM-pU-c7F" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="TMD-Th-hu7"/>
+                <constraint firstItem="3LV-1y-AFe" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ThH-Vb-ujf"/>
+                <constraint firstItem="IyM-pU-c7F" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="Vg1-dA-chE"/>
                 <constraint firstItem="RIt-VO-dna" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="jJA-bq-gYi"/>
-                <constraint firstItem="udh-95-yrk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="sp1-GA-Kxr"/>
-                <constraint firstItem="3LV-1y-AFe" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="v7Z-uJ-i6X"/>
-                <constraint firstItem="3LV-1y-AFe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vwQ-Ya-UbZ"/>
+                <constraint firstItem="3LV-1y-AFe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="jtB-l3-aGI"/>
+                <constraint firstItem="OmH-jr-Lec" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="kDO-go-fLg"/>
+                <constraint firstItem="3LV-1y-AFe" firstAttribute="top" secondItem="OmH-jr-Lec" secondAttribute="bottom" id="sZ2-73-WLo"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

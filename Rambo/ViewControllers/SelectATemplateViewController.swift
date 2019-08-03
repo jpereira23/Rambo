@@ -42,7 +42,7 @@ class SelectATemplateViewController: UIViewController {
     }
     
     func setUpScrollView(){
-        scrollView.frame = CGRect(x: 0, y: 208, width: 414, height:332)
+        scrollView.frame = CGRect(x: -30, y: 190, width: 414, height:332)
         scrollView.contentSize = CGSize(width: 414 * 4, height: 332)
         scrollView.isPagingEnabled = true
         

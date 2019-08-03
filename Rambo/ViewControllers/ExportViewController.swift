@@ -83,10 +83,10 @@ class ExportViewController: UIViewController {
     }
     
     @IBAction func saveToiPhone(_ sender: Any) {
-        let alertMenu = UIAlertController(title: "Resume has been saved to Files application", message: "The file will be found under 'On my iPhone > Worthy'.", preferredStyle: .alert)
+        let alertMenu = UIAlertController(title: "Resume has been saved!", message: "View your resume in your app Files > On My iPhone > Worthy", preferredStyle: .alert)
         
         alertMenu.addTextField(configurationHandler:  { (textField: UITextField!) -> Void in
-            textField.placeholder = "File Name"
+            textField.placeholder = "Enter "
         })
         let submitAction = UIAlertAction(title: "Submit", style: .default){ _ in
             let firstTextField = alertMenu.textFields![0] as! UITextField
@@ -95,7 +95,7 @@ class ExportViewController: UIViewController {
             self.savePDFToiPhone()
             self.changeToMain()
         }
-        let cancelAction = UIAlertAction(title: "Ok", style: .cancel) { _ in
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel) { _ in
             
         }
         alertMenu.addAction(submitAction)

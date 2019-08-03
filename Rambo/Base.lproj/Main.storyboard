@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +24,7 @@
         <!--On Boarding View Controller-->
         <scene sceneID="9e3-Ae-CeK">
             <objects>
-                <viewController storyboardIdentifier="onBoarding" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uto-zT-MCG" customClass="OnBoardingViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="onBoarding" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uto-zT-MCG" customClass="OnBoardingViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gke-hQ-L7P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +102,7 @@
         <!--Resume Preview View Controller-->
         <scene sceneID="4le-Ki-RZ3">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="EYN-1i-LCy" customClass="ResumePreviewViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EYN-1i-LCy" customClass="ResumePreviewViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rYp-15-GrX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -147,34 +149,16 @@
         <!--Main View Controller-->
         <scene sceneID="OAq-9k-SHe">
             <objects>
-                <viewController storyboardIdentifier="mainView" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LQ2-H1-qA9" customClass="MainViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LQ2-H1-qA9" customClass="MainViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t9Z-Nl-vQQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="196" translatesAutoresizingMaskIntoConstraints="NO" id="SaZ-rs-5uB">
-                                <rect key="frame" x="250" y="84" width="76" height="33"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8e5-Vg-fdU">
-                                        <rect key="frame" x="0.0" y="0.0" width="76" height="33"/>
-                                        <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="xsZ-1y-5iY"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Build New"/>
-                                        <connections>
-                                            <segue destination="Z5J-NL-CnJ" kind="show" id="srZ-Dz-vlu"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ioh-bB-gem">
-                                <rect key="frame" x="30" y="147" width="296" height="59"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wz5-59-DM0">
+                                <rect key="frame" x="25" y="74" width="364" height="33"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi Tony!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mI7-79-3gJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="296" height="33"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="33"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="33" id="Ppz-QE-Xzh"/>
                                         </constraints>
@@ -182,26 +166,40 @@
                                         <color key="textColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download your resume to apply to jobs." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFJ-ba-ZU1">
-                                        <rect key="frame" x="0.0" y="38" width="296" height="21"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8e5-Vg-fdU">
+                                        <rect key="frame" x="264" y="0.0" width="100" height="33"/>
+                                        <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="Tlp-bD-ph8"/>
+                                            <constraint firstAttribute="width" constant="100" id="GKc-3l-vrc"/>
+                                            <constraint firstAttribute="height" constant="33" id="nx7-os-QQE"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="NotoSansJP-Regular" family="Noto Sans JP Regular" pointSize="16"/>
-                                        <color key="textColor" red="0.18431372549019609" green="0.1803921568627451" blue="0.25490196078431371" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                        <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="+ Build New"/>
+                                        <connections>
+                                            <segue destination="Z5J-NL-CnJ" kind="show" id="srZ-Dz-vlu"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download your resume to apply to jobs." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0m-yk-J92">
+                                <rect key="frame" x="25" y="112" width="364" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="4fs-Ic-glS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansJP-Regular" family="Noto Sans JP Regular" pointSize="16"/>
+                                <color key="textColor" red="0.1843137255" green="0.18039215689999999" blue="0.25490196079999999" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ptk-ik-ypt">
-                                <rect key="frame" x="0.0" y="236" width="356" height="626"/>
+                                <rect key="frame" x="0.0" y="166" width="414" height="696"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="theCell" rowHeight="475" id="WC6-0y-hDh" customClass="MainTableViewCell" customModule="Rambo" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="356" height="475"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="475"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WC6-0y-hDh" id="fyV-a3-tjn">
-                                            <rect key="frame" x="0.0" y="0.0" width="356" height="475"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="475"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="XR7-4c-zTW">
@@ -287,16 +285,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Eh6-8t-rbg" firstAttribute="trailing" secondItem="ioh-bB-gem" secondAttribute="trailing" constant="30" id="0pW-aE-y4g"/>
                             <constraint firstItem="Ptk-ik-ypt" firstAttribute="bottom" secondItem="Eh6-8t-rbg" secondAttribute="bottom" id="9mY-kA-nmP"/>
-                            <constraint firstItem="ioh-bB-gem" firstAttribute="leading" secondItem="Eh6-8t-rbg" secondAttribute="leading" constant="30" id="Gwv-Kl-6Rz"/>
-                            <constraint firstItem="Ptk-ik-ypt" firstAttribute="top" secondItem="ioh-bB-gem" secondAttribute="bottom" constant="30" id="OOi-ZC-Ls2"/>
+                            <constraint firstItem="Eh6-8t-rbg" firstAttribute="trailing" secondItem="wz5-59-DM0" secondAttribute="trailing" constant="25" id="EVk-vo-2lE"/>
+                            <constraint firstItem="wz5-59-DM0" firstAttribute="top" secondItem="Eh6-8t-rbg" secondAttribute="top" constant="30" id="GBQ-Yc-plF"/>
+                            <constraint firstItem="Ptk-ik-ypt" firstAttribute="top" secondItem="k0m-yk-J92" secondAttribute="bottom" constant="30" id="TG9-li-YUS"/>
                             <constraint firstItem="Ptk-ik-ypt" firstAttribute="leading" secondItem="Eh6-8t-rbg" secondAttribute="leading" id="ULm-wr-8bf"/>
-                            <constraint firstItem="SaZ-rs-5uB" firstAttribute="leading" secondItem="Eh6-8t-rbg" secondAttribute="leading" constant="250" id="VHU-TL-AX7"/>
+                            <constraint firstItem="wz5-59-DM0" firstAttribute="leading" secondItem="Eh6-8t-rbg" secondAttribute="leading" constant="25" id="Ubo-tf-DSt"/>
+                            <constraint firstItem="k0m-yk-J92" firstAttribute="leading" secondItem="Eh6-8t-rbg" secondAttribute="leading" constant="25" id="UkS-1j-fgr"/>
+                            <constraint firstItem="k0m-yk-J92" firstAttribute="top" secondItem="wz5-59-DM0" secondAttribute="bottom" constant="5" id="iDe-9L-Vvh"/>
+                            <constraint firstItem="Eh6-8t-rbg" firstAttribute="trailing" secondItem="k0m-yk-J92" secondAttribute="trailing" constant="25" id="jr2-L3-kuf"/>
                             <constraint firstItem="Ptk-ik-ypt" firstAttribute="trailing" secondItem="Eh6-8t-rbg" secondAttribute="trailing" id="lgk-W7-HMB"/>
-                            <constraint firstItem="SaZ-rs-5uB" firstAttribute="top" secondItem="Eh6-8t-rbg" secondAttribute="top" constant="40" id="ovf-6G-M3Y"/>
-                            <constraint firstItem="Eh6-8t-rbg" firstAttribute="trailing" secondItem="SaZ-rs-5uB" secondAttribute="trailing" constant="30" id="rAR-Fe-D9I"/>
-                            <constraint firstItem="ioh-bB-gem" firstAttribute="top" secondItem="SaZ-rs-5uB" secondAttribute="bottom" constant="30" id="xJd-SE-BZu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Eh6-8t-rbg"/>
                     </view>
@@ -313,7 +311,7 @@
         <!--SelectA Template View Controller-->
         <scene sceneID="2Rm-pw-Dix">
             <objects>
-                <viewController storyboardIdentifier="selectTemplate" modalPresentationStyle="fullScreen" id="Z5J-NL-CnJ" customClass="SelectATemplateViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectTemplate" id="Z5J-NL-CnJ" customClass="SelectATemplateViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D5v-wW-uLx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -387,7 +385,7 @@
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a66-f4-Rix">
-                                <rect key="frame" x="0.0" y="208" width="414" height="332"/>
+                                <rect key="frame" x="0.0" y="198" width="414" height="332"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
                         </subviews>
@@ -416,7 +414,7 @@
         <!--Main Flow View Controller-->
         <scene sceneID="39x-6x-bfF">
             <objects>
-                <viewController storyboardIdentifier="mainFlow" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UO7-mc-UVa" customClass="MainFlowViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainFlow" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UO7-mc-UVa" customClass="MainFlowViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I6g-Eu-dr0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -457,7 +455,7 @@
         <!--Export View Controller-->
         <scene sceneID="5vL-T9-xoE">
             <objects>
-                <viewController restorationIdentifier="exportView" storyboardIdentifier="exportView" modalPresentationStyle="fullScreen" id="U0i-x3-sUS" customClass="ExportViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="exportView" storyboardIdentifier="exportView" id="U0i-x3-sUS" customClass="ExportViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HCy-b0-dez">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
