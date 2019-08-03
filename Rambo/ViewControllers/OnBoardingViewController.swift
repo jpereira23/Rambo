@@ -74,7 +74,8 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func backToMain(_ sender: Any) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "selectTemplate") as! SelectATemplateViewController
-        
+        let defaults = UserDefaults.standard
+        defaults.set(true, forKey: "HasLaunchedOnce")
         //vc.backButton.isEnabled = false
         //vc.backButton.isHidden = true
         

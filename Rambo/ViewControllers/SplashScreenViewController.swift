@@ -69,7 +69,7 @@ class SplashScreenViewController: UIViewController {
             } else {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "onBoarding") as! OnBoardingViewController
                 self.present(vc, animated: true, completion: nil)
-                defaults.set(true, forKey: "HasLaunchedOnce")
+                
                 
             }
             
