@@ -13,6 +13,7 @@ class SelectATemplateViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var continue0: UIButton!
     @IBOutlet weak var backButton: UIButton!
+    var isEdit: Bool = false
     var arrayOfTemplateNames: [String] = ["Column", "Red", "Roboto", "Traditional"]
     var arrayOfSlides: [Template] = []
     var fullResume: FullResume!
@@ -77,6 +78,10 @@ class SelectATemplateViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toMainFlow"{
             let mainFlow = segue.destination as! MainFlowViewController
+            
+            if isEdit == true{
+                mainFlow.isEdit = true
+            }
             if fullResume != nil{
                 mainFlow.fullResume = fullResume
             }

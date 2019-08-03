@@ -15,11 +15,13 @@ protocol MainNavBarDelegate{
     func educationWasSelected()
     func skillsWasSelected()
     func goBack()
+    func exportSelected()
 }
 
 class MainNavBar: UIView {
     var aDelegate: MainNavBarDelegate?
     
+    @IBOutlet weak var exportButton: UIButton!
     @IBOutlet weak var contactButton: UIButton!
     @IBOutlet weak var objectiveButton: UIButton!
     @IBOutlet weak var workButton: UIButton!
@@ -31,7 +33,7 @@ class MainNavBar: UIView {
     var arrayOfButtonViews: [NavButton] = []
     
     override func awakeFromNib(){
-        
+        exportButton.isHidden = true
         scrollView.frame = CGRect(x: 0, y: 186, width: 425, height: 30)
         scrollView.contentSize = CGSize(width: 425, height: 30)
         for i in 0..<arrayOfButtonTitles.count{
@@ -49,6 +51,9 @@ class MainNavBar: UIView {
   
     }
 
+    @IBAction func exportView(_ sender: Any) {
+        aDelegate!.exportSelected()
+    }
     
     @IBAction func goBack(_ sender: Any) {
         aDelegate?.goBack()
