@@ -127,15 +127,15 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
     
     func miscSelected(index: Int){
         
-         let optionMenu = UIAlertController(title: "Select An Option", message: "Not to many options.", preferredStyle: .actionSheet)
-         
-        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
-            self.deleteingStuff(index: index)
-        }
-        
+        let optionMenu = UIAlertController(title: "More Options", message: "Select from one of the options below", preferredStyle: .actionSheet)
+    
         let duplicateAction = UIAlertAction(title: "Duplicate", style: .default) { _ in
             self.duplicateStuff(index: index)
         }
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive) { _ in
+            self.deleteingStuff(index: index)
+        }
+    
         
          //let saveAction = UIAlertAction(title: "Save", style: .default)
          
@@ -154,7 +154,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
     
     func deleteingStuff(index: Int){
         
-         let optionMenu = UIAlertController(title: "Delete", message: "Are you sure you want to delete?", preferredStyle: .alert)
+         let optionMenu = UIAlertController(title: "Delete Resume", message: "Are you sure you want to delete this resume?", preferredStyle: .alert)
         
         let deleteAction = UIAlertAction(title: "Delete", style: .destructive){ _ in
             self.coreDataHelper.deleteResume(index: index)
