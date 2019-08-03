@@ -312,21 +312,25 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
     
     func goNext() {
         self.aView += 1
+        self.aMainNavBar.buttonSelected(index: 1)
         self.selectObjective()
     }
     
     func nextOne(){
         self.aView += 1
+        self.aMainNavBar.buttonSelected(index: 2)
         self.selectWork()
     }
     
     func zeNextOne(){
         self.aView += 1
+        self.aMainNavBar.buttonSelected(index: 3)
         self.selectEducation()
     }
     
     func DANextOne(){
         self.aView += 1
+        self.aMainNavBar.buttonSelected(index: 4)
         self.selectSkill()
     }
     
