@@ -19,10 +19,10 @@ class Node{
     var objectiveLine: String = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Le quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat sum de lavi pu ser sire.</p>"
     var afterObjectiveLine: String = "</div>"
     var educationHeader: String = "<div id=\"education-box\"><h2>Education</h2>"
-    var educationOne: String = " <h3>Penn State University<span id=\"date\">• September 2013 – May 2018</span></h3><p>Computer Science, B.A.</p>"
+    var educationOne: String = " <h3>Penn State University <span id=\"date\">• September 2013 – May 2018</span></h3><p>Computer Science, B.A.</p>"
     var educationFooter: String = "</div>"
     
-    var tmpEducation: String = " <h3>Penn State University<span id=\"date\">• September 2013 – May 2018</span></h3><p>Computer Science, B.A.</p>"
+    var tmpEducation: String = " <h3>Penn State University <span id=\"date\">• September 2013 – May 2018</span></h3><p>Computer Science, B.A.</p>"
     var workExperienceHeader: String = "<div id=\"work-box\"><h2>Work Experience</h2>"
     var workExperience1: String = "<h3>Air Breather, Google <span id=\"date\">• March 2017 – Present</span></h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
     
