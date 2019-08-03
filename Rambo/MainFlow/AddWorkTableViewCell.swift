@@ -37,16 +37,19 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     let keyboardView = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
     
     override func awakeFromNib() {
-        super.awakeFromNib()
+        //super.awakeFromNib()
         // Initialization code
-        
+        //self.startDate.text = "FUCK YOU"
         isEmployed.isOn = true
-        endDate.text = "Present"
-        endDate.isEnabled = false
+        NSLog("startDate.text = \(startDate.text)")
+        //self.endDate.text = "Present"
+        //endDate.isEnabled = false
+        
+        
         jobTitle.delegate = self
         companyName.delegate = self
         startDate.delegate = self
-        endDate.delegate = self
+        //endDate.delegate = self
         CITY.delegate = self
         aDescription.placeholder = "Please place description here."
         aDescription.delegate = self
@@ -87,6 +90,7 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
             endDate.isEnabled = false
         } else {
             endDate.text = ""
+            endDate.placeholder = "08/2016"
             endDate.isEnabled = true
         }
     }
