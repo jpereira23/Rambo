@@ -42,51 +42,53 @@ class MainFlowViewController: UIViewController {
         stepThree.aDelegate = self
         stepFour.aDelegate = self
         stepFive.aDelegate = self
-        if #available(iOS 13.0, *) {
-            self.overrideUserInterfaceStyle = .light
-        } else {
-            // Fallback on earlier versions
-        }
+//        if #available(iOS 13.0, *) {
+//            self.preferredUserInterfaceStyle = .light
+//        } else {
+//            // Fallback on earlier versions
+//        }
     
         aMainNavBar.aDelegate = self
         
         
         
         //buttons
-        stepOne.continue1.layer.cornerRadius = 5
+        stepOne.continue1.layer.cornerRadius = 5.0
         stepOne.ctaBox1.layer.shadowOffset = CGSize(width: 0, height: -5)
         stepOne.ctaBox1.layer.shadowOpacity = 0.07
         stepOne.ctaBox1.layer.shadowRadius = 4.0
         stepOne.ctaBox1.layer.masksToBounds = false
-        stepOne.ctaBox1.layer.cornerRadius = 5
+        stepOne.ctaBox1.layer.cornerRadius = 5.0
         
-        stepTwo.continue2.layer.cornerRadius = 5
+        stepTwo.continue2.layer.cornerRadius = 5.0
         stepTwo.ctaBox2.layer.shadowColor = UIColor.black.cgColor
         stepTwo.ctaBox2.layer.shadowOffset = CGSize(width: 0, height: -5)
         stepTwo.ctaBox2.layer.shadowOpacity = 0.07
         stepTwo.ctaBox2.layer.shadowRadius = 4.0
         stepTwo.ctaBox2.layer.masksToBounds = false
         
-        stepThree.continue3.layer.cornerRadius = 5
+        stepThree.continue3.layer.cornerRadius = 5.0
         stepThree.ctaBox3.layer.shadowColor = UIColor.black.cgColor
         stepThree.ctaBox3.layer.shadowOffset = CGSize(width: 0, height: -5)
         stepThree.ctaBox3.layer.shadowOpacity = 0.07
         stepThree.ctaBox3.layer.shadowRadius = 4.0
         stepThree.ctaBox3.layer.masksToBounds = false
         
-        stepFour.continue4.layer.cornerRadius = 5
+        stepFour.continue4.layer.cornerRadius = 5.0
         stepFour.ctaBox4.layer.shadowColor = UIColor.black.cgColor
         stepFour.ctaBox4.layer.shadowOffset = CGSize(width: 0, height: -5)
         stepFour.ctaBox4.layer.shadowOpacity = 0.07
         stepFour.ctaBox4.layer.shadowRadius = 4.0
         stepFour.ctaBox4.layer.masksToBounds = false
         
-        stepFive.continue5.layer.cornerRadius = 5
+        stepFive.continue5.layer.cornerRadius = 5.0
         stepFive.ctaBox5.layer.shadowColor = UIColor.black.cgColor
         stepFive.ctaBox5.layer.shadowOffset = CGSize(width: 0, height: -5)
         stepFive.ctaBox5.layer.shadowOpacity = 0.07
         stepFive.ctaBox5.layer.shadowRadius = 4.0
         stepFive.ctaBox5.layer.masksToBounds = false
+    
+        stepFive.addSkill.layer.cornerRadius = 5.0
         
         //TextFields Inside Padding
         let indentView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))

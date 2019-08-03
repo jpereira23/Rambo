@@ -23,11 +23,11 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         //self.modalPresentationStyle = .fullScreen
-        if #available(iOS 13.0, *) {
-            self.overrideUserInterfaceStyle = .light
-        } else {
-            // Fallback on earlier versions
-        }
+//        if #available(iOS 13.0, *) {
+////            preferredUserInterfaceStyle = .light
+//        } else {
+//            // Fallback on earlier versions
+//        }
         
         
         
@@ -40,7 +40,7 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         pageControl.pageIndicatorTintColor = UIColor(red: 235.0/255.0, green: 234.0/255.0, blue: 236.0/255.0, alpha: 1.0)
         pageControl.currentPageIndicatorTintColor = UIColor(red: 12.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
         
-        buildResume.layer.cornerRadius = 5
+        buildResume.layer.cornerRadius = 5.0
         scrollView.bringSubviewToFront(pageControl)
         scrollView.bringSubviewToFront(buildResume)
         

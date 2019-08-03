@@ -16,6 +16,7 @@ class StepFive: UIView {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var continue5: UIButton!
     @IBOutlet weak var ctaBox5: UIView!
+    @IBOutlet weak var addSkill: UIButton!
     @IBOutlet weak var skillField: UITextField!
     
     var skills: [String] = []
@@ -71,6 +72,11 @@ extension StepFive: UITableViewDelegate, UITableViewDataSource, UITextFieldDeleg
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "theCell") as! AddSkillTableViewCell
         cell.skillLabel.text = self.skills[indexPath.row]
+        
+        //Textfields Right Padding
+        let indentView0 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
+        skillField.leftView = indentView0
+        skillField.leftViewMode = .always
         
         return cell
     }

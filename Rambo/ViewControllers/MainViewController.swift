@@ -20,13 +20,13 @@ class MainViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light
-        } else {
-            // Fallback on earlier versions
-        }
+//        if #available(iOS 13.0, *) {
+////            preferredUserInterfaceStyle = .light
+//        } else {
+//            // Fallback on earlier versions
+//        }
         //coreDataHelper.resetCoreData()
-        buildNew.layer.cornerRadius = 5
+        buildNew.layer.cornerRadius = 5.0
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "ThirdWayTableViewCell", bundle: bundle)
         self.tableView.register(nib, forCellReuseIdentifier: "cellBitch")

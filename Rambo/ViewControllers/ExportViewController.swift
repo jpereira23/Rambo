@@ -29,12 +29,12 @@ class ExportViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        saveToPhone.layer.cornerRadius = 5
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light
-        } else {
-            // Fallback on earlier versions
-        }
+        saveToPhone.layer.cornerRadius = 5.0
+//        if #available(iOS 13.0, *) {
+//            preferredUserInterfaceStyle = .light
+//        } else {
+//            // Fallback on earlier versions
+//        }
 
         webView.layer.shadowColor = UIColor.black.cgColor
         webView.layer.shadowOffset = CGSize(width: 0, height: 1)
@@ -94,18 +94,18 @@ class ExportViewController: UIViewController {
     }
     
     @IBAction func saveToiPhone(_ sender: Any) {
-        let alertMenu = UIAlertController(title: "File Name", message: "Enter name for exported file.", preferredStyle: .alert)
+        let alertMenu = UIAlertController(title: "Save Your Resume", message: "Please provide a name for your resume.", preferredStyle: .alert)
         
         alertMenu.addTextField(configurationHandler:  { (textField: UITextField!) -> Void in
-            textField.placeholder = "Enter "
+            textField.placeholder = "Ex. John Smith Resume"
         })
-        let submitAction = UIAlertAction(title: "Submit", style: .default){ _ in
+        let submitAction = UIAlertAction(title: "Save", style: .default){ _ in
             let firstTextField = alertMenu.textFields![0] as! UITextField
             self.fileName = firstTextField.text!
             
-            let fileFinishedMenu = UIAlertController(title: "File Saved", message: "File has been saved in 'Files' > 'On My iPhone' > 'Worthy'.", preferredStyle: .alert)
+            let fileFinishedMenu = UIAlertController(title: "Resume Successfully Saved", message: "View your resume in your files app (Files > On My iPhone > Worthy)", preferredStyle: .alert)
             
-            let doneAction = UIAlertAction(title: "Ok", style: .cancel){ _ in
+            let doneAction = UIAlertAction(title: "Awesome!", style: .cancel){ _ in
                 self.changeToMain()
             }
             
@@ -114,7 +114,7 @@ class ExportViewController: UIViewController {
             self.present(fileFinishedMenu, animated: true, completion: nil)
             
         }
-        let cancelAction = UIAlertAction(title: "OK", style: .cancel) { _ in
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
             
         }
         alertMenu.addAction(submitAction)

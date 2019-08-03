@@ -18,7 +18,7 @@ class ThirdWayTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        buildNew.layer.cornerRadius = 5
+        buildNew.layer.cornerRadius = 5.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

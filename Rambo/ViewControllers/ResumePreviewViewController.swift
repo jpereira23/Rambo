@@ -17,12 +17,12 @@ class ResumePreviewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.modalPresentationStyle = .fullScreen
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light
-        } else {
-            // Fallback on earlier versions
-        }
+//        self.modalPresentationStyle = .fullScreen
+//        if #available(iOS 13.0, *) {
+//            self.preferredUserInterfaceStyle = .light
+//        } else {
+//            // Fallback on earlier versions
+//        }
         
         node.setFirstName(name: "Jeff")
         node.setLastName(name: "Pereira")

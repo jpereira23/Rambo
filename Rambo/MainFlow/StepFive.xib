@@ -114,6 +114,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="addSkill" destination="aFp-up-O7b" id="ZfP-YB-t5a"/>
                 <outlet property="continue5" destination="GUA-I6-1w9" id="xl9-UL-13T"/>
                 <outlet property="ctaBox5" destination="RIt-VO-dna" id="bXu-va-A8R"/>
                 <outlet property="skillField" destination="6g9-Kh-ign" id="wNz-xT-rJs"/>
