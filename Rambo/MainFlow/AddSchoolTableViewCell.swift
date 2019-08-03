@@ -100,7 +100,10 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
         endDate.delegate = self
         city.delegate = self
         
-        
+        schoolName.autocapitalizationType = .words
+        degree.autocapitalizationType = .words
+        areaOfStudy.autocapitalizationType = .words
+        city.autocapitalizationType = .words
         
         areaOfStudy.dataList = majors
         

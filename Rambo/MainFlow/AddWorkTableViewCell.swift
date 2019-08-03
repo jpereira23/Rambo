@@ -48,14 +48,19 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
         startDate.delegate = self
         endDate.delegate = self
         CITY.delegate = self
+        aDescription.placeholder = "Please place description here."
+        aDescription.delegate = self
         
+        jobTitle.autocapitalizationType = .words
+        companyName.autocapitalizationType = .words
+        CITY.autocapitalizationType = .words
+        aDescription.autocapitalizationType = .sentences
         
         startDate.addTarget(self, action: #selector(startDateSelected), for: .editingDidBegin)
         endDate.addTarget(self, action: #selector(endDateSelected), for: .editingDidBegin)
         isEmployed.addTarget(self, action: #selector(employedSelected), for: .valueChanged)
         
-        aDescription.placeholder = "Please place description here."
-        aDescription.delegate = self
+        
         
         var aYear = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
         keyboardView.datePicker.aYear = (aYear)
