@@ -112,7 +112,7 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     }
     
     func checkUse() -> Bool{
-        
+        NSLog("TOO FAT FOR IT")
         if jobTitle.text!.count > 0 && companyName.text!.count > 0 && startDate.text!.count > 0 && CITY.text!.count > 0 && aDescription.text!.count > 0{
             return true
         }

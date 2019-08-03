@@ -134,11 +134,12 @@ class MainFlowViewController: UIViewController {
     
     func selectContact(){
         
-        checkUse()
-        
-        if let zeView = self.theView.viewWithTag(1){
-            self.theView.bringSubviewToFront(zeView)
-            aView = 0
+        if stepOne.checkUse() {
+            aMainNavBar.moveSlider(index: 0)
+            if let zeView = self.theView.viewWithTag(1){
+                self.theView.bringSubviewToFront(zeView)
+                aView = 0
+            }
         }
         
     }
@@ -162,104 +163,64 @@ class MainFlowViewController: UIViewController {
         }
     }
     
-    func checkUse(){
-        if stepOne.checkUse() {
-            //let image = UIImage(named: "contact-filled.png")
-            //aMainNavBar.contactButton.setImage(image, for: .normal)
-        } else {
-            //let image = UIImage(named: "contact-empty.png")
-            //aMainNavBar.contactButton.setImage(image, for: .normal)
-        }
-        
-        if stepTwo.checkUse(){
-            NSLog("IT WORKED?")
-            //let image = UIImage(named: "objective-filled.png")
-            //aMainNavBar.objectiveButton.setImage(image, for: .normal)
-        } else {
-            //let image = UIImage(named: "objective-empty.png")
-            //aMainNavBar.objectiveButton.setImage(image, for: .normal)
-        }
-        
-        if stepThree.checkUse(){
-            
-            //let image = UIImage(named: "work-filled.png")
-            //aMainNavBar.workButton.setImage(image, for: .normal)
-        } else {
-            //let image = UIImage(named: "work-empty.png")
-            //aMainNavBar.workButton.setImage(image, for: .normal)
-        }
-        
-        if stepFour.checkUse(){
-            //let image = UIImage(named: "education-filled.png")
-            //aMainNavBar.educationButton.setImage(image, for: .normal)
-        } else {
-            //let image = UIImage(named: "education-empty.png")
-            //aMainNavBar.educationButton.setImage(image, for: .normal)
-        }
-        
-        if stepFive.checkUse(){
-            //let image = UIImage(named: "skills-filled.png")
-            //aMainNavBar.skillsButton.setImage(image, for: .normal)
-        } else {
-            //let image = UIImage(named: "skills-empty.png")
-            //aMainNavBar.skillsButton.setImage(image, for: .normal)
-        }
-    }
     
-    func selectObjective(){
-        NSLog("subview[0].tag = \(self.theView.subviews[0].tag)")
-        NSLog("subview[1].tag = \(self.theView.subviews[1].tag)")
-        NSLog("subview[2].tag = \(self.theView.subviews[2].tag)")
-        NSLog("subview[3].tag = \(self.theView.subviews[3].tag)")
-        //if stepOne.checkUse(){
-            //checkUse()
-            //NSLog("selectObjective")
+    
+    func selectObjective() -> Bool{
+        
+        if stepOne.checkUse(){
+            //self.aMainNavBar.buttonSelected(index: 1)
+            self.aMainNavBar.moveSlider(index: 1)
         
             if let zeView = self.theView.viewWithTag(2){
                 self.theView.bringSubviewToFront(zeView)
                 aView = 1
             }
-        //} else {
-            //failed()
-        //}
+            return true
+        }
+        failed()
+        return false
     
     }
     
     func selectWork(){
-        //if stepTwo.checkUse(){
-            //checkUse()
-        if let zeView = self.theView.viewWithTag(3){
-            self.theView.bringSubviewToFront(zeView)
-            aView = 2
+        if stepTwo.checkUse(){
+            
+            //self.aMainNavBar.buttonSelected(index: 2)
+            aMainNavBar.moveSlider(index: 2)
+            if let zeView = self.theView.viewWithTag(3){
+                self.theView.bringSubviewToFront(zeView)
+                aView = 2
+            }
+        } else {
+            failed()
         }
-        //} else {
-            //failed()
-        //}
     }
     
     func selectEducation(){
-        //if stepThree.checkUse()
-        //{
-            //checkUse()
+        if stepThree.checkUse()
+        {
+            //self.aMainNavBar.buttonSelected(index: 3)
+            aMainNavBar.moveSlider(index: 3)
             if let zeView = self.theView.viewWithTag(4){
                 self.theView.bringSubviewToFront(zeView)
                 aView = 3
             }
-        //} else {
-            //failed()
-        //}
+        } else {
+            failed()
+        }
     }
     
     func selectSkill(){
-        //if stepFour.checkUse(){
-            //checkUse()
+        if stepFour.checkUse(){
+            //self.aMainNavBar.buttonSelected(index: 4)
+            aMainNavBar.moveSlider(index: 4)
             if let zeView = self.theView.viewWithTag(5){
                 self.theView.bringSubviewToFront(zeView)
                 aView = 4
             }
-        //} else {
-            //failed()
-        //}
+        } else {
+            failed()
+        }
     }
     
     func compileInformation() -> FullResume{
@@ -268,7 +229,6 @@ class MainFlowViewController: UIViewController {
         let arrayOfWorks: [Work] = stepThree.arrayOfWorks
         let arrayOfSchools: [School] = stepFour.arrayOfSchools
         let skills: [String] = stepFive.skills
-        NSLog("compiling Information and the anIndex is \(anIndex)")
         fullResume = FullResume(bI: basic, o: objective, aW: arrayOfWorks, aS: arrayOfSchools, s: skills, i: anIndex)
         
         
@@ -280,6 +240,7 @@ class MainFlowViewController: UIViewController {
 extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDelegate, StepThreeDelegate, StepFourDelegate, StepFiveDelegate{
     
     
+    
     func contactWasSelected() {
         if aView != 0{
             selectContact()
@@ -288,12 +249,14 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
     
     func objectiveWasSelected() {
         if aView != 1{
+            NSLog("Jesus")
             selectObjective()
         }
     }
     
     func workWasSelected() {
         if aView != 2{
+            NSLog("JJEFUCKINUS")
             selectWork()
         }
     }
@@ -312,25 +275,25 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
     
     func goNext() {
         self.aView += 1
-        self.aMainNavBar.buttonSelected(index: 1)
+        //self.aMainNavBar.buttonSelected(index: 1)
         self.selectObjective()
     }
     
     func nextOne(){
         self.aView += 1
-        self.aMainNavBar.buttonSelected(index: 2)
+        //self.aMainNavBar.buttonSelected(index: 2)
         self.selectWork()
     }
     
     func zeNextOne(){
         self.aView += 1
-        self.aMainNavBar.buttonSelected(index: 3)
+        //self.aMainNavBar.buttonSelected(index: 3)
         self.selectEducation()
     }
     
     func DANextOne(){
         self.aView += 1
-        self.aMainNavBar.buttonSelected(index: 4)
+        //self.aMainNavBar.buttonSelected(index: 4)
         self.selectSkill()
     }
     
