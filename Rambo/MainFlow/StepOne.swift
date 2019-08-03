@@ -110,7 +110,9 @@ class StepOne: UIView, UITextFieldDelegate{
         link.delegate = self
         
         fullName.autocapitalizationType = .words
-        
+        fullName.textContentType = .nickname
+        phoneNumber.textContentType = .telephoneNumber
+        email.textContentType = .emailAddress
         
         phoneNumber.keyboardType = .numberPad
         email.keyboardType = .emailAddress
