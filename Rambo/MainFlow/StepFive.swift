@@ -32,7 +32,7 @@ class StepFive: UIView {
     
     override func awakeFromNib() {
         skillField.delegate = self
-        
+        skillField.autocapitalizationType = .words
         tableView.delegate = self
         tableView.dataSource = self
         let bundle = Bundle(for: type(of: self))
@@ -48,6 +48,7 @@ class StepFive: UIView {
     }
     @IBAction func addSkill(_ sender: Any) {
         skills.append(skillField.text!)
+        skillField.text = "" 
         tableView.reloadData()
     }
     

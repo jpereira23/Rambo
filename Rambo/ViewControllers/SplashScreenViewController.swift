@@ -15,6 +15,7 @@ class SplashScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         
         self.modalPresentationStyle = .fullScreen
         
@@ -69,7 +70,7 @@ class SplashScreenViewController: UIViewController {
             } else {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "onBoarding") as! OnBoardingViewController
                 self.present(vc, animated: true, completion: nil)
-                defaults.set(true, forKey: "HasLaunchedOnce")
+                
                 
             }
             

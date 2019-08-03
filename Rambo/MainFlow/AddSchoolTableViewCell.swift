@@ -75,8 +75,7 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
     
     var majors: [String] = ["Accounting", "Actuarial Sciences", "Advertising", "Agriculture", "Agricultural and Biological Engineering", "Agricultural Business Management", "Agriculture Economics", "Animal Bioscience", "Animal Sciences", "Anthropology", "Applied Mathematics", "Archaeology", "Architectual Engineering", "Architecture", "Art History", "Studio Art", "Art Education", "Bibehavioral Health", "Biochemistry", "Bioengineering", "Biology", "Biophysics", "Biotechnology", "Business Administration and Management", "Business Logistics", "Chemical Engineering", "Chemistry", "Children", "Civil Engineering", "Communications & Media", "Communication Studies", "Computer Engineering", "Computer Science", "Crime, Law, and Justice", "Dance", "Earth Sciences", "Economics", "Electrical Engineering", "Elementary and Kindergarten Education", "Engineering Science", "English", "Environmental Systems Engineering", "Environmental Sciences", "Environmental Resource Management", "Film and Video", "Finance", "Food Science", "Forest Science", "Forest Technology", "General Science", "Geography", "Geosciences", "Graphic Design and Photography", "Health and Physical Education", "Health Policy and Administration", "History", "Horticulture", "Hotel, Restauarant and Institutional Management", "Human Development and Family Studies", "Industrial Engineering", "Information Sciences and Technology", "Journalism", "Kinesiology", "Landscape Architecture", "Law Enforcement and Correction", "Marine Biology", "Marketing", "Mathematics", "Mechanical Engineering", "Media Studies", "Meteorology", "Microbiology", "Mineral Economics", "Modern Languages", "Music Education", "Nuclear Engineering", "Nursing", "Nutrition", "Philosiphy", "Physics", "Physiology", "Political Science", "Pre-medicine", "Psychology", "Public Relations", "Real Estate", "Recreation and Parks", "Rehabilitation Services", "Religious Studies", "Secondary Education", "Sociology", "Social Work", "Special Education", "Speech Communication", "Speech Pathology and Audiology/Communication Disorder", "Statistics", "Telecommunications", "Theater", "Wildlife and Fishery Science", "Wildlife Technology", "Women's Studies"]
     override func awakeFromNib() {
-        super.awakeFromNib()
-        
+        //super.awakeFromNib()
         // Intialization code
         /*
         do {
@@ -87,6 +86,7 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
             print("error processing: \(error)")
         }
         */
+        
         isEmployee.isOn = true
         endDate.text = "Present"
         endDate.isEnabled = false
@@ -100,7 +100,10 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
         endDate.delegate = self
         city.delegate = self
         
-        
+        schoolName.autocapitalizationType = .words
+        degree.autocapitalizationType = .words
+        areaOfStudy.autocapitalizationType = .words
+        city.autocapitalizationType = .words
         
         areaOfStudy.dataList = majors
         
@@ -116,6 +119,8 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
         startDate.inputView = keyboardView
         endDate.inputView = keyboardView
         keyboardView.delegate = self
+        
+        addDoneButton()
     }
     
     @objc func countryStartEditing(textField: UITextField){
@@ -158,6 +163,56 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
     func processFile(at url: URL) throws{
         let s = try String(contentsOf: url)
         try process(string: s)
+    }
+    
+    func addDoneButton(){
+        let doneToolbar3: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        doneToolbar3.barStyle = .default
+        
+        let flexSpace3 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done3: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction3))
+        let cancel3: UIBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(self.cancelButtonAction3))
+        done3.tintColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        cancel3.tintColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        
+        let items3 = [cancel3, flexSpace3, done3]
+        doneToolbar3.items = items3
+        doneToolbar3.sizeToFit()
+        
+        endDate.inputAccessoryView = doneToolbar3
+        
+        let doneToolbar4: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        doneToolbar4.barStyle = .default
+        
+        let flexSpace4 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done4: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction4))
+        let cancel4: UIBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(self.cancelButtonAction4))
+        done4.tintColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        cancel4.tintColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        
+        let items4 = [cancel4, flexSpace4, done4]
+        doneToolbar4.items = items4
+        doneToolbar4.sizeToFit()
+        
+        startDate.inputAccessoryView = doneToolbar4
+    }
+    
+    @objc func doneButtonAction3(){
+        keyboardView.getData()
+        endDate.resignFirstResponder()
+    }
+    
+    @objc func cancelButtonAction3(){
+        endDate.resignFirstResponder()
+    }
+    
+    @objc func doneButtonAction4(){
+        keyboardView.getData()
+        startDate.resignFirstResponder()
+    }
+    
+    @objc func cancelButtonAction4(){
+        startDate.resignFirstResponder()
     }
     
     func keyWasTapped(date: String) {

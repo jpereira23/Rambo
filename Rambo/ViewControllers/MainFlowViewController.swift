@@ -31,7 +31,8 @@ class MainFlowViewController: UIViewController {
     
     var dateAlert: UIAlertController!
     var fullResume: FullResume!
-    
+    var isEdit: Bool = false
+    var editIndex: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +42,11 @@ class MainFlowViewController: UIViewController {
         stepThree.aDelegate = self
         stepFour.aDelegate = self
         stepFive.aDelegate = self
+        if #available(iOS 13.0, *) {
+            self.overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
     
         aMainNavBar.aDelegate = self
         
@@ -214,6 +220,7 @@ class MainFlowViewController: UIViewController {
         if stepFour.checkUse(){
             //self.aMainNavBar.buttonSelected(index: 4)
             aMainNavBar.moveSlider(index: 4)
+            aMainNavBar.exportButton.isHidden = false
             if let zeView = self.theView.viewWithTag(5){
                 self.theView.bringSubviewToFront(zeView)
                 aView = 4
@@ -238,6 +245,16 @@ class MainFlowViewController: UIViewController {
 }
 
 extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDelegate, StepThreeDelegate, StepFourDelegate, StepFiveDelegate{
+    func exportSelected() {
+        let fullResume = compileInformation()
+        let vc = storyboard?.instantiateViewController(withIdentifier: "exportView") as! ExportViewController
+        if isEdit == true{
+            vc.isEdit = true
+        }
+        vc.fullResume = fullResume
+        self.present(vc, animated: true, completion: nil)
+    }
+    
     
     
     
@@ -346,6 +363,9 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
     func timeToExport() {
         let fullResume = compileInformation()
         let vc = storyboard?.instantiateViewController(withIdentifier: "exportView") as! ExportViewController
+        if isEdit == true{
+            vc.isEdit = true
+        }
         vc.fullResume = fullResume
         self.present(vc, animated: true, completion: nil)
     }

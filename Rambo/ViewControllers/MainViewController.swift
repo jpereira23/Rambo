@@ -20,7 +20,11 @@ class MainViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
         //coreDataHelper.resetCoreData()
         buildNew.layer.cornerRadius = 5
         let bundle = Bundle(for: type(of: self))
@@ -115,6 +119,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
     func editSelected(fullResume: FullResume) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "selectTemplate") as! SelectATemplateViewController
         vc.fullResume = fullResume
+        vc.isEdit = true
+        
         self.present(vc, animated: true, completion: nil)
         
     }

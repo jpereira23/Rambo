@@ -146,7 +146,8 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
         cell.jobTitle.text = arrayOfWorks[indexPath.row].jobTitle
         cell.CITY.text = arrayOfWorks[indexPath.row].city
         cell.startDate.text = arrayOfWorks[indexPath.row].startDate
-        cell.endDate.text = arrayOfWorks[indexPath.row].endDate
+        cell.endDate.text = "Present"
+        cell.endDate.isEnabled = false
         cell.companyName.text = arrayOfWorks[indexPath.row].companyName
         cell.aDescription.text = arrayOfWorks[indexPath.row].description
     

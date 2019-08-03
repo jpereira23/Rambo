@@ -109,6 +109,11 @@ class StepOne: UIView, UITextFieldDelegate{
         email.delegate = self
         link.delegate = self
         
+        fullName.autocapitalizationType = .words
+        fullName.textContentType = .nickname
+        phoneNumber.textContentType = .telephoneNumber
+        email.textContentType = .emailAddress
+        
         phoneNumber.keyboardType = .numberPad
         email.keyboardType = .emailAddress
         
@@ -145,12 +150,10 @@ class StepOne: UIView, UITextFieldDelegate{
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
     {
-        NSLog("Hello, how are you")
+        
         
         var aString: String! = phoneNumber!.text
         let isBackspace: Int32! = strcmp(string.cString(using: String.Encoding.utf8), "\\b")
-        
-        NSLog("\(aString.count)")
         if aString.count == 3 && isBackspace != -92{
             let index = aString.index(aString.startIndex, offsetBy: 3)
             aString.insert("-", at: index)

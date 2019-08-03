@@ -37,25 +37,33 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     let keyboardView = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
     
     override func awakeFromNib() {
-        super.awakeFromNib()
+        //super.awakeFromNib()
         // Initialization code
-        
+        //self.startDate.text = "FUCK YOU"
         isEmployed.isOn = true
-        endDate.text = "Present"
-        endDate.isEnabled = false
+        NSLog("startDate.text = \(startDate.text)")
+        //self.endDate.text = "Present"
+        //endDate.isEnabled = false
+        
+        
         jobTitle.delegate = self
         companyName.delegate = self
         startDate.delegate = self
-        endDate.delegate = self
+        //endDate.delegate = self
         CITY.delegate = self
+        aDescription.placeholder = "Please place description here."
+        aDescription.delegate = self
         
+        jobTitle.autocapitalizationType = .words
+        companyName.autocapitalizationType = .words
+        CITY.autocapitalizationType = .words
+        aDescription.autocapitalizationType = .sentences
         
         startDate.addTarget(self, action: #selector(startDateSelected), for: .editingDidBegin)
         endDate.addTarget(self, action: #selector(endDateSelected), for: .editingDidBegin)
         isEmployed.addTarget(self, action: #selector(employedSelected), for: .valueChanged)
         
-        aDescription.placeholder = "Please place description here."
-        aDescription.delegate = self
+        
         
         var aYear = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
         keyboardView.datePicker.aYear = (aYear)
@@ -82,6 +90,7 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
             endDate.isEnabled = false
         } else {
             endDate.text = ""
+            endDate.placeholder = "08/2016"
             endDate.isEnabled = true
         }
     }
@@ -105,6 +114,55 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
         aDoneToolbar.sizeToFit()
         
         aDescription.inputAccessoryView = aDoneToolbar
+        
+ 
+        let doneToolbar3: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        doneToolbar3.barStyle = .default
+        
+        let flexSpace3 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done3: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction3))
+        let cancel3: UIBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(self.cancelButtonAction3))
+        done3.tintColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        cancel3.tintColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        
+        let items3 = [cancel3, flexSpace3, done3]
+        doneToolbar3.items = items3
+        doneToolbar3.sizeToFit()
+        
+        endDate.inputAccessoryView = doneToolbar3
+        
+        let doneToolbar4: UIToolbar = UIToolbar(frame: CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 50))
+        doneToolbar4.barStyle = .default
+        
+        let flexSpace4 = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let done4: UIBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonAction4))
+        let cancel4: UIBarButtonItem = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(self.cancelButtonAction4))
+        done4.tintColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        cancel4.tintColor = UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0)
+        
+        let items4 = [cancel4, flexSpace4, done4]
+        doneToolbar4.items = items4
+        doneToolbar4.sizeToFit()
+        
+        startDate.inputAccessoryView = doneToolbar4
+    }
+    
+    @objc func doneButtonAction3(){
+        keyboardView.getData()
+        endDate.resignFirstResponder()
+    }
+    
+    @objc func cancelButtonAction3(){
+        endDate.resignFirstResponder()
+    }
+    
+    @objc func doneButtonAction4(){
+        keyboardView.getData()
+        startDate.resignFirstResponder()
+    }
+    
+    @objc func cancelButtonAction4(){
+        startDate.resignFirstResponder()
     }
     
     @objc func linkDoneButtonAction(){
@@ -112,7 +170,6 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     }
     
     func checkUse() -> Bool{
-        NSLog("TOO FAT FOR IT")
         if jobTitle.text!.count > 0 && companyName.text!.count > 0 && startDate.text!.count > 0 && CITY.text!.count > 0 && aDescription.text!.count > 0{
             return true
         }

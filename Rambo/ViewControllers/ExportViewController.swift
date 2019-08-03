@@ -24,21 +24,32 @@ class ExportViewController: UIViewController {
     var fullResume: FullResume!
     var coreDataHelper: CoreDataHelper = CoreDataHelper()
     var fileName = "output"
+    var isEdit: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         saveToPhone.layer.cornerRadius = 5
-        
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
+
         webView.layer.shadowColor = UIColor.black.cgColor
         webView.layer.shadowOffset = CGSize(width: 0, height: 1)
         webView.layer.shadowOpacity = 0.1
         webView.layer.shadowRadius = 5.0
         webView.layer.masksToBounds = false
+        webView.isUserInteractionEnabled = false
         
         
         let url = Bundle.main.url(forResource: "sample_one", withExtension: "html")
-        
+        if isEdit == false{
         coreDataHelper.saveFullResume(fullResume: fullResume)
+        } else if isEdit == true{
+            
+        }
         node.setFirstName(name: fullResume.basicInfo.fullName)
         node.setEmail(email: fullResume.basicInfo.email)
         node.setNumber(number: fullResume.basicInfo.phoneNumber)
@@ -83,7 +94,7 @@ class ExportViewController: UIViewController {
     }
     
     @IBAction func saveToiPhone(_ sender: Any) {
-        let alertMenu = UIAlertController(title: "Resume has been saved!", message: "View your resume in your app Files > On My iPhone > Worthy", preferredStyle: .alert)
+        let alertMenu = UIAlertController(title: "File Name", message: "Enter name for exported file.", preferredStyle: .alert)
         
         alertMenu.addTextField(configurationHandler:  { (textField: UITextField!) -> Void in
             textField.placeholder = "Enter "
@@ -92,8 +103,16 @@ class ExportViewController: UIViewController {
             let firstTextField = alertMenu.textFields![0] as! UITextField
             self.fileName = firstTextField.text!
             
+            let fileFinishedMenu = UIAlertController(title: "File Saved", message: "File has been saved in 'Files' > 'On My iPhone' > 'Worthy'.", preferredStyle: .alert)
+            
+            let doneAction = UIAlertAction(title: "Ok", style: .cancel){ _ in
+                self.changeToMain()
+            }
+            
+            fileFinishedMenu.addAction(doneAction)
             self.savePDFToiPhone()
-            self.changeToMain()
+            self.present(fileFinishedMenu, animated: true, completion: nil)
+            
         }
         let cancelAction = UIAlertAction(title: "OK", style: .cancel) { _ in
             

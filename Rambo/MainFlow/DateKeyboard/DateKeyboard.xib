@@ -18,30 +18,17 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oit-dD-Dqb">
-                    <rect key="frame" x="0.0" y="70" width="414" height="210"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oit-dD-Dqb">
+                    <rect key="frame" x="0.0" y="44" width="414" height="236"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWq-cF-Ieu">
-                    <rect key="frame" x="30" y="32" width="354" height="30"/>
-                    <state key="normal" title="Done">
-                        <color key="titleColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="getDate:" destination="-1" eventType="touchUpInside" id="PFL-ze-Vay"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Oit-dD-Dqb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="09y-xU-0PB"/>
-                <constraint firstItem="Oit-dD-Dqb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="5gI-TT-820"/>
-                <constraint firstAttribute="bottom" secondItem="eWq-cF-Ieu" secondAttribute="bottom" constant="218" id="Ekd-vz-kac"/>
-                <constraint firstItem="eWq-cF-Ieu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="Mcb-f2-TAt"/>
-                <constraint firstItem="eWq-cF-Ieu" firstAttribute="top" secondItem="Oit-dD-Dqb" secondAttribute="bottom" constant="-248" id="NLT-TV-pdZ"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eWq-cF-Ieu" secondAttribute="trailing" constant="30" id="NNi-qs-8zi"/>
-                <constraint firstItem="eWq-cF-Ieu" firstAttribute="top" secondItem="Oit-dD-Dqb" secondAttribute="bottom" constant="-248" id="iyg-MF-x05"/>
-                <constraint firstItem="Oit-dD-Dqb" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="j51-MB-X19"/>
+                <constraint firstItem="Oit-dD-Dqb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2cf-Lq-BCP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Oit-dD-Dqb" secondAttribute="bottom" id="8a8-d8-Af3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="top" secondItem="Oit-dD-Dqb" secondAttribute="top" id="o81-de-OzJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Oit-dD-Dqb" secondAttribute="trailing" id="tQE-CJ-cbM"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
