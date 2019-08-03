@@ -20,6 +20,12 @@ class SelectATemplateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
         scrollView.layer.shadowColor = UIColor.black.cgColor
         scrollView.layer.shadowOffset = CGSize(width: 0, height: 1)
         scrollView.layer.shadowOpacity = 0.1

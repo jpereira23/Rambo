@@ -23,6 +23,11 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         //self.modalPresentationStyle = .fullScreen
+        if #available(iOS 13.0, *) {
+            self.overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
         
         
         

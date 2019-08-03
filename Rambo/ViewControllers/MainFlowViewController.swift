@@ -41,6 +41,11 @@ class MainFlowViewController: UIViewController {
         stepThree.aDelegate = self
         stepFour.aDelegate = self
         stepFive.aDelegate = self
+        if #available(iOS 13.0, *) {
+            self.overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
     
         aMainNavBar.aDelegate = self
         
