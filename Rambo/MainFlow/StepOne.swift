@@ -200,11 +200,9 @@ class StepOne: UIView, UITextFieldDelegate{
             phoneNumber.text = aString
             
         }
-        
-        
-        
-        
-        
+        if(isBackspace != -92){
+            return phoneNumber.text!.count <= 13
+        }
         return true
     }
     

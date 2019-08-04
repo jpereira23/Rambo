@@ -181,6 +181,81 @@ class CoreDataHelper{
         
     }
     
+    public func updateResume(index: Int, fullResume: FullResume){
+        
+ 
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "AFullResume")
+        
+        do {
+            managedObjects = []
+            managedObjects = try self.managedContext!.fetch(fetchRequest)
+        } catch let error as NSError {
+            NSLog(error.localizedDescription)
+        }
+        
+        let theFullResume = managedObjects[index] as! AFullResume
+    
+        theFullResume.setValue(fullResume.objective, forKeyPath: "objective")
+        let theProfile = theFullResume.aBasicInfo!.allObjects[0] as! ABasicInfo
+        
+        theProfile.setValue(fullResume.basicInfo.email, forKeyPath: "email")
+        theProfile.setValue(fullResume.basicInfo.fullName, forKeyPath: "fullName")
+        theProfile.setValue(fullResume.basicInfo.link, forKeyPath: "link")
+        theProfile.setValue(fullResume.basicInfo.phoneNumber, forKeyPath: "phoneNumber")
+        theFullResume.setValue(fullResume.index, forKeyPath: "index")
+        
+        let works = theFullResume.mutableSetValue(forKey: "works")
+        
+        for work in fullResume.arrayOfWorks{
+            let aWork = NSManagedObject(entity: self.workEntity!, insertInto: self.managedContext)
+            
+            aWork.setValue(work.jobTitle, forKeyPath: "jobTitle")
+            aWork.setValue(work.city, forKeyPath: "city")
+            aWork.setValue(work.companyName, forKeyPath: "companyName")
+            aWork.setValue(work.description, forKeyPath: "aDescription")
+            aWork.setValue(work.startDate, forKeyPath: "startDate")
+            aWork.setValue(work.endDate, forKeyPath: "endDate")
+            
+            works.add(aWork)
+        }
+        
+        let schools = theFullResume.mutableSetValue(forKey: "schools")
+        
+        for school in fullResume.arrayOfSchools{
+            let aSchool = NSManagedObject(entity: self.schoolEntity!, insertInto: self.managedContext)
+            
+            aSchool.setValue(school.areaOfStudy, forKeyPath: "areaOfStudy")
+            aSchool.setValue(school.city, forKeyPath: "city")
+            aSchool.setValue(school.degree, forKeyPath: "degree")
+            aSchool.setValue(school.endDate, forKeyPath: "endDate")
+            aSchool.setValue(school.startDate, forKeyPath: "startDate")
+            aSchool.setValue(school.schoolName, forKeyPath: "schoolName")
+            
+            schools.add(aSchool)
+        }
+        
+        let skills = theFullResume.mutableSetValue(forKey: "skills")
+        
+        for skill in fullResume.skills{
+            let aSkill = NSManagedObject(entity: self.skillsEntity!, insertInto: self.managedContext)
+            
+            aSkill.setValue(skill, forKeyPath: "aSkill")
+            skills.add(aSkill)
+        }
+        
+        let aBasicInfos = theFullResume.mutableSetValue(forKey: "aBasicInfo")
+        aBasicInfos.add(theProfile)
+        
+        managedObjects[index] = theFullResume
+        
+        do{
+            try self.managedContext.save()
+        } catch let error as NSError {
+            NSLog(error.localizedDescription)
+        }
+        
+    }
+    
     public func deleteResume(index: Int){
         var tempFullResume: [FullResume] = []
         

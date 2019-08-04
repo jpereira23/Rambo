@@ -11,6 +11,7 @@ import UIKit
 
 protocol AddSchoolTableViewCellDelegate{
     func startedEditing(y: Int)
+    func deletingSchool(index: Int)
 }
 
 struct SchoolStuff{
@@ -163,6 +164,11 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
     func processFile(at url: URL) throws{
         let s = try String(contentsOf: url)
         try process(string: s)
+    }
+    
+    
+    @IBAction func deleteSchool(_ sender: Any) {
+        aDelegate.deletingSchool(index: index)
     }
     
     func addDoneButton(){

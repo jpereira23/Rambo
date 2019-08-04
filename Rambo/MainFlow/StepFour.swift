@@ -153,6 +153,13 @@ extension StepFour: UITableViewDataSource, UITableViewDelegate{
 }
 
 extension StepFour: AddSchoolTableViewCellDelegate{
+    func deletingSchool(index: Int) {
+        arrayOfCells.remove(at: index)
+        arrayOfSchools.remove(at: index)
+        
+        tableview.reloadData()
+    }
+    
     func startedEditing(y: Int) {
         var point = CGPoint(x: 0, y: y)
         NSLog("point = \(point)")

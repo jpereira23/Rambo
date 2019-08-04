@@ -129,6 +129,7 @@ class MainFlowViewController: UIViewController {
             stepOne.link.text = fullResume.basicInfo.link
             
             stepTwo.textView.text = fullResume.objective
+            stepTwo.textView.viewWithTag(100)!.isHidden = true 
             
             stepThree.arrayOfWorks = fullResume.arrayOfWorks
             
@@ -251,7 +252,9 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
         let fullResume = compileInformation()
         let vc = storyboard?.instantiateViewController(withIdentifier: "exportView") as! ExportViewController
         if isEdit == true{
+            NSLog("IS IT TRUE")
             vc.isEdit = true
+            vc.editIndex = editIndex
         }
         vc.fullResume = fullResume
         self.present(vc, animated: true, completion: nil)
@@ -367,6 +370,7 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
         let vc = storyboard?.instantiateViewController(withIdentifier: "exportView") as! ExportViewController
         if isEdit == true{
             vc.isEdit = true
+            vc.editIndex = editIndex
         }
         vc.fullResume = fullResume
         self.present(vc, animated: true, completion: nil)

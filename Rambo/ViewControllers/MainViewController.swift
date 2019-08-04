@@ -32,6 +32,11 @@ class MainViewController: UIViewController{
         self.tableView.register(nib, forCellReuseIdentifier: "cellBitch")
         
         arrayOfResumes = coreDataHelper.loadFullResume()
+        if arrayOfResumes.count > 0{
+            accountLabel.text = "Hi " + arrayOfResumes[0].basicInfo.fullName + "!"
+        } else {
+            accountLabel.text = "Hi User!"
+        }
         
         self.tableView.reloadData()
         // Do any additional setup after loading the view.
@@ -116,10 +121,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         self.present(vc, animated: true, completion: nil)
     }
     
-    func editSelected(fullResume: FullResume) {
+    func editSelected(fullResume: FullResume, index: Int) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "selectTemplate") as! SelectATemplateViewController
         vc.fullResume = fullResume
         vc.isEdit = true
+        vc.editIndex = index
+        
         
         self.present(vc, animated: true, completion: nil)
         

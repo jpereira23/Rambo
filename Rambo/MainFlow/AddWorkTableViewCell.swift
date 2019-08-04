@@ -11,6 +11,7 @@ import UIKit
 
 protocol AddWorkTableViewCellDelegate{
     func editingBegan(y: Int)
+    func deleteCell(index: Int)
 }
 class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     @IBOutlet weak var jobTitle: UITextField!
@@ -168,6 +169,11 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     @objc func linkDoneButtonAction(){
         aDescription.resignFirstResponder()
     }
+    
+    @IBAction func deleteWork(_ sender: Any) {
+        aDelegate?.deleteCell(index: index)
+    }
+    
     
     func checkUse() -> Bool{
         if jobTitle.text!.count > 0 && companyName.text!.count > 0 && startDate.text!.count > 0 && CITY.text!.count > 0 && aDescription.text!.count > 0{

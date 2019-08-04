@@ -17,6 +17,7 @@ class SelectATemplateViewController: UIViewController {
     var arrayOfTemplateNames: [String] = ["Column", "Red", "Roboto", "Traditional"]
     var arrayOfSlides: [Template] = []
     var fullResume: FullResume!
+    var editIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +82,7 @@ class SelectATemplateViewController: UIViewController {
             
             if isEdit == true{
                 mainFlow.isEdit = true
+                mainFlow.editIndex = self.editIndex
             }
             if fullResume != nil{
                 mainFlow.fullResume = fullResume
