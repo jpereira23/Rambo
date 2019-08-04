@@ -240,6 +240,7 @@
                 <outlet property="cityStack" destination="Crh-1H-d52" id="6l5-9z-G2V"/>
                 <outlet property="companyName" destination="B8m-b8-nay" id="5Ji-rB-ka4"/>
                 <outlet property="companyNameStack" destination="lxp-5n-zvG" id="f9y-AI-p2z"/>
+                <outlet property="deleteButton" destination="Pjv-wj-dAJ" id="Asl-ag-R5b"/>
                 <outlet property="descriptionStack" destination="kGr-Oo-5PD" id="nOy-SV-G2V"/>
                 <outlet property="endDate" destination="b1p-hD-g86" id="Tqx-Wn-98V"/>
                 <outlet property="endDateStack" destination="Ane-Z2-nHr" id="XeH-WX-PTH"/>

@@ -66,6 +66,7 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
     @IBOutlet weak var startDateStack: UIStackView!
     @IBOutlet weak var endDateStack: UIStackView!
     @IBOutlet weak var cityStack: UIStackView!
+    @IBOutlet weak var deleteButton: UIButton!
     
     let keyboardView = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
     var aDelegate: AddSchoolTableViewCellDelegate!

@@ -138,16 +138,16 @@
                         </subviews>
                     </stackView>
                     <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DZd-28-5JS">
-                        <rect key="frame" x="148.5" y="468" width="141.5" height="31"/>
+                        <rect key="frame" x="143.5" y="468" width="146.5" height="31"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I still attend here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ckT-Qy-LZD">
-                                <rect key="frame" x="0.0" y="0.0" width="88.5" height="31"/>
+                                <rect key="frame" x="0.0" y="0.0" width="93.5" height="31"/>
                                 <fontDescription key="fontDescription" name="NotoSansJP-Regular" family="Noto Sans JP Regular" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6kt-ND-ICk">
-                                <rect key="frame" x="92.5" y="0.0" width="51" height="31"/>
+                                <rect key="frame" x="97.5" y="0.0" width="51" height="31"/>
                                 <color key="onTintColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                             </switch>
                         </subviews>
@@ -221,6 +221,7 @@
                 <outlet property="cityStack" destination="0vI-WJ-BOv" id="Rm2-g3-gVV"/>
                 <outlet property="degree" destination="TGn-3x-aBB" id="QdZ-ya-sPK"/>
                 <outlet property="degreeStack" destination="Bcx-Fy-1YE" id="MBI-cL-Km8"/>
+                <outlet property="deleteButton" destination="hu1-ev-sPa" id="09J-OI-GZc"/>
                 <outlet property="endDate" destination="FAt-zy-e3p" id="Ywb-s6-ljE"/>
                 <outlet property="endDateStack" destination="GaJ-4f-j4K" id="bax-HJ-qfC"/>
                 <outlet property="isEmployee" destination="6kt-ND-ICk" id="6Tf-ip-nfh"/>

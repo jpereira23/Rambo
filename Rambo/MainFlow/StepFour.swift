@@ -113,6 +113,9 @@ extension StepFour: UITableViewDataSource, UITableViewDelegate{
         
         cell.aDelegate = self
         
+        if indexPath.row == 0{
+            cell.deleteButton.isHidden = true
+        }
         //Textfields Right Padding
         let indentView0 = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 44))
         cell.schoolName.leftView = indentView0

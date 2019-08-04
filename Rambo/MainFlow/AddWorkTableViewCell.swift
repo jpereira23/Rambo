@@ -27,6 +27,7 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     @IBOutlet weak var endDateStack: UIStackView!
     @IBOutlet weak var cityStack: UIStackView!
     @IBOutlet weak var descriptionStack: UIStackView!
+    @IBOutlet weak var deleteButton: UIButton!
     
     
     var aDelegate: AddWorkTableViewCellDelegate?

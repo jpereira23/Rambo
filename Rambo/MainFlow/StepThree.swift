@@ -109,6 +109,10 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "laCell") as! AddWorkTableViewCell
         
+        
+        if indexPath.row == 0{
+            cell.deleteButton.isHidden = true
+        }
         cell.index = indexPath.row
         cell.aDelegate = self
     
