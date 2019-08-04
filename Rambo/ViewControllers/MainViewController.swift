@@ -32,6 +32,11 @@ class MainViewController: UIViewController{
         self.tableView.register(nib, forCellReuseIdentifier: "cellBitch")
         
         arrayOfResumes = coreDataHelper.loadFullResume()
+        if arrayOfResumes.count > 0{
+            accountLabel.text = "Hi " + arrayOfResumes[0].basicInfo.fullName + "!"
+        } else {
+            accountLabel.text = "Hi User!"
+        }
         
         self.tableView.reloadData()
         // Do any additional setup after loading the view.
