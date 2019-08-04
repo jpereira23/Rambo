@@ -15,19 +15,7 @@ class MonthYearPickerView: UIPickerView, UIPickerViewDelegate, UIPickerViewDataS
     var year: Int = 2019
     var aYear: Int = 2019
     
-    var month = Calendar.current.component(.month, from: Date()) {
-        didSet {
-            selectRow(month-1, inComponent: 0, animated: false)
-        }
-    }
-    /*
- 
-    var year = Calendar.current.component(.year, from: Date()) {
-        didSet {
-            selectRow(years.index(of: year)!, inComponent: 1, animated: true)
-        }
-    }
-    */
+    var month = 1
     var onDateSelected: ((_ month: Int, _ year: Int) -> Void)?
     
     override init(frame: CGRect) {

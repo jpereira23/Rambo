@@ -160,8 +160,16 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
 }
 
 extension StepThree: AddWorkTableViewCellDelegate{
+    func deleteCell(index: Int) {
+        arrayOfCells.remove(at: index)
+        arrayOfWorks.remove(at: index)
+        tableView.reloadData()
+    }
+    
     func editingBegan(y: Int) {
         var point = CGPoint(x: 0, y: y)
         self.tableView.setContentOffset(point, animated: true)
     }
+    
+    
 }
