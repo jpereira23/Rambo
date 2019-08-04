@@ -30,7 +30,9 @@ class StepTwo: UIView {
     }
     
     override func awakeFromNib() {
+    
         textView.placeholder = "I am a results-driven contributor who doesn’t mind working out the details to deliver quality work to clients."
+        
         
         textView.autocapitalizationType = .sentences
         

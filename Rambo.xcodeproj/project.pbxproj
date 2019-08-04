@@ -215,7 +215,6 @@
 		2011B869228B640900067C1C /* Account Stuff */ = {
 			isa = PBXGroup;
 			children = (
-				2011B86A228B642300067C1C /* CoreDataHelper.swift */,
 			);
 			path = "Account Stuff";
 			sourceTree = "<group>";
@@ -390,6 +389,7 @@
 		20D360AC22A46C9400CBF8DE /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2011B86A228B642300067C1C /* CoreDataHelper.swift */,
 				20D360AD22A46CA500CBF8DE /* Node.swift */,
 				20FCF43022AC6AD3005B553D /* School.swift */,
 				206BBB2422AC783B003E9681 /* Work.swift */,

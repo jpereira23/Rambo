@@ -25,6 +25,7 @@ class ExportViewController: UIViewController {
     var coreDataHelper: CoreDataHelper = CoreDataHelper()
     var fileName = "output"
     var isEdit: Bool = false
+    var editIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,8 @@ class ExportViewController: UIViewController {
         if isEdit == false{
         coreDataHelper.saveFullResume(fullResume: fullResume)
         } else if isEdit == true{
-            
+            NSLog("Updating Resume")
+            coreDataHelper.updateResume(index: editIndex, fullResume: fullResume)
         }
         node.setFirstName(name: fullResume.basicInfo.fullName)
         node.setEmail(email: fullResume.basicInfo.email)

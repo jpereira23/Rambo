@@ -116,10 +116,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         self.present(vc, animated: true, completion: nil)
     }
     
-    func editSelected(fullResume: FullResume) {
+    func editSelected(fullResume: FullResume, index: Int) {
         let vc = storyboard?.instantiateViewController(withIdentifier: "selectTemplate") as! SelectATemplateViewController
         vc.fullResume = fullResume
         vc.isEdit = true
+        vc.editIndex = index
+        
         
         self.present(vc, animated: true, completion: nil)
         

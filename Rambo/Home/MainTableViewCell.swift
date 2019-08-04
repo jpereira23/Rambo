@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 protocol MainTableViewCellDelegate{
-    func editSelected(fullResume: FullResume)
+    func editSelected(fullResume: FullResume, index: Int)
     func exportSelected(fullResume: FullResume)
     func miscSelected(index: Int)
 }
@@ -41,7 +41,7 @@ class MainTableViewCell: UITableViewCell {
     }
     
     @IBAction func editAction(_ sender: Any) {
-        self.aDelegate?.editSelected(fullResume: fullResume)
+        self.aDelegate?.editSelected(fullResume: fullResume, index: index)
     }
     
     @IBAction func exportAction(_ sender: Any) {
