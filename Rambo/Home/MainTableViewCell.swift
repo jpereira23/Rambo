@@ -11,7 +11,7 @@ import WebKit
 
 protocol MainTableViewCellDelegate{
     func editSelected(fullResume: FullResume, index: Int)
-    func exportSelected(fullResume: FullResume)
+    func exportSelected(fullResume: FullResume, webView: WKWebView)
     func miscSelected(index: Int)
 }
 
@@ -45,7 +45,7 @@ class MainTableViewCell: UITableViewCell {
     }
     
     @IBAction func exportAction(_ sender: Any) {
-        self.aDelegate?.exportSelected(fullResume: self.fullResume)
+        self.aDelegate?.exportSelected(fullResume: self.fullResume, webView: webView)
     }
     
     @IBAction func miscAction(_ sender: Any) {

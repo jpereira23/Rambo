@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class MainViewController: UIViewController{
 
@@ -16,7 +17,7 @@ class MainViewController: UIViewController{
     let coreDataHelper: CoreDataHelper = CoreDataHelper()
     var isSignedIn: Bool = false
     var arrayOfResumes: [FullResume] = []
-    
+    var fileName: String = "output"
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -132,10 +133,70 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         
     }
     
-    func exportSelected(fullResume: FullResume){
-        let vc = storyboard?.instantiateViewController(withIdentifier: "exportView") as! ExportViewController
-        vc.fullResume = fullResume
-        self.present(vc, animated: true, completion: nil)
+    func exportSelected(fullResume: FullResume, webView: WKWebView){
+        let alertMenu = UIAlertController(title: "Save Your Resume", message: "Please provide a name for your resume.", preferredStyle: .alert)
+        
+        alertMenu.addTextField(configurationHandler:  { (textField: UITextField!) -> Void in
+            textField.placeholder = "Ex. John Smith Resume"
+        })
+        let submitAction = UIAlertAction(title: "Save", style: .default){ _ in
+            let firstTextField = alertMenu.textFields![0] as! UITextField
+            self.fileName = firstTextField.text!
+            
+            let fileFinishedMenu = UIAlertController(title: "Resume Successfully Saved", message: "View your resume in your files app (Files > On My iPhone > Worthy)", preferredStyle: .alert)
+            
+            let doneAction = UIAlertAction(title: "Awesome!", style: .cancel){ _ in
+                
+            }
+            
+            fileFinishedMenu.addAction(doneAction)
+            self.savePDFToiPhone(webView: webView)
+            self.present(fileFinishedMenu, animated: true, completion: nil)
+            
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            
+        }
+        alertMenu.addAction(submitAction)
+        alertMenu.addAction(cancelAction)
+        
+        self.present(alertMenu, animated: true, completion:nil)
+    }
+    
+    func savePDFToiPhone(webView: WKWebView){
+        let render = UIPrintPageRenderer()
+        
+        render.addPrintFormatter(webView.viewPrintFormatter(), startingAtPageAt: 0)
+        
+        
+        let page = CGRect(x: 0, y: 0, width: 595.2, height: 841.8)
+        render.setValue(page, forKey: "paperRect")
+        render.setValue(page, forKey: "printableRect")
+        
+        NSLog("number of pages \(render.numberOfPages)")
+        
+        
+        let pdfData = NSMutableData()
+        UIGraphicsBeginPDFContextToData(pdfData, .zero, nil)
+        
+        for i in 0..<render.numberOfPages{
+            NSLog("Hello world")
+            UIGraphicsBeginPDFPage();
+            render.drawPage(at: i, in: UIGraphicsGetPDFContextBounds())
+        }
+        
+        
+        UIGraphicsEndPDFContext();
+        
+        guard let outputURL = try? FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent(fileName).appendingPathExtension("pdf") else {
+            fatalError("Destination URL not created")
+        }
+        
+        guard nil != (try? pdfData.write(to: outputURL, options: .atomic))
+            else { fatalError("Error writing PDF data to file.") }
+        
+        
+        
     }
     
     func miscSelected(index: Int){
