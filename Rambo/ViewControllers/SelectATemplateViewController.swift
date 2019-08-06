@@ -59,7 +59,7 @@ class SelectATemplateViewController: UIViewController {
             aSlide.title.text = arrayOfTemplateNames[i]
             let node = Node()
             node.setCSS(css: i)
-             let url = Bundle.main.url(forResource: "resume", withExtension: "html")
+             let url = Bundle.main.url(forResource: "master", withExtension: "html")
             aSlide.webView.loadHTMLString(node.combinedHTML, baseURL: url)
             aSlide.frame = CGRect(x: i * 414, y: 0, width: 414, height: 332)
             arrayOfSlides.append(aSlide)

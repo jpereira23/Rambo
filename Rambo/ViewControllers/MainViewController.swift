@@ -79,22 +79,41 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         let aResume = arrayOfResumes[indexPath.row]
         
         
-        let url = Bundle.main.url(forResource: "resume", withExtension: "html")
+        let url = Bundle.main.url(forResource: "master", withExtension: "html")
         
         node.setFirstName(name: aResume.basicInfo.fullName)
         node.setEmail(email: aResume.basicInfo.email)
         node.setNumber(number: aResume.basicInfo.phoneNumber)
         node.setObjective(objective: aResume.objective)
+        
+        var workCount = 0
         for work in aResume.arrayOfWorks{
-            node.addWorkExperience(company: work.companyName, date: work.startDate + " - " + work.endDate, sub: work.jobTitle)
+            if workCount == 0{
+                node.addWorkExperience(company: work.companyName, position: work.jobTitle, date: work.startDate + " - " + work.endDate, sub: work.description, isFirst: true)
+            } else {
+                node.addWorkExperience(company: work.companyName, position: work.jobTitle, date: work.startDate + " - " + work.endDate, sub: work.description, isFirst: false)
+            }
+            
+            workCount += 1
         }
-        
+        var schoolCount = 0
         for school in aResume.arrayOfSchools{
-            node.addInstitution(institution: school.schoolName, date: school.startDate + " - " + school.endDate, degree: school.areaOfStudy)
+            if schoolCount == 0{
+                node.addInstitution(institution: school.schoolName, date: school.startDate + " - " + school.endDate , degree: school.areaOfStudy, skillSet: school.degree, isFirst: true)
+            } else {
+                node.addInstitution(institution: school.schoolName, date: school.startDate + " - " + school.endDate , degree: school.areaOfStudy, skillSet: school.degree, isFirst: false)
+            }
+           schoolCount += 1
         }
-        
+        var skillCount = 0
         for skill in aResume.skills{
-            node.addSkill(skill: skill)
+            if skillCount == 0{
+                node.addSkill(aSkill: skill, isFirst: true)
+            } else {
+                node.addSkill(aSkill: skill, isFirst: false)
+            }
+            
+            skillCount += 1
         }
         node.setCSS(css: aResume.index)
         

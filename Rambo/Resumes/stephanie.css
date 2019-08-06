@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700&display=swap');
+
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#wrapper {
+		width: 600px;
+		margin: 0px auto;
+		padding: 50px 60px;
+		border: 1px solid gray;
+	}
+
+	.sections {
+		margin-bottom: 20px;
+	}
+
+	h1 {
+		color: #4A90E2;
+		font-family: "Arvo", sans-serif;
+		letter-spacing: 1px;
+		font-size: 20px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+
+	.section-titles {
+		color: white;
+		font-family: "Arvo", sans-serif;
+		letter-spacing: 2px;
+		line-height: 14px;
+		font-size: 10px;
+		font-weight: 700;
+		text-transform: uppercase;
+		background-color: #4A90E2;
+		padding: 3px 5px;
+		text-align: center;
+	}
+
+	.section-titles, .subsection, #email-container, #phone-container, #link-container {
+		margin-bottom: 10px;
+	}
+
+	.titles, .job-title {
+		color: #4A90E2;
+		font-family: "Arvo", sans-serif;
+		letter-spacing: 0.5px;
+		line-height: 18px;
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	.date {
+		display: inline-block;
+		float: right;
+		color: #909090;
+	}
+
+	#email-container, #phone-container, #link-container {
+		display: inline-block;
+		margin-right: 30px;
+	}
+
+	p {
+		color: #909090;
+		font-family: "Arvo", sans-serif;
+		line-height: 18px;
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	li {
+		border: 1px solid #4A90E2;
+		padding: 4px 10px;
+		font-family: "Arvo", sans-serif;
+		line-height: 18px;
+		font-size: 12px;
+		display: inline-block;
+		color: #909090;
+		margin-right: 5px;
+		margin-bottom: 5px;
+	}
+
+

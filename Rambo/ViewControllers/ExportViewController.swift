@@ -45,7 +45,7 @@ class ExportViewController: UIViewController {
         webView.isUserInteractionEnabled = false
         
         
-        let url = Bundle.main.url(forResource: "sample_one", withExtension: "html")
+        let url = Bundle.main.url(forResource: "master", withExtension: "html")
         if isEdit == false{
         coreDataHelper.saveFullResume(fullResume: fullResume)
         } else if isEdit == true{
@@ -56,16 +56,40 @@ class ExportViewController: UIViewController {
         node.setEmail(email: fullResume.basicInfo.email)
         node.setNumber(number: fullResume.basicInfo.phoneNumber)
         node.setObjective(objective: fullResume.objective)
+        var schoolCount: Int = 0
         for school in fullResume.arrayOfSchools{
-            node.addInstitution(institution: school.schoolName, date: school.startDate + " - " + school.endDate , degree: school.degree)
+            if schoolCount == 0{
+                node.addInstitution(institution: school.schoolName, date: school.startDate + " - " + school.endDate , degree: school.areaOfStudy, skillSet: school.degree, isFirst: true)
+            } else {
+                node.addInstitution(institution: school.schoolName, date: school.startDate + " - " + school.endDate , degree: school.areaOfStudy, skillSet: school.degree, isFirst: false)
+            }
+            
+            schoolCount += 1
         }
         
+        var workCount = 0
         for work in fullResume.arrayOfWorks{
-            node.addWorkExperience(company: work.companyName, date: work.startDate + " - " + work.endDate, sub: work.description)
+            
+            if workCount == 0{
+                node.addWorkExperience(company: work.companyName, position: work.jobTitle, date: work.startDate + " - " + work.endDate, sub: work.description, isFirst: true)
+            } else {
+                node.addWorkExperience(company: work.companyName, position: work.jobTitle, date: work.startDate + " - " + work.endDate, sub: work.description, isFirst: false)
+            }
+            
+            workCount += 1
+            
         }
-        
+        var skillCount = 0
         for skill in fullResume.skills{
-            node.addSkill(skill: skill)
+            
+            if skillCount == 0{
+                node.addSkill(aSkill: skill, isFirst: true)
+            } else {
+                node.addSkill(aSkill: skill, isFirst: false)
+            }
+            
+            skillCount += 1
+            
         }
         
         node.setCSS(css: fullResume.index)

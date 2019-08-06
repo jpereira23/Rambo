@@ -9,33 +9,22 @@
 import Foundation
 
 class Node{
-    var headerFront: String = "<!DOCTYPE HTML><html><head><meta charset=\"utf-8\"><meta content=\"width=device-width, initial-scale=0.4, maximum-scale=1.0\" name=\"viewport\">"
-    var cssLink: String = "<link rel=\"stylesheet\" type=\"text/css\" href=\"traditional.css\">"
+    var headerFront: String = "<!DOCTYPE HTML><html><head><meta charset=\"utf-8\"><meta content=\"width=device-width, initial-scale=0.4, maximum-scale=0.3\" name=\"viewport\">"
+    var cssLink: String = "<link rel=\"stylesheet\" type=\"text/css\" href=\"logan.css\">"
     var headerEndToBody: String = "</head><body><div id=\"wrapper\">"
-    var nameLine: String = "<h2 id=\"name\">Logan Fitzpatrick</h2>"
-    var afterNameLine: String = " <div id=\"contact-box\"><h2>Contact</h2>"
-    var numberAndEmailLine: String = "<p>209-879-3308 <br> logan@gmail.com</p>"
-    var afterNumberAndEmailLine: String = " </div><div id=\"objective-box\"><h2>Objective</h2>"
-    var objectiveLine: String = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Le quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat sum de lavi pu ser sire.</p>"
-    var afterObjectiveLine: String = "</div>"
-    var educationHeader: String = "<div id=\"education-box\"><h2>Education</h2>"
-    var educationOne: String = " <h3>Penn State University <span id=\"date\">• September 2013 – May 2018</span></h3><p>Computer Science, B.A.</p>"
-    var educationFooter: String = "</div>"
+    var nameLine: String = "<div class=\"sections\" id=\"name-section\"><h1 id=\"name\">Luis Eduardo Giron Yuja</h1></div>"
+    var basicInfoStuff: String = "<div class=\"sections\" id=\"contact-section\"><h3 class=\"section-titles\">Contact Info</h3><div id=\"email-container\"><h4 class=\"titles\">Email</h4><p>legyuja@gmail.com</p></div><div id=\"phone-container\"><h4 class=\"titles\">Phone</h4><p>209-914-8031</p></div><div id=\"link-container\"><h4 class=\"titles\">Personal Link</h4><p>www.legyuja.design</p></div><div id=\"objective-container\"><h4 class=\"titles\">Summary</h4><p>A human-centered problem solver focused in company goals by prioritizing the needs and pain-points of his clients. Company goals by prioritizing the needs and pain-points of his clients.</p></div></div>"
+    var preEducation: String = "<div class=\"sections\"id=\"education-section\"><h3 class=\"section-titles\">Education</h3>"
+    var educationSection: String = "<div class=\"subsection\" id=\"education-container\"><h4 class=\"titles\">San Jose State University <span class=\"date\">Aug 2016 - Dec 2017</span></h4><p><span id=\"degree\">Bachelor's</span> in <span id=\"area-of-study\">Spanish</span></p></div>"
+    var preWork: String = "</div><div class=\"sections\" id=\"work-section\"><h3 class=\"section-titles\">Work Experience</h3>"
+    var workSection: String = "<div class=\"subsection\" id=\"work-container\"><h4 class=\"job-title\">Product Designer at <span id=\"company\">LeadCrunch</span><span class=\"date\">Jan 2019 - Present</span></h4><p>Collaborate with sales team to grow customer segments by building stronger partnerships when enrolling and educating domestic and international organizations on Color products. Reinforce Color’s growth engine by executing support team's best practices of internal tools, processes and procedures.</p></div>"
     
-    var tmpEducation: String = " <h3>Penn State University <span id=\"date\">• September 2013 – May 2018</span></h3><p>Computer Science, B.A.</p>"
-    var workExperienceHeader: String = "<div id=\"work-box\"><h2>Work Experience</h2>"
-    var workExperience1: String = "<h3>Air Breather, Google <span id=\"date\">• March 2017 – Present</span></h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
-    
-    var tmpWorkExperience: String = "<h3>Air Breather, Google <span id=\"date\">• March 2017 – Present</span></h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>"
-    var workExperienceFooter: String = "</div>"
-    var skillsHeader: String = "<div id=\"skills-box\"><h2>Skills</h3><ul>"
-    var skill1: String = "<li>Word</li>"
-    var tmpSkill: String = "<li>Word</li>"
-    var skillsFooter: String = "</ul></div></wrapper></body></html>"
-    
+    var prelimSkills: String = "</div><div class=\"sections\" id=\"skills-section\"><h3 class=\"section-titles\">Skills</h3><div id=\"work-container\"><ul>"
+    var skill: String = "<li> Salesforce </li>"
+    var endlimSkills: String = "</ul></div></div></div></body></html>"
     var combinedHTML: String! = ""
     
-    var cssStyles: [String] = ["column.css", "red.css", "roboto.css", "traditional.css"]
+    var cssStyles: [String] = ["brittany.css", "logan.css", "mike.css", "stephanie.css"]
     
     init(){
         runHTMLAppend()
@@ -47,24 +36,18 @@ class Node{
         combinedHTML.append(cssLink)
         combinedHTML.append(headerEndToBody)
         combinedHTML.append(nameLine)
-        combinedHTML.append(afterNameLine)
-        combinedHTML.append(numberAndEmailLine)
-        combinedHTML.append(afterNumberAndEmailLine)
-        combinedHTML.append(objectiveLine)
-        combinedHTML.append(afterObjectiveLine)
-        combinedHTML.append(educationHeader)
-        combinedHTML.append(educationOne)
-        combinedHTML.append(educationFooter)
-        combinedHTML.append(workExperienceHeader)
-        combinedHTML.append(workExperience1)
-        combinedHTML.append(workExperienceFooter)
-        combinedHTML.append(skillsHeader)
-        combinedHTML.append(skill1)
-        combinedHTML.append(skillsFooter)
+        combinedHTML.append(basicInfoStuff)
+        combinedHTML.append(preEducation)
+        combinedHTML.append(educationSection)
+        combinedHTML.append(preWork)
+        combinedHTML.append(workSection)
+        combinedHTML.append(prelimSkills)
+        combinedHTML.append(skill)
+        combinedHTML.append(endlimSkills)
     }
     
     func setFirstName(name: String){
-        nameLine = nameLine.replacingOccurrences(of: "Logan Fitzpatrick", with: name)
+        nameLine = nameLine.replacingOccurrences(of: "Luis Eduardo Giron Yuja", with: name)
         
         runHTMLAppend()
     }
@@ -76,92 +59,77 @@ class Node{
     }
     
     func setNumber(number: String){
-        numberAndEmailLine = numberAndEmailLine.replacingOccurrences(of: "209-879-3308", with: number)
+        basicInfoStuff = basicInfoStuff.replacingOccurrences(of: "209-914-8031", with: number)
         
         runHTMLAppend()
     }
     
     func setEmail(email: String){
-        numberAndEmailLine = numberAndEmailLine.replacingOccurrences(of: "logan@gmail.com", with: email)
+        basicInfoStuff = basicInfoStuff.replacingOccurrences(of: "legyuja@gmail.com", with: email)
+        
+        runHTMLAppend()
+    }
+    
+    func setLink(link: String){
+        basicInfoStuff = basicInfoStuff.replacingOccurrences(of: "www.legyuja.design", with: link)
         
         runHTMLAppend()
     }
     
     func setObjective(objective: String){
-        objectiveLine = objectiveLine.replacingOccurrences(of: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Le quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat sum de lavi pu ser sire.", with: objective)
+        basicInfoStuff = basicInfoStuff.replacingOccurrences(of: "A human-centered problem solver focused in company goals by prioritizing the needs and pain-points of his clients. Company goals by prioritizing the needs and pain-points of his clients", with: objective)
         
         runHTMLAppend()
     }
     
-    func setInstitution(institution: String){
-        educationOne = educationOne.replacingOccurrences(of: "Penn State University", with: institution)
+    func addWorkExperience(company: String, position: String, date: String, sub: String, isFirst: Bool){
+        if isFirst {
+            workSection = workSection.replacingOccurrences(of: "Product Designer", with: position)
+            workSection = workSection.replacingOccurrences(of: "LeadCrunch", with: company)
+            workSection = workSection.replacingOccurrences(of: "Jan 2019 - Present", with: date)
+            workSection = workSection.replacingOccurrences(of: "Collaborate with sales team to grow customer segments by building stronger partnerships when enrolling and educating domestic and international organizations on Color products. Reinforce Color’s growth engine by executing support team's best practices of internal tools, processes and procedures.", with: sub)
+        } else {
+            var anExperience = workSection
+            anExperience = anExperience.replacingOccurrences(of: "LeadCrunch", with: company)
+            anExperience = anExperience.replacingOccurrences(of: "Jan 2019 - Present", with: date)
+            anExperience = anExperience.replacingOccurrences(of: "Collaborate with sales team to grow customer segments by building stronger partnerships when enrolling and educating domestic and international organizations on Color products. Reinforce Color’s growth engine by executing support team's best practices of internal tools, processes and procedures.", with: sub)
+            
+            workSection.append(anExperience)
+        }
         
         runHTMLAppend()
     }
     
-    func setInstitutionDate(date: String){
-        educationOne = educationOne.replacingOccurrences(of: "September 2013 – May 2018", with: date)
+    func addSkill(aSkill: String, isFirst: Bool){
+        
+        if isFirst {
+            skill = skill.replacingOccurrences(of: "Salesforce", with: aSkill)
+        } else {
+            var theSkill: String = skill
+            theSkill = theSkill.replacingOccurrences(of: "Salesforce", with: aSkill)
+            skill.append(theSkill)
+        }
         
         runHTMLAppend()
     }
     
-    func setDegree(degree: String){
-        educationOne = educationOne.replacingOccurrences(of: "Computer Science, B.A.", with: degree)
+    func addInstitution(institution: String, date: String, degree: String, skillSet: String, isFirst: Bool){
         
-        runHTMLAppend()
-    }
-    
-    func setCompany(company: String){
-        workExperience1 = workExperience1.replacingOccurrences(of: "Air Breather, Google ", with: company)
+        if isFirst{
+            educationSection = educationSection.replacingOccurrences(of: "San Jose State University", with: institution)
+            educationSection = educationSection.replacingOccurrences(of: "Aug 2016 - Dec 2017", with: date)
+            educationSection = educationSection.replacingOccurrences(of: "Bachelor's", with: skillSet)
+            educationSection = educationSection.replacingOccurrences(of: "Spanish", with: degree)
+        } else {
+            var aEducation: String = educationSection
+            aEducation = aEducation.replacingOccurrences(of: "San Jose State University", with: institution)
+            aEducation = aEducation.replacingOccurrences(of: "Aug 2016 - Dec 2017", with: date)
+            aEducation = aEducation.replacingOccurrences(of: "Bachelor's", with: skillSet)
+            aEducation = aEducation.replacingOccurrences(of: "Spanish", with: degree)
+            
+            educationSection.append(aEducation)
+        }
         
-        runHTMLAppend()
-    }
-    
-    func setCompanyDate(date: String){
-        workExperience1 = workExperience1.replacingOccurrences(of: "March 2017 – Present", with: date)
-        
-        runHTMLAppend()
-    }
-    
-    func setCompanySubHeader(sub: String){
-        workExperience1 = workExperience1.replacingOccurrences(of: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", with: sub)
-        
-        runHTMLAppend()
-    }
-    
-    func setSkill(skill: String){
-        skill1 = skill1.replacingOccurrences(of: "Word", with: skill)
-        
-        runHTMLAppend()
-    }
-    
-    func addWorkExperience(company: String, date: String, sub: String){
-        var anExperience = tmpWorkExperience
-        anExperience = anExperience.replacingOccurrences(of: "Air Breather, Google ", with: company)
-        anExperience = anExperience.replacingOccurrences(of: "March 2017 – Present", with: date)
-        anExperience = anExperience.replacingOccurrences(of: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", with: sub)
-        
-        workExperience1.append(anExperience)
-        
-        runHTMLAppend()
-    }
-    
-    func addSkill(skill: String){
-        var aSkill: String = tmpSkill
-        aSkill = aSkill.replacingOccurrences(of: "Word", with: skill)
-        skill1.append(aSkill)
-        
-        runHTMLAppend()
-    }
-    
-    func addInstitution(institution: String, date: String, degree: String){
-        
-        var aEducation: String = tmpEducation
-        aEducation = aEducation.replacingOccurrences(of: "Penn State University", with: institution)
-        aEducation = aEducation.replacingOccurrences(of: "September 2013 – May 2018", with: date)
-        aEducation = aEducation.replacingOccurrences(of: "Computer Science, B.A.", with: degree)
-        
-        educationOne.append(aEducation)
         
         
         runHTMLAppend()
@@ -169,7 +137,7 @@ class Node{
     }
     
     func setCSS(css: Int){
-        cssLink = cssLink.replacingOccurrences(of: "traditional.css", with: cssStyles[css])
+        cssLink = cssLink.replacingOccurrences(of: "logan.css", with: cssStyles[css])
         
         runHTMLAppend()
     }

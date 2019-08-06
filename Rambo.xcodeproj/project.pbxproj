@@ -24,11 +24,6 @@
 		205F7F4D22BC5B4F0096676D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 205F7F4C22BC5B4F0096676D /* CloudKit.framework */; };
 		20614F6C22A86EF2008567DC /* Template.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20614F6B22A86EF2008567DC /* Template.xib */; };
 		20614F6E22A86FA1008567DC /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20614F6D22A86FA1008567DC /* Template.swift */; };
-		20614F7422A871AE008567DC /* traditional.css in Resources */ = {isa = PBXBuildFile; fileRef = 20614F6F22A871AE008567DC /* traditional.css */; };
-		20614F7522A871AE008567DC /* column.css in Resources */ = {isa = PBXBuildFile; fileRef = 20614F7022A871AE008567DC /* column.css */; };
-		20614F7622A871AE008567DC /* red.css in Resources */ = {isa = PBXBuildFile; fileRef = 20614F7122A871AE008567DC /* red.css */; };
-		20614F7722A871AE008567DC /* roboto.css in Resources */ = {isa = PBXBuildFile; fileRef = 20614F7222A871AE008567DC /* roboto.css */; };
-		20614F7822A871AE008567DC /* resume.html in Resources */ = {isa = PBXBuildFile; fileRef = 20614F7322A871AE008567DC /* resume.html */; };
 		206BBB2522AC783B003E9681 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206BBB2422AC783B003E9681 /* Work.swift */; };
 		207063002288A27100ADE876 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207062FF2288A27100ADE876 /* SplashScreenViewController.swift */; };
 		208C22F1228675B300F91C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C22F0228675B300F91C4F /* AppDelegate.swift */; };
@@ -37,6 +32,11 @@
 		208C22FB228675B400F91C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 208C22FA228675B400F91C4F /* Assets.xcassets */; };
 		208C2309228675B400F91C4F /* RamboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2308228675B400F91C4F /* RamboTests.swift */; };
 		208C2314228675B400F91C4F /* RamboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208C2313228675B400F91C4F /* RamboUITests.swift */; };
+		2094F66322FA38C400607E37 /* master.html in Resources */ = {isa = PBXBuildFile; fileRef = 2094F65E22FA38C400607E37 /* master.html */; };
+		2094F66422FA38C400607E37 /* brittany.css in Resources */ = {isa = PBXBuildFile; fileRef = 2094F65F22FA38C400607E37 /* brittany.css */; };
+		2094F66522FA38C400607E37 /* logan.css in Resources */ = {isa = PBXBuildFile; fileRef = 2094F66022FA38C400607E37 /* logan.css */; };
+		2094F66622FA38C400607E37 /* mike.css in Resources */ = {isa = PBXBuildFile; fileRef = 2094F66122FA38C400607E37 /* mike.css */; };
+		2094F66722FA38C400607E37 /* stephanie.css in Resources */ = {isa = PBXBuildFile; fileRef = 2094F66222FA38C400607E37 /* stephanie.css */; };
 		20A5E3EB22B061AF009D44D5 /* DateKeyboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A5E3EA22B061AF009D44D5 /* DateKeyboard.xib */; };
 		20A5E3ED22B06233009D44D5 /* DateKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5E3EC22B06233009D44D5 /* DateKeyboard.swift */; };
 		20A5E3F022B073DF009D44D5 /* ThirdWayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A5E3EE22B073DF009D44D5 /* ThirdWayTableViewCell.swift */; };
@@ -119,11 +119,6 @@
 		205F7F4C22BC5B4F0096676D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		20614F6B22A86EF2008567DC /* Template.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Template.xib; sourceTree = "<group>"; };
 		20614F6D22A86FA1008567DC /* Template.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
-		20614F6F22A871AE008567DC /* traditional.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = traditional.css; path = Rambo/traditional.css; sourceTree = SOURCE_ROOT; };
-		20614F7022A871AE008567DC /* column.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = column.css; path = Rambo/column.css; sourceTree = SOURCE_ROOT; };
-		20614F7122A871AE008567DC /* red.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = red.css; path = Rambo/red.css; sourceTree = SOURCE_ROOT; };
-		20614F7222A871AE008567DC /* roboto.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = roboto.css; path = Rambo/roboto.css; sourceTree = SOURCE_ROOT; };
-		20614F7322A871AE008567DC /* resume.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = resume.html; path = Rambo/resume.html; sourceTree = SOURCE_ROOT; };
 		206BBB2422AC783B003E9681 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		207062FF2288A27100ADE876 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		208C22ED228675B300F91C4F /* Rambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +133,11 @@
 		208C230F228675B400F91C4F /* RamboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		208C2313228675B400F91C4F /* RamboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RamboUITests.swift; sourceTree = "<group>"; };
 		208C2315228675B400F91C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2094F65E22FA38C400607E37 /* master.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = master.html; sourceTree = "<group>"; };
+		2094F65F22FA38C400607E37 /* brittany.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = brittany.css; sourceTree = "<group>"; };
+		2094F66022FA38C400607E37 /* logan.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = logan.css; sourceTree = "<group>"; };
+		2094F66122FA38C400607E37 /* mike.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = mike.css; sourceTree = "<group>"; };
+		2094F66222FA38C400607E37 /* stephanie.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = stephanie.css; sourceTree = "<group>"; };
 		20A5E3EA22B061AF009D44D5 /* DateKeyboard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateKeyboard.xib; sourceTree = "<group>"; };
 		20A5E3EC22B06233009D44D5 /* DateKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateKeyboard.swift; sourceTree = "<group>"; };
 		20A5E3EE22B073DF009D44D5 /* ThirdWayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdWayTableViewCell.swift; sourceTree = "<group>"; };
@@ -377,11 +377,11 @@
 		20D3609522A449A100CBF8DE /* Resumes */ = {
 			isa = PBXGroup;
 			children = (
-				20614F7022A871AE008567DC /* column.css */,
-				20614F7122A871AE008567DC /* red.css */,
-				20614F7322A871AE008567DC /* resume.html */,
-				20614F7222A871AE008567DC /* roboto.css */,
-				20614F6F22A871AE008567DC /* traditional.css */,
+				2094F65F22FA38C400607E37 /* brittany.css */,
+				2094F66022FA38C400607E37 /* logan.css */,
+				2094F65E22FA38C400607E37 /* master.html */,
+				2094F66122FA38C400607E37 /* mike.css */,
+				2094F66222FA38C400607E37 /* stephanie.css */,
 			);
 			path = Resumes;
 			sourceTree = "<group>";
@@ -548,13 +548,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2011B874228B68BE00067C1C /* OnBoardingView.xib in Resources */,
-				20614F7622A871AE008567DC /* red.css in Resources */,
 				203D182022C58CBB006BC1F0 /* InstitutionCampus.csv in Resources */,
 				205F7F4622BC4DDF0096676D /* world-cities.txt in Resources */,
 				20F2036A22A886BD00CAF938 /* StepThree.xib in Resources */,
 				20C2C1FB228E5E1000E3B0D7 /* SelectTemplate.xib in Resources */,
+				2094F66622FA38C400607E37 /* mike.css in Resources */,
 				208C22FB228675B400F91C4F /* Assets.xcassets in Resources */,
+				2094F66422FA38C400607E37 /* brittany.css in Resources */,
+				2094F66522FA38C400607E37 /* logan.css in Resources */,
 				E583737C22B0B1D800A84C64 /* NotoSansJP-Medium.otf in Resources */,
+				2094F66722FA38C400607E37 /* stephanie.css in Resources */,
 				20F2037222A889A200CAF938 /* StepFive.xib in Resources */,
 				E583737E22B0B1DE00A84C64 /* NotoSansJP-Bold.otf in Resources */,
 				20F2036222A8832F00CAF938 /* StepOne.xib in Resources */,
@@ -564,17 +567,14 @@
 				2042B174229070E500DEAD80 /* sample_two.html in Resources */,
 				2030E68222AC810C00FB7028 /* AddWorkTableViewCell.xib in Resources */,
 				20B63A56229062AC00EA1814 /* TemplateScroll.xib in Resources */,
-				20614F7422A871AE008567DC /* traditional.css in Resources */,
-				20614F7722A871AE008567DC /* roboto.css in Resources */,
+				2094F66322FA38C400607E37 /* master.html in Resources */,
 				20B63A5E2290652200EA1814 /* sample_one.html in Resources */,
 				20A80C9F22DFDEAC001054D1 /* NavButton.xib in Resources */,
 				20FCF42F22AC3E2A005B553D /* AddSkillTableViewCell.xib in Resources */,
 				E5BBC24A228A60C100D778C6 /* LaunchScreen.storyboard in Resources */,
 				20C0363422A87E500049B068 /* MainNavBar.xib in Resources */,
 				20F2036622A8849100CAF938 /* StepTwo.xib in Resources */,
-				20614F7822A871AE008567DC /* resume.html in Resources */,
 				20F2036E22A8887300CAF938 /* StepFour.xib in Resources */,
-				20614F7522A871AE008567DC /* column.css in Resources */,
 				20D861FC22AC6D0A00E72879 /* AddSchoolTableViewCell.xib in Resources */,
 				E54A8DA4228A494D0030FB2F /* Icons in Resources */,
 				20614F6C22A86EF2008567DC /* Template.xib in Resources */,

@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600,800&display=swap');
+
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#wrapper {
+		width: 600px;
+		margin: 0px auto;
+		padding: 50px 60px;
+		border: 1px solid gray;
+	}
+
+	.sections {
+		margin-bottom: 20px;
+	}
+
+	h1 {
+		color: black;
+		font-family: "Nunito", sans-serif;
+		letter-spacing: 1px;
+		font-size: 20px;
+		font-weight: 800;
+		margin-bottom: 20px;
+		text-align: left;
+	}
+
+	.section-titles {
+		color: white;
+		font-family: "Nunito", sans-serif;
+		letter-spacing: 0.5px;
+		line-height: 14px;
+		font-size: 10px;
+		font-weight: 700;
+		text-transform: uppercase;
+		background-color: #1EA261;
+		padding: 5px 10px 4px 10px;
+		text-align: left;
+		border-radius: 3px;
+	}
+
+	.section-titles, .subsection, #email-container, #phone-container, #link-container {
+		margin-bottom: 10px;
+	}
+
+	#contact-section h3 {
+		width: 90px;
+		}
+
+	#education-section h3 {
+		width: 84px;
+	}
+
+	#work-section h3 {
+		width: 125px;
+	}
+
+	#skills-section h3 {
+		width: 57px;
+	}
+
+	.titles, .job-title {
+		color: black;
+		font-family: "Nunito", sans-serif;
+		line-height: 18px;
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	.date {
+		display: inline-block;
+		float: right;
+		color: #909090;
+	}
+
+	#email-container, #phone-container, #link-container {
+		display: inline-block;
+		margin-right: 30px;
+	}
+
+	p {
+		color: #909090;
+		font-family: "Nunito", sans-serif;
+		line-height: 18px;
+		font-size: 12px;
+		font-weight: 400;
+	}
+
+	ul {
+		list-style-type: none;
+	}
+
+	li {
+		border: 1px solid #1EA261;
+		border-radius: 3px;
+		padding: 4px 10px;
+		font-family: "Nunito", sans-serif;
+		line-height: 18px;
+		font-size: 12px;
+		display: inline-block;
+		color: black;
+		margin-right: 5px;
+		margin-bottom: 5px;
+	}
+
+

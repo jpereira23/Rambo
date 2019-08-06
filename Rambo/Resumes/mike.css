@@ -1,0 +1,93 @@
+@@import url('https://fonts.googleapis.com/css?family=Martel:400,700,900&display=swap');
+
+	* {
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#wrapper {
+		width: 600px;
+		margin: 0px auto;
+		padding: 50px 60px;
+		border: 1px solid gray;
+	}
+
+	h1 {
+		color: black;
+		font-family: "Martel", sans-serif;
+		letter-spacing: 1px;
+		font-size: 24px;
+		font-weight: 900;
+		text-align: center;
+	}
+
+	.sections {
+		margin-bottom: 20px;
+	}
+
+	.subsection {
+		margin-bottom: 10px;
+	}
+
+	.section-titles {
+		color: black;
+		font-family: "Martel", sans-serif;
+		line-height: 21px;
+		font-size: 12px;
+		font-weight: 900;
+		padding: 3px 0px;
+		text-align: left;
+		margin-bottom: 10px;
+		border-bottom: 1px solid #D0021B;
+	}
+
+	.titles, .job-title {
+		color: black;
+		font-family: "Martel", sans-serif;
+		letter-spacing: 0.5px;
+		line-height: 18px;
+		font-size: 12px;
+		font-weight: 700;
+		margin: 0px;
+	}
+
+	.date {
+		display: inline-block;
+		float: right;
+		color: #909090;
+	}
+
+	#email-container, #phone-container, #link-container {
+		display: inline-block;
+		margin-right: 30px;
+		margin-bottom: 10px;
+	}
+
+	p {
+		color: #909090;
+		font-family: "Martel", sans-serif;
+		line-height: 18px;
+		font-size: 12px;
+		font-weight: 400;
+		margin: 0px;
+	}
+
+	ul {
+		list-style-type: none;
+		padding-left: 0px;
+	}
+
+	li {
+		border: 1px solid #D0021B;
+		padding: 5px 10px 4px 10px;
+		font-family: "Martel", sans-serif;
+		font-weight: 400;
+		line-height: 18px;
+		font-size: 12px;
+		display: inline-block;
+		color: #909090;
+		margin-right: 5px;
+		margin-bottom: 5px;
+	}
+
+
