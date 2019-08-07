@@ -35,6 +35,8 @@ class StepThree: UIView {
         self.tableView.allowsSelection = false
         arrayOfCells = []
         self.tableView.reloadData()
+        
+        
     }
     
     func getData(aCell: AddWorkTableViewCell, index: Int){
@@ -112,7 +114,11 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
         
         if indexPath.row == 0{
             cell.deleteButton.isHidden = true
+        } else {
+            cell.deleteButton.isHidden = false 
         }
+        
+        
         cell.index = indexPath.row
         cell.aDelegate = self
     
@@ -154,7 +160,14 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
         cell.endDate.isEnabled = false
         cell.companyName.text = arrayOfWorks[indexPath.row].companyName
         cell.aDescription.text = arrayOfWorks[indexPath.row].description
-    
+        NSLog("cell description count is \(cell.aDescription.text)")
+        if cell.aDescription.text.count == 0{
+            cell.aDescription.placeholder = "Please place description here."
+            cell.aDescription.viewWithTag(100)!.isHidden = false
+        } else {
+            cell.aDescription.viewWithTag(100)!.isHidden = true
+            
+        }
         
         arrayOfCells.append(cell)
         return cell
@@ -165,8 +178,9 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
 
 extension StepThree: AddWorkTableViewCellDelegate{
     func deleteCell(index: Int) {
-        arrayOfCells.remove(at: index)
+        //arrayOfCells.remove(at: index)
         arrayOfWorks.remove(at: index)
+        arrayOfCells = []
         tableView.reloadData()
     }
     

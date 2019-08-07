@@ -47,7 +47,7 @@ class MainNavBar: UIView {
             scrollView.addSubview(aContact)
  
         }
-        arrayOfButtonViews[0].bottomLine.isHidden = false
+        arrayOfButtonViews[0].theButton.setTitleColor(UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0), for: .normal)
   
     }
 
@@ -61,7 +61,7 @@ class MainNavBar: UIView {
     
     func allButtonsFalse(){
         for button in arrayOfButtonViews{
-            button.bottomLine.isHidden = true
+            button.theButton.setTitleColor(UIColor.lightGray, for: .normal)
         }
     }
     
@@ -70,29 +70,29 @@ class MainNavBar: UIView {
         switch(index){
         case 0:
             aPoint.x = 0
+            arrayOfButtonViews[0].theButton.setTitleColor(UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0), for: .normal)
             allButtonsFalse()
-            arrayOfButtonViews[0].bottomLine.isHidden = false
             break
         case 1:
             aPoint.x = 25
             allButtonsFalse()
-            arrayOfButtonViews[1].bottomLine.isHidden = false
+            arrayOfButtonViews[1].theButton.setTitleColor(UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0), for: .normal)
             break
         case 2:
             aPoint.x = 100
             
             allButtonsFalse()
-            arrayOfButtonViews[2].bottomLine.isHidden = false
+            arrayOfButtonViews[2].theButton.setTitleColor(UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0), for: .normal)
             break
         case 3:
             aPoint.x = 150
             allButtonsFalse()
-            arrayOfButtonViews[3].bottomLine.isHidden = false
+            arrayOfButtonViews[3].theButton.setTitleColor(UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0), for: .normal)
             break
         case 4:
             aPoint.x = 200
             allButtonsFalse()
-            arrayOfButtonViews[4].bottomLine.isHidden = false
+            arrayOfButtonViews[4].theButton.setTitleColor(UIColor(displayP3Red: 13.0/255.0, green: 199.0/255.0, blue: 156.0/255.0, alpha: 1.0), for: .normal)
             break
         default:
             break
