@@ -165,7 +165,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
             let fileFinishedMenu = UIAlertController(title: "Resume Successfully Saved", message: "View your resume in your files app (Files > On My iPhone > Worthy)", preferredStyle: .alert)
             
             let doneAction = UIAlertAction(title: "Awesome!", style: .cancel){ _ in
-                
             }
             
             fileFinishedMenu.addAction(doneAction)
