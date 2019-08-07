@@ -39,13 +39,20 @@ class SelectATemplateViewController: UIViewController {
         continue0.layer.cornerRadius = 5.0
         
         setUpScrollView()
-        /*
- 
-    UIView.animate(withDuration: 10.0, animations: { () -> Void in
-            self.scrollView.isPagingEnabled = false
-            self.scrollView.contentOffset = CGPoint(x: 414, y: 0)
-        })
-        */ 
+        
+        self.scrollView.scrollRectToVisible(CGRect(x: 3 * 414, y: 0, width: 414, height: 332), animated: true)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        UIView.animate(withDuration: 10, animations: {
+            self.scrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 414, height: 332), animated: true)
+            
+            //self.scrollView.scrollRectToVisible(CGRect(x: 414, y: 0, width: 414, height: 332), animated: true)
+        }, completion: nil)
+        
+        //self.scrollView.scrollRectToVisible(CGRect(x: 414, y: 0, width: 414, height: 332), animated: true)
+        
         
     }
     
