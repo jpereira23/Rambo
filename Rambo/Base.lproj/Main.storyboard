@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,8 +21,8 @@
         <!--On Boarding View Controller-->
         <scene sceneID="9e3-Ae-CeK">
             <objects>
-                <viewController storyboardIdentifier="onBoarding" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uto-zT-MCG" customClass="OnBoardingViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gke-hQ-L7P">
+                <viewController storyboardIdentifier="onBoarding" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uto-zT-MCG" customClass="OnBoardingViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="gke-hQ-L7P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -33,7 +35,7 @@
                                     <outlet property="delegate" destination="uto-zT-MCG" id="Wua-u9-ZGf"/>
                                 </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-GR-9Ns">
+                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-GR-9Ns">
                                 <rect key="frame" x="188" y="744" width="39" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="N8k-54-7K8"/>
@@ -41,7 +43,7 @@
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="0.39772227112676056" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3l-tv-N0n">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3l-tv-N0n">
                                 <rect key="frame" x="30" y="782" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -92,7 +94,7 @@
         <!--Resume Preview View Controller-->
         <scene sceneID="4le-Ki-RZ3">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="EYN-1i-LCy" customClass="ResumePreviewViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EYN-1i-LCy" customClass="ResumePreviewViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rYp-15-GrX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +123,7 @@
         <!--Splash Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SplashScreenViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SplashScreenViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -139,7 +141,7 @@
         <!--Main View Controller-->
         <scene sceneID="OAq-9k-SHe">
             <objects>
-                <viewController storyboardIdentifier="mainView" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LQ2-H1-qA9" customClass="MainViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LQ2-H1-qA9" customClass="MainViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t9Z-Nl-vQQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -299,7 +301,7 @@
         <!--SelectA Template View Controller-->
         <scene sceneID="2Rm-pw-Dix">
             <objects>
-                <viewController storyboardIdentifier="selectTemplate" modalPresentationStyle="fullScreen" id="Z5J-NL-CnJ" customClass="SelectATemplateViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectTemplate" id="Z5J-NL-CnJ" customClass="SelectATemplateViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D5v-wW-uLx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -352,10 +354,10 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rR4-Mb-nyu">
-                                <rect key="frame" x="30" y="782" width="354" height="50"/>
+                                <rect key="frame" x="30" y="797" width="354" height="35"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="DTd-u4-Zkf"/>
+                                    <constraint firstAttribute="height" constant="35" id="DTd-u4-Zkf"/>
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -402,7 +404,7 @@
         <!--Main Flow View Controller-->
         <scene sceneID="39x-6x-bfF">
             <objects>
-                <viewController storyboardIdentifier="mainFlow" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UO7-mc-UVa" customClass="MainFlowViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainFlow" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UO7-mc-UVa" customClass="MainFlowViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I6g-Eu-dr0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -443,7 +445,7 @@
         <!--Export View Controller-->
         <scene sceneID="5vL-T9-xoE">
             <objects>
-                <viewController restorationIdentifier="exportView" storyboardIdentifier="exportView" modalPresentationStyle="fullScreen" id="U0i-x3-sUS" customClass="ExportViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="exportView" storyboardIdentifier="exportView" id="U0i-x3-sUS" customClass="ExportViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HCy-b0-dez">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
