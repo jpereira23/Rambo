@@ -40,17 +40,17 @@ class SelectATemplateViewController: UIViewController {
         
         setUpScrollView()
         
-        //self.scrollView.scrollRectToVisible(CGRect(x: 3 * 376, y: 0, width: 376, height: 414), animated: true)
+        self.scrollView.scrollRectToVisible(CGRect(x: 3 * 376, y: 0, width: 376, height: 414), animated: true)
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        /*UIView.animate(withDuration: 10, animations: {
+        UIView.animate(withDuration: 10, animations: {
             self.scrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 376, height: 414), animated: true)
             
             //self.scrollView.scrollRectToVisible(CGRect(x: 414, y: 0, width: 414, height: 332), animated: true)
         }, completion: nil)
-    */
+    
         
         //self.scrollView.scrollRectToVisible(CGRect(x: 414, y: 0, width: 414, height: 332), animated: true)
         
@@ -62,7 +62,7 @@ class SelectATemplateViewController: UIViewController {
         NSLog("width = \(scrollView.frame.width)")
         
         
-        scrollView.frame = CGRect(x: 0, y: 0, width: 376, height: 414)
+        scrollView.frame = CGRect(x: 0, y: 220.5, width: 376, height: 800)
         scrollView.contentSize = CGSize(width: (376.0) * 4, height: 0)
         scrollView.isPagingEnabled = true
         
