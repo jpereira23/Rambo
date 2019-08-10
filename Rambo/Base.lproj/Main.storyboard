@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.15"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,8 +19,8 @@
         <!--On Boarding View Controller-->
         <scene sceneID="9e3-Ae-CeK">
             <objects>
-                <viewController storyboardIdentifier="onBoarding" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uto-zT-MCG" customClass="OnBoardingViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="gke-hQ-L7P">
+                <viewController storyboardIdentifier="onBoarding" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uto-zT-MCG" customClass="OnBoardingViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gke-hQ-L7P">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -35,7 +33,7 @@
                                     <outlet property="delegate" destination="uto-zT-MCG" id="Wua-u9-ZGf"/>
                                 </connections>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-GR-9Ns">
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="5Zd-GR-9Ns">
                                 <rect key="frame" x="188" y="744" width="39" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="N8k-54-7K8"/>
@@ -43,7 +41,7 @@
                                 <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="0.39772227112676056" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3l-tv-N0n">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3l-tv-N0n">
                                 <rect key="frame" x="30" y="782" width="354" height="50"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -123,7 +121,7 @@
         <!--Splash Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SplashScreenViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SplashScreenViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,7 +139,7 @@
         <!--Main View Controller-->
         <scene sceneID="OAq-9k-SHe">
             <objects>
-                <viewController storyboardIdentifier="mainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LQ2-H1-qA9" customClass="MainViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainView" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="LQ2-H1-qA9" customClass="MainViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t9Z-Nl-vQQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,7 +299,7 @@
         <!--SelectA Template View Controller-->
         <scene sceneID="2Rm-pw-Dix">
             <objects>
-                <viewController storyboardIdentifier="selectTemplate" id="Z5J-NL-CnJ" customClass="SelectATemplateViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectTemplate" modalPresentationStyle="fullScreen" id="Z5J-NL-CnJ" customClass="SelectATemplateViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D5v-wW-uLx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -374,9 +372,8 @@
                                     <segue destination="UO7-mc-UVa" kind="showDetail" identifier="toMainFlow" id="oby-tg-Wvc"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a66-f4-Rix">
-                                <rect key="frame" x="0.0" y="198" width="414" height="332"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a66-f4-Rix">
+                                <rect key="frame" x="0.0" y="220.5" width="414" height="327.5"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.96078431369999995" green="0.96862745100000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -384,8 +381,12 @@
                             <constraint firstItem="Yuh-YO-hjn" firstAttribute="leading" secondItem="ShR-nk-r4b" secondAttribute="leading" id="0HC-g9-4x0"/>
                             <constraint firstItem="ShR-nk-r4b" firstAttribute="top" secondItem="qpC-Ho-faQ" secondAttribute="top" constant="-30" id="1Gp-24-oMi"/>
                             <constraint firstItem="Yuh-YO-hjn" firstAttribute="trailing" secondItem="ShR-nk-r4b" secondAttribute="trailing" id="5Eq-Mv-gu3"/>
+                            <constraint firstItem="a66-f4-Rix" firstAttribute="firstBaseline" secondItem="6wn-XS-cEN" secondAttribute="baseline" constant="50" id="8mB-ef-Eqb"/>
                             <constraint firstItem="ShR-nk-r4b" firstAttribute="trailing" secondItem="rR4-Mb-nyu" secondAttribute="trailing" constant="30" id="Su4-Rw-cJO"/>
                             <constraint firstItem="rR4-Mb-nyu" firstAttribute="leading" secondItem="ShR-nk-r4b" secondAttribute="leading" constant="30" id="Xmp-zo-AXR"/>
+                            <constraint firstItem="rR4-Mb-nyu" firstAttribute="top" secondItem="a66-f4-Rix" secondAttribute="bottom" priority="750" constant="249" id="mc3-xv-hPP"/>
+                            <constraint firstItem="ShR-nk-r4b" firstAttribute="trailing" secondItem="a66-f4-Rix" secondAttribute="trailing" id="rFO-V2-5tG"/>
+                            <constraint firstItem="a66-f4-Rix" firstAttribute="leading" secondItem="ShR-nk-r4b" secondAttribute="leading" id="rGq-f2-Ddb"/>
                             <constraint firstItem="Yuh-YO-hjn" firstAttribute="top" secondItem="ShR-nk-r4b" secondAttribute="top" id="rwW-Jc-rjs"/>
                             <constraint firstItem="ShR-nk-r4b" firstAttribute="bottom" secondItem="rR4-Mb-nyu" secondAttribute="bottom" constant="30" id="t5j-PY-PoM"/>
                         </constraints>
@@ -404,7 +405,7 @@
         <!--Main Flow View Controller-->
         <scene sceneID="39x-6x-bfF">
             <objects>
-                <viewController storyboardIdentifier="mainFlow" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UO7-mc-UVa" customClass="MainFlowViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainFlow" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UO7-mc-UVa" customClass="MainFlowViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I6g-Eu-dr0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -445,7 +446,7 @@
         <!--Export View Controller-->
         <scene sceneID="5vL-T9-xoE">
             <objects>
-                <viewController restorationIdentifier="exportView" storyboardIdentifier="exportView" id="U0i-x3-sUS" customClass="ExportViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="exportView" storyboardIdentifier="exportView" modalPresentationStyle="fullScreen" id="U0i-x3-sUS" customClass="ExportViewController" customModule="Rambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HCy-b0-dez">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

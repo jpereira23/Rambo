@@ -255,8 +255,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default)
         
-        optionMenu.addAction(deleteAction)
         optionMenu.addAction(cancelAction)
+        optionMenu.addAction(deleteAction)
+        
         
         self.present(optionMenu, animated: true, completion: nil)
         

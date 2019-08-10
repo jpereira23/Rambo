@@ -40,16 +40,17 @@ class SelectATemplateViewController: UIViewController {
         
         setUpScrollView()
         
-        self.scrollView.scrollRectToVisible(CGRect(x: 3 * 414, y: 0, width: 414, height: 332), animated: true)
+        //self.scrollView.scrollRectToVisible(CGRect(x: 3 * 376, y: 0, width: 376, height: 414), animated: true)
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        UIView.animate(withDuration: 10, animations: {
-            self.scrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 414, height: 332), animated: true)
+        /*UIView.animate(withDuration: 10, animations: {
+            self.scrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 376, height: 414), animated: true)
             
             //self.scrollView.scrollRectToVisible(CGRect(x: 414, y: 0, width: 414, height: 332), animated: true)
         }, completion: nil)
+    */
         
         //self.scrollView.scrollRectToVisible(CGRect(x: 414, y: 0, width: 414, height: 332), animated: true)
         
@@ -57,18 +58,24 @@ class SelectATemplateViewController: UIViewController {
     }
     
     func setUpScrollView(){
-        scrollView.frame = CGRect(x: -30, y: 180, width: 414, height:332)
-        scrollView.contentSize = CGSize(width: 414 * 4, height: 332)
+        
+        NSLog("width = \(scrollView.frame.width)")
+        
+        
+        scrollView.frame = CGRect(x: 0, y: 0, width: 376, height: 414)
+        scrollView.contentSize = CGSize(width: (376.0) * 4, height: 0)
         scrollView.isPagingEnabled = true
         
         for i in 0..<arrayOfTemplateNames.count{
             let aSlide = Bundle.main.loadNibNamed("Template", owner: self, options: nil)?.first as! Template
+            NSLog("aSlide.width = \(aSlide.frame.width)"
+            )
             aSlide.title.text = arrayOfTemplateNames[i]
             let node = Node()
             node.setCSS(css: i)
              let url = Bundle.main.url(forResource: "master", withExtension: "html")
             aSlide.webView.loadHTMLString(node.combinedHTML, baseURL: url)
-            aSlide.frame = CGRect(x: i * 414, y: 0, width: 414, height: 332)
+            aSlide.frame = CGRect(x: i * Int(376), y: 0, width: Int(376), height: Int(414))
             arrayOfSlides.append(aSlide)
             scrollView.addSubview(aSlide)
         }
