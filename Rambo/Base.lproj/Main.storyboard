@@ -472,10 +472,10 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UtW-Ep-023">
-                                <rect key="frame" x="25" y="797" width="364" height="35"/>
+                                <rect key="frame" x="0.0" y="807" width="414" height="55"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="tFj-m0-OCo"/>
+                                    <constraint firstAttribute="height" constant="55" id="tFj-m0-OCo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
                                 <state key="normal" title="Save to iPhone">
@@ -500,16 +500,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="s0A-BP-VKG" firstAttribute="trailing" secondItem="UtW-Ep-023" secondAttribute="trailing" constant="25" id="7Es-X0-sfQ"/>
+                            <constraint firstItem="s0A-BP-VKG" firstAttribute="trailing" secondItem="UtW-Ep-023" secondAttribute="trailing" id="7Es-X0-sfQ"/>
                             <constraint firstItem="9qm-Nx-wDY" firstAttribute="leading" secondItem="s0A-BP-VKG" secondAttribute="leading" constant="25" id="BRk-Tm-e8h"/>
                             <constraint firstItem="uVH-fh-s5U" firstAttribute="top" secondItem="J3V-Pq-B4g" secondAttribute="bottom" constant="30" id="K4i-AB-oqH"/>
                             <constraint firstItem="i3x-8l-iRV" firstAttribute="leading" secondItem="s0A-BP-VKG" secondAttribute="leading" constant="25" id="PRF-ii-VYg"/>
                             <constraint firstItem="9qm-Nx-wDY" firstAttribute="top" secondItem="s0A-BP-VKG" secondAttribute="top" constant="30" id="X3l-vd-x5t"/>
                             <constraint firstItem="uVH-fh-s5U" firstAttribute="leading" secondItem="s0A-BP-VKG" secondAttribute="leading" constant="67.5" id="YJ7-9j-sza"/>
-                            <constraint firstItem="UtW-Ep-023" firstAttribute="leading" secondItem="s0A-BP-VKG" secondAttribute="leading" constant="25" id="a0S-XM-hmy"/>
+                            <constraint firstItem="UtW-Ep-023" firstAttribute="leading" secondItem="s0A-BP-VKG" secondAttribute="leading" id="a0S-XM-hmy"/>
                             <constraint firstItem="s0A-BP-VKG" firstAttribute="trailing" secondItem="uVH-fh-s5U" secondAttribute="trailing" constant="66.5" id="fgr-KE-Jfv"/>
                             <constraint firstItem="s0A-BP-VKG" firstAttribute="trailing" secondItem="i3x-8l-iRV" secondAttribute="trailing" constant="25" id="gP3-wT-62T"/>
-                            <constraint firstItem="s0A-BP-VKG" firstAttribute="bottom" secondItem="UtW-Ep-023" secondAttribute="bottom" constant="30" id="orX-wp-sdA"/>
+                            <constraint firstItem="s0A-BP-VKG" firstAttribute="bottom" secondItem="UtW-Ep-023" secondAttribute="bottom" id="orX-wp-sdA"/>
                             <constraint firstItem="i3x-8l-iRV" firstAttribute="top" secondItem="9qm-Nx-wDY" secondAttribute="bottom" constant="30" id="s4h-zv-1o4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="s0A-BP-VKG"/>

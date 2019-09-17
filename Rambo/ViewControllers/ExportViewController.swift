@@ -30,7 +30,7 @@ class ExportViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        saveToPhone.layer.cornerRadius = 5.0
+//        saveToPhone.layer.cornerRadius = 5.0
 //        if #available(iOS 13.0, *) {
 //            preferredUserInterfaceStyle = .light
 //        } else {
