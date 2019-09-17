@@ -22,19 +22,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3lC-qg-NRm">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="487"/>
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="484"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="separatorColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N9G-06-lyg">
-                    <rect key="frame" x="0.0" y="487" width="414" height="90"/>
+                    <rect key="frame" x="0.0" y="484" width="414" height="100"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="C7n-AK-SqQ">
-                            <rect key="frame" x="25" y="10" width="364" height="70"/>
+                            <rect key="frame" x="0.0" y="10" width="414" height="90"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZm-yC-hak">
-                                    <rect key="frame" x="0.0" y="0.0" width="364" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="25"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="25" id="yIr-1r-QhX"/>
                                     </constraints>
@@ -47,10 +47,10 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdC-vM-cst">
-                                    <rect key="frame" x="0.0" y="35" width="364" height="35"/>
+                                    <rect key="frame" x="0.0" y="35" width="414" height="55"/>
                                     <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="35" id="Ljz-Q7-JGK"/>
+                                        <constraint firstAttribute="height" constant="55" id="Ljz-Q7-JGK"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
                                     <state key="normal" title="Save &amp; Continue">
@@ -65,10 +65,10 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="C7n-AK-SqQ" secondAttribute="trailing" constant="25" id="Aau-35-spl"/>
-                        <constraint firstAttribute="height" constant="90" id="UiD-AT-IFg"/>
-                        <constraint firstAttribute="bottom" secondItem="C7n-AK-SqQ" secondAttribute="bottom" constant="10" id="VTC-1a-AyR"/>
-                        <constraint firstItem="C7n-AK-SqQ" firstAttribute="leading" secondItem="N9G-06-lyg" secondAttribute="leading" constant="25" id="XUe-gZ-TD2"/>
+                        <constraint firstAttribute="trailing" secondItem="C7n-AK-SqQ" secondAttribute="trailing" id="Aau-35-spl"/>
+                        <constraint firstAttribute="height" constant="100" id="UiD-AT-IFg"/>
+                        <constraint firstAttribute="bottom" secondItem="C7n-AK-SqQ" secondAttribute="bottom" id="VTC-1a-AyR"/>
+                        <constraint firstItem="C7n-AK-SqQ" firstAttribute="leading" secondItem="N9G-06-lyg" secondAttribute="leading" id="XUe-gZ-TD2"/>
                         <constraint firstItem="C7n-AK-SqQ" firstAttribute="top" secondItem="N9G-06-lyg" secondAttribute="top" constant="10" id="hFD-1j-C1A"/>
                     </constraints>
                 </view>
@@ -80,7 +80,7 @@
                 <constraint firstItem="3lC-qg-NRm" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="FoW-YO-yrG"/>
                 <constraint firstItem="N9G-06-lyg" firstAttribute="top" secondItem="3lC-qg-NRm" secondAttribute="bottom" id="LGK-h2-feB"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="N9G-06-lyg" secondAttribute="trailing" id="NSt-nf-Tmh"/>
-                <constraint firstItem="N9G-06-lyg" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="xoy-kZ-EIY"/>
+                <constraint firstItem="N9G-06-lyg" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="7" id="xoy-kZ-EIY"/>
                 <constraint firstItem="3lC-qg-NRm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="zLc-ed-p8c"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -90,7 +90,7 @@
                 <outlet property="ctaBox4" destination="N9G-06-lyg" id="hMf-Gz-9dY"/>
                 <outlet property="tableview" destination="3lC-qg-NRm" id="190-11-99H"/>
             </connections>
-            <point key="canvasLocation" x="-259.4202898550725" y="-62.946428571428569"/>
+            <point key="canvasLocation" x="-259.4202898550725" y="-63.28125"/>
         </view>
     </objects>
 </document>

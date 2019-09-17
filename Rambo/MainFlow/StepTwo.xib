@@ -48,13 +48,13 @@
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhl-wN-7cj">
-                    <rect key="frame" x="0.0" y="522" width="414" height="55"/>
+                    <rect key="frame" x="0.0" y="529" width="414" height="55"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUD-af-mbX">
-                            <rect key="frame" x="25" y="10" width="364" height="35"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
                             <color key="backgroundColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="35" id="jdu-Ya-yvL"/>
+                                <constraint firstAttribute="height" constant="55" id="jdu-Ya-yvL"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
                             <state key="normal" title="Save &amp; Continue">
@@ -67,10 +67,10 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="OUD-af-mbX" firstAttribute="top" secondItem="zhl-wN-7cj" secondAttribute="top" constant="10" id="3fn-Oo-8ZF"/>
-                        <constraint firstAttribute="bottom" secondItem="OUD-af-mbX" secondAttribute="bottom" constant="10" id="JIJ-dH-iU5"/>
-                        <constraint firstItem="OUD-af-mbX" firstAttribute="leading" secondItem="zhl-wN-7cj" secondAttribute="leading" constant="25" id="ZpS-fr-l7C"/>
-                        <constraint firstAttribute="trailing" secondItem="OUD-af-mbX" secondAttribute="trailing" constant="25" id="xiR-f6-gPF"/>
+                        <constraint firstItem="OUD-af-mbX" firstAttribute="top" secondItem="zhl-wN-7cj" secondAttribute="top" id="3fn-Oo-8ZF"/>
+                        <constraint firstAttribute="bottom" secondItem="OUD-af-mbX" secondAttribute="bottom" id="JIJ-dH-iU5"/>
+                        <constraint firstItem="OUD-af-mbX" firstAttribute="leading" secondItem="zhl-wN-7cj" secondAttribute="leading" id="ZpS-fr-l7C"/>
+                        <constraint firstAttribute="trailing" secondItem="OUD-af-mbX" secondAttribute="trailing" id="xiR-f6-gPF"/>
                     </constraints>
                 </view>
             </subviews>
@@ -80,7 +80,7 @@
                 <constraint firstItem="MJ6-Fe-vXV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="I6e-yl-PGf"/>
                 <constraint firstItem="MJ6-Fe-vXV" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="SaA-M5-JTX"/>
                 <constraint firstItem="zhl-wN-7cj" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="al0-Pt-3s6"/>
-                <constraint firstItem="zhl-wN-7cj" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="gKp-Na-8Jb"/>
+                <constraint firstItem="zhl-wN-7cj" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="7" id="gKp-Na-8Jb"/>
                 <constraint firstItem="zhl-wN-7cj" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="pfu-ca-zUY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

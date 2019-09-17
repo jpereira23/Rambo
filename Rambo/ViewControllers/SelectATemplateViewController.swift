@@ -36,7 +36,7 @@ class SelectATemplateViewController: UIViewController {
         
         self.modalPresentationStyle = .fullScreen
         
-        continue0.layer.cornerRadius = 5.0
+//        continue0.layer.cornerRadius = 5.0
         
         setUpScrollView()
         
