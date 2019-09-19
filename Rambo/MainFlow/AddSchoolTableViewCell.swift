@@ -146,7 +146,9 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
             endDate.isEnabled = true
         }
     }
+    
     func process(string: String) throws{
+        
         /*
  
         let stringOfWordsArray = try string.components(separatedBy: ",")

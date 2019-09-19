@@ -74,9 +74,6 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
         endDate.inputView = keyboardView
         keyboardView.delegate = self
         
-        
-       
-        
         self.addDoneButton()
     }
     

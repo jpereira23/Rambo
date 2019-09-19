@@ -35,9 +35,9 @@ class StepThree: UIView {
         self.tableView.allowsSelection = false
         arrayOfCells = []
         self.tableView.reloadData()
-        
-        
     }
+    
+    
     
     func getData(aCell: AddWorkTableViewCell, index: Int){
         arrayOfWorks[index].jobTitle = aCell.jobTitle.text
@@ -52,9 +52,9 @@ class StepThree: UIView {
         let last = arrayOfWorks.count - 1
         let aCell = arrayOfCells[last]
         if arrayOfWorks.count > 0 && aCell.checkUse(){
+            beforeYouLeave()
             return true
         }
-        
         return false
     }
     
@@ -67,15 +67,17 @@ class StepThree: UIView {
     @IBAction func next(_ sender: Any) {
         
         if checkUse(){
-            for i in 0..<arrayOfWorks.count{
-                let last = arrayOfWorks.count - 1
-                let aCell = arrayOfCells[last]
-                getData(aCell: aCell, index: i)
-            }
-            
             aDelegate.zeNextOne()
         } else {
             aDelegate.stepThreeAlertCell()
+        }
+    }
+    
+    public func beforeYouLeave(){
+        for i in 0..<arrayOfWorks.count{
+            let last = arrayOfWorks.count - 1
+            let aCell = arrayOfCells[last]
+            getData(aCell: aCell, index: i)
         }
     }
     

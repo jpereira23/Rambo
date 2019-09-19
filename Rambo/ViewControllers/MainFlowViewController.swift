@@ -279,6 +279,7 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
     func workWasSelected() {
         if aView != 2{
             NSLog("JJEFUCKINUS")
+            
             selectWork()
         }
     }
