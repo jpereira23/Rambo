@@ -21,6 +21,7 @@ class Node{
     
     var prelimSkills: String = "</div><div class=\"sections\" id=\"skills-section\"><h3 class=\"section-titles\">Skills</h3><div id=\"work-container\"><ul>"
     var skill: String = "<li> Salesforce </li>"
+    var tmpSkill: String = "<li> Salesforce </li>"
     var endlimSkills: String = "</ul></div></div></div></body></html>"
     var combinedHTML: String! = ""
     
@@ -102,10 +103,11 @@ class Node{
     
     func addSkill(aSkill: String, isFirst: Bool){
         
+        
         if isFirst {
-            skill = skill.replacingOccurrences(of: "Salesforce", with: aSkill)
+            skill = tmpSkill.replacingOccurrences(of: "Salesforce", with: aSkill)
         } else {
-            var theSkill: String = skill
+            var theSkill: String = tmpSkill
             theSkill = theSkill.replacingOccurrences(of: "Salesforce", with: aSkill)
             skill.append(theSkill)
         }
