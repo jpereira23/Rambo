@@ -26,6 +26,7 @@ class ExportViewController: UIViewController {
     var fileName = "output"
     var isEdit: Bool = false
     var editIndex: Int = 0
+    let cloudKit = CloudKitHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -147,6 +148,8 @@ class ExportViewController: UIViewController {
         alertMenu.addAction(cancelAction)
         
         self.present(alertMenu, animated: true, completion:nil)
+        
+        cloudKit.saveRecord()
     }
     
     func changeToMain(){
