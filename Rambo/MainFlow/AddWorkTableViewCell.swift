@@ -36,8 +36,8 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     var index: Int!
     let aLabel = UILabel()
     
-    let keyboardView = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
-    
+    let keyboardViewStart = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
+    let keyboardViewEnd = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
     override func awakeFromNib() {
         //super.awakeFromNib()
         // Initialization code
@@ -67,13 +67,18 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
         
         
         
-        var aYear = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
-        keyboardView.datePicker.aYear = (aYear)
-        keyboardView.datePicker.commonSetup()
-        startDate.inputView = keyboardView
-        endDate.inputView = keyboardView
-        keyboardView.delegate = self
+        var aYearStart = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
+        var aYearEnd = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
+        keyboardViewStart.datePicker.aYear = (aYearStart)
+        keyboardViewStart.datePicker.commonSetup()
+        keyboardViewEnd.datePicker.aYear = (aYearEnd)
+        keyboardViewEnd.datePicker.commonSetup()
+        startDate.inputView = keyboardViewStart
         
+        endDate.inputView = keyboardViewEnd
+        
+        keyboardViewStart.delegate = self
+        keyboardViewEnd.delegate = self
         self.addDoneButton()
     }
     
@@ -150,7 +155,7 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     }
     
     @objc func doneButtonAction3(){
-        keyboardView.getData()
+        keyboardViewEnd.getData()
         endDate.resignFirstResponder()
     }
     
@@ -159,7 +164,7 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     }
     
     @objc func doneButtonAction4(){
-        keyboardView.getData()
+        keyboardViewStart.getData()
         startDate.resignFirstResponder()
     }
     
@@ -192,10 +197,10 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
             startDate.endEditing(true)
             isStart = false
             
-            startDate.inputView = keyboardView
-            keyboardView.datePicker.aYear = keyboardView.datePicker.year
-            keyboardView.datePicker.commonSetup1()
-            endDate.inputView = keyboardView
+            startDate.inputView = keyboardViewStart
+            keyboardViewEnd.datePicker.aYear = keyboardViewStart.datePicker.year
+            keyboardViewEnd.datePicker.commonSetup1()
+            endDate.inputView = keyboardViewEnd
         }
         
         if isEnd{
@@ -205,7 +210,7 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
             endDate.endEditing(true)
             isEnd = false
             
-            endDate.inputView = keyboardView
+            endDate.inputView = keyboardViewEnd
         }
     }
 
