@@ -128,7 +128,7 @@ class ExportViewController: UIViewController {
         let alertMenu = UIAlertController(title: "Save Your Resume", message: "Please provide a name for your resume.", preferredStyle: .alert)
         
         alertMenu.addTextField(configurationHandler:  { (textField: UITextField!) -> Void in
-            textField.placeholder = "Ex. John Smith Resume"
+            textField.placeholder = "John Smith Resume"
         })
         let submitAction = UIAlertAction(title: "Save", style: .default){ _ in
             let firstTextField = alertMenu.textFields![0] as! UITextField
