@@ -68,7 +68,9 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
     @IBOutlet weak var cityStack: UIStackView!
     @IBOutlet weak var deleteButton: UIButton!
     
-    let keyboardView = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
+    let keyboardViewStart = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
+    let keyboardViewEnd = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
+    
     var aDelegate: AddSchoolTableViewCellDelegate!
     var index: Int!
     var isStart: Bool = false
@@ -114,14 +116,17 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
         
         isEmployee.addTarget(self, action: #selector(employedSelected), for: .valueChanged)
         
-        var aYear = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
+        var aYearStart = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
+        var aYearEnd = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
         
-        keyboardView.datePicker.aYear = (aYear)
-        keyboardView.datePicker.commonSetup()
-        startDate.inputView = keyboardView
-        endDate.inputView = keyboardView
-        keyboardView.delegate = self
-        
+        keyboardViewStart.datePicker.aYear = (aYearStart)
+        keyboardViewStart.datePicker.commonSetup()
+        keyboardViewEnd.datePicker.aYear = (aYearEnd)
+        keyboardViewEnd.datePicker.commonSetup()
+        startDate.inputView = keyboardViewStart
+        endDate.inputView = keyboardViewEnd
+        keyboardViewStart.delegate = self
+        keyboardViewEnd.delegate = self
         addDoneButton()
     }
     
@@ -146,7 +151,9 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
             endDate.isEnabled = true
         }
     }
+    
     func process(string: String) throws{
+        
         /*
  
         let stringOfWordsArray = try string.components(separatedBy: ",")
@@ -205,7 +212,7 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
     }
     
     @objc func doneButtonAction3(){
-        keyboardView.getData()
+        keyboardViewEnd.getData()
         endDate.resignFirstResponder()
     }
     
@@ -214,7 +221,7 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
     }
     
     @objc func doneButtonAction4(){
-        keyboardView.getData()
+        keyboardViewStart.getData()
         startDate.resignFirstResponder()
     }
     
@@ -231,11 +238,11 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
             startDate.endEditing(true)
             isStart = false
             
-            startDate.inputView = keyboardView
+            startDate.inputView = keyboardViewStart
             
-            keyboardView.datePicker.aYear = keyboardView.datePicker.year
-            keyboardView.datePicker.commonSetup1()
-            endDate.inputView = keyboardView
+            keyboardViewEnd.datePicker.aYear = keyboardViewStart.datePicker.year
+            keyboardViewEnd.datePicker.commonSetup1()
+            endDate.inputView = keyboardViewEnd
         }
         
         if isEnd{
@@ -244,7 +251,7 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
             endDate.reloadInputViews()
             endDate.endEditing(true)
             
-            endDate.inputView = keyboardView
+            endDate.inputView = keyboardViewEnd
             isEnd = false
         }
         

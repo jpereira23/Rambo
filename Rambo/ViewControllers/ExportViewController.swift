@@ -26,6 +26,7 @@ class ExportViewController: UIViewController {
     var fileName = "output"
     var isEdit: Bool = false
     var editIndex: Int = 0
+    let cloudKit = CloudKitHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,11 @@ class ExportViewController: UIViewController {
 //        } else {
 //            // Fallback on earlier versions
 //        }
-
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
         webView.layer.shadowColor = UIColor.black.cgColor
         webView.layer.shadowOffset = CGSize(width: 0, height: 1)
         webView.layer.shadowOpacity = 0.1
@@ -123,7 +128,7 @@ class ExportViewController: UIViewController {
         let alertMenu = UIAlertController(title: "Save Your Resume", message: "Please provide a name for your resume.", preferredStyle: .alert)
         
         alertMenu.addTextField(configurationHandler:  { (textField: UITextField!) -> Void in
-            textField.placeholder = "Ex. John Smith Resume"
+            textField.placeholder = "John Smith Resume"
         })
         let submitAction = UIAlertAction(title: "Save", style: .default){ _ in
             let firstTextField = alertMenu.textFields![0] as! UITextField
@@ -131,7 +136,7 @@ class ExportViewController: UIViewController {
             
             let fileFinishedMenu = UIAlertController(title: "Resume Successfully Saved", message: "View your resume in your files app (Files > On My iPhone > Worthy)", preferredStyle: .alert)
             
-            let doneAction = UIAlertAction(title: "Awesome!", style: .cancel){ _ in
+            let doneAction = UIAlertAction(title: "Great! Thank you.", style: .cancel){ _ in
                 self.changeToMain()
             }
             
@@ -147,6 +152,8 @@ class ExportViewController: UIViewController {
         alertMenu.addAction(cancelAction)
         
         self.present(alertMenu, animated: true, completion:nil)
+        
+        cloudKit.saveRecord()
     }
     
     func changeToMain(){

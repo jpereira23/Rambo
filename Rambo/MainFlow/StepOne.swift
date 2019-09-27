@@ -113,6 +113,7 @@ class StepOne: UIView, UITextFieldDelegate{
         fullName.textContentType = .nickname
         phoneNumber.textContentType = .telephoneNumber
         email.textContentType = .emailAddress
+        link.autocapitalizationType = .words
         
         phoneNumber.keyboardType = .numberPad
         email.keyboardType = .emailAddress
@@ -199,6 +200,8 @@ class StepOne: UIView, UITextFieldDelegate{
             
             phoneNumber.text = aString
             
+        }else if textField == link {
+            return true
         }
         if(isBackspace != -92){
             return phoneNumber.text!.count <= 13

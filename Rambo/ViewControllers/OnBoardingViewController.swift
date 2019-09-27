@@ -30,7 +30,11 @@ class OnBoardingViewController: UIViewController, UIScrollViewDelegate {
 //        }
         
         
-        
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
         aSlides = createSlides()
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false

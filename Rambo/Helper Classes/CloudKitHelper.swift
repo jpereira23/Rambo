@@ -8,6 +8,7 @@
 
 import Foundation
 import CloudKit
+import DeviceCheck
 
 
 
@@ -27,24 +28,25 @@ class CloudKitHelper{
     var arrayOfProfils: [Profil] = []
     
     init(){
-        let privateDatabase = CKContainer(identifier: "iCloud.Jeff.ResumeBuilder").privateCloudDatabase
-        let query = CKQuery(recordType: "Profile", predicate: NSPredicate(value: true))
-        
+        let privateDatabase = CKContainer(identifier: "iCloud.Jeff.ResumeBuilder").publicCloudDatabase
+        let query = CKQuery(recordType: "Instance", predicate: NSPredicate(value: true))
+        /*
         privateDatabase.perform(query, inZoneWith: nil) { (records, error) in
             records?.forEach({ (record) in
                 guard error == nil else{
                     print(error?.localizedDescription as Any)
                     return
                 }
-                let u = record.value(forKey: "username") as! String
-                let p = record.value(forKey: "password") as! String
-                let e = record.value(forKey: "email") as! String
+                //let u = record.value(forKey: "username") as! String
+                //let p = record.value(forKey: "password") as! String
+                //let e = record.value(forKey: "email") as! String
                 
-                let aProfile = Profil(u: u, p: p, e: e)
+                //let aProfile = Profil(u: u, p: p, e: e)
                 
-                self.arrayOfProfils.append(aProfile)
+                //self.arrayOfProfils.append(aProfile)
             })
         }
+        */
     }
     
     func checkAccount(email: String, password: String) -> Bool{
@@ -54,5 +56,28 @@ class CloudKitHelper{
             }
         }
         return false
+    }
+    
+    func saveRecord(){
+        
+        let deviceToken: DCDevice! = DCDevice()
+        deviceToken.generateToken(completionHandler: { data, error in
+            let aRecord = CKRecord(recordType: "Instance")
+            aRecord["toke"] = data?.base64EncodedString(options: .lineLength64Characters)
+            aRecord["dateTime"] = Date()
+            
+            let privateDatabase = CKContainer(identifier: "iCloud.Jeff.ResumeBuilder").publicCloudDatabase
+            privateDatabase.save(aRecord) { [unowned self] record, error in
+                DispatchQueue.main.async {
+                   /*
+                    if error != nil{
+                    
+                    }
+                     */
+                }
+            }
+        })
+        
+        
     }
 }
