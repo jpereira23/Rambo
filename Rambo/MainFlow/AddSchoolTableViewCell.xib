@@ -180,8 +180,8 @@
                             </textField>
                         </subviews>
                     </stackView>
-                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu1-ev-sPa">
-                        <rect key="frame" x="25" y="607.5" width="270" height="33"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu1-ev-sPa">
+                        <rect key="frame" x="25" y="588.5" width="270" height="33"/>
                         <fontDescription key="fontDescription" name="NotoSansJP-Medium" family="Noto Sans JP Medium" pointSize="14"/>
                         <state key="normal" title="Delete School">
                             <color key="titleColor" red="0.050980392159999999" green="0.78039215689999997" blue="0.61176470589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -206,6 +206,7 @@
                     <constraint firstAttribute="trailing" secondItem="DZd-28-5JS" secondAttribute="trailing" constant="30" id="SOH-Zy-dnN"/>
                     <constraint firstItem="lQ7-fP-Hil" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="U2V-8G-VnG"/>
                     <constraint firstItem="0vI-WJ-BOv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="W2h-GV-VyW"/>
+                    <constraint firstItem="hu1-ev-sPa" firstAttribute="top" secondItem="0vI-WJ-BOv" secondAttribute="bottom" constant="10" id="fTc-LE-PHP"/>
                     <constraint firstItem="Bcx-Fy-1YE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="fqh-V3-zUH"/>
                     <constraint firstAttribute="trailing" secondItem="Bcx-Fy-1YE" secondAttribute="trailing" constant="25" id="hee-d0-fNc"/>
                     <constraint firstAttribute="trailing" secondItem="hu1-ev-sPa" secondAttribute="trailing" constant="25" id="lhr-Cn-r8V"/>

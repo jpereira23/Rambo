@@ -20,11 +20,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="laCell" rowHeight="515" id="KGk-i7-Jjw" customClass="AddWorkTableViewCell" customModule="Rambo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="639"/>
+        <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="laCell" rowHeight="598" id="KGk-i7-Jjw" customClass="AddWorkTableViewCell" customModule="Rambo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="638.66666666666663"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="721.66666666666663"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MFo-kh-x3n">
@@ -188,8 +188,8 @@
                             </textField>
                         </subviews>
                     </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="kGr-Oo-5PD">
-                        <rect key="frame" x="25" y="508.66666666666669" width="364" height="45.333333333333314"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="law-hG-Gp2">
+                        <rect key="frame" x="25" y="508.66666666666669" width="364" height="137.33333333333331"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ph-Ky-NdH">
                                 <rect key="frame" x="0.0" y="0.0" width="364" height="20.333333333333332"/>
@@ -201,15 +201,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5B-yE-A7m">
-                                <rect key="frame" x="0.0" y="21.333333333333314" width="364" height="24"/>
+                                <rect key="frame" x="0.0" y="21.333333333333314" width="364" height="116"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="ic0-sn-Sqv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansJP-Regular" family="Noto Sans JP Regular" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                     </stackView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pjv-wj-dAJ">
-                        <rect key="frame" x="25" y="583.66666666666663" width="364" height="35"/>
+                        <rect key="frame" x="25" y="656" width="364" height="35"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="35" id="cdd-ve-v5p"/>
                         </constraints>
@@ -224,20 +227,19 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Crh-1H-d52" firstAttribute="top" secondItem="aZC-sv-9Ux" secondAttribute="bottom" constant="10" id="5e9-ox-ztW"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="kGr-Oo-5PD" secondAttribute="bottom" constant="40" id="6R4-Vo-9f4"/>
                     <constraint firstItem="aZC-sv-9Ux" firstAttribute="top" secondItem="MFo-kh-x3n" secondAttribute="bottom" constant="10" id="7wK-SA-XmT"/>
                     <constraint firstAttribute="trailing" secondItem="Crh-1H-d52" secondAttribute="trailing" constant="25" id="8l1-Gr-8wl"/>
                     <constraint firstItem="Pjv-wj-dAJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="8pf-Zd-iTY"/>
                     <constraint firstAttribute="trailing" secondItem="aZC-sv-9Ux" secondAttribute="trailing" constant="30" id="Ark-iN-FJ6"/>
-                    <constraint firstAttribute="trailing" secondItem="kGr-Oo-5PD" secondAttribute="trailing" constant="25" id="WWp-iE-iHs"/>
-                    <constraint firstItem="kGr-Oo-5PD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="WzA-8K-6GD"/>
-                    <constraint firstAttribute="bottom" secondItem="Pjv-wj-dAJ" secondAttribute="bottom" constant="20" id="eLx-Es-GXb"/>
+                    <constraint firstAttribute="trailing" secondItem="law-hG-Gp2" secondAttribute="trailing" constant="25" id="X8b-Dw-k9s"/>
+                    <constraint firstItem="Pjv-wj-dAJ" firstAttribute="top" secondItem="law-hG-Gp2" secondAttribute="bottom" constant="10" id="hUF-mT-JZg"/>
                     <constraint firstAttribute="trailing" secondItem="Pjv-wj-dAJ" secondAttribute="trailing" constant="25" id="hih-AF-8NB"/>
-                    <constraint firstItem="kGr-Oo-5PD" firstAttribute="top" secondItem="Crh-1H-d52" secondAttribute="bottom" constant="20" id="mo1-co-CAX"/>
                     <constraint firstItem="MFo-kh-x3n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="ooa-zX-8Fy"/>
                     <constraint firstItem="Crh-1H-d52" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="ptN-en-b9M"/>
+                    <constraint firstItem="law-hG-Gp2" firstAttribute="top" secondItem="Crh-1H-d52" secondAttribute="bottom" constant="20" id="qH8-ed-A4G"/>
                     <constraint firstItem="MFo-kh-x3n" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="uGH-gR-1QD"/>
                     <constraint firstAttribute="trailing" secondItem="MFo-kh-x3n" secondAttribute="trailing" constant="25" id="x83-rb-qLe"/>
+                    <constraint firstItem="law-hG-Gp2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="zOq-uc-tXR"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -249,7 +251,6 @@
                 <outlet property="companyName" destination="B8m-b8-nay" id="5Ji-rB-ka4"/>
                 <outlet property="companyNameStack" destination="lxp-5n-zvG" id="f9y-AI-p2z"/>
                 <outlet property="deleteButton" destination="Pjv-wj-dAJ" id="Asl-ag-R5b"/>
-                <outlet property="descriptionStack" destination="kGr-Oo-5PD" id="nOy-SV-G2V"/>
                 <outlet property="endDate" destination="b1p-hD-g86" id="Tqx-Wn-98V"/>
                 <outlet property="endDateStack" destination="Ane-Z2-nHr" id="XeH-WX-PTH"/>
                 <outlet property="isEmployed" destination="oml-hT-ni5" id="sRn-CD-GKT"/>
@@ -258,7 +259,7 @@
                 <outlet property="startDate" destination="ovh-hk-AE0" id="KV2-u0-04y"/>
                 <outlet property="startDateStack" destination="rjg-yd-npN" id="LBA-SD-5lM"/>
             </connections>
-            <point key="canvasLocation" x="137.59999999999999" y="261.20689655172413"/>
+            <point key="canvasLocation" x="137.59999999999999" y="291.87192118226602"/>
         </tableViewCell>
     </objects>
 </document>

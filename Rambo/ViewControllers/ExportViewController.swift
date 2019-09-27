@@ -37,11 +37,11 @@ class ExportViewController: UIViewController {
 //        } else {
 //            // Fallback on earlier versions
 //        }
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light
-        } else {
-            // Fallback on earlier versions
-        }
+//        if #available(iOS 13.0, *) {
+//            overrideUserInterfaceStyle = .light
+//        } else {
+//            // Fallback on earlier versions
+//        }
         webView.layer.shadowColor = UIColor.black.cgColor
         webView.layer.shadowOffset = CGSize(width: 0, height: 1)
         webView.layer.shadowOpacity = 0.1

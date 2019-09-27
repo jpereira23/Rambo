@@ -16,7 +16,7 @@ class SplashScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        preferredUserInterfaceStyle = .light
-        overrideUserInterfaceStyle = .light
+//        overrideUserInterfaceStyle = .light
         self.modalPresentationStyle = .fullScreen
         
         // Do any additional setup after loading the view.

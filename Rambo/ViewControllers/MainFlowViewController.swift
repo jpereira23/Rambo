@@ -36,11 +36,11 @@ class MainFlowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light
-        } else {
-            // Fallback on earlier versions
-        }
+//        if #available(iOS 13.0, *) {
+//            overrideUserInterfaceStyle = .light
+//        } else {
+//            // Fallback on earlier versions
+//        }
         
         self.modalPresentationStyle = .fullScreen
         stepOne.aDelegate = self
@@ -341,29 +341,29 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
     }
     
     func stepOneAlert(){
-        let alert = UIAlertController(title: "Details Required", message: "Please enter your Full Name, Email,and Phone Number to continue.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: "Almost There", message: "Make sure to enter your Full Name, Email, and Phone Number to continue.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Sounds good!", style: .cancel, handler: nil))
         
         self.present(alert, animated: true)
     }
     
     func stepTwoAlert(){
-        let alert = UIAlertController(title: "Details Required", message: "Please enter your Objective to continue.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: "Almost There", message: "Make sure to enter your Objective to continue.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Sounds good!", style: .cancel, handler: nil))
         
         self.present(alert, animated: true)
     }
     
     func stepThreeAlertCell(){
-        let alert = UIAlertController(title: "Details Required", message: "Please enter your Job Title, Company Name, Start Date, End Date and City to continue.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: "Almost There", message: "Make sure to enter your Job Title, Company Name, Start Date, End Date and City to continue.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Sounds good!", style: .cancel, handler: nil))
         
         self.present(alert, animated: true)
     }
     
     func stepFourAlertCell(){
-        let alert = UIAlertController(title: "Details Required", message: "Please enter your School Name, Degree, Area of Study, Start Date, End Date and City to continue.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+        let alert = UIAlertController(title: "Almost There", message: "Make sure to enter your school Name, Degree, Area of Study, Start Date, End Date and City to continue.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Sounds good!", style: .cancel, handler: nil))
         
         self.present(alert, animated: true)
     }

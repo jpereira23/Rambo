@@ -24,11 +24,11 @@ class ResumePreviewViewController: UIViewController {
 //            // Fallback on earlier versions
 //        }
         
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light
-        } else {
-            // Fallback on earlier versions
-        }
+//        if #available(iOS 13.0, *) {
+//            overrideUserInterfaceStyle = .light
+//        } else {
+//            // Fallback on earlier versions
+//        }
         
         node.setFirstName(name: "Jeff")
         node.setLastName(name: "Pereira")
