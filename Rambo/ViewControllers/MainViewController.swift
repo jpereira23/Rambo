@@ -27,6 +27,11 @@ class MainViewController: UIViewController{
 //            // Fallback on earlier versions
 //        }
         //coreDataHelper.resetCoreData()
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
         buildNew.layer.cornerRadius = 5.0
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "ThirdWayTableViewCell", bundle: bundle)

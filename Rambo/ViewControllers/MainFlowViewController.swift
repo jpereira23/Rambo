@@ -36,6 +36,12 @@ class MainFlowViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if #available(iOS 13.0, *) {
+            overrideUserInterfaceStyle = .light
+        } else {
+            // Fallback on earlier versions
+        }
+        
         self.modalPresentationStyle = .fullScreen
         stepOne.aDelegate = self
         stepTwo.aDelegate = self
