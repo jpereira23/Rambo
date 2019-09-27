@@ -136,7 +136,7 @@ class ExportViewController: UIViewController {
             
             let fileFinishedMenu = UIAlertController(title: "Resume Successfully Saved", message: "View your resume in your files app (Files > On My iPhone > Worthy)", preferredStyle: .alert)
             
-            let doneAction = UIAlertAction(title: "Awesome!", style: .cancel){ _ in
+            let doneAction = UIAlertAction(title: "Great! Thank you.", style: .cancel){ _ in
                 self.changeToMain()
             }
             
