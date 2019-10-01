@@ -46,13 +46,13 @@ class SelectATemplateViewController: UIViewController {
         
         setUpScrollView()
         
-        self.scrollView.scrollRectToVisible(CGRect(x: 3 * 376, y: 0, width: 376, height: 414), animated: true)
+        self.scrollView.scrollRectToVisible(CGRect(x: 3 * UIScreen.main.bounds.width, y: 0, width: UIScreen.main.bounds.width, height: 414), animated: true)
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         UIView.animate(withDuration: 10, animations: {
-            self.scrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: 376, height: 414), animated: true)
+            self.scrollView.scrollRectToVisible(CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 414), animated: true)
             
             //self.scrollView.scrollRectToVisible(CGRect(x: 414, y: 0, width: 414, height: 332), animated: true)
         }, completion: nil)
@@ -65,11 +65,12 @@ class SelectATemplateViewController: UIViewController {
     
     func setUpScrollView(){
         
-        NSLog("width = \(scrollView.frame.width)")
+        //NSLog("width = \(scrollView.frame.width)")
         
+        scrollView.frame = CGRect(x: 0, y: 220.5, width: UIScreen.main.bounds.width, height: 800)
         
-        scrollView.frame = CGRect(x: 0, y: 220.5, width: 376, height: 800)
-        scrollView.contentSize = CGSize(width: (376.0) * 4, height: 0)
+        //NSLog("x value: \(UIScreen.main.nativeBounds.maxX)")
+        scrollView.contentSize = CGSize(width: (UIScreen.main.bounds.width) * 4, height: 0)
         scrollView.isPagingEnabled = true
         
         for i in 0..<arrayOfTemplateNames.count{
@@ -81,7 +82,7 @@ class SelectATemplateViewController: UIViewController {
             node.setCSS(css: i)
              let url = Bundle.main.url(forResource: "master", withExtension: "html")
             aSlide.webView.loadHTMLString(node.combinedHTML, baseURL: url)
-            aSlide.frame = CGRect(x: i * Int(376), y: 0, width: Int(376), height: Int(414))
+            aSlide.frame = CGRect(x: i * Int(UIScreen.main.bounds.width), y: 0, width: Int(UIScreen.main.bounds.width), height: Int(414))
             arrayOfSlides.append(aSlide)
             scrollView.addSubview(aSlide)
         }
