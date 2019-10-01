@@ -27,11 +27,11 @@ class MainViewController: UIViewController{
 //            // Fallback on earlier versions
 //        }
         //coreDataHelper.resetCoreData()
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .light
-        } else {
-            // Fallback on earlier versions
-        }
+//        if #available(iOS 13.0, *) {
+//            overrideUserInterfaceStyle = .light
+//        } else {
+//            // Fallback on earlier versions
+//        }
         buildNew.layer.cornerRadius = 5.0
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "ThirdWayTableViewCell", bundle: bundle)
@@ -158,10 +158,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
     }
     
     func exportSelected(fullResume: FullResume, webView: WKWebView){
-        let alertMenu = UIAlertController(title: "Save Your Resume", message: "Please provide a name for your resume.", preferredStyle: .alert)
+        let alertMenu = UIAlertController(title: "Export Your Resume", message: "Enter a unique name for this resume.", preferredStyle: .alert)
         
         alertMenu.addTextField(configurationHandler:  { (textField: UITextField!) -> Void in
-            textField.placeholder = "Ex. John Smith Resume"
+            textField.placeholder = "Steve Jobs Resume"
         })
         let submitAction = UIAlertAction(title: "Save", style: .default){ _ in
             let firstTextField = alertMenu.textFields![0] as! UITextField
