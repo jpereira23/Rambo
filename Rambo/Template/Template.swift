@@ -14,6 +14,7 @@ class Template: UIView {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var recommended: UILabel!
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var stackView: UIStackView!
     
     
     override func awakeFromNib() {

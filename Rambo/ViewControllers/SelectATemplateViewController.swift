@@ -82,9 +82,16 @@ class SelectATemplateViewController: UIViewController {
             node.setCSS(css: i)
              let url = Bundle.main.url(forResource: "master", withExtension: "html")
             aSlide.webView.loadHTMLString(node.combinedHTML, baseURL: url)
+            
             aSlide.frame = CGRect(x: i * Int(UIScreen.main.bounds.width), y: 0, width: Int(UIScreen.main.bounds.width), height: Int(414))
+            
             arrayOfSlides.append(aSlide)
             scrollView.addSubview(aSlide)
+            if(UIScreen.main.bounds.width > 375.0){
+                let leadingConstraint = NSLayoutConstraint(item: aSlide.stackView, attribute: .leading, relatedBy: .equal, toItem: aSlide, attribute: .leading, multiplier: 1.0, constant: 98.5)
+                let trailingConstraint = NSLayoutConstraint(item: aSlide.stackView, attribute: .trailing, relatedBy: .equal, toItem: aSlide, attribute: .trailing, multiplier: 1.0, constant: -98.5)
+                aSlide.addConstraints([leadingConstraint, trailingConstraint])
+            }
         }
         
     }
