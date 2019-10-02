@@ -77,6 +77,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         let cell = tableView.dequeueReusableCell(withIdentifier: "theCell") as! MainTableViewCell
         cell.aDelegate = self
         
+        if(UIScreen.main.bounds.width > 375.0){
+            let leadingConstraint = NSLayoutConstraint(item: cell.stackView, attribute: .leading, relatedBy: .equal, toItem: cell, attribute: .leading, multiplier: 1.0, constant: 100.5)
+            let trailingConstraint = NSLayoutConstraint(item: cell.stackView, attribute: .trailing, relatedBy: .equal, toItem: cell, attribute: .trailing, multiplier: 1.0, constant: -100.5)
+            cell.addConstraints([leadingConstraint, trailingConstraint])
+        }
+        
         cell.index = indexPath.row
         cell.fullResume = arrayOfResumes[indexPath.row]
         

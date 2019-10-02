@@ -21,6 +21,7 @@ class MainTableViewCell: UITableViewCell {
     var aDelegate: MainTableViewCellDelegate?
     var index: Int = 0
     var fullResume: FullResume! 
+    @IBOutlet weak var stackView: UIStackView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
