@@ -255,7 +255,7 @@ extension AddWorkTableViewCell: UITextFieldDelegate, UITextViewDelegate{
     func textViewDidBeginEditing(_ textView: UITextView) {
         var aPoint = CGPoint(x: 0, y: 20)
         
-        //aPoint.y = self.descriptionStack.frame.origin.y
+        aPoint.y = self.cityStack.frame.origin.y
         
         aPoint.y = CGFloat(Int(aPoint.y) + (self.index * Int(self.frame.height)))
         self.aDelegate?.editingBegan(y: Int(aPoint.y))
