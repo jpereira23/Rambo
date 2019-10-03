@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14865.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14819.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="721.66666666666663"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="722"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MFo-kh-x3n">
@@ -47,7 +45,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="A3m-me-qzR"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansJP-Regular" family="Noto Sans JP Regular" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -73,7 +70,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="Xbb-bo-TNu"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansJP-Regular" family="Noto Sans JP Regular" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -99,7 +95,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="2He-dD-NyJ"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansJP-Regular" family="Noto Sans JP Regular" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -125,7 +120,6 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="wxI-lf-k7q"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="NotoSansJP-Regular" family="Noto Sans JP Regular" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -179,7 +173,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="WDE-g9-6dH"/>
                                 </constraints>
-                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NotoSansJP-Regular" family="Noto Sans JP Regular" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -251,6 +244,7 @@
                 <outlet property="companyName" destination="B8m-b8-nay" id="5Ji-rB-ka4"/>
                 <outlet property="companyNameStack" destination="lxp-5n-zvG" id="f9y-AI-p2z"/>
                 <outlet property="deleteButton" destination="Pjv-wj-dAJ" id="Asl-ag-R5b"/>
+                <outlet property="descriptionStack" destination="law-hG-Gp2" id="ZFM-gV-ZEf"/>
                 <outlet property="endDate" destination="b1p-hD-g86" id="Tqx-Wn-98V"/>
                 <outlet property="endDateStack" destination="Ane-Z2-nHr" id="XeH-WX-PTH"/>
                 <outlet property="isEmployed" destination="oml-hT-ni5" id="sRn-CD-GKT"/>
