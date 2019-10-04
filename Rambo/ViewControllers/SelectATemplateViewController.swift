@@ -14,7 +14,7 @@ class SelectATemplateViewController: UIViewController {
     @IBOutlet weak var continue0: UIButton!
     @IBOutlet weak var backButton: UIButton!
     var isEdit: Bool = false
-    var arrayOfTemplateNames: [String] = ["Column", "Red", "Roboto", "Traditional"]
+    var arrayOfTemplateNames: [String] = ["Classy", "Green", "Red", "Traditional"]
     var arrayOfSlides: [Template] = []
     var fullResume: FullResume!
     var editIndex: Int = 0

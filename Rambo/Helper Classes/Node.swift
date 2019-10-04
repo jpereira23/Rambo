@@ -25,7 +25,7 @@ class Node{
     var endlimSkills: String = "</ul></div></div></div></body></html>"
     var combinedHTML: String! = ""
     
-    var cssStyles: [String] = ["brittany.css", "logan.css", "mike.css", "stephanie.css"]
+    var cssStyles: [String] = ["logan.css", "brittany.css", "mike.css", "stephanie.css"]
     
     init(){
         runHTMLAppend()

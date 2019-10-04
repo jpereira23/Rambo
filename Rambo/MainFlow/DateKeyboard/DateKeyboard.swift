@@ -45,40 +45,40 @@ class DateKeyboard: UIView{
         NSLog("\(datePicker.year)")
         switch(datePicker.month){
         case 1:
-            self.delegate?.keyWasTapped(date: "January \(datePicker.year)")
+            self.delegate?.keyWasTapped(date: "Jan \(datePicker.year)")
             break
         case 2:
-            self.delegate?.keyWasTapped(date: "February \(datePicker.year)")
+            self.delegate?.keyWasTapped(date: "Feb \(datePicker.year)")
             break
         case 3:
-            self.delegate?.keyWasTapped(date: "March \(datePicker.year)")
+            self.delegate?.keyWasTapped(date: "Mar \(datePicker.year)")
             break
         case 4:
-            self.delegate?.keyWasTapped(date: "April \(datePicker.year)")
+            self.delegate?.keyWasTapped(date: "Apr \(datePicker.year)")
             break
         case 5:
             self.delegate?.keyWasTapped(date: "May \(datePicker.year)")
             break
         case 6:
-            self.delegate?.keyWasTapped(date: "June \(datePicker.year)")
+            self.delegate?.keyWasTapped(date: "Jun \(datePicker.year)")
             break
         case 7:
-            self.delegate?.keyWasTapped(date: "July \(datePicker.year)")
+            self.delegate?.keyWasTapped(date: "Jul \(datePicker.year)")
             break
         case 8:
-            self.delegate?.keyWasTapped(date: "August \(datePicker.year)")
+            self.delegate?.keyWasTapped(date: "Aug \(datePicker.year)")
             break
         case 9:
-            self.delegate?.keyWasTapped(date: "September \(datePicker.year)")
+            self.delegate?.keyWasTapped(date: "Sept \(datePicker.year)")
             break
         case 10:
-            self.delegate?.keyWasTapped(date: "October \(datePicker.year)")
+            self.delegate?.keyWasTapped(date: "Oct \(datePicker.year)")
             break
         case 11:
-            self.delegate?.keyWasTapped(date: "November \(datePicker.year)")
+            self.delegate?.keyWasTapped(date: "Nov \(datePicker.year)")
             break
         case 12:
-            self.delegate?.keyWasTapped(date: "December \(datePicker.year)")
+            self.delegate?.keyWasTapped(date: "Dec \(datePicker.year)")
             break
         default:
             
