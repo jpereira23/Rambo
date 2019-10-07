@@ -65,18 +65,16 @@ class SelectATemplateViewController: UIViewController {
     
     func setUpScrollView(){
         
-        //NSLog("width = \(scrollView.frame.width)")
+        
         
         scrollView.frame = CGRect(x: 0, y: 220.5, width: UIScreen.main.bounds.width, height: 800)
         
-        //NSLog("x value: \(UIScreen.main.nativeBounds.maxX)")
+        
         scrollView.contentSize = CGSize(width: (UIScreen.main.bounds.width) * 4, height: 0)
         scrollView.isPagingEnabled = true
         
         for i in 0..<arrayOfTemplateNames.count{
             let aSlide = Bundle.main.loadNibNamed("Template", owner: self, options: nil)?.first as! Template
-            NSLog("aSlide.width = \(aSlide.frame.width)"
-            )
             aSlide.title.text = arrayOfTemplateNames[i]
             let node = Node()
             node.setCSS(css: i)
@@ -95,9 +93,6 @@ class SelectATemplateViewController: UIViewController {
         }
         
     }
-    @IBAction func continuing(_ sender: Any) {
-        NSLog("Page is \(scrollView.contentOffset.x / scrollView.frame.size.width)")
-    }
     
     @IBAction func goBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
@@ -115,7 +110,6 @@ class SelectATemplateViewController: UIViewController {
             if fullResume != nil{
                 mainFlow.fullResume = fullResume
             }
-            NSLog("Here is the index it is on \(Int(scrollView.contentOffset.x / scrollView.frame.size.width))")
             mainFlow.anIndex = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
         }
     }

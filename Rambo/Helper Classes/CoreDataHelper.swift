@@ -172,7 +172,6 @@ class CoreDataHelper{
                     
                     arrayOfSkills.append(aSkill!)
                 }
-                NSLog("object index is \(object.index)")
                 tmpFullResume = FullResume(bI: basicInfoTemplate, o: object.objective!, aW: arrayOfWorks, aS: arrayOfSchools, s: arrayOfSkills, i: Int(object.index))
                 tempFullResume.append(tmpFullResume)
             }

@@ -162,7 +162,6 @@ extension StepThree: UITableViewDelegate, UITableViewDataSource{
         cell.endDate.isEnabled = false
         cell.companyName.text = arrayOfWorks[indexPath.row].companyName
         cell.aDescription.text = arrayOfWorks[indexPath.row].description
-        NSLog("cell description count is \(cell.aDescription.text)")
         if cell.aDescription.text.count == 0{
             cell.aDescription.placeholder = "Please place description here."
             cell.aDescription.viewWithTag(100)!.isHidden = false

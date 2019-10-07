@@ -258,7 +258,7 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
         let fullResume = compileInformation()
         let vc = storyboard?.instantiateViewController(withIdentifier: "exportView") as! ExportViewController
         if isEdit == true{
-            NSLog("IS IT TRUE")
+            
             vc.isEdit = true
             vc.editIndex = editIndex
         }
@@ -277,14 +277,14 @@ extension MainFlowViewController: MainNavBarDelegate, StepOneDelegate, StepTwoDe
     
     func objectiveWasSelected() {
         if aView != 1{
-            NSLog("Jesus")
+            
             selectObjective()
         }
     }
     
     func workWasSelected() {
         if aView != 2{
-            NSLog("JJEFUCKINUS")
+            
             
             selectWork()
         }

@@ -39,19 +39,12 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
     let keyboardViewStart = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
     let keyboardViewEnd = DateKeyboard(frame: CGRect(x: 0, y: 0, width: 0, height: 300))
     override func awakeFromNib() {
-        //super.awakeFromNib()
-        // Initialization code
-        //self.startDate.text = "FUCK YOU"
         isEmployed.isOn = true
-        NSLog("startDate.text = \(startDate.text)")
-        //self.endDate.text = "Present"
-        //endDate.isEnabled = false
         
         
         jobTitle.delegate = self
         companyName.delegate = self
         startDate.delegate = self
-        //endDate.delegate = self
         CITY.delegate = self
         aDescription.placeholder = "Please place description here."
         aDescription.delegate = self
@@ -67,8 +60,8 @@ class AddWorkTableViewCell: UITableViewCell, DateKeyboardDelegate {
         
         
         
-        var aYearStart = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
-        var aYearEnd = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
+        let aYearStart = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
+        let aYearEnd = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!.component(.year, from: NSDate() as Date)
         keyboardViewStart.datePicker.aYear = (aYearStart)
         keyboardViewStart.datePicker.commonSetup()
         keyboardViewEnd.datePicker.aYear = (aYearEnd)

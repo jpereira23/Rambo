@@ -42,7 +42,6 @@ class DateKeyboard: UIView{
     func getData(){
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/YYYY"
-        NSLog("\(datePicker.year)")
         switch(datePicker.month){
         case 1:
             self.delegate?.keyWasTapped(date: "Jan \(datePicker.year)")
@@ -87,7 +86,6 @@ class DateKeyboard: UIView{
         }
         /*
          datePicker.onDateSelected = { (month: Int, year: Int) in
-         NSLog("No really, Hello World")
          let string = "\(month)/\(year)"
          self.delegate?.keyWasTapped(date: string)
          }
@@ -99,7 +97,6 @@ class DateKeyboard: UIView{
     @IBAction func getDate(_ sender: Any) {
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/YYYY"
-        NSLog("\(datePicker.year)")
         switch(datePicker.month){
         case 1:
             self.delegate?.keyWasTapped(date: "January \(datePicker.year)")
@@ -144,7 +141,6 @@ class DateKeyboard: UIView{
         }
         /*
         datePicker.onDateSelected = { (month: Int, year: Int) in
-            NSLog("No really, Hello World")
             let string = "\(month)/\(year)"
             self.delegate?.keyWasTapped(date: string)
         }

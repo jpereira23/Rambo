@@ -17,6 +17,7 @@ class Node{
     var preEducation: String = "<div class=\"sections\"id=\"education-section\"><h3 class=\"section-titles\">Education</h3>"
     var educationSection: String = "<div class=\"subsection\" id=\"education-container\"><h4 class=\"titles\">Reed College <span class=\"date\">1972 - 1972</span></h4><p><span id=\"degree\">Undeclared</span> in <span id=\"area-of-study\">General Studies</span></p></div>"
     var preWork: String = "</div><div class=\"sections\" id=\"work-section\"><h3 class=\"section-titles\">Work Experience</h3>"
+    var tmpWorkSection: String = "<div class=\"subsection\" id=\"work-container\"><h4 class=\"job-title\">Co-Founder at <span id=\"company\">Apple</span><span class=\"date\">1976 - 2011</span></h4><p>Built Apple into the second biggest manufacturer of small computers. Pushed the company towards the future of computing with technologies like GUI, the mouse, ans fanless designs.</p></div>"
     var workSection: String = "<div class=\"subsection\" id=\"work-container\"><h4 class=\"job-title\">Co-Founder at <span id=\"company\">Apple</span><span class=\"date\">1976 - 2011</span></h4><p>Built Apple into the second biggest manufacturer of small computers. Pushed the company towards the future of computing with technologies like GUI, the mouse, ans fanless designs.</p></div>"
     
     var prelimSkills: String = "</div><div class=\"sections\" id=\"skills-section\"><h3 class=\"section-titles\">Skills</h3><div id=\"work-container\"><ul>"
@@ -48,8 +49,8 @@ class Node{
     }
     
     func setFirstName(name: String){
-        nameLine = nameLine.replacingOccurrences(of: "Luis Eduardo Giron Yuja", with: name)
-        
+        nameLine = nameLine.replacingOccurrences(of: "Steve Jobs", with: name)
+        NSLog(nameLine)
         runHTMLAppend()
     }
     
@@ -60,40 +61,43 @@ class Node{
     }
     
     func setNumber(number: String){
-        basicInfoStuff = basicInfoStuff.replacingOccurrences(of: "209-914-8031", with: number)
+        basicInfoStuff = basicInfoStuff.replacingOccurrences(of: "123-456-7890", with: number)
         
         runHTMLAppend()
     }
     
     func setEmail(email: String){
-        basicInfoStuff = basicInfoStuff.replacingOccurrences(of: "legyuja@gmail.com", with: email)
+        basicInfoStuff = basicInfoStuff.replacingOccurrences(of: "stevejobs@icloud.com", with: email)
         
         runHTMLAppend()
     }
     
     func setLink(link: String){
-        basicInfoStuff = basicInfoStuff.replacingOccurrences(of: "www.legyuja.design", with: link)
+        basicInfoStuff = basicInfoStuff.replacingOccurrences(of: "www.stayhungrystayfoolish.com", with: link)
         
         runHTMLAppend()
     }
     
     func setObjective(objective: String){
-        basicInfoStuff = basicInfoStuff.replacingOccurrences(of: "A human-centered problem solver focused in company goals by prioritizing the needs and pain-points of his clients. Company goals by prioritizing the needs and pain-points of his clients", with: objective)
+        basicInfoStuff = basicInfoStuff.replacingOccurrences(of: "A creative individual who strives for perfection to deliver the highest quality products. My contributions to my previous ventures speak for themselves.", with: objective)
         
         runHTMLAppend()
     }
     
     func addWorkExperience(company: String, position: String, date: String, sub: String, isFirst: Bool){
         if isFirst {
-            workSection = workSection.replacingOccurrences(of: "Product Designer", with: position)
-            workSection = workSection.replacingOccurrences(of: "LeadCrunch", with: company)
-            workSection = workSection.replacingOccurrences(of: "Jan 2019 - Present", with: date)
-            workSection = workSection.replacingOccurrences(of: "Collaborate with sales team to grow customer segments by building stronger partnerships when enrolling and educating domestic and international organizations on Color products. Reinforce Color’s growth engine by executing support team's best practices of internal tools, processes and procedures.", with: sub)
+            workSection = workSection.replacingOccurrences(of: "Co-Founder", with: position)
+            workSection = workSection.replacingOccurrences(of: "Built Apple into the second biggest manufacturer of small computers. Pushed the company towards the future of computing with technologies like GUI, the mouse, ans fanless designs.", with: sub)
+            workSection = workSection.replacingOccurrences(of: "Apple", with: company)
+            workSection = workSection.replacingOccurrences(of: "1976 - 2011", with: date)
+            
         } else {
-            var anExperience = workSection
-            anExperience = anExperience.replacingOccurrences(of: "LeadCrunch", with: company)
-            anExperience = anExperience.replacingOccurrences(of: "Jan 2019 - Present", with: date)
-            anExperience = anExperience.replacingOccurrences(of: "Collaborate with sales team to grow customer segments by building stronger partnerships when enrolling and educating domestic and international organizations on Color products. Reinforce Color’s growth engine by executing support team's best practices of internal tools, processes and procedures.", with: sub)
+            var anExperience = tmpWorkSection
+            anExperience = anExperience.replacingOccurrences(of: "Co-Founder", with: position)
+            anExperience = anExperience.replacingOccurrences(of: "Built Apple into the second biggest manufacturer of small computers. Pushed the company towards the future of computing with technologies like GUI, the mouse, ans fanless designs.", with: sub)
+            anExperience = anExperience.replacingOccurrences(of: "Apple", with: company)
+            anExperience = anExperience.replacingOccurrences(of: "1976 - 2011", with: date)
+            
             
             workSection.append(anExperience)
         }
@@ -101,14 +105,19 @@ class Node{
         runHTMLAppend()
     }
     
+    func noSkills(){
+        skill = ""
+        
+        runHTMLAppend()
+    }
     func addSkill(aSkill: String, isFirst: Bool){
         
         
         if isFirst {
-            skill = tmpSkill.replacingOccurrences(of: "Salesforce", with: aSkill)
+            skill = tmpSkill.replacingOccurrences(of: "Enthusiasm", with: aSkill)
         } else {
             var theSkill: String = tmpSkill
-            theSkill = theSkill.replacingOccurrences(of: "Salesforce", with: aSkill)
+            theSkill = theSkill.replacingOccurrences(of: "Enthusiasm", with: aSkill)
             skill.append(theSkill)
         }
         
@@ -118,16 +127,16 @@ class Node{
     func addInstitution(institution: String, date: String, degree: String, skillSet: String, isFirst: Bool){
         
         if isFirst{
-            educationSection = educationSection.replacingOccurrences(of: "San Jose State University", with: institution)
-            educationSection = educationSection.replacingOccurrences(of: "Aug 2016 - Dec 2017", with: date)
-            educationSection = educationSection.replacingOccurrences(of: "Bachelor's", with: skillSet)
-            educationSection = educationSection.replacingOccurrences(of: "Spanish", with: degree)
+            educationSection = educationSection.replacingOccurrences(of: "Reed College", with: institution)
+            educationSection = educationSection.replacingOccurrences(of: "1972 - 1972", with: date)
+            educationSection = educationSection.replacingOccurrences(of: "Undeclared", with: skillSet)
+            educationSection = educationSection.replacingOccurrences(of: "General Studies", with: degree)
         } else {
             var aEducation: String = educationSection
-            aEducation = aEducation.replacingOccurrences(of: "San Jose State University", with: institution)
-            aEducation = aEducation.replacingOccurrences(of: "Aug 2016 - Dec 2017", with: date)
-            aEducation = aEducation.replacingOccurrences(of: "Bachelor's", with: skillSet)
-            aEducation = aEducation.replacingOccurrences(of: "Spanish", with: degree)
+            aEducation = aEducation.replacingOccurrences(of: "Reed College", with: institution)
+            aEducation = aEducation.replacingOccurrences(of: "1972 - 1972", with: date)
+            aEducation = aEducation.replacingOccurrences(of: "Undeclared", with: skillSet)
+            aEducation = aEducation.replacingOccurrences(of: "General Studies", with: degree)
             
             educationSection.append(aEducation)
         }

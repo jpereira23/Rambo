@@ -61,7 +61,6 @@ class ExportViewController: UIViewController {
         } else {
             saveToPhone.setTitle("Save (read only)", for: .normal)
             iCloudLoggedIn = false
-            //self.present(noiCloudAlert, animated: true, completion: nil)
         }
         
         
@@ -69,7 +68,6 @@ class ExportViewController: UIViewController {
         if isEdit == false{
         coreDataHelper.saveFullResume(fullResume: fullResume)
         } else if isEdit == true{
-            NSLog("Updating Resume")
             coreDataHelper.updateResume(index: editIndex, fullResume: fullResume)
         }
         node.setFirstName(name: fullResume.basicInfo.fullName)
@@ -89,7 +87,6 @@ class ExportViewController: UIViewController {
         
         var workCount = 0
         for work in fullResume.arrayOfWorks{
-            
             if workCount == 0{
                 node.addWorkExperience(company: work.companyName, position: work.jobTitle, date: work.startDate + " - " + work.endDate, sub: work.description, isFirst: true)
             } else {
@@ -112,8 +109,10 @@ class ExportViewController: UIViewController {
             
         }
         
+        if fullResume.skills.count == 0{
+            node.noSkills()
+        }
         node.setCSS(css: fullResume.index)
-        
         webView.loadHTMLString(node.combinedHTML, baseURL: url)
         // Do any additional setup after loading the view.
     }
@@ -186,14 +185,11 @@ class ExportViewController: UIViewController {
         render.setValue(page, forKey: "paperRect")
         render.setValue(page, forKey: "printableRect")
         
-        NSLog("number of pages \(render.numberOfPages)")
-        
         
         let pdfData = NSMutableData()
         UIGraphicsBeginPDFContextToData(pdfData, .zero, nil)
         
         for i in 0..<render.numberOfPages{
-            NSLog("Hello world")
             UIGraphicsBeginPDFPage();
             render.drawPage(at: i, in: UIGraphicsGetPDFContextBounds())
         }

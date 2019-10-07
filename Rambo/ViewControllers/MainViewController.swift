@@ -208,14 +208,10 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource, ThirdW
         render.setValue(page, forKey: "paperRect")
         render.setValue(page, forKey: "printableRect")
         
-        NSLog("number of pages \(render.numberOfPages)")
-        
-        
         let pdfData = NSMutableData()
         UIGraphicsBeginPDFContextToData(pdfData, .zero, nil)
         
         for i in 0..<render.numberOfPages{
-            NSLog("Hello world")
             UIGraphicsBeginPDFPage();
             render.drawPage(at: i, in: UIGraphicsGetPDFContextBounds())
         }

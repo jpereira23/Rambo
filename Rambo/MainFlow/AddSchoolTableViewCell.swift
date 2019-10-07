@@ -130,10 +130,6 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
         addDoneButton()
     }
     
-    @objc func countryStartEditing(textField: UITextField){
-        NSLog(country.text!)
-    }
-    
     @objc func startDateSelected(textField: UITextField){
         isStart = true
     }
@@ -158,7 +154,7 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
  
         let stringOfWordsArray = try string.components(separatedBy: ",")
         for i in 0..<stringOfWordsArray.count{
-            //NSLog("\(i%14): \(stringOfWordsArray[i])")
+            
             if (i%13) == 3{
             
                 arrayOfSchools.append(stringOfWordsArray[i])
@@ -230,7 +226,6 @@ class AddSchoolTableViewCell: UITableViewCell, DateKeyboardDelegate {
     }
     
     func keyWasTapped(date: String) {
-        NSLog(date)
         if isStart{
             startDate.text = date
             startDate.inputView = nil

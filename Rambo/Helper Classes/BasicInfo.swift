@@ -22,11 +22,4 @@ class BasicInfo{
         phoneNumber = pN
         link = l
     }
-    
-    func printThis(){
-        NSLog("fullName: \(self.fullName)")
-        NSLog("email: \(self.email)")
-        NSLog("phoneNumber: \(self.phoneNumber)")
-        NSLog("link: \(self.link)")
-    }
 }

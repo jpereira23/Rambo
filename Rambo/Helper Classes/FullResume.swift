@@ -24,20 +24,4 @@ class FullResume{
         skills = s
         index = i
     }
-    
-    func printThis(){
-        basicInfo.printThis()
-        NSLog("objective: \(self.objective)")
-        for work in arrayOfWorks{
-            work.printThis()
-        }
-        
-        for school in arrayOfSchools{
-            school.printThis()
-        }
-        
-        for skill in skills{
-            NSLog("skill: \(skill)")
-        }
-    }
 }

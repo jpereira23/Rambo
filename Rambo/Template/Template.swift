@@ -18,7 +18,6 @@ class Template: UIView {
     
     
     override func awakeFromNib() {
-        NSLog("awakeFromNib()")
         webView.isUserInteractionEnabled = false
     }
     /*

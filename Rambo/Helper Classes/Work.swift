@@ -24,11 +24,4 @@ class Work{
         city = ""
         description = ""
     }
-    
-    func printThis(){
-        NSLog("jobTitle: \(self.jobTitle)")
-        NSLog("companyName: \(self.companyName)")
-        NSLog("city: \(self.city)")
-        NSLog("description: \(self.description)")
-    }
 }
