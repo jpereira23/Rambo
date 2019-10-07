@@ -47,7 +47,7 @@ class MainViewController: UIViewController{
         if arrayOfResumes.count > 0{
             accountLabel.text = "Hi " + arrayOfResumes[0].basicInfo.fullName + "!"
         } else {
-            accountLabel.text = "Hi User!"
+            accountLabel.text = "Hi there!"
         }
         
         self.tableView.reloadData()

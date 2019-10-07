@@ -156,7 +156,7 @@ class ExportViewController: UIViewController {
             
             self.present(alertMenu, animated: true, completion:nil)
         } else {
-            let noiCloudAlert = UIAlertController(title: "iCloud disabled", message: "iCloud account not logged in/iCloud drive not turned on. Go to Settings > iCloud, log into iCloud and make sure iCloud drive is turned on for 'Worthy' app.", preferredStyle: .alert)
+            let noiCloudAlert = UIAlertController(title: "Whoops! Cannot Export", message: "You must have iCloud Drive enabled to export. To enable iCloud Drive, go to the Settings app > Enable iCloud Drive > Enable Worthy app", preferredStyle: .alert)
             
             let okAction = UIAlertAction(title: "Ok", style: .cancel){ _ in
                 self.changeToMain()
