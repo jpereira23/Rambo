@@ -41,6 +41,7 @@ class StepThree: UIView {
     
     func getData(aCell: AddWorkTableViewCell, index: Int){
         arrayOfWorks[index].jobTitle = aCell.jobTitle.text
+        NSLog(arrayOfWorks[index].jobTitle)
         arrayOfWorks[index].city = aCell.CITY.text
         arrayOfWorks[index].description = aCell.aDescription.text
         arrayOfWorks[index].companyName = aCell.companyName.text
@@ -75,8 +76,8 @@ class StepThree: UIView {
     
     public func beforeYouLeave(){
         for i in 0..<arrayOfWorks.count{
-            let last = arrayOfWorks.count - 1
-            let aCell = arrayOfCells[last]
+            
+            let aCell = arrayOfCells[i]
             getData(aCell: aCell, index: i)
         }
     }
