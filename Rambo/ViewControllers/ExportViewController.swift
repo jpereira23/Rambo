@@ -27,6 +27,7 @@ class ExportViewController: UIViewController {
     var isEdit: Bool = false
     var editIndex: Int = 0
     let cloudKit = CloudKitHelper()
+    var iCloudLoggedIn: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,20 @@ class ExportViewController: UIViewController {
         webView.layer.shadowRadius = 5.0
         webView.layer.masksToBounds = false
         webView.isUserInteractionEnabled = false
+        
+        //Check iCloud user
+        
+        
+        
+        if let currentToken = FileManager.default.ubiquityIdentityToken{
+            NSLog("iCloud exists")
+            saveToPhone.setTitle("Export to Files", for: .normal)
+            iCloudLoggedIn = true
+        } else {
+            saveToPhone.setTitle("Save (read only)", for: .normal)
+            iCloudLoggedIn = false
+            //self.present(noiCloudAlert, animated: true, completion: nil)
+        }
         
         
         let url = Bundle.main.url(forResource: "master", withExtension: "html")
@@ -101,19 +116,6 @@ class ExportViewController: UIViewController {
         
         webView.loadHTMLString(node.combinedHTML, baseURL: url)
         // Do any additional setup after loading the view.
-        
-        
-        //coreDataHelper.loadFullResume()
-        /*
-        if let loadFullProfile = coreDataHelper.loadFullResume(){
-            for profile in loadFullProfile{
-                NSLog(profile.basicInfo.fullName)
-            }
-        }
-        */
-        
-        
-        
     }
     
     @IBAction func goBack(_ sender: Any) {
@@ -125,33 +127,46 @@ class ExportViewController: UIViewController {
     }
     
     @IBAction func saveToiPhone(_ sender: Any) {
-        let alertMenu = UIAlertController(title: "Save Your Resume", message: "Please provide a name for your resume.", preferredStyle: .alert)
         
-        alertMenu.addTextField(configurationHandler:  { (textField: UITextField!) -> Void in
-            textField.placeholder = "Steve Jobs Resume"
-        })
-        let submitAction = UIAlertAction(title: "Save", style: .default){ _ in
-            let firstTextField = alertMenu.textFields![0] as! UITextField
-            self.fileName = firstTextField.text!
+        if iCloudLoggedIn == true {
+            let alertMenu = UIAlertController(title: "Save Your Resume", message: "Please provide a name for your resume.", preferredStyle: .alert)
             
-            let fileFinishedMenu = UIAlertController(title: "Resume Successfully Saved", message: "View your resume in your files app (Files > On My iPhone > Worthy)", preferredStyle: .alert)
+            alertMenu.addTextField(configurationHandler:  { (textField: UITextField!) -> Void in
+                textField.placeholder = "Steve Jobs Resume"
+            })
+            let submitAction = UIAlertAction(title: "Save", style: .default){ _ in
+                let firstTextField = alertMenu.textFields![0] as! UITextField
+                self.fileName = firstTextField.text!
+                
+                let fileFinishedMenu = UIAlertController(title: "Resume Successfully Saved", message: "View your resume in your files app (Files > On My iPhone > Worthy)", preferredStyle: .alert)
+                
+                let doneAction = UIAlertAction(title: "Great! Thank you.", style: .cancel){ _ in
+                    self.changeToMain()
+                }
+                
+                fileFinishedMenu.addAction(doneAction)
+                self.savePDFToiPhone()
+                self.present(fileFinishedMenu, animated: true, completion: nil)
+                
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+                
+            }
+            alertMenu.addAction(submitAction)
+            alertMenu.addAction(cancelAction)
             
-            let doneAction = UIAlertAction(title: "Great! Thank you.", style: .cancel){ _ in
+            self.present(alertMenu, animated: true, completion:nil)
+        } else {
+            let noiCloudAlert = UIAlertController(title: "iCloud disabled", message: "iCloud account not logged in/iCloud drive not turned on. Go to Settings > iCloud, log into iCloud and make sure iCloud drive is turned on for 'Worthy' app.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "Ok", style: .cancel){ _ in
                 self.changeToMain()
             }
             
-            fileFinishedMenu.addAction(doneAction)
-            self.savePDFToiPhone()
-            self.present(fileFinishedMenu, animated: true, completion: nil)
+            noiCloudAlert.addAction(okAction)
             
+            self.present(noiCloudAlert, animated: true, completion: nil)
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { _ in
-            
-        }
-        alertMenu.addAction(submitAction)
-        alertMenu.addAction(cancelAction)
-        
-        self.present(alertMenu, animated: true, completion:nil)
         
         cloudKit.saveRecord()
     }

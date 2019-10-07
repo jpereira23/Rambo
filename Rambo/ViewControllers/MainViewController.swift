@@ -32,6 +32,12 @@ class MainViewController: UIViewController{
 //        } else {
 //            // Fallback on earlier versions
 //        }
+        
+        if let currentToken = FileManager.default.ubiquityIdentityToken{
+            NSLog("iCloud is logged in")
+        } else {
+            NSLog("iCloud is not logged in")
+        }
         buildNew.layer.cornerRadius = 5.0
         let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "ThirdWayTableViewCell", bundle: bundle)
